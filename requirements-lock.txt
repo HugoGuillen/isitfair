@@ -1,0 +1,37 @@
+# Versions the committed artifacts in results/ were produced with.
+# isitfair guarantees bit-identical output for identical data and
+# random_state -- a guarantee that only holds against fixed dependencies.
+#
+#   pip install -r requirements-lock.txt
+#
+# Generated on 2026-10-02 with Python 3.10.
+
+# --- runtime ---
+numpy==2.2.6
+pandas==2.3.3
+scipy==1.15.3
+scikit-learn==1.7.2
+joblib==1.5.3
+statsmodels==0.14.6
+dcurves==1.1.7
+matplotlib==3.10.9
+jinja2==3.1.6
+tableone==0.9.6
+
+# --- examples and notebooks ---
+ucimlrepo==0.0.7
+jupytext==1.19.2
+nbconvert==7.17.1
+ipykernel==7.2.0
+# tabulate writes the .md tables; adjustText places the Figure 6A labels.
+# Neither version was recorded at build time. Both were recovered by
+# regenerating the artifacts: these versions reproduce the committed files
+# byte for byte (all 20 results/tables/*.md; figure6a_volcano_sex.png/.pdf,
+# which adjustText 1.3.0 also reproduces).
+tabulate==0.10.0
+
+# --- optional: label placement (isitfair[plots]) ---
+adjustText==1.4.0
+
+# --- optional: PDF export (isitfair[pdf]) ---
+weasyprint==70.0

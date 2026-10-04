@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }}</title>
+<style>
+/* --- Base --- */
+*, *::before, *::after { box-sizing: border-box; }
+body {
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    background: #fff;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px;
+}
+h1 { font-size: 1.6em; color: #222; margin-bottom: 0.3em; }
+h2 { font-size: 1.3em; color: #444; border-bottom: 2px solid #e0e0e0; padding-bottom: 4px; margin-top: 2em; }
+h3 { font-size: 1.1em; color: #555; margin-top: 1.5em; }
+
+/* --- Tables --- */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 12px 0;
+    font-size: 13px;
+}
+thead th {
+    background: #f5f5f5;
+    border-bottom: 2px solid #ccc;
+    padding: 6px 8px;
+    text-align: left;
+    font-weight: 600;
+}
+tbody td {
+    border-bottom: 1px solid #e8e8e8;
+    padding: 5px 8px;
+}
+tbody tr:hover { background: #fafafa; }
+.shrunk-row { color: #888; font-style: italic; }
+.muted { color: #666; font-size: 0.92em; margin-top: 0.2em; }
+.tableone-wrap { overflow-x: auto; margin: 1em 0; }
+.tableone-wrap table { font-size: 0.92em; }
+
+/* --- Collapsible per-decile tables (no JS; prints expanded) --- */
+details { margin: 6px 0; border-left: 3px solid #e0e0e0; padding-left: 10px; }
+details summary { cursor: pointer; font-weight: 600; padding: 3px 0; }
+details table { font-size: 0.92em; }
+@media print { details { border-left: none; } details[open] summary { font-weight: 600; } }
+
+/* --- Plots --- */
+.plot-container {
+    text-align: center;
+    margin: 16px 0;
+}
+.plot-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* --- Header --- */
+.report-header {
+    border-bottom: 3px solid #4e79a7;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+}
+.metadata-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 4px 16px;
+    margin-top: 8px;
+    font-size: 13px;
+}
+.metadata-grid dt { font-weight: 600; color: #555; }
+.metadata-grid dd { margin: 0 0 4px; }
+
+/* --- Audit info --- */
+.audit-info {
+    background: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 12px 0;
+}
+.audit-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 4px 24px;
+    font-size: 13px;
+}
+.audit-info-grid .label { font-weight: 600; color: #555; }
+
+/* --- Footer --- */
+.report-footer {
+    margin-top: 3em;
+    padding-top: 12px;
+    border-top: 2px solid #e0e0e0;
+    font-size: 12px;
+    color: #888;
+}
+
+/* --- Section --- */
+.section { margin-bottom: 2em; }
+
+/* --- Methodology appendix --- */
+.methodology { font-size: 12px; }
+.methodology dl { margin: 4px 0 12px; }
+.methodology dt { font-weight: 600; color: #444; margin-top: 6px; }
+.methodology dd { margin: 0 0 2px 16px; color: #555; }
+
+/* --- TRIPOD+AI checklist --- */
+.tripod-checklist table { font-size: 12px; }
+.tripod-checklist .status-addressed { color: #2e7d32; font-weight: 600; }
+.tripod-checklist .status-not-included { color: #b71c1c; }
+.tripod-checklist .status-user { color: #555; font-style: italic; }
+
+
+/* --- Print --- */
+@media print {
+    body { max-width: none; padding: 0; font-size: 11px; }
+    .plot-container img { max-width: 90%; }
+    h2 { page-break-before: auto; }
+    table { page-break-inside: avoid; }
+    .tripod-checklist { page-break-before: always; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== 1. Header ===== -->
+<div class="report-header">
+    <h1>{{ title }}</h1>
+    {% if metadata %}
+    <dl class="metadata-grid">
+        {% for key, value in metadata.items() %}
+        <dt>{{ key }}</dt>
+        <dd>{{ value }}</dd>
+        {% endfor %}
+    </dl>
+    {% endif %}
+</div>
+
+<!-- ===== 2. Summary ===== -->
+<div class="section" id="summary">
+    <h2>Audit summary</h2>
+    <div class="audit-info">
+        <div class="audit-info-grid">
+            <div><span class="label">N:</span> {{ audit_info.n }}</div>
+            <div><span class="label">Events:</span> {{ audit_info.n_events }}</div>
+            <div><span class="label">Prevalence:</span> {{ audit_info.prevalence }}</div>
+            <div><span class="label">Threshold:</span> {{ audit_info.threshold }}</div>
+            <div><span class="label">Bootstrap resamples:</span> {{ audit_info.n_bootstrap }}</div>
+            <div><span class="label">Resampling:</span> {{ audit_info.resample_label }}</div>
+            <div><span class="label">Attributes:</span> {{ audit_info.n_attributes }}</div>
+        </div>
+    </div>
+</div>
+
+{% if has_table_one %}
+<!-- ===== 2b. Table 1 ===== -->
+<div class="section" id="table-one">
+    <h2>Cohort characterisation (Table 1)</h2>
+    <p class="muted">{{ table_one_summary }}</p>
+    <div class="tableone-wrap">
+        {{ table_one_html | safe }}
+    </div>
+    {% if table_one_effect_rows %}
+    <h3>Per-variable effect sizes and BH-FDR</h3>
+    <table>
+    <thead>
+        <tr>
+            <th>Variable</th><th>Kind</th><th>n</th>
+            <th>p-value</th><th>q (FDR)</th>
+            <th>Effect size</th><th>Kind</th><th>Magnitude</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for row in table_one_effect_rows %}
+        <tr>
+            <td>{{ row.variable }}</td>
+            <td>{{ row.kind }}</td>
+            <td>{{ row.n }}</td>
+            <td>{{ row.p_value }}</td>
+            <td>{{ row.q_fdr }}</td>
+            <td>{{ row.effect_size }}</td>
+            <td>{{ row.effect_kind }}</td>
+            <td>{{ row.magnitude }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+    {% endif %}
+</div>
+{% endif %}
+
+<!-- ===== 3. Discrimination ===== -->
+<div class="section" id="discrimination">
+    <h2>Discrimination</h2>
+
+    <table>
+    <thead>
+        <tr>
+            <th>Attribute</th><th>Subgroup</th><th>n</th><th>Events</th>
+            <th>Prevalence</th><th>AUROC (95% CI)</th><th>AUPRC (95% CI)</th>
+            <th>Sensitivity (95% CI)</th><th>Specificity (95% CI)</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for row in disc_table %}
+        <tr{% if row.shrunk %} class="shrunk-row"{% endif %}>
+            <td>{{ row.attribute }}</td>
+            <td>{{ row.subgroup }}</td>
+            <td>{{ row.n }}</td>
+            <td>{{ row.n_events }}</td>
+            <td>{{ row.prevalence }}</td>
+            <td>{{ row.auroc }}</td>
+            <td>{{ row.auprc }}</td>
+            <td>{{ row.sensitivity }}</td>
+            <td>{{ row.specificity }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+
+    {% if gap_table %}
+    <h3>Gap statistics</h3>
+    <p class="muted">Effect-size column shows Cohen's <em>h</em> on rate-metric gaps for two-group attributes; multi-group attributes and ranking metrics (AUROC / AUPRC) show "—".</p>
+    <table>
+    <thead><tr><th>Attribute</th><th>Metric</th><th>Value</th><th>Effect size</th></tr></thead>
+    <tbody>
+    {% for row in gap_table %}
+        <tr>
+            <td>{{ row.attribute }}</td>
+            <td>{{ row.metric }}</td>
+            <td>{{ row.value }}</td>
+            <td>{{ row.effect_size }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+    {% endif %}
+
+    {% for attr in attributes %}
+    {% if forest_plots[attr] %}
+    <div class="plot-container">
+        <img src="{{ forest_plots[attr] }}" alt="Forest plot for {{ attr }}">
+    </div>
+    {% endif %}
+    {% endfor %}
+
+    <h3>ROC curves</h3>
+    <p class="muted">
+        Per-subgroup ROC curves with pointwise 95% bootstrap bands. AUROC values in
+        the legend are taken from the table above, not integrated from the drawn
+        curve. Curves that cross indicate that no single subgroup dominates at every
+        operating point — the ranking of subgroups depends on the threshold chosen.
+    </p>
+    {% for attr in attributes %}
+    {% if roc_plots[attr] %}
+    <div class="plot-container">
+        <img src="{{ roc_plots[attr] }}" alt="ROC curve for {{ attr }}">
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
+
+<!-- ===== 4. Calibration ===== -->
+<div class="section" id="calibration">
+    <h2>Calibration</h2>
+
+    <table>
+    <thead>
+        <tr>
+            <th>Attribute</th><th>Subgroup</th><th>n</th>
+            <th>Intercept (95% CI)</th><th>Slope (95% CI)</th>
+            <th>Brier (95% CI)</th><th>ECE</th><th>ICI</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for row in cal_table %}
+        <tr{% if row.shrunk %} class="shrunk-row"{% endif %}>
+            <td>{{ row.attribute }}</td>
+            <td>{{ row.subgroup }}</td>
+            <td>{{ row.n }}</td>
+            <td>{{ row.intercept }}</td>
+            <td>{{ row.slope }}</td>
+            <td>{{ row.brier }}</td>
+            <td>{{ row.ece }}</td>
+            <td>{{ row.ici }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+
+    {% if cal_gap_table %}
+    <h3>Calibration gap statistics</h3>
+    <table>
+    <thead><tr><th>Attribute</th><th>Metric</th><th>Value (95% CI)</th></tr></thead>
+    <tbody>
+    {% for row in cal_gap_table %}
+        <tr>
+            <td>{{ row.attribute }}</td>
+            <td>{{ row.metric }}</td>
+            <td>{{ row.value }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+    {% endif %}
+
+    {% for attr in attributes %}
+    {% if cal_curve_plots[attr] %}
+    <div class="plot-container">
+        <img src="{{ cal_curve_plots[attr] }}" alt="Calibration curve for {{ attr }}">
+    </div>
+    {% endif %}
+    {% endfor %}
+
+    <h3>Hosmer&ndash;Lemeshow goodness-of-fit</h3>
+    <p class="muted">
+        <strong>Read every statistic beside its <em>n</em> and its decile table.</strong>
+        The Hosmer&ndash;Lemeshow statistic scales with subgroup size: a clinically
+        irrelevant deviation becomes significant in a large subgroup, while a large
+        deviation can go undetected in a small one. Values are therefore
+        <strong>not comparable across subgroups of different size</strong>, and
+        subgroups must not be ranked by p-value. This is why Kramer &amp; Zimmerman
+        (2007) require the statistic to be reported together with the number of
+        patients, the per-decile observed-versus-expected table below, and the
+        adjunct calibration measures in the table above &mdash; never on its own.
+    </p>
+    <table>
+    <thead>
+        <tr>
+            <th>Attribute</th><th>Subgroup</th><th>n</th><th>Events</th>
+            <th>H&ndash;L statistic</th><th>df</th><th>p</th><th>Groups used</th>
+            <th>Decile slope</th><th>Decile intercept</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for row in hl_table %}
+        <tr{% if row.shrunk %} class="shrunk-row"{% endif %}>
+            <td>{{ row.attribute }}</td>
+            <td>{{ row.subgroup }}</td>
+            <td>{{ row.n }}</td>
+            <td>{{ row.n_events }}</td>
+            <td>{{ row.statistic }}</td>
+            <td>{{ row.df }}</td>
+            <td>{{ row.p_value }}</td>
+            <td>{{ row.n_bins_used }}{% if row.bins_reduced %} &dagger;{% endif %}</td>
+            <td>{{ row.decile_slope }}</td>
+            <td>{{ row.decile_intercept }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+    <p class="muted">
+        &dagger; Fewer risk groups than requested were usable, because the subgroup was
+        small or its predicted probabilities were tied. Degrees of freedom follow the
+        reduced count. A well-calibrated model gives a decile slope near 1 and a decile
+        intercept near 0 (Kramer &amp; Zimmerman 2007).
+        {{ hl_n_tests }} tests are reported here; no multiplicity adjustment has been
+        applied. Adjust within an attribute if needed &mdash; do not pool the
+        &ldquo;Overall&rdquo; rows with the subgroup rows.
+    </p>
+
+    {% if hl_gap_table %}
+    <table>
+    <thead><tr><th>Attribute</th><th>Metric</th><th>Value</th></tr></thead>
+    <tbody>
+    {% for row in hl_gap_table %}
+        <tr>
+            <td>{{ row.attribute }}</td>
+            <td>{{ row.metric }}</td>
+            <td>{{ row.value }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+    <p class="muted">
+        The gap is the largest pairwise difference in the statistic across subgroups.
+        It inherits the sample-size dependence in full and should be read as a
+        descriptive summary, not as evidence of differential calibration.
+    </p>
+    {% endif %}
+
+    <h4>Observed versus expected events per decile</h4>
+    <p class="muted">
+        Deciles of predicted risk, of approximately equal size, with cut points snapped
+        to tied predicted probabilities so that identical predictions always share a
+        decile.
+    </p>
+    {% for block in hl_decile_blocks %}
+    <details>
+        <summary>{{ block.attribute }} &mdash; {{ block.subgroup }}</summary>
+        <table>
+        <thead>
+            <tr>
+                <th>Decile</th><th>n</th><th>Observed</th><th>Expected</th>
+                <th>Observed rate</th><th>Expected rate</th><th>Difference</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for row in block.rows %}
+            <tr>
+                <td>{{ row.decile }}</td>
+                <td>{{ row.n }}</td>
+                <td>{{ row.observed }}</td>
+                <td>{{ row.expected }}</td>
+                <td>{{ row.observed_rate }}</td>
+                <td>{{ row.expected_rate }}</td>
+                <td>{{ row.difference }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+        </table>
+    </details>
+    {% endfor %}
+</div>
+
+<!-- ===== 5. Clinical utility ===== -->
+<div class="section" id="clinical-utility">
+    <h2>Clinical utility (decision curves)</h2>
+
+    {% if dc_gap_table %}
+    <h3>Clinical utility gap statistics</h3>
+    <table>
+    <thead><tr><th>Attribute</th><th>Metric</th><th>Value (95% CI)</th></tr></thead>
+    <tbody>
+    {% for row in dc_gap_table %}
+        <tr>
+            <td>{{ row.attribute }}</td>
+            <td>{{ row.metric }}</td>
+            <td>{{ row.value }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+    {% endif %}
+
+    {% for attr in attributes %}
+    {% if dc_plots[attr] %}
+    <div class="plot-container">
+        <img src="{{ dc_plots[attr] }}" alt="Decision curve for {{ attr }}">
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
+
+<!-- ===== 6. Mitigation (conditional) ===== -->
+{% if has_mitigation %}
+<div class="section" id="mitigation">
+    <h2>Mitigation comparison</h2>
+
+    {% for mit in mitigation_data %}
+    <h3>{{ mit.attribute }}</h3>
+
+    <h4>Calibration</h4>
+    <p class="muted">
+        Recalibration targets calibration, so this is where its effect belongs. Compare
+        the intercept against 0 and the slope against 1 within each subgroup, and the
+        gap statistics below across subgroups.
+    </p>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+        <div>
+            <h4>Before</h4>
+            <table>
+            <thead>
+                <tr>
+                    <th>Subgroup</th><th>Intercept (95% CI)</th><th>Slope (95% CI)</th>
+                    <th>Brier (95% CI)</th><th>ECE</th><th>ICI</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for row in mit.before_cal %}
+                <tr{% if row.shrunk %} class="shrunk-row"{% endif %}>
+                    <td>{{ row.subgroup }}</td><td>{{ row.intercept }}</td><td>{{ row.slope }}</td>
+                    <td>{{ row.brier }}</td><td>{{ row.ece }}</td><td>{{ row.ici }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+            </table>
+        </div>
+        <div>
+            <h4>After</h4>
+            <table>
+            <thead>
+                <tr>
+                    <th>Subgroup</th><th>Intercept (95% CI)</th><th>Slope (95% CI)</th>
+                    <th>Brier (95% CI)</th><th>ECE</th><th>ICI</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for row in mit.after_cal %}
+                <tr{% if row.shrunk %} class="shrunk-row"{% endif %}>
+                    <td>{{ row.subgroup }}</td><td>{{ row.intercept }}</td><td>{{ row.slope }}</td>
+                    <td>{{ row.brier }}</td><td>{{ row.ece }}</td><td>{{ row.ici }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+    {% if mit.gap_before or mit.gap_after %}
+    <h4>Calibration gaps</h4>
+    <table>
+    <thead><tr><th>Metric</th><th>Before (95% CI)</th><th>After (95% CI)</th></tr></thead>
+    <tbody>
+    {% for row in mit.gap_before %}
+        <tr>
+            <td>{{ row.metric }}</td>
+            <td>{{ row.value }}</td>
+            <td>{{ mit.gap_after[loop.index0].value if mit.gap_after|length > loop.index0 else "—" }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+    {% endif %}
+
+    {% if mit.cal_plot %}
+    <div class="plot-container">
+        <img src="{{ mit.cal_plot }}" alt="Calibration before and after mitigation for {{ mit.attribute }}">
+    </div>
+    {% endif %}
+
+    <h4>Discrimination (sanity check)</h4>
+    <p class="muted">
+        Per-subgroup recalibration is a monotone transform within each subgroup, so
+        within-subgroup AUROC is invariant except for ties that isotonic regression
+        introduces, and any sensitivity change is a threshold artefact. These columns
+        barely moving is the expected result, not a null finding &mdash; a large shift
+        here means the mitigation did something other than recalibrate.
+    </p>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+        <div>
+            <h4>Before</h4>
+            <table>
+            <thead><tr><th>Subgroup</th><th>AUROC</th><th>Sensitivity</th></tr></thead>
+            <tbody>
+            {% for row in mit.before %}
+                <tr><td>{{ row.subgroup }}</td><td>{{ row.auroc }}</td><td>{{ row.sensitivity }}</td></tr>
+            {% endfor %}
+            </tbody>
+            </table>
+        </div>
+        <div>
+            <h4>After</h4>
+            <table>
+            <thead><tr><th>Subgroup</th><th>AUROC</th><th>Sensitivity</th></tr></thead>
+            <tbody>
+            {% for row in mit.after %}
+                <tr><td>{{ row.subgroup }}</td><td>{{ row.auroc }}</td><td>{{ row.sensitivity }}</td></tr>
+            {% endfor %}
+            </tbody>
+            </table>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+<!-- ===== 7. Cell diagnostics (conditional) ===== -->
+{% if has_interactions %}
+<div class="section" id="cell-diagnostics">
+    <h2>Interaction cell diagnostics</h2>
+
+    <table>
+    <thead>
+        <tr>
+            <th>Attribute</th><th>Subgroup</th><th>n</th><th>Events</th>
+            <th>Shrunk</th><th>Marginal rate</th><th>Cell rate</th>
+            <th>Shrinkage factor</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for row in cell_diag_table %}
+        <tr{% if row.shrunk %} class="shrunk-row"{% endif %}>
+            <td>{{ row.attribute }}</td>
+            <td>{{ row.subgroup }}</td>
+            <td>{{ row.n }}</td>
+            <td>{{ row.n_events }}</td>
+            <td>{{ "Yes" if row.shrunk else "No" }}</td>
+            <td>{{ row.marginal_rate }}</td>
+            <td>{{ row.cell_rate }}</td>
+            <td>{{ row.shrinkage_factor }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+</div>
+{% endif %}
+
+<!-- ===== 8. TRIPOD+AI item coverage ===== -->
+<div class="section tripod-checklist" id="tripod-checklist">
+    <h2>Appendix: TRIPOD+AI item coverage</h2>
+    <p style="font-size: 12px; color: #666;">
+        Fairness-relevant items from the TRIPOD+AI checklist (Collins et al., 2024, <em>BMJ</em>).
+        Items addressed by this audit are linked to the relevant report section.
+        Items marked "User responsibility" require information that the audit tool cannot produce automatically.
+    </p>
+
+    <table>
+    <thead>
+        <tr>
+            <th>Item</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Detail</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for row in tripod_checklist %}
+        <tr>
+            <td>{{ row.item }}</td>
+            <td>{{ row.description }}</td>
+            <td>
+                {% if row.status == "Addressed" %}
+                    <span class="status-addressed">{{ row.status }}</span>
+                {% elif row.status == "Not included" %}
+                    <span class="status-not-included">{{ row.status }}</span>
+                {% else %}
+                    <span class="status-user">{{ row.status }}</span>
+                {% endif %}
+            </td>
+            <td>{{ row.detail }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+
+    <p style="font-size: 11px; color: #999;">
+        Source: Collins GS, Moons KGM, Dhiman P, et al. TRIPOD+AI statement: updated guidance for
+        reporting clinical prediction models that use regression or machine learning methods.
+        <em>BMJ</em> 2024;385:e078378. doi:<a href="https://doi.org/10.1136/bmj-2023-078378" style="color: #999;">10.1136/bmj-2023-078378</a>.
+        This checklist covers fairness-relevant items only; see the full statement for the complete checklist.
+    </p>
+</div>
+
+<!-- ===== 9. How to read this report ===== -->
+<div class="section methodology" id="methodology">
+    <h2>Appendix: How to read this report</h2>
+
+    <h3>Discrimination</h3>
+    <p>Discrimination measures how well the model separates positive from negative cases.</p>
+    <dl>
+        <dt>AUROC (Area Under the ROC Curve)</dt>
+        <dd>Probability that the model ranks a random positive case higher than a random negative case. Range [0, 1]; 0.5 = no discrimination; 1.0 = perfect separation.</dd>
+
+        <dt>AUPRC (Area Under the Precision-Recall Curve)</dt>
+        <dd>Summarises precision across all recall levels. More informative than AUROC for low-prevalence outcomes. Higher is better; baseline equals the prevalence.</dd>
+
+        <dt>Sensitivity (True Positive Rate)</dt>
+        <dd>Proportion of true positive cases correctly identified at the chosen threshold. = TP / (TP + FN).</dd>
+
+        <dt>Specificity (True Negative Rate)</dt>
+        <dd>Proportion of true negative cases correctly identified at the chosen threshold. = TN / (TN + FP).</dd>
+
+        <dt>PPV (Positive Predictive Value)</dt>
+        <dd>Proportion of positive predictions that are truly positive. = TP / (TP + FP).</dd>
+
+        <dt>NPV (Negative Predictive Value)</dt>
+        <dd>Proportion of negative predictions that are truly negative. = TN / (TN + FN).</dd>
+    </dl>
+
+    <h3>Calibration</h3>
+    <p>Calibration measures whether predicted probabilities match observed event rates.</p>
+    <dl>
+        <dt>Calibration intercept</dt>
+        <dd>Intercept from logistic recalibration with slope fixed to 1 (Steyerberg 2009). Perfect calibration = 0. Positive values indicate the model underestimates risk on average; negative values indicate overestimation.</dd>
+
+        <dt>Calibration slope</dt>
+        <dd>Slope from logistic recalibration with free intercept and slope. Perfect calibration = 1. Values &lt; 1 indicate overconfident predictions (predicted probabilities too extreme); values &gt; 1 indicate underconfident predictions.</dd>
+
+        <dt>Brier score</dt>
+        <dd>Mean squared difference between predicted probabilities and binary outcomes. Range [0, 1]; lower is better.</dd>
+
+        <dt>ECE (Expected Calibration Error)</dt>
+        <dd>Weighted average of absolute calibration error across equal-frequency bins. Lower is better.</dd>
+
+        <dt>ICI (Integrated Calibration Index)</dt>
+        <dd>Mean absolute difference between LOESS-smoothed observed probabilities and predicted probabilities (Austin &amp; Steyerberg 2019). Lower is better; more robust than ECE as it avoids binning artefacts.</dd>
+
+        <dt>Hosmer&ndash;Lemeshow statistic</dt>
+        <dd>Chi-square-distributed goodness-of-fit statistic comparing observed with expected events across deciles of predicted risk. A large value indicates lack of fit. <strong>It scales with sample size</strong>, so it is not comparable between subgroups of different size and must be read alongside <em>n</em>, the per-decile table, and the calibration measures above (Kramer &amp; Zimmerman 2007).</dd>
+
+        <dt>Hosmer&ndash;Lemeshow degrees of freedom</dt>
+        <dd>Equal to the number of risk groups used. The classical convention subtracts 2, which is the penalty for estimating an intercept and slope on the data under test; this package evaluates predictions supplied by a model fitted elsewhere, so no degrees of freedom are spent and none are subtracted.</dd>
+
+        <dt>Decile slope and intercept</dt>
+        <dd>Least-squares regression of the observed on the expected event rate across risk groups, recommended by Kramer &amp; Zimmerman (2007) as an adjunct to the statistic. Perfect calibration gives a slope of 1 and an intercept of 0.</dd>
+    </dl>
+
+    <h3>Clinical utility (decision curves)</h3>
+    <p>Decision curve analysis quantifies the clinical value of using the model at a given decision threshold.</p>
+    <dl>
+        <dt>Net benefit</dt>
+        <dd>TP/n &minus; FP/n &times; p<sub>t</sub>/(1 &minus; p<sub>t</sub>), where p<sub>t</sub> is the decision threshold. Higher is better. A model is clinically useful when its net benefit exceeds both 0 (treat none) and the treat-all reference.</dd>
+
+        <dt>Standardised net benefit</dt>
+        <dd>Net benefit divided by prevalence (Naderalvojoud 2025). Normalised to a [0, 1] scale for comparison across cohorts with different prevalences.</dd>
+
+        <dt>Treat-all reference</dt>
+        <dd>Net benefit if all patients receive treatment. = prevalence &minus; (1 &minus; prevalence) &times; p<sub>t</sub>/(1 &minus; p<sub>t</sub>). Becomes strongly negative at high thresholds.</dd>
+
+        <dt>Treat-none reference</dt>
+        <dd>Net benefit = 0. The baseline of no intervention.</dd>
+    </dl>
+
+    <h3>Gap statistics</h3>
+    <p>Gap statistics quantify the largest disparity between subgroups for each metric. All gaps are non-negative; 0 = perfect parity.</p>
+    <dl>
+        <dt>Equal opportunity difference</dt>
+        <dd>max &minus; min of sensitivity across subgroups. Measures fairness in true positive identification.</dd>
+
+        <dt>Predictive equality</dt>
+        <dd>max &minus; min of false positive rate (1 &minus; specificity) across subgroups. Measures fairness in false alarm rates.</dd>
+
+        <dt>Equalized odds gap</dt>
+        <dd>Maximum of equal opportunity difference and predictive equality.</dd>
+
+        <dt>Statistical parity</dt>
+        <dd>max &minus; min of positive prediction rate across subgroups. Measures whether the model predicts positive at equal rates.</dd>
+
+        <dt>Max intercept / slope gap</dt>
+        <dd>Maximum pairwise difference in calibration intercept or slope across subgroups, with bootstrap confidence intervals.</dd>
+
+        <dt>Max net benefit gap</dt>
+        <dd>Maximum across all thresholds of the maximum pairwise net-benefit difference between subgroups, with bootstrap confidence intervals.</dd>
+    </dl>
+
+    <h3>Confidence intervals and shrinkage</h3>
+    <dl>
+        <dt>Bootstrap confidence intervals</dt>
+        {% if audit_info.resample_scheme == "case_control" %}
+        <dd>95% percentile intervals from outcome-stratified resamples. Positive and negative cases are resampled separately, so every replicate preserves the subgroup&rsquo;s observed event count; intervals are therefore conditional on the observed prevalence.</dd>
+        {% else %}
+        <dd>95% percentile intervals from subgroup-stratified patient-level resamples. Patients are resampled with replacement within each subgroup, preserving the subgroup&rsquo;s size while letting its event count vary.</dd>
+        {% endif %}
+
+        <dt>Empirical Bayes shrinkage</dt>
+        <dd>Interaction cells with fewer events than the configured threshold (shown in italics) use Beta-Binomial shrinkage toward the marginal subgroup rate. This reduces instability in small cells. Confidence intervals are suppressed for shrunk estimates.</dd>
+    </dl>
+</div>
+
+<!-- ===== 10. Footer ===== -->
+<div class="report-footer">
+    <p>
+        Generated by <strong>isitfair</strong>.
+        Three-axis evaluation: discrimination, calibration, and clinical utility reported jointly per TRIPOD+AI recommendations.
+    </p>
+    <p>
+        Bootstrap confidence intervals (95%) from {{ audit_info.n_bootstrap }} {{ audit_info.resample_label }} resamples.
+        {% if has_interactions %}
+        Interaction cells with fewer than the configured event threshold use empirical Bayes shrinkage (italicised rows).
+        {% endif %}
+    </p>
+</div>
+
+</body>
+</html>

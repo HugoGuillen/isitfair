@@ -1,0 +1,12 @@
+attribute,subgroup,n,n_events,prevalence,share_of_cohort
+sex,female,787,199,0.2529,0.4322
+sex,male,1034,273,0.264,0.5678
+age_group,18-44,257,65,0.2529,0.1411
+age_group,45-64,684,171,0.25,0.3756
+age_group,65-79,677,172,0.2541,0.3718
+age_group,80+,203,64,0.3153,0.1115
+race_ethnicity,asian,13,5,0.3846,0.0071
+race_ethnicity,black,266,82,0.3083,0.1461
+race_ethnicity,hispanic,57,10,0.1754,0.0313
+race_ethnicity,other,32,9,0.2812,0.0176
+race_ethnicity,white,1453,366,0.2519,0.7979

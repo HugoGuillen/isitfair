@@ -1,0 +1,11 @@
+attribute,subgroup,n,n_events,shrunk,marginal_rate,cell_rate,shrinkage_factor
+sex × race_ethnicity,female / asian,2,2,True,0.2529,1.0,0.988
+sex × race_ethnicity,female / black,127,40,True,0.2529,0.315,0.5654
+sex × race_ethnicity,female / hispanic,24,3,True,0.2529,0.125,0.8732
+sex × race_ethnicity,female / other,14,6,True,0.2529,0.4286,0.9219
+sex × race_ethnicity,female / white,620,148,False,0.2529,0.2387,0.2104
+sex × race_ethnicity,male / asian,11,3,True,0.264,0.2727,0.9376
+sex × race_ethnicity,male / black,139,42,True,0.264,0.3022,0.5431
+sex × race_ethnicity,male / hispanic,33,7,True,0.264,0.2121,0.8335
+sex × race_ethnicity,male / other,18,3,True,0.264,0.1667,0.9017
+sex × race_ethnicity,male / white,833,218,False,0.264,0.2617,0.1655

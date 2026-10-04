@@ -1,0 +1,91 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "isitfair"
+dynamic = ["version"]
+description = "Fairness evaluation toolkit for clinical prediction models"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10,<3.14"
+authors = [
+    { name = "Hugo Guillen-Ramirez" },
+]
+keywords = [
+    "fairness",
+    "clinical prediction models",
+    "calibration",
+    "decision curve analysis",
+    "TRIPOD+AI",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+# Lower bounds are the versions the committed artifacts were built and tested
+# with (requirements-lock.txt). The Python ceiling follows dcurves (<3.14).
+dependencies = [
+    "numpy>=2.2",
+    "pandas>=2.2.3",
+    "scipy>=1.15",
+    "scikit-learn>=1.7",
+    "joblib>=1.4",
+    "statsmodels>=0.14.4",
+    "dcurves>=1.1.7",
+    "matplotlib>=3.10",
+    "jinja2>=3.1",
+    "tableone>=0.9.6",
+]
+
+[project.urls]
+Homepage = "https://github.com/HugoGuillen/isitfair"
+Repository = "https://github.com/HugoGuillen/isitfair"
+Documentation = "https://github.com/HugoGuillen/isitfair#readme"
+
+[project.optional-dependencies]
+# Everything the shipped examples and notebooks need.
+examples = [
+    "ucimlrepo",
+    "jupyter",
+    "nbconvert",
+    "jupytext",
+    "tabulate",
+]
+# Running the test suite.
+dev = ["pytest>=8"]
+# 1.2 is the first release that runs on NumPy 2.
+plots = ["adjustText>=1.2"]
+# PDF export of the HTML report (report_to_pdf, report(..., pdf=True)).
+# WeasyPrint also needs the Pango system library; see its install notes.
+pdf = ["weasyprint>=62"]
+# GroupRecalibration(method="beta").
+beta = ["betacal"]
+docs = [
+    "sphinx",
+    "pydata-sphinx-theme",
+    "myst-parser",
+    "sphinx-copybutton",
+    "sphinx-autodoc-typehints",
+]
+
+[tool.hatch.version]
+path = "src/isitfair/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/isitfair"]
+
+# Executed artifacts, notebooks, slides and the bundled dataset stay in the
+# repository; they are not part of the installable package.
+[tool.hatch.build.targets.sdist]
+exclude = ["results/", "notebooks/", "slides/", "examples/data/"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

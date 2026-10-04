@@ -1,0 +1,32 @@
+﻿variable,variable_label,level,level_label,Overall,Female,Male,P-Value,q_fdr
+n,n,,,6051,2090,3961,,
+"age, median [Q1,Q3]","Age, median [Q1,Q3]",,,"66.0 [55.0,74.0]","65.0 [53.0,74.0]","66.0 [56.0,74.0]",0.037,0.0493
+"age_group, n (%)","Age group, n (%)",0-17,0-17,223 (3.7),109 (5.2),114 (2.9),<0.001,0.0016
+"age_group, n (%)","Age group, n (%)",18-44,18-44,518 (8.6),220 (10.5),298 (7.5),,
+"age_group, n (%)","Age group, n (%)",45-64,45-64,2049 (33.9),683 (32.7),1366 (34.5),,
+"age_group, n (%)","Age group, n (%)",65-79,65-79,2698 (44.6),839 (40.1),1859 (46.9),,
+"age_group, n (%)","Age group, n (%)",80+,80+,563 (9.3),239 (11.4),324 (8.2),,
+"asa, n (%)","ASA score, n (%)",1,1,666 (11.0),339 (16.2),327 (8.3),<0.001,0.0016
+"asa, n (%)","ASA score, n (%)",2,2,113 (1.9),47 (2.2),66 (1.7),,
+"asa, n (%)","ASA score, n (%)",3,3,1967 (32.5),822 (39.3),1145 (28.9),,
+"asa, n (%)","ASA score, n (%)",4,4,3305 (54.6),882 (42.2),2423 (61.2),,
+"frailty, n (%)","Frailty, n (%)",frail,Frail,3684 (60.9),1010 (48.3),2674 (67.5),<0.001,0.0016
+"frailty, n (%)","Frailty, n (%)",non_frail,Non-frail,547 (9.0),275 (13.2),272 (6.9),,
+"frailty, n (%)","Frailty, n (%)",pre_frail,Pre-frail,1820 (30.1),805 (38.5),1015 (25.6),,
+"emergencysurgery, n (%)","Emergency surgery, n (%)",0,No,5162 (85.3),1806 (86.4),3356 (84.7),0.085,0.0971
+"emergencysurgery, n (%)","Emergency surgery, n (%)",1,Yes,889 (14.7),284 (13.6),605 (15.3),,
+"duration_of_surg, median [Q1,Q3]","Surgery duration, median [Q1,Q3]",,,"217.0 [150.0,288.0]","196.0 [136.0,270.0]","227.0 [160.0,294.0]",<0.001,0.0016
+"surgical_group, n (%)","Procedure cluster, n (%)",chopcluster_1,NervousSystem (c1),395 (6.5),158 (7.6),237 (6.0),<0.001,0.0016
+"surgical_group, n (%)","Procedure cluster, n (%)",chopcluster_3,Thoracic (c3),414 (6.8),155 (7.4),259 (6.5),,
+"surgical_group, n (%)","Procedure cluster, n (%)",chopcluster_4,Cardiac (c4),2245 (37.1),502 (24.0),1743 (44.0),,
+"surgical_group, n (%)","Procedure cluster, n (%)",chopcluster_5,Vascular (c5),328 (5.4),82 (3.9),246 (6.2),,
+"surgical_group, n (%)","Procedure cluster, n (%)",chopcluster_6,AbdominalWall (c6),373 (6.2),178 (8.5),195 (4.9),,
+"surgical_group, n (%)","Procedure cluster, n (%)",chopcluster_7,GastroIntestinal (c7),143 (2.4),57 (2.7),86 (2.2),,
+"surgical_group, n (%)","Procedure cluster, n (%)",chopcluster_8,Hepatobiliary (c8),142 (2.3),47 (2.2),95 (2.4),,
+"surgical_group, n (%)","Procedure cluster, n (%)",chopcluster_10,UroAndrological (c10),186 (3.1),58 (2.8),128 (3.2),,
+"surgical_group, n (%)","Procedure cluster, n (%)",chopcluster_11,Gynecological (c11),178 (2.9),178 (8.5),0 (0.0),,
+"surgical_group, n (%)","Procedure cluster, n (%)",chopcluster_12,Musculoskeletal (c12),826 (13.7),357 (17.1),469 (11.8),,
+"surgical_group, n (%)","Procedure cluster, n (%)",chopcluster_13,Cutaneous (c13),154 (2.5),69 (3.3),85 (2.1),,
+"surgical_group, n (%)","Procedure cluster, n (%)",none,Unclassified,667 (11.0),249 (11.9),418 (10.6),,
+"outcome, n (%)","Coded infection, n (%)",0,No,5550 (91.7),1901 (91.0),3649 (92.1),0.129,0.129
+"outcome, n (%)","Coded infection, n (%)",1,Yes,501 (8.3),189 (9.0),312 (7.9),,

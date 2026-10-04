@@ -1,0 +1,54 @@
+cff-version: 1.2.0
+title: >-
+  isitfair: subgroup deployment-readiness auditing for clinical prediction
+  models
+message: >-
+  If you use this software, please cite both the software and the companion
+  paper below.
+type: software
+authors:
+  - family-names: Guillen-Ramirez
+    given-names: Hugo
+    orcid: "https://orcid.org/0000-0003-0705-7432"
+license: MIT
+repository-code: https://github.com/HugoGuillen/isitfair
+version: 0.4.0
+date-released: 2026-10-02
+keywords:
+  - fairness
+  - clinical prediction models
+  - calibration
+  - decision curve analysis
+  - TRIPOD+AI
+abstract: >-
+  A Python toolkit for fairness evaluation of clinical prediction models,
+  built around the joint discrimination-calibration-clinical-utility
+  framework. It produces TRIPOD+AI-aligned subgroup reports for trained
+  binary-classification models, always reporting within-group performance
+  alongside gap statistics, and enforces a single explicit rule for when a
+  subgroup estimate is too sparse to carry an interval.
+preferred-citation:
+  type: article
+  title: >-
+    Subgroup deployment-readiness audit of calibration and clinical utility in
+    perioperative infection prediction
+  authors:
+    - family-names: Guillen-Ramirez
+      given-names: Hugo
+      orcid: "https://orcid.org/0000-0003-0705-7432"
+    - family-names: Lucas
+      given-names: Katharina Lucia
+    - family-names: Wintsch
+      given-names: Yves Max
+    - family-names: Blatter
+      given-names: Tobias Ueli
+    - family-names: Triep
+      given-names: Karen
+    - family-names: Endrich
+      given-names: Olga
+    - family-names: Beldi
+      given-names: Guido
+      orcid: "https://orcid.org/0000-0002-9914-3807"
+  journal: Journal of the American Medical Informatics Association
+  year: 2026
+  notes: Under review

@@ -1,0 +1,876 @@
+﻿attribute,subgroup,metric,n,n_events,event_floor,below_floor,n_replicates,n_estimable,proportion_nonestimable,not_estimable,not_estimable_final,rule
+age_group,0-17,auprc,223.0,21.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group,0-17,auroc,223.0,21.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group,0-17,brier,223.0,21.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group,0-17,calibration_intercept,223.0,21.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group,0-17,calibration_slope,223.0,21.0,100.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group,0-17,net_benefit,223.0,21.0,50.0,True,,,,False,True,below its pre-registered event floor
+age_group,0-17,npv,223.0,21.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group,0-17,ppv,223.0,21.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group,0-17,prevalence,223.0,21.0,,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,0-17,sensitivity,223.0,21.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group,0-17,specificity,223.0,21.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group,18-44,auprc,518.0,34.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,18-44,auroc,518.0,34.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,18-44,brier,518.0,34.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,18-44,calibration_intercept,518.0,34.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,18-44,calibration_slope,518.0,34.0,100.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group,18-44,net_benefit,518.0,34.0,50.0,True,,,,False,True,below its pre-registered event floor
+age_group,18-44,npv,518.0,34.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,18-44,ppv,518.0,34.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,18-44,prevalence,518.0,34.0,,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,18-44,sensitivity,518.0,34.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,18-44,specificity,518.0,34.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,45-64,auprc,2049.0,146.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,45-64,auroc,2049.0,146.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,45-64,brier,2049.0,146.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,45-64,calibration_intercept,2049.0,146.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,45-64,calibration_slope,2049.0,146.0,100.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,45-64,net_benefit,2049.0,146.0,50.0,False,,,,False,False,reportable
+age_group,45-64,npv,2049.0,146.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,45-64,ppv,2049.0,146.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,45-64,prevalence,2049.0,146.0,,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,45-64,sensitivity,2049.0,146.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,45-64,specificity,2049.0,146.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,65-79,auprc,2698.0,247.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,65-79,auroc,2698.0,247.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,65-79,brier,2698.0,247.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,65-79,calibration_intercept,2698.0,247.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,65-79,calibration_slope,2698.0,247.0,100.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,65-79,net_benefit,2698.0,247.0,50.0,False,,,,False,False,reportable
+age_group,65-79,npv,2698.0,247.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,65-79,ppv,2698.0,247.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,65-79,prevalence,2698.0,247.0,,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,65-79,sensitivity,2698.0,247.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,65-79,specificity,2698.0,247.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,80+,auprc,563.0,53.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,80+,auroc,563.0,53.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,80+,brier,563.0,53.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,80+,calibration_intercept,563.0,53.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,80+,calibration_slope,563.0,53.0,100.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group,80+,net_benefit,563.0,53.0,50.0,False,,,,False,False,reportable
+age_group,80+,npv,563.0,53.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,80+,ppv,563.0,53.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,80+,prevalence,563.0,53.0,,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,80+,sensitivity,563.0,53.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,80+,specificity,563.0,53.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,GAP,equal_opportunity_difference,,,25.0,True,2000.0,2000.0,0.0,False,True,"inherits the auroc event floor from its constituent subgroups (0-17), which fail it"
+age_group,GAP,equalized_odds_gap,,,25.0,True,2000.0,2000.0,0.0,False,True,"inherits the auroc event floor from its constituent subgroups (0-17), which fail it"
+age_group,GAP,max_hl_gap,,,,False,,,,False,False,reportable
+age_group,GAP,max_intercept_gap,,,25.0,True,2000.0,2000.0,0.0,False,True,"inherits the calibration_intercept event floor from its constituent subgroups (0-17), which fail it"
+age_group,GAP,max_net_benefit_gap,,,50.0,True,,,,False,True,"inherits the net_benefit event floor from its constituent subgroups (0-17, 18-44), which fail it"
+age_group,GAP,max_slope_gap,,,100.0,True,2000.0,2000.0,0.0,False,True,"inherits the calibration_slope event floor from its constituent subgroups (0-17, 18-44, 80+), which fail it"
+age_group,GAP,predictive_equality,,,25.0,True,2000.0,2000.0,0.0,False,True,"inherits the auroc event floor from its constituent subgroups (0-17), which fail it"
+age_group,GAP,statistical_parity,,,25.0,True,2000.0,2000.0,0.0,False,True,"inherits the auroc event floor from its constituent subgroups (0-17), which fail it"
+age_group,Overall,auprc,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,Overall,auroc,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,Overall,brier,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,Overall,calibration_intercept,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,Overall,calibration_slope,6051.0,501.0,100.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,Overall,net_benefit,6051.0,501.0,50.0,False,,,,False,False,reportable
+age_group,Overall,npv,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,Overall,ppv,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,Overall,prevalence,6051.0,501.0,,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,Overall,sensitivity,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group,Overall,specificity,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,0-17 / frail,auprc,128.0,19.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,0-17 / frail,auroc,128.0,19.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,0-17 / frail,brier,128.0,19.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,0-17 / frail,calibration_intercept,128.0,19.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,0-17 / frail,calibration_slope,128.0,19.0,100.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,0-17 / frail,net_benefit,128.0,19.0,50.0,True,,,,False,True,below its pre-registered event floor
+age_group × frailty,0-17 / frail,npv,128.0,19.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,0-17 / frail,ppv,128.0,19.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,0-17 / frail,prevalence,128.0,19.0,,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,0-17 / frail,sensitivity,128.0,19.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,0-17 / frail,specificity,128.0,19.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,0-17 / non_frail,auprc,28.0,0.0,25.0,True,2000.0,0.0,1.0,True,True,"below its event floor, and >10% of replicates non-estimable"
+age_group × frailty,0-17 / non_frail,auroc,28.0,0.0,25.0,True,2000.0,0.0,1.0,True,True,"below its event floor, and >10% of replicates non-estimable"
+age_group × frailty,0-17 / non_frail,brier,28.0,0.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,0-17 / non_frail,calibration_intercept,28.0,0.0,25.0,True,2000.0,0.0,1.0,True,True,"below its event floor, and >10% of replicates non-estimable"
+age_group × frailty,0-17 / non_frail,calibration_slope,28.0,0.0,100.0,True,2000.0,0.0,1.0,True,True,"below its event floor, and >10% of replicates non-estimable"
+age_group × frailty,0-17 / non_frail,net_benefit,28.0,0.0,50.0,True,,,,False,True,below its pre-registered event floor
+age_group × frailty,0-17 / non_frail,npv,28.0,0.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,0-17 / non_frail,ppv,28.0,0.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,0-17 / non_frail,prevalence,28.0,0.0,,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,0-17 / non_frail,sensitivity,28.0,0.0,25.0,True,2000.0,0.0,1.0,True,True,"below its event floor, and >10% of replicates non-estimable"
+age_group × frailty,0-17 / non_frail,specificity,28.0,0.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,0-17 / pre_frail,auprc,67.0,2.0,25.0,True,2000.0,1728.0,0.136,True,True,"below its event floor, and >10% of replicates non-estimable"
+age_group × frailty,0-17 / pre_frail,auroc,67.0,2.0,25.0,True,2000.0,1728.0,0.136,True,True,"below its event floor, and >10% of replicates non-estimable"
+age_group × frailty,0-17 / pre_frail,brier,67.0,2.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,0-17 / pre_frail,calibration_intercept,67.0,2.0,25.0,True,2000.0,1728.0,0.136,True,True,"below its event floor, and >10% of replicates non-estimable"
+age_group × frailty,0-17 / pre_frail,calibration_slope,67.0,2.0,100.0,True,2000.0,1728.0,0.136,True,True,"below its event floor, and >10% of replicates non-estimable"
+age_group × frailty,0-17 / pre_frail,net_benefit,67.0,2.0,50.0,True,,,,False,True,below its pre-registered event floor
+age_group × frailty,0-17 / pre_frail,npv,67.0,2.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,0-17 / pre_frail,ppv,67.0,2.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,0-17 / pre_frail,prevalence,67.0,2.0,,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,0-17 / pre_frail,sensitivity,67.0,2.0,25.0,True,2000.0,1728.0,0.136,True,True,"below its event floor, and >10% of replicates non-estimable"
+age_group × frailty,0-17 / pre_frail,specificity,67.0,2.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,18-44 / frail,auprc,183.0,21.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,18-44 / frail,auroc,183.0,21.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,18-44 / frail,brier,183.0,21.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,18-44 / frail,calibration_intercept,183.0,21.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,18-44 / frail,calibration_slope,183.0,21.0,100.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,18-44 / frail,net_benefit,183.0,21.0,50.0,True,,,,False,True,below its pre-registered event floor
+age_group × frailty,18-44 / frail,npv,183.0,21.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,18-44 / frail,ppv,183.0,21.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,18-44 / frail,prevalence,183.0,21.0,,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,18-44 / frail,sensitivity,183.0,21.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,18-44 / frail,specificity,183.0,21.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,18-44 / non_frail,auprc,182.0,2.0,25.0,True,2000.0,1732.0,0.134,True,True,"below its event floor, and >10% of replicates non-estimable"
+age_group × frailty,18-44 / non_frail,auroc,182.0,2.0,25.0,True,2000.0,1732.0,0.134,True,True,"below its event floor, and >10% of replicates non-estimable"
+age_group × frailty,18-44 / non_frail,brier,182.0,2.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,18-44 / non_frail,calibration_intercept,182.0,2.0,25.0,True,2000.0,1732.0,0.134,True,True,"below its event floor, and >10% of replicates non-estimable"
+age_group × frailty,18-44 / non_frail,calibration_slope,182.0,2.0,100.0,True,2000.0,1732.0,0.134,True,True,"below its event floor, and >10% of replicates non-estimable"
+age_group × frailty,18-44 / non_frail,net_benefit,182.0,2.0,50.0,True,,,,False,True,below its pre-registered event floor
+age_group × frailty,18-44 / non_frail,npv,182.0,2.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,18-44 / non_frail,ppv,182.0,2.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,18-44 / non_frail,prevalence,182.0,2.0,,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,18-44 / non_frail,sensitivity,182.0,2.0,25.0,True,2000.0,1732.0,0.134,True,True,"below its event floor, and >10% of replicates non-estimable"
+age_group × frailty,18-44 / non_frail,specificity,182.0,2.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,18-44 / pre_frail,auprc,153.0,11.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,18-44 / pre_frail,auroc,153.0,11.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,18-44 / pre_frail,brier,153.0,11.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,18-44 / pre_frail,calibration_intercept,153.0,11.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,18-44 / pre_frail,calibration_slope,153.0,11.0,100.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,18-44 / pre_frail,net_benefit,153.0,11.0,50.0,True,,,,False,True,below its pre-registered event floor
+age_group × frailty,18-44 / pre_frail,npv,153.0,11.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,18-44 / pre_frail,ppv,153.0,11.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,18-44 / pre_frail,prevalence,153.0,11.0,,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,18-44 / pre_frail,sensitivity,153.0,11.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,18-44 / pre_frail,specificity,153.0,11.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,45-64 / frail,auprc,1167.0,110.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,45-64 / frail,auroc,1167.0,110.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,45-64 / frail,brier,1167.0,110.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,45-64 / frail,calibration_intercept,1167.0,110.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,45-64 / frail,calibration_slope,1167.0,110.0,100.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,45-64 / frail,net_benefit,1167.0,110.0,50.0,False,,,,False,False,reportable
+age_group × frailty,45-64 / frail,npv,1167.0,110.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,45-64 / frail,ppv,1167.0,110.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,45-64 / frail,prevalence,1167.0,110.0,,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,45-64 / frail,sensitivity,1167.0,110.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,45-64 / frail,specificity,1167.0,110.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,45-64 / non_frail,auprc,210.0,3.0,25.0,True,2000.0,1913.0,0.04349999999999998,False,True,below its pre-registered event floor
+age_group × frailty,45-64 / non_frail,auroc,210.0,3.0,25.0,True,2000.0,1913.0,0.04349999999999998,False,True,below its pre-registered event floor
+age_group × frailty,45-64 / non_frail,brier,210.0,3.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,45-64 / non_frail,calibration_intercept,210.0,3.0,25.0,True,2000.0,1913.0,0.04349999999999998,False,True,below its pre-registered event floor
+age_group × frailty,45-64 / non_frail,calibration_slope,210.0,3.0,100.0,True,2000.0,1913.0,0.04349999999999998,False,True,below its pre-registered event floor
+age_group × frailty,45-64 / non_frail,net_benefit,210.0,3.0,50.0,True,,,,False,True,below its pre-registered event floor
+age_group × frailty,45-64 / non_frail,npv,210.0,3.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,45-64 / non_frail,ppv,210.0,3.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,45-64 / non_frail,prevalence,210.0,3.0,,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,45-64 / non_frail,sensitivity,210.0,3.0,25.0,True,2000.0,1913.0,0.04349999999999998,False,True,below its pre-registered event floor
+age_group × frailty,45-64 / non_frail,specificity,210.0,3.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,45-64 / pre_frail,auprc,672.0,33.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,45-64 / pre_frail,auroc,672.0,33.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,45-64 / pre_frail,brier,672.0,33.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,45-64 / pre_frail,calibration_intercept,672.0,33.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,45-64 / pre_frail,calibration_slope,672.0,33.0,100.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,45-64 / pre_frail,net_benefit,672.0,33.0,50.0,True,,,,False,True,below its pre-registered event floor
+age_group × frailty,45-64 / pre_frail,npv,672.0,33.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,45-64 / pre_frail,ppv,672.0,33.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,45-64 / pre_frail,prevalence,672.0,33.0,,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,45-64 / pre_frail,sensitivity,672.0,33.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,45-64 / pre_frail,specificity,672.0,33.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,65-79 / frail,auprc,1846.0,204.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,65-79 / frail,auroc,1846.0,204.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,65-79 / frail,brier,1846.0,204.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,65-79 / frail,calibration_intercept,1846.0,204.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,65-79 / frail,calibration_slope,1846.0,204.0,100.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,65-79 / frail,net_benefit,1846.0,204.0,50.0,False,,,,False,False,reportable
+age_group × frailty,65-79 / frail,npv,1846.0,204.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,65-79 / frail,ppv,1846.0,204.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,65-79 / frail,prevalence,1846.0,204.0,,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,65-79 / frail,sensitivity,1846.0,204.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,65-79 / frail,specificity,1846.0,204.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,65-79 / non_frail,auprc,118.0,1.0,25.0,True,2000.0,1293.0,0.35350000000000004,True,True,"below its event floor, and >10% of replicates non-estimable"
+age_group × frailty,65-79 / non_frail,auroc,118.0,1.0,25.0,True,2000.0,1293.0,0.35350000000000004,True,True,"below its event floor, and >10% of replicates non-estimable"
+age_group × frailty,65-79 / non_frail,brier,118.0,1.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,65-79 / non_frail,calibration_intercept,118.0,1.0,25.0,True,2000.0,1293.0,0.35350000000000004,True,True,"below its event floor, and >10% of replicates non-estimable"
+age_group × frailty,65-79 / non_frail,calibration_slope,118.0,1.0,100.0,True,2000.0,1293.0,0.35350000000000004,True,True,"below its event floor, and >10% of replicates non-estimable"
+age_group × frailty,65-79 / non_frail,net_benefit,118.0,1.0,50.0,True,,,,False,True,below its pre-registered event floor
+age_group × frailty,65-79 / non_frail,npv,118.0,1.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,65-79 / non_frail,ppv,118.0,1.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,65-79 / non_frail,prevalence,118.0,1.0,,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,65-79 / non_frail,sensitivity,118.0,1.0,25.0,True,2000.0,1293.0,0.35350000000000004,True,True,"below its event floor, and >10% of replicates non-estimable"
+age_group × frailty,65-79 / non_frail,specificity,118.0,1.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,65-79 / pre_frail,auprc,734.0,42.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,65-79 / pre_frail,auroc,734.0,42.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,65-79 / pre_frail,brier,734.0,42.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,65-79 / pre_frail,calibration_intercept,734.0,42.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,65-79 / pre_frail,calibration_slope,734.0,42.0,100.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,65-79 / pre_frail,net_benefit,734.0,42.0,50.0,True,,,,False,True,below its pre-registered event floor
+age_group × frailty,65-79 / pre_frail,npv,734.0,42.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,65-79 / pre_frail,ppv,734.0,42.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,65-79 / pre_frail,prevalence,734.0,42.0,,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,65-79 / pre_frail,sensitivity,734.0,42.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,65-79 / pre_frail,specificity,734.0,42.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,80+ / frail,auprc,360.0,45.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,80+ / frail,auroc,360.0,45.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,80+ / frail,brier,360.0,45.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,80+ / frail,calibration_intercept,360.0,45.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,80+ / frail,calibration_slope,360.0,45.0,100.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,80+ / frail,net_benefit,360.0,45.0,50.0,True,,,,False,True,below its pre-registered event floor
+age_group × frailty,80+ / frail,npv,360.0,45.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,80+ / frail,ppv,360.0,45.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,80+ / frail,prevalence,360.0,45.0,,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,80+ / frail,sensitivity,360.0,45.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,80+ / frail,specificity,360.0,45.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,80+ / non_frail,auprc,9.0,0.0,25.0,True,2000.0,0.0,1.0,True,True,"below its event floor, and >10% of replicates non-estimable"
+age_group × frailty,80+ / non_frail,auroc,9.0,0.0,25.0,True,2000.0,0.0,1.0,True,True,"below its event floor, and >10% of replicates non-estimable"
+age_group × frailty,80+ / non_frail,brier,9.0,0.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,80+ / non_frail,calibration_intercept,9.0,0.0,25.0,True,2000.0,0.0,1.0,True,True,"below its event floor, and >10% of replicates non-estimable"
+age_group × frailty,80+ / non_frail,calibration_slope,9.0,0.0,100.0,True,2000.0,0.0,1.0,True,True,"below its event floor, and >10% of replicates non-estimable"
+age_group × frailty,80+ / non_frail,net_benefit,9.0,0.0,50.0,True,,,,False,True,below its pre-registered event floor
+age_group × frailty,80+ / non_frail,npv,9.0,0.0,25.0,True,2000.0,1986.0,0.007000000000000006,False,True,below its pre-registered event floor
+age_group × frailty,80+ / non_frail,ppv,9.0,0.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,80+ / non_frail,prevalence,9.0,0.0,,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,80+ / non_frail,sensitivity,9.0,0.0,25.0,True,2000.0,0.0,1.0,True,True,"below its event floor, and >10% of replicates non-estimable"
+age_group × frailty,80+ / non_frail,specificity,9.0,0.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,80+ / pre_frail,auprc,194.0,8.0,25.0,True,2000.0,1999.0,0.0004999999999999449,False,True,below its pre-registered event floor
+age_group × frailty,80+ / pre_frail,auroc,194.0,8.0,25.0,True,2000.0,1999.0,0.0004999999999999449,False,True,below its pre-registered event floor
+age_group × frailty,80+ / pre_frail,brier,194.0,8.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,80+ / pre_frail,calibration_intercept,194.0,8.0,25.0,True,2000.0,1999.0,0.0004999999999999449,False,True,below its pre-registered event floor
+age_group × frailty,80+ / pre_frail,calibration_slope,194.0,8.0,100.0,True,2000.0,1999.0,0.0004999999999999449,False,True,below its pre-registered event floor
+age_group × frailty,80+ / pre_frail,net_benefit,194.0,8.0,50.0,True,,,,False,True,below its pre-registered event floor
+age_group × frailty,80+ / pre_frail,npv,194.0,8.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,80+ / pre_frail,ppv,194.0,8.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,80+ / pre_frail,prevalence,194.0,8.0,,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,80+ / pre_frail,sensitivity,194.0,8.0,25.0,True,2000.0,1999.0,0.0004999999999999449,False,True,below its pre-registered event floor
+age_group × frailty,80+ / pre_frail,specificity,194.0,8.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+age_group × frailty,GAP,equal_opportunity_difference,,,25.0,True,2000.0,2000.0,0.0,False,True,"inherits the auroc event floor from its constituent subgroups (0-17 / frail, 0-17 / non_frail, 0-17 / pre_frail, 18-44 / frail, 18-44 / non_frail, 18-44 / pre_frail, 45-64 / non_frail, 65-79 / non_frail, 80+ / non_frail, 80+ / pre_frail), which fail it"
+age_group × frailty,GAP,equalized_odds_gap,,,25.0,True,2000.0,2000.0,0.0,False,True,"inherits the auroc event floor from its constituent subgroups (0-17 / frail, 0-17 / non_frail, 0-17 / pre_frail, 18-44 / frail, 18-44 / non_frail, 18-44 / pre_frail, 45-64 / non_frail, 65-79 / non_frail, 80+ / non_frail, 80+ / pre_frail), which fail it"
+age_group × frailty,GAP,max_hl_gap,,,,False,,,,False,False,reportable
+age_group × frailty,GAP,max_intercept_gap,,,25.0,True,2000.0,2000.0,0.0,False,True,"inherits the calibration_intercept event floor from its constituent subgroups (0-17 / frail, 0-17 / non_frail, 0-17 / pre_frail, 18-44 / frail, 18-44 / non_frail, 18-44 / pre_frail, 45-64 / non_frail, 65-79 / non_frail, 80+ / non_frail, 80+ / pre_frail), which fail it"
+age_group × frailty,GAP,max_net_benefit_gap,,,50.0,True,,,,False,True,"inherits the net_benefit event floor from its constituent subgroups (0-17 / frail, 0-17 / non_frail, 0-17 / pre_frail, 18-44 / frail, 18-44 / non_frail, 18-44 / pre_frail, 45-64 / non_frail, 45-64 / pre_frail, 65-79 / non_frail, 65-79 / pre_frail, 80+ / frail, 80+ / non_frail, 80+ / pre_frail), which fail it"
+age_group × frailty,GAP,max_slope_gap,,,100.0,True,2000.0,2000.0,0.0,False,True,"inherits the calibration_slope event floor from its constituent subgroups (0-17 / frail, 0-17 / non_frail, 0-17 / pre_frail, 18-44 / frail, 18-44 / non_frail, 18-44 / pre_frail, 45-64 / non_frail, 45-64 / pre_frail, 65-79 / non_frail, 65-79 / pre_frail, 80+ / frail, 80+ / non_frail, 80+ / pre_frail), which fail it"
+age_group × frailty,GAP,predictive_equality,,,25.0,True,2000.0,2000.0,0.0,False,True,"inherits the auroc event floor from its constituent subgroups (0-17 / frail, 0-17 / non_frail, 0-17 / pre_frail, 18-44 / frail, 18-44 / non_frail, 18-44 / pre_frail, 45-64 / non_frail, 65-79 / non_frail, 80+ / non_frail, 80+ / pre_frail), which fail it"
+age_group × frailty,GAP,statistical_parity,,,25.0,True,2000.0,2000.0,0.0,False,True,"inherits the auroc event floor from its constituent subgroups (0-17 / frail, 0-17 / non_frail, 0-17 / pre_frail, 18-44 / frail, 18-44 / non_frail, 18-44 / pre_frail, 45-64 / non_frail, 65-79 / non_frail, 80+ / non_frail, 80+ / pre_frail), which fail it"
+age_group × frailty,Overall,auprc,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,Overall,auroc,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,Overall,brier,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,Overall,calibration_intercept,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,Overall,calibration_slope,6051.0,501.0,100.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,Overall,net_benefit,6051.0,501.0,50.0,False,,,,False,False,reportable
+age_group × frailty,Overall,npv,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,Overall,ppv,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,Overall,prevalence,6051.0,501.0,,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,Overall,sensitivity,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+age_group × frailty,Overall,specificity,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,GAP,equal_opportunity_difference,,,25.0,True,2000.0,2000.0,0.0,False,True,"inherits the auroc event floor from its constituent subgroups (ORL, gynecology, pediatric, thoracic, urology), which fail it"
+clinic,GAP,equalized_odds_gap,,,25.0,True,2000.0,2000.0,0.0,False,True,"inherits the auroc event floor from its constituent subgroups (ORL, gynecology, pediatric, thoracic, urology), which fail it"
+clinic,GAP,max_hl_gap,,,,False,,,,False,False,reportable
+clinic,GAP,max_intercept_gap,,,25.0,True,2000.0,2000.0,0.0,False,True,"inherits the calibration_intercept event floor from its constituent subgroups (ORL, gynecology, pediatric, thoracic, urology), which fail it"
+clinic,GAP,max_net_benefit_gap,,,50.0,True,,,,False,True,"inherits the net_benefit event floor from its constituent subgroups (ORL, gynecology, neuro, pediatric, thoracic, urology), which fail it"
+clinic,GAP,max_slope_gap,,,100.0,True,2000.0,2000.0,0.0,False,True,"inherits the calibration_slope event floor from its constituent subgroups (ORL, gynecology, neuro, ortho, pediatric, thoracic, urology), which fail it"
+clinic,GAP,predictive_equality,,,25.0,True,2000.0,2000.0,0.0,False,True,"inherits the auroc event floor from its constituent subgroups (ORL, gynecology, pediatric, thoracic, urology), which fail it"
+clinic,GAP,statistical_parity,,,25.0,True,2000.0,2000.0,0.0,False,True,"inherits the auroc event floor from its constituent subgroups (ORL, gynecology, pediatric, thoracic, urology), which fail it"
+clinic,ORL,auprc,118.0,14.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,ORL,auroc,118.0,14.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,ORL,brier,118.0,14.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,ORL,calibration_intercept,118.0,14.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,ORL,calibration_slope,118.0,14.0,100.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,ORL,net_benefit,118.0,14.0,50.0,True,,,,False,True,below its pre-registered event floor
+clinic,ORL,npv,118.0,14.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,ORL,ppv,118.0,14.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,ORL,prevalence,118.0,14.0,,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,ORL,sensitivity,118.0,14.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,ORL,specificity,118.0,14.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,Overall,auprc,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,Overall,auroc,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,Overall,brier,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,Overall,calibration_intercept,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,Overall,calibration_slope,6051.0,501.0,100.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,Overall,net_benefit,6051.0,501.0,50.0,False,,,,False,False,reportable
+clinic,Overall,npv,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,Overall,ppv,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,Overall,prevalence,6051.0,501.0,,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,Overall,sensitivity,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,Overall,specificity,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,gynecology,auprc,274.0,24.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,gynecology,auroc,274.0,24.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,gynecology,brier,274.0,24.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,gynecology,calibration_intercept,274.0,24.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,gynecology,calibration_slope,274.0,24.0,100.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,gynecology,net_benefit,274.0,24.0,50.0,True,,,,False,True,below its pre-registered event floor
+clinic,gynecology,npv,274.0,24.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,gynecology,ppv,274.0,24.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,gynecology,prevalence,274.0,24.0,,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,gynecology,sensitivity,274.0,24.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,gynecology,specificity,274.0,24.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,neuro,auprc,488.0,25.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,neuro,auroc,488.0,25.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,neuro,brier,488.0,25.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,neuro,calibration_intercept,488.0,25.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,neuro,calibration_slope,488.0,25.0,100.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,neuro,net_benefit,488.0,25.0,50.0,True,,,,False,True,below its pre-registered event floor
+clinic,neuro,npv,488.0,25.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,neuro,ppv,488.0,25.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,neuro,prevalence,488.0,25.0,,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,neuro,sensitivity,488.0,25.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,neuro,specificity,488.0,25.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,ortho,auprc,971.0,76.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,ortho,auroc,971.0,76.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,ortho,brier,971.0,76.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,ortho,calibration_intercept,971.0,76.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,ortho,calibration_slope,971.0,76.0,100.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,ortho,net_benefit,971.0,76.0,50.0,False,,,,False,False,reportable
+clinic,ortho,npv,971.0,76.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,ortho,ppv,971.0,76.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,ortho,prevalence,971.0,76.0,,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,ortho,sensitivity,971.0,76.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,ortho,specificity,971.0,76.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,pediatric,auprc,37.0,3.0,25.0,True,2000.0,1903.0,0.04849999999999999,False,True,below its pre-registered event floor
+clinic,pediatric,auroc,37.0,3.0,25.0,True,2000.0,1903.0,0.04849999999999999,False,True,below its pre-registered event floor
+clinic,pediatric,brier,37.0,3.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,pediatric,calibration_intercept,37.0,3.0,25.0,True,2000.0,1903.0,0.04849999999999999,False,True,below its pre-registered event floor
+clinic,pediatric,calibration_slope,37.0,3.0,100.0,True,2000.0,1903.0,0.04849999999999999,False,True,below its pre-registered event floor
+clinic,pediatric,net_benefit,37.0,3.0,50.0,True,,,,False,True,below its pre-registered event floor
+clinic,pediatric,npv,37.0,3.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,pediatric,ppv,37.0,3.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,pediatric,prevalence,37.0,3.0,,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,pediatric,sensitivity,37.0,3.0,25.0,True,2000.0,1903.0,0.04849999999999999,False,True,below its pre-registered event floor
+clinic,pediatric,specificity,37.0,3.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,thoracic,auprc,403.0,14.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,thoracic,auroc,403.0,14.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,thoracic,brier,403.0,14.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,thoracic,calibration_intercept,403.0,14.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,thoracic,calibration_slope,403.0,14.0,100.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,thoracic,net_benefit,403.0,14.0,50.0,True,,,,False,True,below its pre-registered event floor
+clinic,thoracic,npv,403.0,14.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,thoracic,ppv,403.0,14.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,thoracic,prevalence,403.0,14.0,,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,thoracic,sensitivity,403.0,14.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,thoracic,specificity,403.0,14.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,urology,auprc,200.0,19.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,urology,auroc,200.0,19.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,urology,brier,200.0,19.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,urology,calibration_intercept,200.0,19.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,urology,calibration_slope,200.0,19.0,100.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,urology,net_benefit,200.0,19.0,50.0,True,,,,False,True,below its pre-registered event floor
+clinic,urology,npv,200.0,19.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,urology,ppv,200.0,19.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,urology,prevalence,200.0,19.0,,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,urology,sensitivity,200.0,19.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,urology,specificity,200.0,19.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+clinic,vascular,auprc,2838.0,183.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,vascular,auroc,2838.0,183.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,vascular,brier,2838.0,183.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,vascular,calibration_intercept,2838.0,183.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,vascular,calibration_slope,2838.0,183.0,100.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,vascular,net_benefit,2838.0,183.0,50.0,False,,,,False,False,reportable
+clinic,vascular,npv,2838.0,183.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,vascular,ppv,2838.0,183.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,vascular,prevalence,2838.0,183.0,,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,vascular,sensitivity,2838.0,183.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,vascular,specificity,2838.0,183.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,visceral,auprc,722.0,143.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,visceral,auroc,722.0,143.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,visceral,brier,722.0,143.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,visceral,calibration_intercept,722.0,143.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,visceral,calibration_slope,722.0,143.0,100.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,visceral,net_benefit,722.0,143.0,50.0,False,,,,False,False,reportable
+clinic,visceral,npv,722.0,143.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,visceral,ppv,722.0,143.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,visceral,prevalence,722.0,143.0,,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,visceral,sensitivity,722.0,143.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+clinic,visceral,specificity,722.0,143.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+emergency,GAP,equal_opportunity_difference,,,,False,2000.0,2000.0,0.0,False,False,reportable
+emergency,GAP,equalized_odds_gap,,,,False,2000.0,2000.0,0.0,False,False,reportable
+emergency,GAP,max_hl_gap,,,,False,,,,False,False,reportable
+emergency,GAP,max_intercept_gap,,,,False,2000.0,2000.0,0.0,False,False,reportable
+emergency,GAP,max_net_benefit_gap,,,,False,,,,False,False,reportable
+emergency,GAP,max_slope_gap,,,,False,2000.0,2000.0,0.0,False,False,reportable
+emergency,GAP,predictive_equality,,,,False,2000.0,2000.0,0.0,False,False,reportable
+emergency,GAP,statistical_parity,,,,False,2000.0,2000.0,0.0,False,False,reportable
+emergency,Overall,auprc,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+emergency,Overall,auroc,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+emergency,Overall,brier,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+emergency,Overall,calibration_intercept,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+emergency,Overall,calibration_slope,6051.0,501.0,100.0,False,2000.0,2000.0,0.0,False,False,reportable
+emergency,Overall,net_benefit,6051.0,501.0,50.0,False,,,,False,False,reportable
+emergency,Overall,npv,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+emergency,Overall,ppv,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+emergency,Overall,prevalence,6051.0,501.0,,False,2000.0,2000.0,0.0,False,False,reportable
+emergency,Overall,sensitivity,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+emergency,Overall,specificity,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+emergency,elective,auprc,5162.0,314.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+emergency,elective,auroc,5162.0,314.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+emergency,elective,brier,5162.0,314.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+emergency,elective,calibration_intercept,5162.0,314.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+emergency,elective,calibration_slope,5162.0,314.0,100.0,False,2000.0,2000.0,0.0,False,False,reportable
+emergency,elective,net_benefit,5162.0,314.0,50.0,False,,,,False,False,reportable
+emergency,elective,npv,5162.0,314.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+emergency,elective,ppv,5162.0,314.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+emergency,elective,prevalence,5162.0,314.0,,False,2000.0,2000.0,0.0,False,False,reportable
+emergency,elective,sensitivity,5162.0,314.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+emergency,elective,specificity,5162.0,314.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+emergency,emergency,auprc,889.0,187.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+emergency,emergency,auroc,889.0,187.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+emergency,emergency,brier,889.0,187.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+emergency,emergency,calibration_intercept,889.0,187.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+emergency,emergency,calibration_slope,889.0,187.0,100.0,False,2000.0,2000.0,0.0,False,False,reportable
+emergency,emergency,net_benefit,889.0,187.0,50.0,False,,,,False,False,reportable
+emergency,emergency,npv,889.0,187.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+emergency,emergency,ppv,889.0,187.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+emergency,emergency,prevalence,889.0,187.0,,False,2000.0,2000.0,0.0,False,False,reportable
+emergency,emergency,sensitivity,889.0,187.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+emergency,emergency,specificity,889.0,187.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+frailty,GAP,equal_opportunity_difference,,,25.0,True,2000.0,2000.0,0.0,False,True,"inherits the auroc event floor from its constituent subgroups (non_frail), which fail it"
+frailty,GAP,equalized_odds_gap,,,25.0,True,2000.0,2000.0,0.0,False,True,"inherits the auroc event floor from its constituent subgroups (non_frail), which fail it"
+frailty,GAP,max_hl_gap,,,,False,,,,False,False,reportable
+frailty,GAP,max_intercept_gap,,,25.0,True,2000.0,2000.0,0.0,False,True,"inherits the calibration_intercept event floor from its constituent subgroups (non_frail), which fail it"
+frailty,GAP,max_net_benefit_gap,,,50.0,True,,,,False,True,"inherits the net_benefit event floor from its constituent subgroups (non_frail), which fail it"
+frailty,GAP,max_slope_gap,,,100.0,True,2000.0,2000.0,0.0,False,True,"inherits the calibration_slope event floor from its constituent subgroups (non_frail, pre_frail), which fail it"
+frailty,GAP,predictive_equality,,,25.0,True,2000.0,2000.0,0.0,False,True,"inherits the auroc event floor from its constituent subgroups (non_frail), which fail it"
+frailty,GAP,statistical_parity,,,25.0,True,2000.0,2000.0,0.0,False,True,"inherits the auroc event floor from its constituent subgroups (non_frail), which fail it"
+frailty,Overall,auprc,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+frailty,Overall,auroc,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+frailty,Overall,brier,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+frailty,Overall,calibration_intercept,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+frailty,Overall,calibration_slope,6051.0,501.0,100.0,False,2000.0,2000.0,0.0,False,False,reportable
+frailty,Overall,net_benefit,6051.0,501.0,50.0,False,,,,False,False,reportable
+frailty,Overall,npv,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+frailty,Overall,ppv,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+frailty,Overall,prevalence,6051.0,501.0,,False,2000.0,2000.0,0.0,False,False,reportable
+frailty,Overall,sensitivity,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+frailty,Overall,specificity,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+frailty,frail,auprc,3684.0,399.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+frailty,frail,auroc,3684.0,399.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+frailty,frail,brier,3684.0,399.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+frailty,frail,calibration_intercept,3684.0,399.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+frailty,frail,calibration_slope,3684.0,399.0,100.0,False,2000.0,2000.0,0.0,False,False,reportable
+frailty,frail,net_benefit,3684.0,399.0,50.0,False,,,,False,False,reportable
+frailty,frail,npv,3684.0,399.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+frailty,frail,ppv,3684.0,399.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+frailty,frail,prevalence,3684.0,399.0,,False,2000.0,2000.0,0.0,False,False,reportable
+frailty,frail,sensitivity,3684.0,399.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+frailty,frail,specificity,3684.0,399.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+frailty,non_frail,auprc,547.0,6.0,25.0,True,2000.0,1995.0,0.0024999999999999467,False,True,below its pre-registered event floor
+frailty,non_frail,auroc,547.0,6.0,25.0,True,2000.0,1995.0,0.0024999999999999467,False,True,below its pre-registered event floor
+frailty,non_frail,brier,547.0,6.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+frailty,non_frail,calibration_intercept,547.0,6.0,25.0,True,2000.0,1995.0,0.0024999999999999467,False,True,below its pre-registered event floor
+frailty,non_frail,calibration_slope,547.0,6.0,100.0,True,2000.0,1995.0,0.0024999999999999467,False,True,below its pre-registered event floor
+frailty,non_frail,net_benefit,547.0,6.0,50.0,True,,,,False,True,below its pre-registered event floor
+frailty,non_frail,npv,547.0,6.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+frailty,non_frail,ppv,547.0,6.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+frailty,non_frail,prevalence,547.0,6.0,,False,2000.0,2000.0,0.0,False,False,reportable
+frailty,non_frail,sensitivity,547.0,6.0,25.0,True,2000.0,1995.0,0.0024999999999999467,False,True,below its pre-registered event floor
+frailty,non_frail,specificity,547.0,6.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+frailty,pre_frail,auprc,1820.0,96.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+frailty,pre_frail,auroc,1820.0,96.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+frailty,pre_frail,brier,1820.0,96.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+frailty,pre_frail,calibration_intercept,1820.0,96.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+frailty,pre_frail,calibration_slope,1820.0,96.0,100.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+frailty,pre_frail,net_benefit,1820.0,96.0,50.0,False,,,,False,False,reportable
+frailty,pre_frail,npv,1820.0,96.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+frailty,pre_frail,ppv,1820.0,96.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+frailty,pre_frail,prevalence,1820.0,96.0,,False,2000.0,2000.0,0.0,False,False,reportable
+frailty,pre_frail,sensitivity,1820.0,96.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+frailty,pre_frail,specificity,1820.0,96.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex,GAP,equal_opportunity_difference,,,,False,2000.0,2000.0,0.0,False,False,reportable
+sex,GAP,equalized_odds_gap,,,,False,2000.0,2000.0,0.0,False,False,reportable
+sex,GAP,max_hl_gap,,,,False,,,,False,False,reportable
+sex,GAP,max_intercept_gap,,,,False,2000.0,2000.0,0.0,False,False,reportable
+sex,GAP,max_net_benefit_gap,,,,False,,,,False,False,reportable
+sex,GAP,max_slope_gap,,,,False,2000.0,2000.0,0.0,False,False,reportable
+sex,GAP,predictive_equality,,,,False,2000.0,2000.0,0.0,False,False,reportable
+sex,GAP,statistical_parity,,,,False,2000.0,2000.0,0.0,False,False,reportable
+sex,Overall,auprc,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex,Overall,auroc,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex,Overall,brier,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex,Overall,calibration_intercept,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex,Overall,calibration_slope,6051.0,501.0,100.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex,Overall,net_benefit,6051.0,501.0,50.0,False,,,,False,False,reportable
+sex,Overall,npv,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex,Overall,ppv,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex,Overall,prevalence,6051.0,501.0,,False,2000.0,2000.0,0.0,False,False,reportable
+sex,Overall,sensitivity,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex,Overall,specificity,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex,female,auprc,2090.0,189.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex,female,auroc,2090.0,189.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex,female,brier,2090.0,189.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex,female,calibration_intercept,2090.0,189.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex,female,calibration_slope,2090.0,189.0,100.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex,female,net_benefit,2090.0,189.0,50.0,False,,,,False,False,reportable
+sex,female,npv,2090.0,189.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex,female,ppv,2090.0,189.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex,female,prevalence,2090.0,189.0,,False,2000.0,2000.0,0.0,False,False,reportable
+sex,female,sensitivity,2090.0,189.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex,female,specificity,2090.0,189.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex,male,auprc,3961.0,312.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex,male,auroc,3961.0,312.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex,male,brier,3961.0,312.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex,male,calibration_intercept,3961.0,312.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex,male,calibration_slope,3961.0,312.0,100.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex,male,net_benefit,3961.0,312.0,50.0,False,,,,False,False,reportable
+sex,male,npv,3961.0,312.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex,male,ppv,3961.0,312.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex,male,prevalence,3961.0,312.0,,False,2000.0,2000.0,0.0,False,False,reportable
+sex,male,sensitivity,3961.0,312.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex,male,specificity,3961.0,312.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,GAP,equal_opportunity_difference,,,25.0,True,2000.0,2000.0,0.0,False,True,"inherits the auroc event floor from its constituent subgroups (female / 0-17, female / 18-44, female / 80+, male / 0-17, male / 18-44), which fail it"
+sex × age_group,GAP,equalized_odds_gap,,,25.0,True,2000.0,2000.0,0.0,False,True,"inherits the auroc event floor from its constituent subgroups (female / 0-17, female / 18-44, female / 80+, male / 0-17, male / 18-44), which fail it"
+sex × age_group,GAP,max_hl_gap,,,,False,,,,False,False,reportable
+sex × age_group,GAP,max_intercept_gap,,,25.0,True,2000.0,2000.0,0.0,False,True,"inherits the calibration_intercept event floor from its constituent subgroups (female / 0-17, female / 18-44, female / 80+, male / 0-17, male / 18-44), which fail it"
+sex × age_group,GAP,max_net_benefit_gap,,,50.0,True,,,,False,True,"inherits the net_benefit event floor from its constituent subgroups (female / 0-17, female / 18-44, female / 80+, male / 0-17, male / 18-44, male / 80+), which fail it"
+sex × age_group,GAP,max_slope_gap,,,100.0,True,2000.0,2000.0,0.0,False,True,"inherits the calibration_slope event floor from its constituent subgroups (female / 0-17, female / 18-44, female / 45-64, female / 65-79, female / 80+, male / 0-17, male / 18-44, male / 45-64, male / 80+), which fail it"
+sex × age_group,GAP,predictive_equality,,,25.0,True,2000.0,2000.0,0.0,False,True,"inherits the auroc event floor from its constituent subgroups (female / 0-17, female / 18-44, female / 80+, male / 0-17, male / 18-44), which fail it"
+sex × age_group,GAP,statistical_parity,,,25.0,True,2000.0,2000.0,0.0,False,True,"inherits the auroc event floor from its constituent subgroups (female / 0-17, female / 18-44, female / 80+, male / 0-17, male / 18-44), which fail it"
+sex × age_group,Overall,auprc,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,Overall,auroc,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,Overall,brier,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,Overall,calibration_intercept,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,Overall,calibration_slope,6051.0,501.0,100.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,Overall,net_benefit,6051.0,501.0,50.0,False,,,,False,False,reportable
+sex × age_group,Overall,npv,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,Overall,ppv,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,Overall,prevalence,6051.0,501.0,,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,Overall,sensitivity,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,Overall,specificity,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,female / 0-17,auprc,109.0,13.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,female / 0-17,auroc,109.0,13.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,female / 0-17,brier,109.0,13.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,female / 0-17,calibration_intercept,109.0,13.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,female / 0-17,calibration_slope,109.0,13.0,100.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,female / 0-17,net_benefit,109.0,13.0,50.0,True,,,,False,True,below its pre-registered event floor
+sex × age_group,female / 0-17,npv,109.0,13.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,female / 0-17,ppv,109.0,13.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,female / 0-17,prevalence,109.0,13.0,,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,female / 0-17,sensitivity,109.0,13.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,female / 0-17,specificity,109.0,13.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,female / 18-44,auprc,220.0,13.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,female / 18-44,auroc,220.0,13.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,female / 18-44,brier,220.0,13.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,female / 18-44,calibration_intercept,220.0,13.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,female / 18-44,calibration_slope,220.0,13.0,100.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,female / 18-44,net_benefit,220.0,13.0,50.0,True,,,,False,True,below its pre-registered event floor
+sex × age_group,female / 18-44,npv,220.0,13.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,female / 18-44,ppv,220.0,13.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,female / 18-44,prevalence,220.0,13.0,,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,female / 18-44,sensitivity,220.0,13.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,female / 18-44,specificity,220.0,13.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,female / 45-64,auprc,683.0,52.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,female / 45-64,auroc,683.0,52.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,female / 45-64,brier,683.0,52.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,female / 45-64,calibration_intercept,683.0,52.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,female / 45-64,calibration_slope,683.0,52.0,100.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,female / 45-64,net_benefit,683.0,52.0,50.0,False,,,,False,False,reportable
+sex × age_group,female / 45-64,npv,683.0,52.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,female / 45-64,ppv,683.0,52.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,female / 45-64,prevalence,683.0,52.0,,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,female / 45-64,sensitivity,683.0,52.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,female / 45-64,specificity,683.0,52.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,female / 65-79,auprc,839.0,92.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,female / 65-79,auroc,839.0,92.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,female / 65-79,brier,839.0,92.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,female / 65-79,calibration_intercept,839.0,92.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,female / 65-79,calibration_slope,839.0,92.0,100.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,female / 65-79,net_benefit,839.0,92.0,50.0,False,,,,False,False,reportable
+sex × age_group,female / 65-79,npv,839.0,92.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,female / 65-79,ppv,839.0,92.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,female / 65-79,prevalence,839.0,92.0,,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,female / 65-79,sensitivity,839.0,92.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,female / 65-79,specificity,839.0,92.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,female / 80+,auprc,239.0,19.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,female / 80+,auroc,239.0,19.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,female / 80+,brier,239.0,19.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,female / 80+,calibration_intercept,239.0,19.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,female / 80+,calibration_slope,239.0,19.0,100.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,female / 80+,net_benefit,239.0,19.0,50.0,True,,,,False,True,below its pre-registered event floor
+sex × age_group,female / 80+,npv,239.0,19.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,female / 80+,ppv,239.0,19.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,female / 80+,prevalence,239.0,19.0,,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,female / 80+,sensitivity,239.0,19.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,female / 80+,specificity,239.0,19.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,male / 0-17,auprc,114.0,8.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,male / 0-17,auroc,114.0,8.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,male / 0-17,brier,114.0,8.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,male / 0-17,calibration_intercept,114.0,8.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,male / 0-17,calibration_slope,114.0,8.0,100.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,male / 0-17,net_benefit,114.0,8.0,50.0,True,,,,False,True,below its pre-registered event floor
+sex × age_group,male / 0-17,npv,114.0,8.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,male / 0-17,ppv,114.0,8.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,male / 0-17,prevalence,114.0,8.0,,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,male / 0-17,sensitivity,114.0,8.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,male / 0-17,specificity,114.0,8.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,male / 18-44,auprc,298.0,21.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,male / 18-44,auroc,298.0,21.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,male / 18-44,brier,298.0,21.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,male / 18-44,calibration_intercept,298.0,21.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,male / 18-44,calibration_slope,298.0,21.0,100.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,male / 18-44,net_benefit,298.0,21.0,50.0,True,,,,False,True,below its pre-registered event floor
+sex × age_group,male / 18-44,npv,298.0,21.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,male / 18-44,ppv,298.0,21.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,male / 18-44,prevalence,298.0,21.0,,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,male / 18-44,sensitivity,298.0,21.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,male / 18-44,specificity,298.0,21.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,male / 45-64,auprc,1366.0,94.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,male / 45-64,auroc,1366.0,94.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,male / 45-64,brier,1366.0,94.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,male / 45-64,calibration_intercept,1366.0,94.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,male / 45-64,calibration_slope,1366.0,94.0,100.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,male / 45-64,net_benefit,1366.0,94.0,50.0,False,,,,False,False,reportable
+sex × age_group,male / 45-64,npv,1366.0,94.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,male / 45-64,ppv,1366.0,94.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,male / 45-64,prevalence,1366.0,94.0,,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,male / 45-64,sensitivity,1366.0,94.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,male / 45-64,specificity,1366.0,94.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,male / 65-79,auprc,1859.0,155.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,male / 65-79,auroc,1859.0,155.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,male / 65-79,brier,1859.0,155.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,male / 65-79,calibration_intercept,1859.0,155.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,male / 65-79,calibration_slope,1859.0,155.0,100.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,male / 65-79,net_benefit,1859.0,155.0,50.0,False,,,,False,False,reportable
+sex × age_group,male / 65-79,npv,1859.0,155.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,male / 65-79,ppv,1859.0,155.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,male / 65-79,prevalence,1859.0,155.0,,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,male / 65-79,sensitivity,1859.0,155.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,male / 65-79,specificity,1859.0,155.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,male / 80+,auprc,324.0,34.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,male / 80+,auroc,324.0,34.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,male / 80+,brier,324.0,34.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,male / 80+,calibration_intercept,324.0,34.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,male / 80+,calibration_slope,324.0,34.0,100.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × age_group,male / 80+,net_benefit,324.0,34.0,50.0,True,,,,False,True,below its pre-registered event floor
+sex × age_group,male / 80+,npv,324.0,34.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,male / 80+,ppv,324.0,34.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,male / 80+,prevalence,324.0,34.0,,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,male / 80+,sensitivity,324.0,34.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × age_group,male / 80+,specificity,324.0,34.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,GAP,equal_opportunity_difference,,,25.0,True,2000.0,2000.0,0.0,False,True,"inherits the auroc event floor from its constituent subgroups (female / non_frail, male / non_frail), which fail it"
+sex × frailty,GAP,equalized_odds_gap,,,25.0,True,2000.0,2000.0,0.0,False,True,"inherits the auroc event floor from its constituent subgroups (female / non_frail, male / non_frail), which fail it"
+sex × frailty,GAP,max_hl_gap,,,,False,,,,False,False,reportable
+sex × frailty,GAP,max_intercept_gap,,,25.0,True,2000.0,2000.0,0.0,False,True,"inherits the calibration_intercept event floor from its constituent subgroups (female / non_frail, male / non_frail), which fail it"
+sex × frailty,GAP,max_net_benefit_gap,,,50.0,True,,,,False,True,"inherits the net_benefit event floor from its constituent subgroups (female / non_frail, male / non_frail, male / pre_frail), which fail it"
+sex × frailty,GAP,max_slope_gap,,,100.0,True,2000.0,2000.0,0.0,False,True,"inherits the calibration_slope event floor from its constituent subgroups (female / non_frail, female / pre_frail, male / non_frail, male / pre_frail), which fail it"
+sex × frailty,GAP,predictive_equality,,,25.0,True,2000.0,2000.0,0.0,False,True,"inherits the auroc event floor from its constituent subgroups (female / non_frail, male / non_frail), which fail it"
+sex × frailty,GAP,statistical_parity,,,25.0,True,2000.0,2000.0,0.0,False,True,"inherits the auroc event floor from its constituent subgroups (female / non_frail, male / non_frail), which fail it"
+sex × frailty,Overall,auprc,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,Overall,auroc,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,Overall,brier,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,Overall,calibration_intercept,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,Overall,calibration_slope,6051.0,501.0,100.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,Overall,net_benefit,6051.0,501.0,50.0,False,,,,False,False,reportable
+sex × frailty,Overall,npv,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,Overall,ppv,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,Overall,prevalence,6051.0,501.0,,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,Overall,sensitivity,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,Overall,specificity,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,female / frail,auprc,1010.0,129.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,female / frail,auroc,1010.0,129.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,female / frail,brier,1010.0,129.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,female / frail,calibration_intercept,1010.0,129.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,female / frail,calibration_slope,1010.0,129.0,100.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,female / frail,net_benefit,1010.0,129.0,50.0,False,,,,False,False,reportable
+sex × frailty,female / frail,npv,1010.0,129.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,female / frail,ppv,1010.0,129.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,female / frail,prevalence,1010.0,129.0,,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,female / frail,sensitivity,1010.0,129.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,female / frail,specificity,1010.0,129.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,female / non_frail,auprc,275.0,1.0,25.0,True,2000.0,1236.0,0.382,True,True,"below its event floor, and >10% of replicates non-estimable"
+sex × frailty,female / non_frail,auroc,275.0,1.0,25.0,True,2000.0,1236.0,0.382,True,True,"below its event floor, and >10% of replicates non-estimable"
+sex × frailty,female / non_frail,brier,275.0,1.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × frailty,female / non_frail,calibration_intercept,275.0,1.0,25.0,True,2000.0,1236.0,0.382,True,True,"below its event floor, and >10% of replicates non-estimable"
+sex × frailty,female / non_frail,calibration_slope,275.0,1.0,100.0,True,2000.0,1236.0,0.382,True,True,"below its event floor, and >10% of replicates non-estimable"
+sex × frailty,female / non_frail,net_benefit,275.0,1.0,50.0,True,,,,False,True,below its pre-registered event floor
+sex × frailty,female / non_frail,npv,275.0,1.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × frailty,female / non_frail,ppv,275.0,1.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × frailty,female / non_frail,prevalence,275.0,1.0,,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,female / non_frail,sensitivity,275.0,1.0,25.0,True,2000.0,1236.0,0.382,True,True,"below its event floor, and >10% of replicates non-estimable"
+sex × frailty,female / non_frail,specificity,275.0,1.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × frailty,female / pre_frail,auprc,805.0,59.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,female / pre_frail,auroc,805.0,59.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,female / pre_frail,brier,805.0,59.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,female / pre_frail,calibration_intercept,805.0,59.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,female / pre_frail,calibration_slope,805.0,59.0,100.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × frailty,female / pre_frail,net_benefit,805.0,59.0,50.0,False,,,,False,False,reportable
+sex × frailty,female / pre_frail,npv,805.0,59.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,female / pre_frail,ppv,805.0,59.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,female / pre_frail,prevalence,805.0,59.0,,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,female / pre_frail,sensitivity,805.0,59.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,female / pre_frail,specificity,805.0,59.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,male / frail,auprc,2674.0,270.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,male / frail,auroc,2674.0,270.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,male / frail,brier,2674.0,270.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,male / frail,calibration_intercept,2674.0,270.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,male / frail,calibration_slope,2674.0,270.0,100.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,male / frail,net_benefit,2674.0,270.0,50.0,False,,,,False,False,reportable
+sex × frailty,male / frail,npv,2674.0,270.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,male / frail,ppv,2674.0,270.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,male / frail,prevalence,2674.0,270.0,,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,male / frail,sensitivity,2674.0,270.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,male / frail,specificity,2674.0,270.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,male / non_frail,auprc,272.0,5.0,25.0,True,2000.0,1979.0,0.010499999999999954,False,True,below its pre-registered event floor
+sex × frailty,male / non_frail,auroc,272.0,5.0,25.0,True,2000.0,1979.0,0.010499999999999954,False,True,below its pre-registered event floor
+sex × frailty,male / non_frail,brier,272.0,5.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × frailty,male / non_frail,calibration_intercept,272.0,5.0,25.0,True,2000.0,1979.0,0.010499999999999954,False,True,below its pre-registered event floor
+sex × frailty,male / non_frail,calibration_slope,272.0,5.0,100.0,True,2000.0,1979.0,0.010499999999999954,False,True,below its pre-registered event floor
+sex × frailty,male / non_frail,net_benefit,272.0,5.0,50.0,True,,,,False,True,below its pre-registered event floor
+sex × frailty,male / non_frail,npv,272.0,5.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × frailty,male / non_frail,ppv,272.0,5.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × frailty,male / non_frail,prevalence,272.0,5.0,,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,male / non_frail,sensitivity,272.0,5.0,25.0,True,2000.0,1979.0,0.010499999999999954,False,True,below its pre-registered event floor
+sex × frailty,male / non_frail,specificity,272.0,5.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × frailty,male / pre_frail,auprc,1015.0,37.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,male / pre_frail,auroc,1015.0,37.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,male / pre_frail,brier,1015.0,37.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,male / pre_frail,calibration_intercept,1015.0,37.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,male / pre_frail,calibration_slope,1015.0,37.0,100.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+sex × frailty,male / pre_frail,net_benefit,1015.0,37.0,50.0,True,,,,False,True,below its pre-registered event floor
+sex × frailty,male / pre_frail,npv,1015.0,37.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,male / pre_frail,ppv,1015.0,37.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,male / pre_frail,prevalence,1015.0,37.0,,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,male / pre_frail,sensitivity,1015.0,37.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+sex × frailty,male / pre_frail,specificity,1015.0,37.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,GAP,equal_opportunity_difference,,,25.0,True,2000.0,2000.0,0.0,False,True,"inherits the auroc event floor from its constituent subgroups (chopcluster_1, chopcluster_11, chopcluster_3, chopcluster_8), which fail it"
+surgical_group,GAP,equalized_odds_gap,,,25.0,True,2000.0,2000.0,0.0,False,True,"inherits the auroc event floor from its constituent subgroups (chopcluster_1, chopcluster_11, chopcluster_3, chopcluster_8), which fail it"
+surgical_group,GAP,max_hl_gap,,,,False,,,,False,False,reportable
+surgical_group,GAP,max_intercept_gap,,,25.0,True,2000.0,2000.0,0.0,False,True,"inherits the calibration_intercept event floor from its constituent subgroups (chopcluster_1, chopcluster_11, chopcluster_3, chopcluster_8), which fail it"
+surgical_group,GAP,max_net_benefit_gap,,,50.0,True,,,,False,True,"inherits the net_benefit event floor from its constituent subgroups (chopcluster_1, chopcluster_10, chopcluster_11, chopcluster_13, chopcluster_3, chopcluster_5, chopcluster_7, chopcluster_8, none), which fail it"
+surgical_group,GAP,max_slope_gap,,,100.0,True,2000.0,2000.0,0.0,False,True,"inherits the calibration_slope event floor from its constituent subgroups (chopcluster_1, chopcluster_10, chopcluster_11, chopcluster_12, chopcluster_13, chopcluster_3, chopcluster_5, chopcluster_6, chopcluster_7, chopcluster_8, none), which fail it"
+surgical_group,GAP,predictive_equality,,,25.0,True,2000.0,2000.0,0.0,False,True,"inherits the auroc event floor from its constituent subgroups (chopcluster_1, chopcluster_11, chopcluster_3, chopcluster_8), which fail it"
+surgical_group,GAP,statistical_parity,,,25.0,True,2000.0,2000.0,0.0,False,True,"inherits the auroc event floor from its constituent subgroups (chopcluster_1, chopcluster_11, chopcluster_3, chopcluster_8), which fail it"
+surgical_group,Overall,auprc,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,Overall,auroc,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,Overall,brier,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,Overall,calibration_intercept,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,Overall,calibration_slope,6051.0,501.0,100.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,Overall,net_benefit,6051.0,501.0,50.0,False,,,,False,False,reportable
+surgical_group,Overall,npv,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,Overall,ppv,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,Overall,prevalence,6051.0,501.0,,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,Overall,sensitivity,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,Overall,specificity,6051.0,501.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_1,auprc,395.0,21.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+surgical_group,chopcluster_1,auroc,395.0,21.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+surgical_group,chopcluster_1,brier,395.0,21.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+surgical_group,chopcluster_1,calibration_intercept,395.0,21.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+surgical_group,chopcluster_1,calibration_slope,395.0,21.0,100.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+surgical_group,chopcluster_1,net_benefit,395.0,21.0,50.0,True,,,,False,True,below its pre-registered event floor
+surgical_group,chopcluster_1,npv,395.0,21.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+surgical_group,chopcluster_1,ppv,395.0,21.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+surgical_group,chopcluster_1,prevalence,395.0,21.0,,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_1,sensitivity,395.0,21.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+surgical_group,chopcluster_1,specificity,395.0,21.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+surgical_group,chopcluster_10,auprc,186.0,28.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_10,auroc,186.0,28.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_10,brier,186.0,28.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_10,calibration_intercept,186.0,28.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_10,calibration_slope,186.0,28.0,100.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+surgical_group,chopcluster_10,net_benefit,186.0,28.0,50.0,True,,,,False,True,below its pre-registered event floor
+surgical_group,chopcluster_10,npv,186.0,28.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_10,ppv,186.0,28.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_10,prevalence,186.0,28.0,,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_10,sensitivity,186.0,28.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_10,specificity,186.0,28.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_11,auprc,178.0,9.0,25.0,True,2000.0,1999.0,0.0004999999999999449,False,True,below its pre-registered event floor
+surgical_group,chopcluster_11,auroc,178.0,9.0,25.0,True,2000.0,1999.0,0.0004999999999999449,False,True,below its pre-registered event floor
+surgical_group,chopcluster_11,brier,178.0,9.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+surgical_group,chopcluster_11,calibration_intercept,178.0,9.0,25.0,True,2000.0,1999.0,0.0004999999999999449,False,True,below its pre-registered event floor
+surgical_group,chopcluster_11,calibration_slope,178.0,9.0,100.0,True,2000.0,1999.0,0.0004999999999999449,False,True,below its pre-registered event floor
+surgical_group,chopcluster_11,net_benefit,178.0,9.0,50.0,True,,,,False,True,below its pre-registered event floor
+surgical_group,chopcluster_11,npv,178.0,9.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+surgical_group,chopcluster_11,ppv,178.0,9.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+surgical_group,chopcluster_11,prevalence,178.0,9.0,,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_11,sensitivity,178.0,9.0,25.0,True,2000.0,1999.0,0.0004999999999999449,False,True,below its pre-registered event floor
+surgical_group,chopcluster_11,specificity,178.0,9.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+surgical_group,chopcluster_12,auprc,826.0,61.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_12,auroc,826.0,61.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_12,brier,826.0,61.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_12,calibration_intercept,826.0,61.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_12,calibration_slope,826.0,61.0,100.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+surgical_group,chopcluster_12,net_benefit,826.0,61.0,50.0,False,,,,False,False,reportable
+surgical_group,chopcluster_12,npv,826.0,61.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_12,ppv,826.0,61.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_12,prevalence,826.0,61.0,,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_12,sensitivity,826.0,61.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_12,specificity,826.0,61.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_13,auprc,154.0,43.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_13,auroc,154.0,43.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_13,brier,154.0,43.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_13,calibration_intercept,154.0,43.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_13,calibration_slope,154.0,43.0,100.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+surgical_group,chopcluster_13,net_benefit,154.0,43.0,50.0,True,,,,False,True,below its pre-registered event floor
+surgical_group,chopcluster_13,npv,154.0,43.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_13,ppv,154.0,43.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_13,prevalence,154.0,43.0,,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_13,sensitivity,154.0,43.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_13,specificity,154.0,43.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_3,auprc,414.0,22.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+surgical_group,chopcluster_3,auroc,414.0,22.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+surgical_group,chopcluster_3,brier,414.0,22.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+surgical_group,chopcluster_3,calibration_intercept,414.0,22.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+surgical_group,chopcluster_3,calibration_slope,414.0,22.0,100.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+surgical_group,chopcluster_3,net_benefit,414.0,22.0,50.0,True,,,,False,True,below its pre-registered event floor
+surgical_group,chopcluster_3,npv,414.0,22.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+surgical_group,chopcluster_3,ppv,414.0,22.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+surgical_group,chopcluster_3,prevalence,414.0,22.0,,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_3,sensitivity,414.0,22.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+surgical_group,chopcluster_3,specificity,414.0,22.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+surgical_group,chopcluster_4,auprc,2245.0,118.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_4,auroc,2245.0,118.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_4,brier,2245.0,118.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_4,calibration_intercept,2245.0,118.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_4,calibration_slope,2245.0,118.0,100.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_4,net_benefit,2245.0,118.0,50.0,False,,,,False,False,reportable
+surgical_group,chopcluster_4,npv,2245.0,118.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_4,ppv,2245.0,118.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_4,prevalence,2245.0,118.0,,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_4,sensitivity,2245.0,118.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_4,specificity,2245.0,118.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_5,auprc,328.0,30.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_5,auroc,328.0,30.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_5,brier,328.0,30.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_5,calibration_intercept,328.0,30.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_5,calibration_slope,328.0,30.0,100.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+surgical_group,chopcluster_5,net_benefit,328.0,30.0,50.0,True,,,,False,True,below its pre-registered event floor
+surgical_group,chopcluster_5,npv,328.0,30.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_5,ppv,328.0,30.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_5,prevalence,328.0,30.0,,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_5,sensitivity,328.0,30.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_5,specificity,328.0,30.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_6,auprc,373.0,66.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_6,auroc,373.0,66.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_6,brier,373.0,66.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_6,calibration_intercept,373.0,66.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_6,calibration_slope,373.0,66.0,100.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+surgical_group,chopcluster_6,net_benefit,373.0,66.0,50.0,False,,,,False,False,reportable
+surgical_group,chopcluster_6,npv,373.0,66.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_6,ppv,373.0,66.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_6,prevalence,373.0,66.0,,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_6,sensitivity,373.0,66.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_6,specificity,373.0,66.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_7,auprc,143.0,36.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_7,auroc,143.0,36.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_7,brier,143.0,36.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_7,calibration_intercept,143.0,36.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_7,calibration_slope,143.0,36.0,100.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+surgical_group,chopcluster_7,net_benefit,143.0,36.0,50.0,True,,,,False,True,below its pre-registered event floor
+surgical_group,chopcluster_7,npv,143.0,36.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_7,ppv,143.0,36.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_7,prevalence,143.0,36.0,,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_7,sensitivity,143.0,36.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_7,specificity,143.0,36.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_8,auprc,142.0,23.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+surgical_group,chopcluster_8,auroc,142.0,23.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+surgical_group,chopcluster_8,brier,142.0,23.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+surgical_group,chopcluster_8,calibration_intercept,142.0,23.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+surgical_group,chopcluster_8,calibration_slope,142.0,23.0,100.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+surgical_group,chopcluster_8,net_benefit,142.0,23.0,50.0,True,,,,False,True,below its pre-registered event floor
+surgical_group,chopcluster_8,npv,142.0,23.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+surgical_group,chopcluster_8,ppv,142.0,23.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+surgical_group,chopcluster_8,prevalence,142.0,23.0,,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,chopcluster_8,sensitivity,142.0,23.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+surgical_group,chopcluster_8,specificity,142.0,23.0,25.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+surgical_group,none,auprc,667.0,44.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,none,auroc,667.0,44.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,none,brier,667.0,44.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,none,calibration_intercept,667.0,44.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,none,calibration_slope,667.0,44.0,100.0,True,2000.0,2000.0,0.0,False,True,below its pre-registered event floor
+surgical_group,none,net_benefit,667.0,44.0,50.0,True,,,,False,True,below its pre-registered event floor
+surgical_group,none,npv,667.0,44.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,none,ppv,667.0,44.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,none,prevalence,667.0,44.0,,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,none,sensitivity,667.0,44.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable
+surgical_group,none,specificity,667.0,44.0,25.0,False,2000.0,2000.0,0.0,False,False,reportable

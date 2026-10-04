@@ -1,0 +1,18 @@
+**Clinical consequences per 1,000 patients at t = 0.3**
+
+| attribute      | subgroup   |   nb_per_1000 |   treat_all_per_1000 |   standardized_net_benefit |
+|:---------------|:-----------|--------------:|---------------------:|---------------------------:|
+| sex            | Overall    |         126.9 |                -58.3 |                     0.4894 |
+| sex            | female     |         122.5 |                -67.3 |                     0.4846 |
+| sex            | male       |         130.1 |                -51.4 |                     0.4929 |
+| age_group      | Overall    |         126.9 |                -58.3 |                     0.4894 |
+| age_group      | 18-44      |         133.4 |                -67.3 |                     0.5275 |
+| age_group      | 45-64      |         129.3 |                -71.4 |                     0.5171 |
+| age_group      | 65-79      |         111.2 |                -65.6 |                     0.4377 |
+| age_group      | 80+        |         162.6 |                 21.8 |                     0.5156 |
+| race_ethnicity | Overall    |         126.9 |                -58.3 |                     0.4894 |
+| race_ethnicity | asian      |         164.8 |                120.9 |                     0.4286 |
+| race_ethnicity | black      |         157.4 |                 11.8 |                     0.5105 |
+| race_ethnicity | hispanic   |          47.6 |               -177.9 |                     0.2714 |
+| race_ethnicity | other      |         160.7 |                -26.8 |                     0.5714 |
+| race_ethnicity | white      |         123.3 |                -68.7 |                     0.4895 |

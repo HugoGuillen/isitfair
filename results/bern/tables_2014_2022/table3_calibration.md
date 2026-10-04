@@ -1,0 +1,20 @@
+**Table 3.** Per-subgroup calibration on the audited cohort (*n* = 10,719; 504 infection events) for the three pre-specified protected attributes. Within-subgroup calibration intercept (calibration-in-the-large; fixed-slope logit recalibration) and calibration slope (logistic regression of outcome on linear predictor) with 95% bootstrap CIs (2,000 patient-level resamples). Brier score and 95% CI, expected calibration error (ECE; 10 quantile bins), and integrated calibration index (ICI). Per-axis maximum intercept- and slope-gaps with 95% bootstrap CIs are reported in the section header rows. A maximum gap is reported as not estimable where a stratum it is measured against falls below the pre-registered event floor; its point estimate is shown and its interval withheld. A subgroup estimate is labelled not estimable where the stratum falls below the pre-registered event floor for that metric (see Methods); its point estimate is shown and its interval withheld. Subgroups flagged with † used empirical-Bayes shrinkage toward the marginal rate (cell *n* events < 50). Primary analysis: the published model's out-of-fold predictions on the audited 2014-2022 cohort, which is the cohort the deployed model was fitted on. Rows that do not meet the pre-registered event floors are shown for completeness but are not estimable and must not be interpreted: the non-frail stratum on every metric (6 events) and the pre-frail calibration slope (98 events against a floor of 100); the verdict for every cell is in estimability_enforced.csv beside this table. Outcome ascertainment is not constant across this span. The present-on-admission coding the endpoint requires is effectively absent before 2018, so infection cases whose postoperative timing could not be established left the cohort at construction rather than being recorded as negatives, and 2014-2017 contributes 4,668 procedures against 3 coded events. Prevalence is therefore 4.70% here against 8.28% in 2018-2022, and prevalence-dependent quantities -- calibration-in-the-large, PPV and net benefit -- differ accordingly; the temporal-validation analyses report both.
+
+| Subgroup | *n* | Events (%) | Intercept (95% CI) | Slope (95% CI) | Brier (95% CI) | ECE | ICI |
+|---|---:|---:|---|---|---|---:|---:|
+| **Sex** — max ΔIntercept 0.09 (0.00, 0.28) · max ΔSlope 0.01 (0.00, 0.29) | | | | | | | |
+| Overall | 10,719 | 504 (4.7) | -1.02 (-1.12, -0.94) | 1.57 (1.45, 1.69) | 0.041 (0.039, 0.043) | 0.062 | 0.061 |
+| Female | 3,689 | 190 (5.2) | -0.96 (-1.11, -0.82) | 1.56 (1.37, 1.76) | 0.043 (0.040, 0.047) | 0.061 | 0.060 |
+| Male | 7,030 | 314 (4.5) | -1.05 (-1.17, -0.94) | 1.57 (1.42, 1.73) | 0.040 (0.037, 0.043) | 0.063 | 0.061 |
+| **Age group** — max ΔIntercept 0.32 (not estimable) · max ΔSlope 0.51 (not estimable) | | | | | | | |
+| Overall | 10,719 | 504 (4.7) | -1.02 (-1.12, -0.94) | 1.57 (1.45, 1.69) | 0.041 (0.039, 0.043) | 0.062 | 0.061 |
+| 0-17 | 367 | 21 (5.7) | -0.96 (not estimable) | 1.54 (not estimable) | 0.055 (not estimable) | 0.073 | 0.071 |
+| 18-44 | 941 | 34 (3.6) | -1.21 (-1.59, -0.91) | 1.40 (not estimable) | 0.036 (0.029, 0.044) | 0.065 | 0.064 |
+| 45-64 | 3,715 | 147 (4.0) | -1.16 (-1.34, -1.01) | 1.59 (1.39, 1.85) | 0.036 (0.033, 0.040) | 0.065 | 0.063 |
+| 65-79 | 4,684 | 249 (5.3) | -0.89 (-1.02, -0.77) | 1.68 (1.50, 1.88) | 0.042 (0.039, 0.046) | 0.057 | 0.056 |
+| 80+ | 1,012 | 53 (5.2) | -1.07 (-1.38, -0.81) | 1.16 (not estimable) | 0.053 (0.046, 0.062) | 0.074 | 0.075 |
+| **Physiological reserve (frailty)** — max ΔIntercept 1.62 (not estimable) · max ΔSlope 0.31 (not estimable) | | | | | | | |
+| Overall | 10,719 | 504 (4.7) | -1.02 (-1.12, -0.94) | 1.57 (1.45, 1.69) | 0.041 (0.039, 0.043) | 0.062 | 0.061 |
+| Frail | 6,139 | 400 (6.5) | -0.86 (-0.96, -0.76) | 1.59 (1.46, 1.74) | 0.052 (0.049, 0.055) | 0.064 | 0.062 |
+| Non-frail | 1,022 | 6 (0.6) | -2.47 (not estimable) | 1.55 (not estimable) | 0.011 (not estimable) | 0.055 | 0.055 |
+| Pre-frail | 3,558 | 98 (2.8) | -1.34 (-1.55, -1.16) | 1.28 (not estimable) | 0.031 (0.028, 0.034) | 0.062 | 0.062 |

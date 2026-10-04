@@ -1,0 +1,12 @@
+**Supplementary Table — Wasserstein demographic-parity comparator**
+
+| subgroup   |    n |   n_events |   calibration_intercept |   calibration_slope |    brier |      ece |
+|:-----------|-----:|-----------:|------------------------:|--------------------:|---------:|---------:|
+| Overall    | 1821 |        472 |                  0.0734 |              1.0294 |   0.1301 |   0.019  |
+| asian      |   13 |          5 |                  1.4163 |              1.5801 |   0.2653 |   0.3834 |
+| black      |  266 |         82 |                  0.3225 |              0.894  |   0.1573 |   0.0606 |
+| hispanic   |   57 |         10 |                 -0.5326 |              0.8949 |   0.1077 |   0.0857 |
+| other      |   32 |          9 |                  1.0388 |              1.3081 |   0.1453 |   0.1698 |
+| white      | 1453 |        366 |                  0.0085 |              1.0783 |   0.1244 |   0.0225 |
+| GAP        |  nan |        nan |                nan      |            nan      | nan      | nan      |
+| GAP        |  nan |        nan |                nan      |            nan      | nan      | nan      |

@@ -1,0 +1,179 @@
+attribute,subgroup,metric,n,n_events,event_floor,below_floor,proportion_nonestimable,rule,not_estimable_final
+age_group,18-44,auprc,257.0,65.0,25.0,False,0.0,reportable,False
+age_group,18-44,auroc,257.0,65.0,25.0,False,0.0,reportable,False
+age_group,18-44,brier,257.0,65.0,25.0,False,0.0,reportable,False
+age_group,18-44,calibration_intercept,257.0,65.0,25.0,False,0.0,reportable,False
+age_group,18-44,calibration_slope,257.0,65.0,100.0,True,0.0,below its pre-registered event floor,True
+age_group,18-44,net_benefit,257.0,65.0,50.0,False,,reportable,False
+age_group,18-44,npv,257.0,65.0,25.0,False,0.0,reportable,False
+age_group,18-44,ppv,257.0,65.0,25.0,False,0.0,reportable,False
+age_group,18-44,prevalence,257.0,65.0,,False,0.0,reportable,False
+age_group,18-44,sensitivity,257.0,65.0,25.0,False,0.0,reportable,False
+age_group,18-44,specificity,257.0,65.0,25.0,False,0.0,reportable,False
+age_group,45-64,auprc,684.0,171.0,25.0,False,0.0,reportable,False
+age_group,45-64,auroc,684.0,171.0,25.0,False,0.0,reportable,False
+age_group,45-64,brier,684.0,171.0,25.0,False,0.0,reportable,False
+age_group,45-64,calibration_intercept,684.0,171.0,25.0,False,0.0,reportable,False
+age_group,45-64,calibration_slope,684.0,171.0,100.0,False,0.0,reportable,False
+age_group,45-64,net_benefit,684.0,171.0,50.0,False,,reportable,False
+age_group,45-64,npv,684.0,171.0,25.0,False,0.0,reportable,False
+age_group,45-64,ppv,684.0,171.0,25.0,False,0.0,reportable,False
+age_group,45-64,prevalence,684.0,171.0,,False,0.0,reportable,False
+age_group,45-64,sensitivity,684.0,171.0,25.0,False,0.0,reportable,False
+age_group,45-64,specificity,684.0,171.0,25.0,False,0.0,reportable,False
+age_group,65-79,auprc,677.0,172.0,25.0,False,0.0,reportable,False
+age_group,65-79,auroc,677.0,172.0,25.0,False,0.0,reportable,False
+age_group,65-79,brier,677.0,172.0,25.0,False,0.0,reportable,False
+age_group,65-79,calibration_intercept,677.0,172.0,25.0,False,0.0,reportable,False
+age_group,65-79,calibration_slope,677.0,172.0,100.0,False,0.0,reportable,False
+age_group,65-79,net_benefit,677.0,172.0,50.0,False,,reportable,False
+age_group,65-79,npv,677.0,172.0,25.0,False,0.0,reportable,False
+age_group,65-79,ppv,677.0,172.0,25.0,False,0.0,reportable,False
+age_group,65-79,prevalence,677.0,172.0,,False,0.0,reportable,False
+age_group,65-79,sensitivity,677.0,172.0,25.0,False,0.0,reportable,False
+age_group,65-79,specificity,677.0,172.0,25.0,False,0.0,reportable,False
+age_group,80+,auprc,203.0,64.0,25.0,False,0.0,reportable,False
+age_group,80+,auroc,203.0,64.0,25.0,False,0.0,reportable,False
+age_group,80+,brier,203.0,64.0,25.0,False,0.0,reportable,False
+age_group,80+,calibration_intercept,203.0,64.0,25.0,False,0.0,reportable,False
+age_group,80+,calibration_slope,203.0,64.0,100.0,True,0.0,below its pre-registered event floor,True
+age_group,80+,net_benefit,203.0,64.0,50.0,False,,reportable,False
+age_group,80+,npv,203.0,64.0,25.0,False,0.0,reportable,False
+age_group,80+,ppv,203.0,64.0,25.0,False,0.0,reportable,False
+age_group,80+,prevalence,203.0,64.0,,False,0.0,reportable,False
+age_group,80+,sensitivity,203.0,64.0,25.0,False,0.0,reportable,False
+age_group,80+,specificity,203.0,64.0,25.0,False,0.0,reportable,False
+age_group,GAP,equal_opportunity_difference,,,,False,0.0,reportable,False
+age_group,GAP,equalized_odds_gap,,,,False,0.0,reportable,False
+age_group,GAP,max_hl_gap,,,,False,,reportable,False
+age_group,GAP,max_intercept_gap,,,,False,0.0,reportable,False
+age_group,GAP,max_net_benefit_gap,,,,False,,reportable,False
+age_group,GAP,max_slope_gap,,,100.0,True,0.0,"inherits the calibration_slope event floor from its constituent subgroups (18-44, 80+), which fail it",True
+age_group,GAP,predictive_equality,,,,False,0.0,reportable,False
+age_group,GAP,statistical_parity,,,,False,0.0,reportable,False
+age_group,Overall,auprc,1821.0,472.0,25.0,False,0.0,reportable,False
+age_group,Overall,auroc,1821.0,472.0,25.0,False,0.0,reportable,False
+age_group,Overall,brier,1821.0,472.0,25.0,False,0.0,reportable,False
+age_group,Overall,calibration_intercept,1821.0,472.0,25.0,False,0.0,reportable,False
+age_group,Overall,calibration_slope,1821.0,472.0,100.0,False,0.0,reportable,False
+age_group,Overall,net_benefit,1821.0,472.0,50.0,False,,reportable,False
+age_group,Overall,npv,1821.0,472.0,25.0,False,0.0,reportable,False
+age_group,Overall,ppv,1821.0,472.0,25.0,False,0.0,reportable,False
+age_group,Overall,prevalence,1821.0,472.0,,False,0.0,reportable,False
+age_group,Overall,sensitivity,1821.0,472.0,25.0,False,0.0,reportable,False
+age_group,Overall,specificity,1821.0,472.0,25.0,False,0.0,reportable,False
+race_ethnicity,GAP,equal_opportunity_difference,,,25.0,True,0.0,"inherits the auroc event floor from its constituent subgroups (asian, hispanic, other), which fail it",True
+race_ethnicity,GAP,equalized_odds_gap,,,25.0,True,0.0,"inherits the auroc event floor from its constituent subgroups (asian, hispanic, other), which fail it",True
+race_ethnicity,GAP,max_hl_gap,,,,False,,reportable,False
+race_ethnicity,GAP,max_intercept_gap,,,25.0,True,0.0,"inherits the calibration_intercept event floor from its constituent subgroups (asian, hispanic, other), which fail it",True
+race_ethnicity,GAP,max_net_benefit_gap,,,50.0,True,,"inherits the net_benefit event floor from its constituent subgroups (asian, hispanic, other), which fail it",True
+race_ethnicity,GAP,max_slope_gap,,,100.0,True,0.0,"inherits the calibration_slope event floor from its constituent subgroups (asian, black, hispanic, other), which fail it",True
+race_ethnicity,GAP,predictive_equality,,,25.0,True,0.0,"inherits the auroc event floor from its constituent subgroups (asian, hispanic, other), which fail it",True
+race_ethnicity,GAP,statistical_parity,,,25.0,True,0.0,"inherits the auroc event floor from its constituent subgroups (asian, hispanic, other), which fail it",True
+race_ethnicity,Overall,auprc,1821.0,472.0,25.0,False,0.0,reportable,False
+race_ethnicity,Overall,auroc,1821.0,472.0,25.0,False,0.0,reportable,False
+race_ethnicity,Overall,brier,1821.0,472.0,25.0,False,0.0,reportable,False
+race_ethnicity,Overall,calibration_intercept,1821.0,472.0,25.0,False,0.0,reportable,False
+race_ethnicity,Overall,calibration_slope,1821.0,472.0,100.0,False,0.0,reportable,False
+race_ethnicity,Overall,net_benefit,1821.0,472.0,50.0,False,,reportable,False
+race_ethnicity,Overall,npv,1821.0,472.0,25.0,False,0.0,reportable,False
+race_ethnicity,Overall,ppv,1821.0,472.0,25.0,False,0.0,reportable,False
+race_ethnicity,Overall,prevalence,1821.0,472.0,,False,0.0,reportable,False
+race_ethnicity,Overall,sensitivity,1821.0,472.0,25.0,False,0.0,reportable,False
+race_ethnicity,Overall,specificity,1821.0,472.0,25.0,False,0.0,reportable,False
+race_ethnicity,asian,auprc,13.0,5.0,25.0,True,0.0025,below its pre-registered event floor,True
+race_ethnicity,asian,auroc,13.0,5.0,25.0,True,0.0025,below its pre-registered event floor,True
+race_ethnicity,asian,brier,13.0,5.0,25.0,True,0.0,below its pre-registered event floor,True
+race_ethnicity,asian,calibration_intercept,13.0,5.0,25.0,True,0.0025,below its pre-registered event floor,True
+race_ethnicity,asian,calibration_slope,13.0,5.0,100.0,True,0.0025,below its pre-registered event floor,True
+race_ethnicity,asian,net_benefit,13.0,5.0,50.0,True,,below its pre-registered event floor,True
+race_ethnicity,asian,npv,13.0,5.0,25.0,True,0.0,below its pre-registered event floor,True
+race_ethnicity,asian,ppv,13.0,5.0,25.0,True,0.001,below its pre-registered event floor,True
+race_ethnicity,asian,prevalence,13.0,5.0,,False,0.0,reportable,False
+race_ethnicity,asian,sensitivity,13.0,5.0,25.0,True,0.0025,below its pre-registered event floor,True
+race_ethnicity,asian,specificity,13.0,5.0,25.0,True,0.0,below its pre-registered event floor,True
+race_ethnicity,black,auprc,266.0,82.0,25.0,False,0.0,reportable,False
+race_ethnicity,black,auroc,266.0,82.0,25.0,False,0.0,reportable,False
+race_ethnicity,black,brier,266.0,82.0,25.0,False,0.0,reportable,False
+race_ethnicity,black,calibration_intercept,266.0,82.0,25.0,False,0.0,reportable,False
+race_ethnicity,black,calibration_slope,266.0,82.0,100.0,True,0.0,below its pre-registered event floor,True
+race_ethnicity,black,net_benefit,266.0,82.0,50.0,False,,reportable,False
+race_ethnicity,black,npv,266.0,82.0,25.0,False,0.0,reportable,False
+race_ethnicity,black,ppv,266.0,82.0,25.0,False,0.0,reportable,False
+race_ethnicity,black,prevalence,266.0,82.0,,False,0.0,reportable,False
+race_ethnicity,black,sensitivity,266.0,82.0,25.0,False,0.0,reportable,False
+race_ethnicity,black,specificity,266.0,82.0,25.0,False,0.0,reportable,False
+race_ethnicity,hispanic,auprc,57.0,10.0,25.0,True,0.0,below its pre-registered event floor,True
+race_ethnicity,hispanic,auroc,57.0,10.0,25.0,True,0.0,below its pre-registered event floor,True
+race_ethnicity,hispanic,brier,57.0,10.0,25.0,True,0.0,below its pre-registered event floor,True
+race_ethnicity,hispanic,calibration_intercept,57.0,10.0,25.0,True,0.0,below its pre-registered event floor,True
+race_ethnicity,hispanic,calibration_slope,57.0,10.0,100.0,True,0.0,below its pre-registered event floor,True
+race_ethnicity,hispanic,net_benefit,57.0,10.0,50.0,True,,below its pre-registered event floor,True
+race_ethnicity,hispanic,npv,57.0,10.0,25.0,True,0.0,below its pre-registered event floor,True
+race_ethnicity,hispanic,ppv,57.0,10.0,25.0,True,0.0,below its pre-registered event floor,True
+race_ethnicity,hispanic,prevalence,57.0,10.0,,False,0.0,reportable,False
+race_ethnicity,hispanic,sensitivity,57.0,10.0,25.0,True,0.0,below its pre-registered event floor,True
+race_ethnicity,hispanic,specificity,57.0,10.0,25.0,True,0.0,below its pre-registered event floor,True
+race_ethnicity,other,auprc,32.0,9.0,25.0,True,0.0,below its pre-registered event floor,True
+race_ethnicity,other,auroc,32.0,9.0,25.0,True,0.0,below its pre-registered event floor,True
+race_ethnicity,other,brier,32.0,9.0,25.0,True,0.0,below its pre-registered event floor,True
+race_ethnicity,other,calibration_intercept,32.0,9.0,25.0,True,0.0,below its pre-registered event floor,True
+race_ethnicity,other,calibration_slope,32.0,9.0,100.0,True,0.0,below its pre-registered event floor,True
+race_ethnicity,other,net_benefit,32.0,9.0,50.0,True,,below its pre-registered event floor,True
+race_ethnicity,other,npv,32.0,9.0,25.0,True,0.0,below its pre-registered event floor,True
+race_ethnicity,other,ppv,32.0,9.0,25.0,True,0.0,below its pre-registered event floor,True
+race_ethnicity,other,prevalence,32.0,9.0,,False,0.0,reportable,False
+race_ethnicity,other,sensitivity,32.0,9.0,25.0,True,0.0,below its pre-registered event floor,True
+race_ethnicity,other,specificity,32.0,9.0,25.0,True,0.0,below its pre-registered event floor,True
+race_ethnicity,white,auprc,1453.0,366.0,25.0,False,0.0,reportable,False
+race_ethnicity,white,auroc,1453.0,366.0,25.0,False,0.0,reportable,False
+race_ethnicity,white,brier,1453.0,366.0,25.0,False,0.0,reportable,False
+race_ethnicity,white,calibration_intercept,1453.0,366.0,25.0,False,0.0,reportable,False
+race_ethnicity,white,calibration_slope,1453.0,366.0,100.0,False,0.0,reportable,False
+race_ethnicity,white,net_benefit,1453.0,366.0,50.0,False,,reportable,False
+race_ethnicity,white,npv,1453.0,366.0,25.0,False,0.0,reportable,False
+race_ethnicity,white,ppv,1453.0,366.0,25.0,False,0.0,reportable,False
+race_ethnicity,white,prevalence,1453.0,366.0,,False,0.0,reportable,False
+race_ethnicity,white,sensitivity,1453.0,366.0,25.0,False,0.0,reportable,False
+race_ethnicity,white,specificity,1453.0,366.0,25.0,False,0.0,reportable,False
+sex,GAP,equal_opportunity_difference,,,,False,0.0,reportable,False
+sex,GAP,equalized_odds_gap,,,,False,0.0,reportable,False
+sex,GAP,max_hl_gap,,,,False,,reportable,False
+sex,GAP,max_intercept_gap,,,,False,0.0,reportable,False
+sex,GAP,max_net_benefit_gap,,,,False,,reportable,False
+sex,GAP,max_slope_gap,,,,False,0.0,reportable,False
+sex,GAP,predictive_equality,,,,False,0.0,reportable,False
+sex,GAP,statistical_parity,,,,False,0.0,reportable,False
+sex,Overall,auprc,1821.0,472.0,25.0,False,0.0,reportable,False
+sex,Overall,auroc,1821.0,472.0,25.0,False,0.0,reportable,False
+sex,Overall,brier,1821.0,472.0,25.0,False,0.0,reportable,False
+sex,Overall,calibration_intercept,1821.0,472.0,25.0,False,0.0,reportable,False
+sex,Overall,calibration_slope,1821.0,472.0,100.0,False,0.0,reportable,False
+sex,Overall,net_benefit,1821.0,472.0,50.0,False,,reportable,False
+sex,Overall,npv,1821.0,472.0,25.0,False,0.0,reportable,False
+sex,Overall,ppv,1821.0,472.0,25.0,False,0.0,reportable,False
+sex,Overall,prevalence,1821.0,472.0,,False,0.0,reportable,False
+sex,Overall,sensitivity,1821.0,472.0,25.0,False,0.0,reportable,False
+sex,Overall,specificity,1821.0,472.0,25.0,False,0.0,reportable,False
+sex,female,auprc,787.0,199.0,25.0,False,0.0,reportable,False
+sex,female,auroc,787.0,199.0,25.0,False,0.0,reportable,False
+sex,female,brier,787.0,199.0,25.0,False,0.0,reportable,False
+sex,female,calibration_intercept,787.0,199.0,25.0,False,0.0,reportable,False
+sex,female,calibration_slope,787.0,199.0,100.0,False,0.0,reportable,False
+sex,female,net_benefit,787.0,199.0,50.0,False,,reportable,False
+sex,female,npv,787.0,199.0,25.0,False,0.0,reportable,False
+sex,female,ppv,787.0,199.0,25.0,False,0.0,reportable,False
+sex,female,prevalence,787.0,199.0,,False,0.0,reportable,False
+sex,female,sensitivity,787.0,199.0,25.0,False,0.0,reportable,False
+sex,female,specificity,787.0,199.0,25.0,False,0.0,reportable,False
+sex,male,auprc,1034.0,273.0,25.0,False,0.0,reportable,False
+sex,male,auroc,1034.0,273.0,25.0,False,0.0,reportable,False
+sex,male,brier,1034.0,273.0,25.0,False,0.0,reportable,False
+sex,male,calibration_intercept,1034.0,273.0,25.0,False,0.0,reportable,False
+sex,male,calibration_slope,1034.0,273.0,100.0,False,0.0,reportable,False
+sex,male,net_benefit,1034.0,273.0,50.0,False,,reportable,False
+sex,male,npv,1034.0,273.0,25.0,False,0.0,reportable,False
+sex,male,ppv,1034.0,273.0,25.0,False,0.0,reportable,False
+sex,male,prevalence,1034.0,273.0,,False,0.0,reportable,False
+sex,male,sensitivity,1034.0,273.0,25.0,False,0.0,reportable,False
+sex,male,specificity,1034.0,273.0,25.0,False,0.0,reportable,False

@@ -1,0 +1,10 @@
+# Source and docs: LF in the repository, whatever the checkout platform.
+* text=auto eol=lf
+
+# Committed artifacts are compared byte for byte (results/MANIFEST.csv records
+# a content hash for each), so git must never rewrite them on checkout.
+results/** -text
+notebooks/*.ipynb -text
+*.pdf binary
+*.png binary
+*.gz binary

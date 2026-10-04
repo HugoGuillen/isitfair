@@ -1,0 +1,54 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: py${{ matrix.python }} ${{ matrix.os }} ${{ matrix.deps }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          # The versions the committed artifacts were built with.
+          - { os: ubuntu-latest, python: "3.10", deps: locked }
+          # What a reader gets from a fresh `pip install` today.
+          - { os: ubuntu-latest, python: "3.11", deps: latest }
+          - { os: ubuntu-latest, python: "3.12", deps: latest }
+          - { os: ubuntu-latest, python: "3.13", deps: latest }
+          - { os: windows-latest, python: "3.12", deps: latest }
+    env:
+      MPLBACKEND: Agg
+      ISITFAIR_FAST: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install (locked)
+        if: matrix.deps == 'locked'
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-lock.txt
+          pip install ".[examples,plots,dev]"
+      - name: Install (latest)
+        if: matrix.deps == 'latest'
+        run: |
+          python -m pip install --upgrade pip
+          pip install ".[examples,plots,dev]"
+      - run: pip list
+      - name: Unit tests
+        run: pytest -q
+      - name: Docstring examples
+        run: pytest -q --doctest-modules src/isitfair
+      - name: Example module doctests
+        run: python -m doctest examples/support2_data.py
+      - name: Own-data template (demo mode)
+        run: python examples/audit_your_own_data.py --fast --out ci_report/audit_report.html
+      - name: SUPPORT2 example script
+        if: matrix.os == 'ubuntu-latest'
+        run: python examples/support2_mortality_audit.py
