@@ -1,3 +1,5 @@
+<img src="./logo/isitfair-logo.svg">
+
 # isitfair
 
 **Fairness evaluation for clinical prediction models** — subgroup-stratified
