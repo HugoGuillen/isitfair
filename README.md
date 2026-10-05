@@ -25,11 +25,10 @@ Python 3.10 to 3.13. Use a fresh environment:
 ```bash
 python -m venv isitfair-env               # or: conda create -n isitfair python=3.12
 source isitfair-env/bin/activate          # Windows: isitfair-env\Scripts\activate
-pip install git+https://github.com/HugoGuillen/isitfair.git@v0.4.0
-python -c "import isitfair; print(isitfair.__version__)"   # 0.4.0
+pip install git+https://github.com/HugoGuillen/isitfair.git
+python -c "import isitfair; print(isitfair.__version__)"
 ```
 
-`@v0.4.0` installs the release the paper used; drop it for the latest version.
 
 ## Quick start
 
