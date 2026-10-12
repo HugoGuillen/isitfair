@@ -102,19 +102,18 @@ cohort of ~2,000 patients and three attributes.
 ## Finished products
 
 Everything below is committed, already executed, and reproducible from this
-repository. GitHub shows `.html` files as raw text, so each one has a rendered
-link next to it.
+repository. GitHub shows `.html` files as raw text.
 
-| | What it is | Rendered |
-|---|---|---|
-| 📓 [`notebooks/01_audit_report_support2.ipynb`](notebooks/01_audit_report_support2.ipynb) | **Start here.** An audit end to end, producing the HTML report below. | [HTML](https://htmlpreview.github.io/?https://github.com/HugoGuillen/isitfair/blob/main/results/notebooks_html/01_audit_report_support2.html) |
-| 📄 `results/support2_audit_report.html` | The **generated audit report** — three axes, gap statistics, per-decile H–L tables, intersectional diagnostics, before/after mitigation, TRIPOD+AI appendix. Self-contained, no JavaScript. | [view report](https://htmlpreview.github.io/?https://github.com/HugoGuillen/isitfair/blob/main/results/support2_audit_report.html) |
-| 📄 [`results/support2_audit_report.pdf`](results/support2_audit_report.pdf) | The same report typeset for print. | — |
-| 📓 [`notebooks/02_paper_analysis_support2.ipynb`](notebooks/02_paper_analysis_support2.ipynb) | The **complete analysis**, section by section — cohort table through mitigation and interaction screens. Writes 20 tables and 8 figures. | [HTML](https://htmlpreview.github.io/?https://github.com/HugoGuillen/isitfair/blob/main/results/notebooks_html/02_paper_analysis_support2.html) |
-| 📓 [`notebooks/03_tutorial_support2.ipynb`](notebooks/03_tutorial_support2.ipynb) | The **tutorial**, runnable. Nine sections, every slide's code executing on real data. | [HTML](https://htmlpreview.github.io/?https://github.com/HugoGuillen/isitfair/blob/main/results/notebooks_html/03_tutorial_support2.html) |
-| 🎞️ [`slides/isitfair_audit_tutorial.pdf`](slides/isitfair_audit_tutorial.pdf) | The tutorial deck the notebook above is built from. 61 frames. | — |
-| 📁 [`results/tables/`](results/tables) · [`results/figures/`](results/figures) | Every table as `.csv` **and** `.md`; every figure as `.png` **and** `.pdf`. | — |
-| 🏥 [`results/bern/`](results/bern) | **The paper's clinical cohort, aggregated**: its audit reports and subgroup tables for 2014–2022 and the 2018–2022 window. Aggregates only, some of them small; see its README. | — |
+| | What it is |
+|---|---|
+| 📓 [`notebooks/01_audit_report_support2.ipynb`](notebooks/01_audit_report_support2.ipynb) | **Start here.** An audit end to end, producing the HTML report below. |
+| 📄 `results/support2_audit_report.html` | The **generated audit report** — three axes, gap statistics, per-decile H–L tables, intersectional diagnostics, before/after mitigation, TRIPOD+AI appendix. Self-contained, no JavaScript. |
+| 📄 [`results/support2_audit_report.pdf`](results/support2_audit_report.pdf) | The same report typeset for print. |
+| 📓 [`notebooks/02_paper_analysis_support2.ipynb`](notebooks/02_paper_analysis_support2.ipynb) | The **complete analysis**, section by section — cohort table through mitigation and interaction screens. Writes 20 tables and 8 figures. |
+| 📓 [`notebooks/03_tutorial_support2.ipynb`](notebooks/03_tutorial_support2.ipynb) | The **tutorial**, runnable. Nine sections, every slide's code executing on real data. |
+| 🎞️ [`slides/isitfair_audit_tutorial.pdf`](slides/isitfair_audit_tutorial.pdf) | The tutorial deck the notebook above is built from. 61 frames. |
+| 📁 [`results/tables/`](results/tables) · [`results/figures/`](results/figures) | Every table as `.csv` **and** `.md`; every figure as `.png` **and** `.pdf`. |
+| 🏥 [`results/bern/`](results/bern) | **The paper's clinical cohort, aggregated**: its audit reports and subgroup tables for 2014–2022 and the 2018–2022 window. Aggregates only, some of them small; see its README. |
 
 `results/MANIFEST.csv` records the producing notebook, seed, replicate count,
 package versions and a content hash for each SUPPORT2 artifact.
