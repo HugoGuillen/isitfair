@@ -2,7 +2,7 @@
 
 # isitfair
 
-**Fairness evaluation for clinical prediction models** — subgroup-stratified
+**Fairness evaluation for clinical prediction models**: subgroup-stratified
 discrimination, calibration and decision-curve analysis with TRIPOD+AI-aligned
 reporting.
 
@@ -14,7 +14,7 @@ This is the software companion to:
 
 > Guillen-Ramirez H, Lucas KL, Wintsch YM, Blatter TU, Triep K, Endrich O, Beldi G.
 > **Subgroup deployment-readiness audit of calibration and clinical utility in
-> perioperative infection prediction.** Under review, *JAMIA*.
+> perioperative infection prediction.** Accepted, *JAMIA*. 2026. [doi.org/10.1093/jamia/ocag184 ](https://doi.org/10.1093/jamia/ocag184)
 
 ---
 
@@ -309,13 +309,11 @@ pip install -e ".[docs]" && sphinx-build -b html docs docs/_build/html
              Endrich, Olga and Beldi, Guido},
   journal = {Journal of the American Medical Informatics Association},
   year    = {2026},
-  note    = {Under review. Software:
+  doi = {https://doi.org/10.1093/jamia/ocag184},
+  note    = {Accepted. Software:
              https://github.com/HugoGuillen/isitfair},
 }
 ```
-
-Please also cite the SUPPORT2 cohort if you use the shipped examples: Knaus WA,
-Harrell FE, Lynn J, et al. *Ann Intern Med* 1995;122:191–203.
 
 ## License
 
