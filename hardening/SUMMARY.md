@@ -1,7 +1,8 @@
 # Hardening summary
 
-Branch `hardening`. Code changes are confined to `src/isitfair/audit.py` (4
-fixes, 63 added lines in total, none above the 40-line limit). Supporting
+Branch `hardening`. Code changes are confined to `src/isitfair/audit.py` (6
+fixes, 116 added lines in total, none above the 40-line limit; E07 about 37,
+E08 about 16). Supporting
 changes:
 
 - `tests/test_hardening_regressions.py`
@@ -29,10 +30,10 @@ not involved (`diagnosis.md`).
 | E03 | `recalibration_ladder()` says "use fewer folds" for a level with no events at all | fixed, tested, documented |
 | E04 | statistical-parity gap dropped subgroups with no events (COMPAS: 0.337 instead of 0.451) | fixed, tested |
 | E05 | ECE depended on row order and CPU when predictions are tied | fixed, tested |
-| E06 | intercept and slope agree with a GLM to about 1e-6, not 1e-9 | deferred (would move SUPPORT2 numbers) |
-| E07 | point-estimate LOWESS (ICI, curves) still O(n^2): about 13 min per stage at 100k | deferred (proposal: share one fit) |
-| E08 | `decision_curve(zero_crossing=True)` O(U x n) | deferred (proposal: cumulative sums, same output) |
-| E09 | slope CI coverage 91.5% and 92% vs the 93% to 97% target | deferred (needs a larger simulation first) |
+| E06 | intercept and slope agree with a GLM to about 1e-6, not 1e-9 | won't fix (maintainer) |
+| E07 | point-estimate LOWESS (ICI, curves) refitted by every stage, O(n^2) each | fixed, tested (one fit per subgroup, identical results) |
+| E08 | `decision_curve(zero_crossing=True)` O(U x n) | fixed, tested (cumulative counts, identical results) |
+| E09 | slope CI coverage 91.5% and 92% vs the 93% to 97% target | won't fix (maintainer) |
 
 Details, reproducers and before-fix failing output are in `ERRORLOG.md`.
 
@@ -50,7 +51,8 @@ Details, reproducers and before-fix failing output are in `ERRORLOG.md`.
   - Figures: same pixels, up to sub-visual noise.
 - **Results.**
   - Notebook 02 tables, all fixes applied: PASS.
-  - Example and report, Phase 7 run on the final code: PASS. 10 report ECE cells and 33 table ECE cells differ, all exempt; the figures differ only sub-visually (at most 0.008 intensity in 0.02% of pixels).
+  - Example and report, Phase 7 run (E01 to E05): PASS. 10 report ECE cells and 33 table ECE cells differ, all exempt; the figures differ only sub-visually (at most 0.008 intensity in 0.02% of pixels).
+  - Rerun after E07 and E08 (`logs/e07e08_golden_narrow.log`): PASS, with the same exempt cells and figure noise. `pytest -q`: 51 passed.
   - E04 changed no committed SUPPORT2 number, because SUPPORT2 has no
     subgroup without events.
 
@@ -140,16 +142,18 @@ that it did; for every other dataset it changes nothing.
 
 ## Runtime guidance for the docs
 
-From the Phase 1 sweep (synthetic, B = 20, fixed code, one process): totals
-for all stages including `report()`.
+From the Phase 1 sweep (synthetic, B = 20, one process): totals for all
+stages including `report()`.
 
-| n | B = 20 total |
-|---:|---:|
-| 1,000 | about 20 s |
-| 5,000 | about 40 s |
-| 20,000 | about 3.5 min |
-| 50,000 | about 17.5 min |
-| 100,000 | about 65 min |
+| n | after E01 | after E07 and E08 |
+|---:|---:|---:|
+| 1,000 | about 20 s | not rerun |
+| 5,000 | about 40 s | not rerun |
+| 20,000 | about 3.5 min | about 1.2 min |
+| 50,000 | about 17.5 min | about 4.3 min |
+| 100,000 | about 65 min | about 14.3 min |
 
-At B = 2,000 only the bootstrap parts scale up. Above about 20,000 rows the
-point-estimate LOWESS (E07) dominates.
+At B = 2,000 only the bootstrap parts scale up. The exact point-estimate
+LOWESS is still O(n^2), but it now runs twice per subgroup (once in `calibration()` for ICI
+and once in `calibration_curves()` for the curve) instead of in every stage;
+per-stage numbers are in `diagnosis.md`.

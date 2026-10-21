@@ -1,0 +1,13 @@
+n=20000 events=1918 prevalence=0.0959 B=20
+  construct 0.067s
+  discrimination 2.033s (elapsed 2.1s)
+  calibration 21.767s (elapsed 23.9s)
+  calibration_curves 28.361s (elapsed 52.2s)
+  decision_curve 2.968s (elapsed 55.2s)
+  estimability 0.030s (elapsed 55.2s)
+  hosmer_lemeshow 0.711s (elapsed 55.9s)
+  recalibration_ladder 7.130s (elapsed 63.1s)
+  report 7.099s (elapsed 70.2s)
+  roc_curves 0.000s (elapsed 70.2s)
+  decision_curve_zero_crossing 4.121s (elapsed 74.3s)
+done total 74.3s

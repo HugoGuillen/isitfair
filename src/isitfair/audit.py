@@ -10,9 +10,11 @@ Discrimination metrics use sklearn directly. Mitigation methods live in
 
 from __future__ import annotations
 
+import hashlib
 import itertools
 import os
 import warnings
+from collections import OrderedDict
 from dataclasses import dataclass
 from typing import Any
 
@@ -463,9 +465,40 @@ def _loess_smooth_at_data(
     its divide-by-zero warning is silenced, and the value it returns is
     unchanged.
     """
+    return _exact_lowess(y_true, y_proba, return_sorted=False)
+
+
+#: Exact point-estimate LOWESS fits of more than ``_LOESS_EXACT_MAX_N`` rows,
+#: keyed by input content. The fit is O(n^2), and calibration(),
+#: calibration_curves(), hosmer_lemeshow(), recalibration_ladder() and report()
+#: each need it for the same subgroups; caching returns the identical array.
+_LOWESS_CACHE: OrderedDict[tuple[bool, int, bytes], npt.NDArray[np.float64]] = OrderedDict()
+_LOWESS_CACHE_MAX = 64
+
+
+def _exact_lowess(
+    y_true: npt.NDArray[np.floating[Any]],
+    y_proba: npt.NDArray[np.floating[Any]],
+    return_sorted: bool,
+) -> npt.NDArray[np.float64]:
+    """``lowess(frac=2/3, it=0)`` at every data point, memoized for large inputs."""
+    key = None
+    if len(y_true) > _LOESS_EXACT_MAX_N:
+        digest = hashlib.blake2b(digest_size=16)
+        digest.update(np.ascontiguousarray(y_true, dtype=np.float64).tobytes())
+        digest.update(np.ascontiguousarray(y_proba, dtype=np.float64).tobytes())
+        key = (return_sorted, len(y_true), digest.digest())
+        if key in _LOWESS_CACHE:
+            _LOWESS_CACHE.move_to_end(key)
+            return _LOWESS_CACHE[key].copy()
     with np.errstate(divide="ignore", invalid="ignore"):
-        result = lowess(y_true, y_proba, frac=2 / 3, it=0, return_sorted=False)
-    return np.asarray(result, dtype=np.float64)
+        result = lowess(y_true, y_proba, frac=2 / 3, it=0, return_sorted=return_sorted)
+    result = np.asarray(result, dtype=np.float64)
+    if key is not None:
+        _LOWESS_CACHE[key] = result.copy()
+        if len(_LOWESS_CACHE) > _LOWESS_CACHE_MAX:
+            _LOWESS_CACHE.popitem(last=False)
+    return result
 
 
 #: Largest sample on which a bootstrap replicate's calibration curve is fitted
@@ -499,8 +532,7 @@ def _loess_curve_at_grid(
         with np.errstate(divide="ignore", invalid="ignore"):
             fitted = lowess(y_true, y_proba, frac=2 / 3, it=0, xvals=xvals)
         return np.clip(np.asarray(fitted, dtype=np.float64), 0.0, 1.0)
-    with np.errstate(divide="ignore", invalid="ignore"):
-        result = lowess(y_true, y_proba, frac=2 / 3, it=0, return_sorted=True)
+    result = _exact_lowess(y_true, y_proba, return_sorted=True)
     smoothed: npt.NDArray[np.floating[Any]] = np.interp(eval_points, result[:, 0], result[:, 1])
     return np.clip(smoothed, 0.0, 1.0)
 
@@ -650,11 +682,20 @@ def _zero_crossings(
         | {float(a) for a in np.unique(y_proba) if t_lo < a < t_hi}
     )
     eps = 1e-9
+    # TP and FP among ``y_proba >= t`` from one sort and cumulative counts, so each
+    # threshold costs O(log n) instead of a full pass (the loops below visit O(n)).
+    order = np.argsort(y_proba, kind="stable")
+    p_sorted = y_proba[order]
+    events = np.concatenate([[0], np.cumsum(y_true[order] == 1)])
+    non_events = np.concatenate([[0], np.cumsum(y_true[order] == 0)])
+
+    def counts_at(t: float) -> tuple[float, float]:
+        i = int(np.searchsorted(p_sorted, t, side="left"))
+        return float(events[-1] - events[i]), float(non_events[-1] - non_events[i])
+
     candidates: list[float] = []
     for lo, hi in itertools.pairwise(edges):
-        flagged = y_proba >= hi
-        tp = float(np.sum(y_true[flagged] == 1))
-        fp = float(np.sum(y_true[flagged] == 0))
+        tp, fp = counts_at(hi)
         if tp + fp > 0:
             t_star = tp / (tp + fp)
             if lo < t_star <= hi:
@@ -663,8 +704,12 @@ def _zero_crossings(
             candidates.append(float(hi))
     candidates.append(float(edges[0]))
 
+    n = len(y_true)
+
     def nb_at(t: float) -> float:
-        return float(_compute_net_benefits(y_true, y_proba, np.array([t]))[0])
+        # Same expression as _compute_net_benefits.
+        tp, fp = counts_at(t)
+        return tp / n - fp / n * t / (1.0 - t)
 
     found: list[float] = []
     for t in candidates:

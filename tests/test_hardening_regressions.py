@@ -11,6 +11,13 @@ import isitfair.audit as audit_module
 from isitfair import FairnessAudit
 
 
+@pytest.fixture(autouse=True)
+def _fresh_lowess_cache():
+    # E07 memoizes exact LOWESS fits by content; start every test without hits.
+    getattr(audit_module, "_LOWESS_CACHE", {}).clear()
+    yield
+
+
 def _large_cohort(n, seed=0):
     rng = np.random.default_rng(seed)
     p = expit(rng.normal(-1.5, 1.0, n))
@@ -177,3 +184,114 @@ def test_e05_untied_predictions_keep_equal_frequency_bins():
     order = np.argsort(p)
     expected = sum(len(b) * abs(p[b].mean() - y[b].mean()) for b in np.array_split(order, 10)) / len(p)
     assert audit_module._compute_ece(y, p, 10) == expected
+
+
+# E07: the exact point-estimate LOWESS (O(n^2)) was refitted for the same
+# subgroup by every stage that needs ICI or the calibration curve.
+
+
+def test_e07_point_estimate_lowess_is_fitted_once_per_subgroup(monkeypatch):
+    y, p, g = _large_cohort(5_000)
+    calls = []
+    real = audit_module.lowess
+
+    def spy(endog, exog, *args, **kwargs):
+        if kwargs.get("xvals") is None and len(exog) > 2_000:
+            calls.append((kwargs.get("return_sorted", True),
+                          np.asarray(endog).tobytes(), np.asarray(exog).tobytes()))
+        return real(endog, exog, *args, **kwargs)
+
+    monkeypatch.setattr(audit_module, "lowess", spy)
+    audit = FairnessAudit(y_true=y, y_proba=p, sensitive_features={"g": g},
+                          threshold=0.2, n_bootstrap=2, random_state=1)
+    # Each of these stages needs ICI for Overall, a and b (the ladder also on its
+    # recalibrated rungs, which are different inputs).
+    audit.calibration()
+    audit.hosmer_lemeshow()
+    audit.recalibration_ladder(by="g")
+    audit.calibration_curves()
+    audit.calibration_curves()
+    # No identical input is fitted twice.
+    assert len(calls) == len(set(calls)) and len(calls) >= 6
+
+
+def test_e07_cached_results_equal_uncached(monkeypatch):
+    y, p, g = _large_cohort(5_000)
+    kw = dict(y_true=y, y_proba=p, sensitive_features={"g": g},
+              threshold=0.2, n_bootstrap=2, random_state=1)
+    audit = FairnessAudit(**kw)
+    first = (audit.calibration(), audit.hosmer_lemeshow(detail=True), audit.calibration_curves())
+    second = (FairnessAudit(**kw).calibration(), audit.hosmer_lemeshow(detail=True),
+              FairnessAudit(**kw).calibration_curves())
+    monkeypatch.setattr(audit_module, "_LOWESS_CACHE_MAX", 0, raising=False)
+    getattr(audit_module, "_LOWESS_CACHE", {}).clear()
+    fresh = FairnessAudit(**kw)
+    uncached = (fresh.calibration(), fresh.hosmer_lemeshow(detail=True), fresh.calibration_curves())
+    for a, b, c in zip(first, second, uncached):
+        assert a.equals(b) and a.equals(c)
+
+
+# E08: _zero_crossings() rescanned every row for every distinct prediction,
+# O(U x n), so decision_curve(zero_crossing=True) took minutes at 100,000 rows.
+
+
+def _zero_crossings_reference(y_true, y_proba, t_lo, t_hi):
+    # The pre-fix algorithm, kept as the oracle for the faster one.
+    import itertools
+
+    if len(y_true) == 0 or t_hi <= t_lo:
+        return []
+    edges = sorted({float(t_lo), float(t_hi)}
+                   | {float(a) for a in np.unique(y_proba) if t_lo < a < t_hi})
+    eps = 1e-9
+    candidates = []
+    for lo, hi in itertools.pairwise(edges):
+        flagged = y_proba >= hi
+        tp = float(np.sum(y_true[flagged] == 1))
+        fp = float(np.sum(y_true[flagged] == 0))
+        if tp + fp > 0:
+            t_star = tp / (tp + fp)
+            if lo < t_star <= hi:
+                candidates.append(float(t_star))
+        if hi < t_hi:
+            candidates.append(float(hi))
+    candidates.append(float(edges[0]))
+
+    def nb_at(t):
+        return float(audit_module._compute_net_benefits(y_true, y_proba, np.array([t]))[0])
+
+    found = []
+    for t in candidates:
+        before, after = nb_at(t - eps), nb_at(t + eps)
+        if np.isnan(before) or np.isnan(after) or np.sign(before) * np.sign(after) >= 0:
+            continue
+        found.append(t)
+    return sorted(set(found))
+
+
+def test_e08_zero_crossings_do_not_rescan_every_row(monkeypatch):
+    y, p, _ = _large_cohort(3_000)
+    scans = []
+    real = audit_module._compute_net_benefits
+
+    def spy(y_true, y_proba, thresholds):
+        scans.append(len(y_true))
+        return real(y_true, y_proba, thresholds)
+
+    monkeypatch.setattr(audit_module, "_compute_net_benefits", spy)
+    audit_module._zero_crossings(y, p, 0.01, 0.99)
+    assert scans == []
+
+
+@pytest.mark.parametrize("seed", range(6))
+def test_e08_zero_crossings_match_the_reference(seed):
+    rng = np.random.default_rng(seed)
+    n = 400
+    p = expit(rng.normal(-1.0, 1.5, n))
+    if seed % 2:
+        p = np.round(p, 2)  # heavy ties
+    if seed == 5:
+        p[:5], p[5:10] = 0.0, 1.0  # exact 0/1 predictions
+    y = rng.binomial(1, np.clip(p * rng.uniform(0.3, 1.7), 0, 1)).astype(float)
+    for t_lo, t_hi in [(0.01, 0.99), (0.05, 0.6), (0.2, 0.21)]:
+        assert audit_module._zero_crossings(y, p, t_lo, t_hi) ==             _zero_crossings_reference(y, p, t_lo, t_hi)

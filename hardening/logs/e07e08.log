@@ -1,0 +1,6 @@
+== pytest rc=0
+== golden rc=0
+== bench 20000 rc=0
+== bench 50000 rc=0
+== bench 100000 rc=0
+== E07E08 DONE 2026-10-21T13:39:49+02:00

@@ -3,7 +3,9 @@
 ## Unreleased
 
 Hardening against real classification datasets (see `hardening/`). The
-committed SUPPORT2 results are unchanged.
+committed SUPPORT2 results are unchanged except the ECE of isotonic-recalibrated
+(heavily tied) predictions in the mitigation tables and report, which now no
+longer depends on row order or CPU.
 
 ### Fixes
 
@@ -24,6 +26,17 @@ committed SUPPORT2 results are unchanged.
 - ECE no longer depends on row order when predicted probabilities are tied.
   Bins are tie-snapped exactly as in `hosmer_lemeshow()`; untied predictions
   get the same equal-frequency bins as before.
+
+### Performance
+
+- The exact point-estimate LOESS behind ICI and the calibration curve (O(n^2))
+  is now fitted once per subgroup and reused by `calibration()`,
+  `calibration_curves()`, `hosmer_lemeshow()`, `recalibration_ladder()` and
+  `report()`, instead of once per method call. Results are identical; only
+  inputs of more than 2,000 rows are memoized (at most 64 fits).
+- `decision_curve(zero_crossing=True)` counts flagged events with one sort and
+  cumulative sums instead of a full pass per distinct prediction. Results are
+  identical; the search is O(n log n) instead of O(n^2).
 
 ## 0.4.0
 

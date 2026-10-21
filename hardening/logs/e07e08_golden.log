@@ -1,0 +1,408 @@
+== example start 2026-10-21T12:26:41+02:00
+[cell 00] start  # ---
+[cell 00] done        0.00 s   (elapsed      0.00 s)
+[cell 01] start  import importlib.util
+isitfair 0.4.0
+seed 99 · threshold 0.3 · bootstrap replicates 2000
+results -> results/
+[cell 01] done        4.10 s   (elapsed      4.10 s)
+[cell 02] start  df = load_support2()
+N = 9105   in-hospital mortality = 0.259
+[cell 02] done        5.04 s   (elapsed      9.14 s)
+[cell 03] start  # Sex and race are audit axes; the design matrix is built without them
+            sex: female n=3980, male n=5125
+      age_group: 18-44 n=1357, 45-64 n=3235, 65-79 n=3467, 80+ n=1046
+ race_ethnicity: asian n=79, black n=1391, hispanic n=290, other n=154, white n=7191
+[cell 03] done        0.01 s   (elapsed      9.15 s)
+[cell 04] start  X = build_model_matrix(df)
+design matrix: 18 columns, 0 missing
+sex in features?  False
+race in features? False
+[cell 04] done        0.01 s   (elapsed      9.16 s)
+[cell 05] start  idx_train, idx_calib, idx_test = split_cohort(X, y, seed=SEED)
+train: n= 5463  events=1416  prev=0.259
+calib: n= 1821  events= 472  prev=0.259
+ test: n= 1821  events= 472  prev=0.259
+[cell 05] done        0.02 s   (elapsed      9.18 s)
+[cell 06] start  audit = FairnessAudit(
+FairnessAudit(n=1821, events=472, threshold=0.3, n_bootstrap=2000, random_state=99, attributes: sex (2), age_group (4), race_ethnicity (5))
+[cell 06] done        0.00 s   (elapsed      9.19 s)
+[cell 07] start  disc = audit.discrimination()
+     attribute subgroup      n  n_events  prevalence    auroc  auroc_ci_low  auroc_ci_high
+           sex  Overall 1821.0     472.0    0.259198 0.846028      0.825305       0.865933
+           sex   female  787.0     199.0    0.252859 0.833248      0.800488       0.863965
+           sex     male 1034.0     273.0    0.264023 0.856142      0.828934       0.880544
+     age_group  Overall 1821.0     472.0    0.259198 0.846028      0.825305       0.865933
+     age_group    18-44  257.0      65.0    0.252918 0.878686      0.828753       0.921541
+     age_group    45-64  684.0     171.0    0.250000 0.860196      0.826049       0.892116
+     age_group    65-79  677.0     172.0    0.254062 0.829277      0.794705       0.860208
+     age_group      80+  203.0      64.0    0.315271 0.811488      0.741168       0.872815
+race_ethnicity  Overall 1821.0     472.0    0.259198 0.846028      0.825305       0.865933
+race_ethnicity    asian   13.0       5.0    0.384615 0.800000           NaN            NaN
+race_ethnicity    black  266.0      82.0    0.308271 0.808722      0.750423       0.859965
+race_ethnicity hispanic   57.0      10.0    0.175439 0.814894           NaN            NaN
+race_ethnicity    other   32.0       9.0    0.281250 0.840580           NaN            NaN
+race_ethnicity    white 1453.0     366.0    0.251893 0.854902      0.832859       0.878036
+[cell 07] done       62.21 s   (elapsed     71.39 s)
+[cell 08] start  gaps = disc[disc.subgroup == "GAP"][["attribute", "gap_metric", "gap_v
+     attribute                   gap_metric  gap_value  gap_ci_low  gap_ci_high
+           sex equal_opportunity_difference   0.042299    0.002247     0.126338
+           sex          predictive_equality   0.031088    0.002134     0.072754
+           sex           equalized_odds_gap   0.042299    0.013125     0.126338
+           sex           statistical_parity   0.028077    0.001696     0.071432
+     age_group equal_opportunity_difference   0.077485    0.039733     0.215690
+     age_group          predictive_equality   0.130941    0.072448     0.210696
+     age_group           equalized_odds_gap   0.130941    0.091557     0.227222
+     age_group           statistical_parity   0.150095    0.078200     0.225624
+race_ethnicity equal_opportunity_difference   0.104918         NaN          NaN
+race_ethnicity          predictive_equality   0.163043         NaN          NaN
+race_ethnicity           equalized_odds_gap   0.163043         NaN          NaN
+race_ethnicity           statistical_parity   0.134615         NaN          NaN
+[cell 08] done        0.00 s   (elapsed     71.39 s)
+[cell 09] start  roc = audit.roc_curves()
+1400 rows across 3 axes
+[cell 09] done       16.91 s   (elapsed     88.30 s)
+[cell 10] start  cal = audit.calibration()
+     attribute subgroup      n  calibration_intercept  calibration_slope    brier      ece      ici
+           sex  Overall 1821.0               0.082409           1.033646 0.129298 0.019082 0.013658
+           sex   female  787.0              -0.029882           1.007830 0.130851 0.022756 0.009457
+           sex     male 1034.0               0.171066           1.062549 0.128117 0.034439 0.026475
+           sex      GAP    NaN                    NaN                NaN      NaN      NaN      NaN
+           sex      GAP    NaN                    NaN                NaN      NaN      NaN      NaN
+     age_group  Overall 1821.0               0.082409           1.033646 0.129298 0.019082 0.013658
+     age_group    18-44  257.0              -0.025151           1.173759 0.112402 0.033332 0.019216
+     age_group    45-64  684.0               0.267405           1.113330 0.121203 0.037952 0.031088
+     age_group    65-79  677.0              -0.049054           0.962521 0.136564 0.035703 0.025771
+     age_group      80+  203.0               0.078283           0.977964 0.153734 0.038711 0.024644
+     age_group      GAP    NaN                    NaN                NaN      NaN      NaN      NaN
+     age_group      GAP    NaN                    NaN                NaN      NaN      NaN      NaN
+race_ethnicity  Overall 1821.0               0.082409           1.033646 0.129298 0.019082 0.013658
+race_ethnicity    asian   13.0               0.674644           0.948987 0.200621 0.348770 0.188440
+race_ethnicity    black  266.0               0.336408           0.870793 0.157254 0.055203 0.043209
+race_ethnicity hispanic   57.0              -0.492658           0.947605 0.106005 0.098122 0.057142
+race_ethnicity    other   32.0               0.431006           0.941341 0.125675 0.123582 0.069424
+race_ethnicity    white 1453.0               0.038975           1.077807 0.124536 0.023804 0.014065
+race_ethnicity      GAP    NaN                    NaN                NaN      NaN      NaN      NaN
+race_ethnicity      GAP    NaN                    NaN                NaN      NaN      NaN      NaN
+[cell 10] done       89.61 s   (elapsed    177.91 s)
+[cell 11] start  curves = audit.calibration_curves()
+Timeout (0:10:00)!
+Thread 0x000034ec (most recent call first):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\statsmodels\nonparametric\smoothers_lowess.py", line 226 in lowess
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 495 in _exact_lowess
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 535 in _loess_curve_at_grid
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 2840 in calibration_curves
+  File "support2_mortality_audit.py:cell11", line 1 in <module>
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\tools\run_cells.py", line 58 in main
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\tools\run_cells.py", line 72 in <module>
+LOESS calibration curves: 1400 rows across 3 axes
+[cell 11] done      595.68 s   (elapsed    773.59 s)
+[cell 12] start  hl = audit.hosmer_lemeshow()
+     attribute subgroup      n  n_events  hl_statistic  hl_df  hl_p_value  n_bins_used  bins_reduced  decile_slope  decile_intercept
+           sex  Overall 1821.0     472.0      6.984481   10.0    0.726909         10.0         False      1.035193          0.001901
+           sex   female  787.0     199.0      4.889447   10.0    0.898440         10.0         False      0.999816         -0.003906
+           sex     male 1034.0     273.0     11.609940   10.0    0.312009         10.0         False      1.074030          0.003854
+     age_group  Overall 1821.0     472.0      6.984481   10.0    0.726909         10.0         False      1.035193          0.001901
+     age_group    18-44  257.0      65.0      3.455898   10.0    0.968575         10.0         False      1.060467         -0.018412
+     age_group    45-64  684.0     171.0      9.862405   10.0    0.452647         10.0         False      1.113864          0.007580
+     age_group    65-79  677.0     172.0      9.413592   10.0    0.493353         10.0         False      0.927756          0.012236
+     age_group      80+  203.0      64.0      2.580623   10.0    0.989648         10.0         False      1.030563          0.002523
+race_ethnicity  Overall 1821.0     472.0      6.984481   10.0    0.726909         10.0         False      1.035193          0.001901
+race_ethnicity    asian   13.0       5.0     12.590772   10.0    0.247460         10.0         False      0.649923          0.276802
+race_ethnicity    black  266.0      82.0     11.803887   10.0    0.298396         10.0         False      0.953182          0.058448
+race_ethnicity hispanic   57.0      10.0      7.163323   10.0    0.709942         10.0         False      0.847620         -0.019755
+race_ethnicity    other   32.0       9.0     10.850724   10.0    0.369266         10.0         False      1.060909          0.039889
+race_ethnicity    white 1453.0     366.0      7.201423   10.0    0.706302         10.0         False      1.046285         -0.006428
+[cell 12] done        0.52 s   (elapsed    774.11 s)
+[cell 13] start  hl_deciles = audit.hosmer_lemeshow(detail=True)
+per-decile observed vs expected: 140 rows
+attribute subgroup  decile     n  observed   expected  observed_rate  expected_rate  difference
+      sex  Overall       1 183.0       4.0   4.540307       0.021858       0.024810   -0.540307
+      sex  Overall       2 182.0       6.0   7.731616       0.032967       0.042481   -1.731616
+      sex  Overall       3 182.0      11.0  10.941175       0.060440       0.060116    0.058825
+      sex  Overall       4 182.0      17.0  15.428930       0.093407       0.084774    1.571070
+      sex  Overall       5 182.0      20.0  22.806125       0.109890       0.125308   -2.806125
+      sex  Overall       6 182.0      42.0  33.256611       0.230769       0.182729    8.743389
+      sex  Overall       7 182.0      50.0  47.405714       0.274725       0.260471    2.594286
+      sex  Overall       8 182.0      76.0  68.087159       0.417582       0.374105    7.912841
+      sex  Overall       9 182.0      94.0  96.603701       0.516484       0.530790   -2.603701
+      sex  Overall      10 182.0     152.0 145.813312       0.835165       0.801172    6.186688
+[cell 13] done        0.54 s   (elapsed    774.65 s)
+[cell 14] start  dc = audit.decision_curve(zero_crossing=True)
+attribute subgroup  threshold  net_benefit  standardized_net_benefit  treat_all_nb
+      sex  Overall       0.02     0.244584                  0.943618      0.244080
+      sex  Overall       0.04     0.231031                  0.891331      0.228332
+      sex  Overall       0.06     0.219239                  0.845835      0.211913
+      sex  Overall       0.08     0.208032                  0.802598      0.194781
+      sex  Overall       0.10     0.198182                  0.764595      0.176887
+      sex  Overall       0.12     0.191254                  0.737866      0.158180
+      sex  Overall       0.14     0.184616                  0.712259      0.138603
+      sex  Overall       0.16     0.176015                  0.679076      0.118093
+      sex  Overall       0.18     0.162401                  0.626550      0.096583
+      sex  Overall       0.20     0.155821                  0.601165      0.073998
+      sex  Overall       0.22     0.148974                  0.574750      0.050254
+      sex  Overall       0.24     0.143617                  0.554081      0.025261
+[cell 14] done       18.81 s   (elapsed    793.46 s)
+[cell 15] start  est = audit.estimability()
+41 of 178 cell-metrics are not reportable
+     attribute subgroup                       metric     n  n_events  event_floor  below_floor  proportion_nonestimable
+     age_group    18-44            calibration_slope 257.0      65.0        100.0         True                   0.0000
+     age_group      80+            calibration_slope 203.0      64.0        100.0         True                   0.0000
+     age_group      GAP                max_slope_gap   NaN       NaN        100.0         True                   0.0000
+race_ethnicity      GAP equal_opportunity_difference   NaN       NaN         25.0         True                   0.0000
+race_ethnicity      GAP           equalized_odds_gap   NaN       NaN         25.0         True                   0.0000
+race_ethnicity      GAP            max_intercept_gap   NaN       NaN         25.0         True                   0.0000
+race_ethnicity      GAP          max_net_benefit_gap   NaN       NaN         50.0         True                      NaN
+race_ethnicity      GAP                max_slope_gap   NaN       NaN        100.0         True                   0.0000
+race_ethnicity      GAP          predictive_equality   NaN       NaN         25.0         True                   0.0000
+race_ethnicity      GAP           statistical_parity   NaN       NaN         25.0         True                   0.0000
+race_ethnicity    asian                        auprc  13.0       5.0         25.0         True                   0.0025
+race_ethnicity    asian                        auroc  13.0       5.0         25.0         True                   0.0025
+race_ethnicity    asian                        brier  13.0       5.0         25.0         True                   0.0000
+race_ethnicity    asian        calibration_intercept  13.0       5.0         25.0         True                   0.0025
+race_ethnicity    asian            calibration_slope  13.0       5.0        100.0         True                   0.0025
+race_ethnicity    asian                  net_benefit  13.0       5.0         50.0         True                      NaN
+race_ethnicity    asian                          npv  13.0       5.0         25.0         True                   0.0000
+race_ethnicity    asian                          ppv  13.0       5.0         25.0         True                   0.0010
+race_ethnicity    asian                  sensitivity  13.0       5.0         25.0         True                   0.0025
+race_ethnicity    asian                  specificity  13.0       5.0         25.0         True                   0.0000
+race_ethnicity    black            calibration_slope 266.0      82.0        100.0         True                   0.0000
+race_ethnicity hispanic                        auprc  57.0      10.0         25.0         True                   0.0000
+race_ethnicity hispanic                        auroc  57.0      10.0         25.0         True                   0.0000
+race_ethnicity hispanic                        brier  57.0      10.0         25.0         True                   0.0000
+race_ethnicity hispanic        calibration_intercept  57.0      10.0         25.0         True                   0.0000
+race_ethnicity hispanic            calibration_slope  57.0      10.0        100.0         True                   0.0000
+race_ethnicity hispanic                  net_benefit  57.0      10.0         50.0         True                      NaN
+race_ethnicity hispanic                          npv  57.0      10.0         25.0         True                   0.0000
+race_ethnicity hispanic                          ppv  57.0      10.0         25.0         True                   0.0000
+race_ethnicity hispanic                  sensitivity  57.0      10.0         25.0         True                   0.0000
+race_ethnicity hispanic                  specificity  57.0      10.0         25.0         True                   0.0000
+race_ethnicity    other                        auprc  32.0       9.0         25.0         True                   0.0000
+race_ethnicity    other                        auroc  32.0       9.0         25.0         True                   0.0000
+race_ethnicity    other                        brier  32.0       9.0         25.0         True                   0.0000
+race_ethnicity    other        calibration_intercept  32.0       9.0         25.0         True                   0.0000
+race_ethnicity    other            calibration_slope  32.0       9.0        100.0         True                   0.0000
+race_ethnicity    other                  net_benefit  32.0       9.0         50.0         True                      NaN
+race_ethnicity    other                          npv  32.0       9.0         25.0         True                   0.0000
+race_ethnicity    other                          ppv  32.0       9.0         25.0         True                   0.0000
+race_ethnicity    other                  sensitivity  32.0       9.0         25.0         True                   0.0000
+race_ethnicity    other                  specificity  32.0       9.0         25.0         True                   0.0000
+[cell 15] done        0.03 s   (elapsed    793.48 s)
+[cell 16] start  audit_inter = FairnessAudit(
+           attribute          subgroup   n  n_events  shrunk  marginal_rate  cell_rate  shrinkage_factor
+sex × race_ethnicity    female / asian   2         2    True       0.252859   1.000000          0.988038
+sex × race_ethnicity    female / black 127        40    True       0.252859   0.314961          0.565366
+sex × race_ethnicity female / hispanic  24         3    True       0.252859   0.125000          0.873150
+sex × race_ethnicity    female / other  14         6    True       0.252859   0.428571          0.921875
+sex × race_ethnicity    female / white 620       148   False       0.252859   0.238710          0.210392
+sex × race_ethnicity      male / asian  11         3    True       0.264023   0.272727          0.937571
+sex × race_ethnicity      male / black 139        42    True       0.264023   0.302158          0.543064
+sex × race_ethnicity   male / hispanic  33         7    True       0.264023   0.212121          0.833502
+sex × race_ethnicity      male / other  18         3    True       0.264023   0.166667          0.901747
+sex × race_ethnicity      male / white 833       218   False       0.264023   0.261705          0.165498
+
+8 of 10 cells were shrunk
+[cell 16] done        0.01 s   (elapsed    793.49 s)
+[cell 17] start  audit_pre = FairnessAudit(
+BEFORE (race_ethnicity):
+subgroup  calibration_intercept  calibration_slope    brier      ece
+ Overall               0.082409           1.033646 0.129298 0.019082
+   asian               0.674644           0.948987 0.200621 0.348770
+   black               0.336408           0.870793 0.157254 0.055203
+hispanic              -0.492658           0.947605 0.106005 0.098122
+   other               0.431006           0.941341 0.125675 0.123582
+   white               0.038975           1.077807 0.124536 0.023804
+     GAP                    NaN                NaN      NaN      NaN
+     GAP                    NaN                NaN      NaN      NaN
+
+AFTER group-specific isotonic recalibration:
+subgroup  calibration_intercept  calibration_slope    brier      ece
+ Overall               0.057901           0.628589 0.131329 0.020230
+   asian               0.998499           0.647445 0.235401 0.229470
+   black               0.246544           0.443329 0.158801 0.050161
+hispanic              -0.979672           0.113524 0.122518 0.148523
+   other              -0.731854           0.079183 0.147460 0.162334
+   white               0.051509           0.905701 0.125359 0.027221
+     GAP                    NaN                NaN      NaN      NaN
+     GAP                    NaN                NaN      NaN      NaN
+[cell 17] done      204.40 s   (elapsed    997.90 s)
+[cell 18] start  write_pdf = importlib.util.find_spec("weasyprint") is not None
+Timeout (0:10:00)!
+Thread 0x000034ec (most recent call first):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\statsmodels\nonparametric\smoothers_lowess.py", line 226 in lowess
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 495 in _exact_lowess
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 535 in _loess_curve_at_grid
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 2840 in calibration_curves
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\report.py", line 945 in generate_report
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 4013 in report
+  File "support2_mortality_audit.py:cell18", line 2 in <module>
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\tools\run_cells.py", line 58 in main
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\tools\run_cells.py", line 72 in <module>
+report written to results\support2_audit_report.html
+PDF written to results\support2_audit_report.pdf
+[cell 18] done      545.55 s   (elapsed   1543.45 s)
+[total] 1543.45 s
+== example end 2026-10-21T12:52:25+02:00 (1544 s)
+== nb02 start 2026-10-21T12:52:25+02:00
+[NbConvertApp] Converting notebook 02_paper_analysis_support2.ipynb to notebook
+C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\zmq\_future.py:718: RuntimeWarning: Proactor event loop does not implement add_reader family of methods required for zmq. Registering an additional selector thread for add_reader support via tornado. Use `asyncio.set_event_loop_policy(WindowsSelectorEventLoopPolicy())` to avoid this warning.
+  self._get_loop()
+[NbConvertApp] Writing 1348222 bytes to C:\Users\hugoa\Desktop\isitfair\hardening\logs\golden_e07e08_nb02.ipynb
+== nb02 end 2026-10-21T13:19:34+02:00 (1629 s)
+== compare
+HASH     results/figures/figure1_discrimination.png: manifest a3c8769444371415 got 3c138fecb03e52a1
+HASH     results/figures/figure2_calibration.png: manifest 0045b79ae8a926ea got f3c7cee4d3405146
+HASH     results/figures/figure3_decision_curves.png: manifest 0fcd8a54acd4a669 got f5dedcecb3951d9d
+HASH     results/figures/figure4_clinical_consequences.png: manifest 40a6be15c3923ebf got 9c839f55825add83
+HASH     results/figures/figure5_recalibration_ladder.pdf: manifest fbc634651176576d got 5b7ba8b644ccacf3
+HASH     results/figures/figure5_recalibration_ladder.png: manifest 77ac2aceefad01a4 got c5ac924010e3d098
+HASH     results/figures/figure6a_volcano_sex.png: manifest af48d354e8c201c6 got 4149ae941080c3a2
+HASH     results/figures/figure6b_forest_comorbidity_sex.png: manifest 66627dc4d65951a2 got 45b5038a387ce6b0
+HASH     results/figures/figureS_roc.png: manifest 1ed8f7374d6f5569 got 0a889cc72cecca4e
+HASH     results/support2_audit_report.html: manifest 14ba8df8e7f6c477 got 5576138e23609bf8
+HASH     results/support2_audit_report.pdf: manifest be0632fb997acbfb got ba8d96a377c09724
+HASH     results/support2_audit_report_figures/calibration_age_group.png: manifest acc89e584f95dae8 got 56d626725eabba3c
+HASH     results/support2_audit_report_figures/calibration_race_ethnicity.png: manifest fdf8970e124f2f53 got f7c772fe0f21e8a3
+HASH     results/support2_audit_report_figures/calibration_sex.png: manifest d830e6cb5297354e got af54495675d1e162
+HASH     results/support2_audit_report_figures/decision_curve_age_group.png: manifest dc7652d59c658e1c got 4a94307c1909a535
+HASH     results/support2_audit_report_figures/decision_curve_race_ethnicity.png: manifest ba144a5f0f173922 got b25bc2d267846c4f
+HASH     results/support2_audit_report_figures/decision_curve_sex.png: manifest 09754631c8110a3d got 984ddbe7aac7c1b6
+HASH     results/support2_audit_report_figures/discrimination_age_group.png: manifest fe76df6ecb2e7840 got 6f636dbbdcfdf9ea
+HASH     results/support2_audit_report_figures/discrimination_race_ethnicity.png: manifest 333263c64e7b0901 got b430151862278d9d
+HASH     results/support2_audit_report_figures/discrimination_sex.png: manifest cd36471fed7e9060 got 8c40fbf5e774b6cc
+HASH     results/support2_audit_report_figures/mitigation_calibration_age_group.png: manifest 0ef264392d5e63f5 got 7c08b715ce30e735
+HASH     results/support2_audit_report_figures/mitigation_calibration_race_ethnicity.png: manifest 86bdc780dde37706 got 021636c7079af209
+HASH     results/support2_audit_report_figures/mitigation_calibration_sex.png: manifest 8d6f7827fd36279f got b5b1716fd22b4b0a
+HASH     results/support2_audit_report_figures/roc_age_group.png: manifest b25582140d515244 got 96f2c50ff07600b7
+HASH     results/support2_audit_report_figures/roc_race_ethnicity.png: manifest f35d59c637acd996 got bf28ffe61c5e2eb9
+HASH     results/support2_audit_report_figures/roc_sex.png: manifest b1a25a391cc79394 got cb0cdec798c02f04
+HASH     results/tables/table1_by_race_effect_sizes.csv: manifest 70bc128c402b4f35 got 6b2053df71dbee76
+         max |numeric diff| = 0; text columns equal: True
+HASH     results/tables/table1_by_race_effect_sizes.md: manifest 13d8549b1cf62ec1 got 9b802397d3b16dac
+HASH     results/tables/table1_by_sex_effect_sizes.csv: manifest f29faa53416f24d4 got 0e7a79d37d21c84a
+         max |numeric diff| = 9.71e-17; text columns equal: True
+HASH     results/tables/table1_by_sex_effect_sizes.md: manifest a241ed2d67410453 got c4daaf517e86f367
+HASH     results/tables/table2_discrimination.csv: manifest 5e4cdc7cc6eeb97a got 8a13f4fd877814fa
+         max |numeric diff| = 0; text columns equal: True
+HASH     results/tables/table2_discrimination.md: manifest 05c68baec4672060 got c7b9db19667c0e21
+HASH     results/tables/table2_discrimination_gaps.csv: manifest 2e82b474317fb8a5 got 4c9050920fe9e8d8
+         max |numeric diff| = 0; text columns equal: True
+HASH     results/tables/table2_discrimination_gaps.md: manifest 781a78072a3f12fa got c74874d4bb9c766a
+HASH     results/tables/table3_calibration.csv: manifest 4cff0c6460b3337f got 17db5cd17a4f8ba6
+         max |numeric diff| = 0; text columns equal: True
+HASH     results/tables/table3_calibration.md: manifest 34022bc02dd5a69b got 673e5c1ad67cdfcc
+HASH     results/tables/table3_calibration_gaps.csv: manifest 780c218d13e65e33 got c8edd5ea94214446
+         max |numeric diff| = 0; text columns equal: True
+HASH     results/tables/table3_calibration_gaps.md: manifest 2a1ff594594e2f46 got 4547e88add77dbb2
+HASH     results/tables/table4_mitigation_before_after.csv: manifest 579317e445955620 got 23f84855c07756a5
+         max |numeric diff| = 0.154; text columns equal: True
+HASH     results/tables/table4_mitigation_before_after.md: manifest 1d94b5bf3d90903e got 290f3d7a1104b6eb
+HASH     results/tables/table4_recalibration_ladder.csv: manifest 5807424905842460 got 984533e959ec90ab
+         max |numeric diff| = 0.0167; text columns equal: True
+HASH     results/tables/table4_recalibration_ladder.md: manifest c6d1b67cb1477224 got dd7d4231a357cec9
+HASH     results/tables/tableS1_feature_by_sex.csv: manifest 8349894d90045a96 got fcfbb8ac6b0dd688
+         max |numeric diff| = 0; text columns equal: True
+HASH     results/tables/tableS1_feature_by_sex.md: manifest e262dfb5259d088a got 8cc21036adef76b7
+HASH     results/tables/tableS5_comorbidity_sex_interaction.csv: manifest eb780df3e55f587b got 82df6edc865d72d7
+         max |numeric diff| = 0; text columns equal: True
+HASH     results/tables/tableS5_comorbidity_sex_interaction.md: manifest 0afedc5f43a1f233 got 2809e15f2a8daf39
+HASH     results/tables/tableS_dca_sensitivity.csv: manifest 220b6bd712c68c6a got c3267748f48a26d8
+         max |numeric diff| = 0; text columns equal: True
+HASH     results/tables/tableS_dca_sensitivity.md: manifest 7d64b98a41244877 got 36eb4c2da5f3ace5
+HASH     results/tables/tableS_hosmer_lemeshow.csv: manifest cf5ba1c6c03c4c23 got 25a89c7520e6b824
+         max |numeric diff| = 0; text columns equal: True
+HASH     results/tables/tableS_hosmer_lemeshow.md: manifest 468b00a9f2956fcc got 8f1669a4334d67e7
+HASH     results/tables/tableS_hosmer_lemeshow_deciles.csv: manifest f6a9d9dcdd378591 got fe06457c334ece6f
+         max |numeric diff| = 0; text columns equal: True
+HASH     results/tables/tableS_hosmer_lemeshow_deciles.md: manifest 592771c191b5e684 got 575141a4ac5421ff
+HASH     results/tables/tableS_intersectional_cells.csv: manifest 11f7e21ce084d467 got a05b37cbc8e5346e
+         max |numeric diff| = 0; text columns equal: True
+HASH     results/tables/tableS_intersectional_cells.md: manifest 08fa47dcb0752fdd got a5bc1d26f1889906
+HASH     results/tables/tableS_mitigation_wasserstein.csv: manifest db371d536f107791 got ae39a5630eba049c
+         max |numeric diff| = 0.0285; text columns equal: True
+HASH     results/tables/tableS_mitigation_wasserstein.md: manifest af11a95df504992a got 4e9e1e9f7be82bc0
+HASH     results/tables/table_clinical_consequences.csv: manifest 61c9dcc390752e09 got 1c30a4f024a41e23
+         max |numeric diff| = 0; text columns equal: True
+HASH     results/tables/table_clinical_consequences.md: manifest 2cb8172694946ba1 got 27b233f14b10b84b
+HASH     results/tables/table_compare_periods.csv: manifest fa1301d54eee2e0d got 54b5a66e60189832
+         max |numeric diff| = 0; text columns equal: True
+HASH     results/tables/table_compare_periods.md: manifest 4e908e4a9c61df61 got 8ca619f9e5184b95
+HASH     results/tables/table_decision_curve.csv: manifest 24f6abe433cf9a39 got c5a40f1518533759
+         max |numeric diff| = 0; text columns equal: True
+HASH     results/tables/table_decision_curve.md: manifest 75f103f7b97a074b got 7f02ddf07a6bd73b
+HASH     results/tables/table_estimability.csv: manifest 1d44bb89e932b9c4 got 03616e1e01fb88e3
+         max |numeric diff| = 0; text columns equal: True
+HASH     results/tables/table_estimability.md: manifest 4279b29458080754 got c32b612297e3f380
+HASH     results/tables/table_subgroup_distribution.csv: manifest 68096ad9da6b1241 got b84dcc00bbec19ec
+         max |numeric diff| = 0; text columns equal: True
+HASH     results/tables/table_subgroup_distribution.md: manifest 3c21bfd4edf8ddad got f159c1f61caeec5f
+
+matched 13, differ 66, missing 0
+== git status of worktree results/
+ M results/figures/figure1_discrimination.png
+ M results/figures/figure2_calibration.png
+ M results/figures/figure3_decision_curves.png
+ M results/figures/figure4_clinical_consequences.png
+ M results/figures/figure5_recalibration_ladder.pdf
+ M results/figures/figure5_recalibration_ladder.png
+ M results/figures/figure6a_volcano_sex.png
+ M results/figures/figure6b_forest_comorbidity_sex.png
+ M results/figures/figureS_roc.png
+ M results/support2_audit_report.html
+ M results/support2_audit_report.pdf
+ M results/support2_audit_report_figures/calibration_age_group.png
+ M results/support2_audit_report_figures/calibration_race_ethnicity.png
+ M results/support2_audit_report_figures/calibration_sex.png
+ M results/support2_audit_report_figures/decision_curve_age_group.png
+ M results/support2_audit_report_figures/decision_curve_race_ethnicity.png
+ M results/support2_audit_report_figures/decision_curve_sex.png
+ M results/support2_audit_report_figures/discrimination_age_group.png
+ M results/support2_audit_report_figures/discrimination_race_ethnicity.png
+ M results/support2_audit_report_figures/discrimination_sex.png
+ M results/support2_audit_report_figures/mitigation_calibration_age_group.png
+ M results/support2_audit_report_figures/mitigation_calibration_race_ethnicity.png
+ M results/support2_audit_report_figures/mitigation_calibration_sex.png
+ M results/support2_audit_report_figures/roc_age_group.png
+ M results/support2_audit_report_figures/roc_race_ethnicity.png
+ M results/support2_audit_report_figures/roc_sex.png
+ M results/tables/table1_by_race_effect_sizes.csv
+ M results/tables/table1_by_race_effect_sizes.md
+ M results/tables/table1_by_sex_effect_sizes.csv
+ M results/tables/table1_by_sex_effect_sizes.md
+ M results/tables/table2_discrimination.csv
+ M results/tables/table2_discrimination.md
+ M results/tables/table2_discrimination_gaps.csv
+ M results/tables/table2_discrimination_gaps.md
+ M results/tables/table3_calibration.csv
+ M results/tables/table3_calibration.md
+ M results/tables/table3_calibration_gaps.csv
+ M results/tables/table3_calibration_gaps.md
+ M results/tables/table4_mitigation_before_after.csv
+ M results/tables/table4_mitigation_before_after.md
+ M results/tables/table4_recalibration_ladder.csv
+ M results/tables/table4_recalibration_ladder.md
+ M results/tables/tableS1_feature_by_sex.csv
+ M results/tables/tableS1_feature_by_sex.md
+ M results/tables/tableS5_comorbidity_sex_interaction.csv
+ M results/tables/tableS5_comorbidity_sex_interaction.md
+ M results/tables/tableS_dca_sensitivity.csv
+ M results/tables/tableS_dca_sensitivity.md
+ M results/tables/tableS_hosmer_lemeshow.csv
+ M results/tables/tableS_hosmer_lemeshow.md
+ M results/tables/tableS_hosmer_lemeshow_deciles.csv
+ M results/tables/tableS_hosmer_lemeshow_deciles.md
+ M results/tables/tableS_intersectional_cells.csv
+ M results/tables/tableS_intersectional_cells.md
+ M results/tables/tableS_mitigation_wasserstein.csv
+ M results/tables/tableS_mitigation_wasserstein.md
+ M results/tables/table_clinical_consequences.csv
+ M results/tables/table_clinical_consequences.md
+ M results/tables/table_compare_periods.csv
+ M results/tables/table_compare_periods.md
+ M results/tables/table_decision_curve.csv
+ M results/tables/table_decision_curve.md
+ M results/tables/table_estimability.csv
+ M results/tables/table_estimability.md
+ M results/tables/table_subgroup_distribution.csv
+ M results/tables/table_subgroup_distribution.md
+== total 3174 s

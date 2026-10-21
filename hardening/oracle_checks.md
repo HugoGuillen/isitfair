@@ -1,6 +1,6 @@
 # Phase 5: isitfair against independent oracles
 
-All checks use the final code (E01, E03, E04, E05 applied).
+All checks use the code with E01, E03, E04 and E05 applied. E07 and E08, applied later, change no output (bit-identical by construction and by test).
 
 - **Scripts**: `hardening/phase5/oracles.py`, `oracle_definitions.py` and
   `oracle_calib_coverage.py`.
@@ -55,7 +55,7 @@ holds the pre-fix run).
    `tol=1e-12`. Across all 18 runs the difference never exceeds 1.7e-6. The
    committed SUPPORT2 tables round these to 3 or 4 decimals. Tightening the
    tolerance would move the committed SUPPORT2 numbers in the 6th decimal and
-   would breach the golden rule, so it was not changed (ERRORLOG E06).
+   would breach the golden rule, so it was not changed (ERRORLOG E06, won't fix).
 
 2. **Calibration slope.** There are two kinds of difference:
    - **Optimizer tolerance.** The largest is 1.2e-4 on COMPAS race = Asian
@@ -134,8 +134,7 @@ Mean estimates are unbiased: slope 0.9997 (A) and 0.7024 (B); intercept
 Slope coverage is 1.0 and 1.5 points below the 93% lower bound. With 200
 simulations the Monte Carlo standard error of a 95% coverage is about 1.5
 points, so 91.5% is 2.3 standard errors below nominal: weak but real evidence
-of undercoverage. This is logged as ERRORLOG E09 and not
-fixed, because a different interval method would change the committed
+of undercoverage. This is logged as ERRORLOG E09 and marked won't fix by the maintainer, because a different interval method would change the committed
 SUPPORT2 CIs.
 
 ## oracle_sparse: 0-event and 3-event levels not estimable

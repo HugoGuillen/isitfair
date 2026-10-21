@@ -1,0 +1,22 @@
+n=100000 events=9622 prevalence=0.0962 B=20
+  construct 0.311s
+  discrimination 4.417s (elapsed 4.7s)
+  calibration 392.071s (elapsed 396.8s)
+Timeout (0:10:00)!
+Thread 0x00005688 (most recent call first):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\statsmodels\nonparametric\smoothers_lowess.py", line 226 in lowess
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 495 in _exact_lowess
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 535 in _loess_curve_at_grid
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 2830 in calibration_curves
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\phase1\bench.py", line 62 in call
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\phase1\bench.py", line 141 in main
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\phase1\bench.py", line 153 in <module>
+  calibration_curves 407.632s (elapsed 804.4s)
+  decision_curve 5.913s (elapsed 810.3s)
+  estimability 0.029s (elapsed 810.4s)
+  hosmer_lemeshow 0.477s (elapsed 810.9s)
+  recalibration_ladder 26.591s (elapsed 837.4s)
+  report 9.058s (elapsed 846.5s)
+  roc_curves 0.000s (elapsed 846.5s)
+  decision_curve_zero_crossing 12.239s (elapsed 858.7s)
+done total 858.7s

@@ -47,13 +47,32 @@ What the fix changed: at 20k `calibration_curves()` fell from 914 s to 45 s and
 at 100k from about 7 hours to 13 minutes. B now enters only linearly through
 cheap grid evaluations.
 
-What remains quadratic (not the hang, not fixed; ERRORLOG E07): every stage
-that computes ICI or a LOESS curve for the point estimate still runs one exact
+What remained quadratic after E01 (not the hang; ERRORLOG E07): every stage
+that computes ICI or a LOESS curve for the point estimate ran one exact
 LOWESS per subgroup, O(n^2). That is what the "after" slopes of about 1.8 to 2
-measure. It is B-independent, so it costs about 13 minutes per stage at
-100,000 rows and under 4 minutes at 50,000, and it is repeated in each of
+measure. It is B-independent, so it cost about 13 minutes per stage at
+100,000 rows and under 4 minutes at 50,000, and it was repeated in each of
 `calibration()`, `calibration_curves()`, `hosmer_lemeshow()` and `report()`.
-`decision_curve(zero_crossing=True)` is quadratic for a separate reason (E08).
+`decision_curve(zero_crossing=True)` was quadratic for a separate reason (E08).
+
+### After E07 and E08 (seconds, same bench, `phase1/results/after_e07e08_*.json`)
+
+E07 caches each exact fit by a hash of its inputs, so later stages reuse it
+(bit-identical). E08 replaces the per-threshold rescan with cumulative counts.
+
+| stage | 20k after E01 | 20k now | 50k after E01 | 50k now | 100k after E01 | 100k now |
+|---|---:|---:|---:|---:|---:|---:|
+| `calibration()` | 38.4 | 21.8 | 208.2 | 105.0 | 793.2 | 392.1 |
+| `calibration_curves()` | 45.0 | 28.4 | 216.2 | 114.2 | 799.0 | 407.6 |
+| `hosmer_lemeshow()` | 32.8 | 0.7 | 200.2 | 0.6 | 775.6 | < 0.5 |
+| `recalibration_ladder()` | 17.5 | 7.1 | 75.4 | 14.4 | 274.1 | 26.6 |
+| `report()` | 39.9 | 7.1 | 207.3 | 8.1 | 783.4 | 9.1 |
+| `decision_curve(zero_crossing=True)` | 27.1 | 4.1 | 134.3 | 7.6 | 497.8 | 12.2 |
+| total | 205.6 | 74.3 | 1,048.7 | 256.9 | 3,933.4 | 858.7 |
+
+The remaining cost sits in `calibration()` and `calibration_curves()`: each
+fits a different exact LOWESS (fitted values at the data for ICI, sorted
+curve for the plot), once per subgroup, still O(n^2).
 
 ## Profile at n = 20,000 (pre-fix code)
 

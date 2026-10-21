@@ -159,7 +159,7 @@ root cause (file:line), fix, regression test, status, golden check after fix.
 - **fix**: none. Tightening the tolerance would change committed SUPPORT2 intercepts and slopes
   in about the 6th decimal, which the golden rule forbids.
 - **regression test**: n/a
-- **status**: deferred (decision for the maintainer; 1e-6 is far below every reported precision)
+- **status**: won't fix (maintainer decision, 2026-10-21; 1e-6 is far below every reported precision)
 - **golden check after fix**: n/a
 
 ## E07: point-estimate LOWESS (ICI and calibration curves) is still O(n^2)
@@ -175,14 +175,20 @@ root cause (file:line), fix, regression test, status, golden check after fix.
 - **expected**: no hang (met: it is B-independent and finishes), ideally near-linear.
 - **root cause**: `audit.py:467` and `audit.py:503` fit LOWESS with `delta=0` at every data point
   for the point estimate, once per subgroup per stage.
-- **fix**: none here. Any faster exact-at-data method (statsmodels `delta`, or evaluating at a grid
-  for ICI) changes the reported ICI and curve points, which the golden rule forbids. A
-  number-preserving option is to cache the per-subgroup point fit on the audit object so the
-  four stages share one fit (about 15 lines; it removes the three repeated fits); not done
-  because it is an optimization, not a defect fix.
-- **regression test**: n/a
-- **status**: deferred (proposal for the maintainer)
-- **golden check after fix**: n/a
+- **fix** (maintainer asked for it, 2026-10-21): `_exact_lowess` memoizes the exact fit by input
+  content (blake2b of y and p, plus the sorted/unsorted mode) for inputs of more than
+  `_LOESS_EXACT_MAX_N` rows, LRU of 64 entries; `_loess_smooth_at_data` and the exact branch of
+  `_loess_curve_at_grid` go through it. The same `lowess` call produces the cached array, so
+  results are bit-identical. 37 lines.
+- **regression test**: `tests/test_hardening_regressions.py::test_e07_*`
+  (fails before: `hardening/logs/regression/E07_E08_before.log`, pre-fix tree = commit 4803094):
+  ```
+  E       assert (18 == 12)
+  E        +  where 18 = len([(False, b'...'), ...])      (fits at the data, identical inputs repeated)
+  FAILED tests/test_hardening_regressions.py::test_e07_point_estimate_lowess_is_fitted_once_per_subgroup
+  ```
+- **status**: fixed
+- **golden check after fix**: PASS (narrowed rule, 2026-10-21, `logs/e07e08_golden_narrow.log`): tables and report identical except the same 10 report and 33 table ECE cells already exempt; figures sub-visual only (max 0.008)
 
 ## E08: decision_curve(zero_crossing=True) is O(U x n)
 
@@ -193,11 +199,19 @@ root cause (file:line), fix, regression test, status, golden check after fix.
 - **expected**: near-linear.
 - **root cause**: `audit.py:621 _zero_crossings` loops over every distinct prediction (U of them,
   about n for continuous models) and recounts TP and FP with a full `y_proba >= hi` mask each time.
-- **fix**: none here. An exact equivalent sorts once and uses cumulative sums (about 25 lines,
-  identical output); it is an optimization, not a correctness fix, and the stage finishes.
-- **regression test**: n/a
-- **status**: deferred (proposal for the maintainer)
-- **golden check after fix**: n/a
+- **fix** (maintainer asked for it, 2026-10-21): one stable sort and cumulative event and
+  non-event counts; TP and FP at any threshold come from a `searchsorted`, and `nb_at` uses the
+  same expression as `_compute_net_benefits`, so the crossings are identical. 16 lines.
+- **regression test**: `tests/test_hardening_regressions.py::test_e08_*` (a call-count spy, and
+  equality with the pre-fix algorithm on 6 inputs including heavy ties and exact 0/1 predictions)
+  (fails before: `hardening/logs/regression/E07_E08_before.log`):
+  ```
+  E       assert [3000, 3000, ...00, 3000, ...] == []
+  E         Left contains 5994 more items, first extra item: 3000
+  FAILED tests/test_hardening_regressions.py::test_e08_zero_crossings_do_not_rescan_every_row
+  ```
+- **status**: fixed
+- **golden check after fix**: PASS (narrowed rule, 2026-10-21, `logs/e07e08_golden_narrow.log`): tables and report identical except the same 10 report and 33 table ECE cells already exempt; figures sub-visual only (max 0.008)
 
 ## E09: calibration-slope 95% CIs cover 91.5% to 92% in simulation
 
@@ -213,5 +227,5 @@ root cause (file:line), fix, regression test, status, golden check after fix.
   intervals at B = 200 rather than a coding error; the B = 2,000 single run covers both slopes.
 - **fix**: none. Changing the interval method would change committed SUPPORT2 CIs.
 - **regression test**: n/a
-- **status**: deferred (needs a larger simulation, for example 1,000 runs at B = 2,000, before any change)
+- **status**: won't fix (maintainer decision, 2026-10-21)
 - **golden check after fix**: n/a

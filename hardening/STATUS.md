@@ -129,3 +129,9 @@ the Phase 7 golden step reruns the example.
 | P7 golden check (narrowed) | 2026-10-21 10:32:23 | 2026-10-21 11:24:47 | 3144 | | GOLDEN (narrowed): FAIL |
 | P7 golden compare v2 (ECE column located by header; v1 missed 2 ECE cells in rows without a Brier CI) | 2026-10-21 11:25:59 | 2026-10-21 11:25:59 | 10 | | logs/p7_golden_narrow_v2.log: PASS |
 | P7 nbconvert diabetes130 rerun (unseen-level rows dropped) | 2026-10-21 11:25:01 | 2026-10-21 12:01:16 | 2175 | | logs/p7_nb_diabetes130_rerun.log |
+| E07/E08 check (projection) | 2026-10-21 12:25:32 | | | pytest ~1 min, golden ~52 min, bench 20k ~2 min, 50k ~10 min, 100k ~35 min: done ~14:00 | P7 golden 3134 s; Phase 1 after sweep with ICI/curve fits now once each |
+| E07/E08 pytest -q | 2026-10-21 12:25:32 | 2026-10-21 12:26:40 | 68 | | 51 passed in 66.68s (0:01:06) |
+| E07/E08 golden check (narrowed) | 2026-10-21 12:26:40 | 2026-10-21 13:19:46 | 3185 | | GOLDEN (narrowed): PASS |
+| E07/E08 Phase 1 bench n=20000 | 2026-10-21 13:19:46 | 2026-10-21 13:21:04 | 78 | | phase1/results/after_e07e08_20000.json |
+| E07/E08 Phase 1 bench n=50000 | 2026-10-21 13:21:04 | 2026-10-21 13:25:26 | 262 | | phase1/results/after_e07e08_50000.json |
+| E07/E08 Phase 1 bench n=100000 | 2026-10-21 13:25:26 | 2026-10-21 13:39:49 | 863 | | phase1/results/after_e07e08_100000.json |

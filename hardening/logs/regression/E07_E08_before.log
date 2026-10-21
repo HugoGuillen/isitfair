@@ -1,0 +1,61 @@
+F.F......                                                                [100%]
+================================== FAILURES ===================================
+_________ test_e07_point_estimate_lowess_is_fitted_once_per_subgroup __________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000020608E27850>
+
+    def test_e07_point_estimate_lowess_is_fitted_once_per_subgroup(monkeypatch):
+        y, p, g = _large_cohort(5_000)
+        calls = []
+        real = audit_module.lowess
+    
+        def spy(endog, exog, *args, **kwargs):
+            if kwargs.get("xvals") is None and len(exog) > 2_000:
+                calls.append((kwargs.get("return_sorted", True),
+                              np.asarray(endog).tobytes(), np.asarray(exog).tobytes()))
+            return real(endog, exog, *args, **kwargs)
+    
+        monkeypatch.setattr(audit_module, "lowess", spy)
+        audit = FairnessAudit(y_true=y, y_proba=p, sensitive_features={"g": g},
+                              threshold=0.2, n_bootstrap=2, random_state=1)
+        # Each of these stages needs ICI for Overall, a and b (the ladder also on its
+        # recalibrated rungs, which are different inputs).
+        audit.calibration()
+        audit.hosmer_lemeshow()
+        audit.recalibration_ladder(by="g")
+        audit.calibration_curves()
+        audit.calibration_curves()
+        # No identical input is fitted twice.
+>       assert len(calls) == len(set(calls)) and len(calls) >= 6
+E       assert (18 == 12)
+E        +  where 18 = len([(False, b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x0...\xb5\xeb\xcf?-\x1a\xf3$\xf2l\xac?\xd5"\xe2\x9b\xff\xed\xcb?\xf5\xd2\x88\xf8\xe2\xa9\xc0?\xbb/\xd6\xb31\xb0\xb9?'), ...])
+E        +  and   12 = len({(False, b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x0...d6?\xf3$2\r\xdb\xcd\xd2?\x9d\xb2\x0b\x16Gr\xb2?`\xc5\t)y\x96\xc1?\xd2\xd2\xd2\xd2\xd2\xd2\xc2?Vzja\xa5\xa7\x96?'), ...})
+E        +    where {(False, b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x0...d6?\xf3$2\r\xdb\xcd\xd2?\x9d\xb2\x0b\x16Gr\xb2?`\xc5\t)y\x96\xc1?\xd2\xd2\xd2\xd2\xd2\xd2\xc2?Vzja\xa5\xa7\x96?'), ...} = set([(False, b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x0...\xb5\xeb\xcf?-\x1a\xf3$\xf2l\xac?\xd5"\xe2\x9b\xff\xed\xcb?\xf5\xd2\x88\xf8\xe2\xa9\xc0?\xbb/\xd6\xb31\xb0\xb9?'), ...])
+
+tests\test_hardening_regressions.py:215: AssertionError
+_______________ test_e08_zero_crossings_do_not_rescan_every_row _______________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000002060D010460>
+
+    def test_e08_zero_crossings_do_not_rescan_every_row(monkeypatch):
+        y, p, _ = _large_cohort(3_000)
+        scans = []
+        real = audit_module._compute_net_benefits
+    
+        def spy(y_true, y_proba, thresholds):
+            scans.append(len(y_true))
+            return real(y_true, y_proba, thresholds)
+    
+        monkeypatch.setattr(audit_module, "_compute_net_benefits", spy)
+        audit_module._zero_crossings(y, p, 0.01, 0.99)
+>       assert scans == []
+E       assert [3000, 3000, ...00, 3000, ...] == []
+E         
+E         Left contains 5994 more items, first extra item: 3000
+E         Use -v to get more diff
+
+tests\test_hardening_regressions.py:283: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_hardening_regressions.py::test_e07_point_estimate_lowess_is_fitted_once_per_subgroup
+FAILED tests/test_hardening_regressions.py::test_e08_zero_crossings_do_not_rescan_every_row
+2 failed, 7 passed, 11 deselected in 16.61s
