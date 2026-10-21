@@ -29,14 +29,33 @@ longer depends on row order or CPU.
 
 ### Performance
 
-- The exact point-estimate LOESS behind ICI and the calibration curve (O(n^2))
-  is now fitted once per subgroup and reused by `calibration()`,
+- The exact point-estimate LOESS fits behind ICI and the calibration curve
+  (O(n^2)) are now computed once per subgroup and reused by `calibration()`,
   `calibration_curves()`, `hosmer_lemeshow()`, `recalibration_ladder()` and
   `report()`, instead of once per method call. Results are identical; only
   inputs of more than 2,000 rows are memoized (at most 64 fits).
 - `decision_curve(zero_crossing=True)` counts flagged events with one sort and
   cumulative sums instead of a full pass per distinct prediction. Results are
   identical; the search is O(n log n) instead of O(n^2).
+- Together: a full audit of 100,000 patients with 20 bootstrap replicates
+  takes about 14 minutes instead of about 65 (synthetic benchmark,
+  `hardening/diagnosis.md`).
+
+### Documentation
+
+- Two troubleshooting rows in `docs/user_guide/your_own_data.md`: long
+  silent runs on large cohorts, and the `recalibration_ladder()` message for a
+  level with no events.
+
+### Known issues
+
+- Calibration intercept and slope agree with a tightly converged GLM to about
+  1e-6, not 1e-9 (optimizer tolerance). Not changed, to keep published results
+  stable.
+- In simulation, 95% CIs for the calibration slope covered 91.5% to 92% of the
+  time (200 datasets, 200 replicates each). Not changed, for the same reason.
+- In Jupyter on Windows, joblib's loky backend can print harmless `KeyError`
+  tracebacks from its resource tracker during cleanup.
 
 ## 0.4.0
 
