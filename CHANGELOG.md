@@ -43,9 +43,9 @@ longer depends on row order or CPU.
 
 ### Documentation
 
-- Two troubleshooting rows in `docs/user_guide/your_own_data.md`: long
-  silent runs on large cohorts, and the `recalibration_ladder()` message for a
-  level with no events.
+- Two troubleshooting rows in `docs/user_guide/your_own_data.md` for the
+  `recalibration_ladder()` messages: a level with no events at all, and a
+  fold whose training data has no events for a level.
 
 ### Known issues
 
