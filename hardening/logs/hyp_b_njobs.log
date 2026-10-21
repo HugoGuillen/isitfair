@@ -1,0 +1,341 @@
+== plain script 2026-10-20T20:13:03+02:00
+plain-script n_jobs=None: 67.3s
+plain-script n_jobs=2: 40.9s
+plain-script n_jobs=-1: 37.5s
+plain-script n_jobs=2 identical to n_jobs=None: True
+plain-script n_jobs=-1 identical to n_jobs=None: True
+rc=0
+== jupyter kernel 2026-10-20T20:15:36+02:00
+[NbConvertApp] Converting notebook hyp_b_njobs.ipynb to notebook
+C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\zmq\_future.py:718: RuntimeWarning: Proactor event loop does not implement add_reader family of methods required for zmq. Registering an additional selector thread for add_reader support via tornado. Use `asyncio.set_event_loop_policy(WindowsSelectorEventLoopPolicy())` to avoid this warning.
+  self._get_loop()
+Traceback (most recent call last):
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\Scripts\jupyter-nbconvert.EXE\__main__.py", line 5, in <module>
+    sys.exit(main())
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\jupyter_core\application.py", line 284, in launch_instance
+    super().launch_instance(argv=argv, **kwargs)
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\traitlets\config\application.py", line 1080, in launch_instance
+    app.start()
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\nbconvert\nbconvertapp.py", line 420, in start
+    self.convert_notebooks()
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\nbconvert\nbconvertapp.py", line 597, in convert_notebooks
+    self.convert_single_notebook(notebook_filename)
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\nbconvert\nbconvertapp.py", line 563, in convert_single_notebook
+    output, resources = self.export_single_notebook(
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\nbconvert\nbconvertapp.py", line 487, in export_single_notebook
+    output, resources = self.exporter.from_filename(
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\nbconvert\exporters\exporter.py", line 201, in from_filename
+    return self.from_file(f, resources=resources, **kw)
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\nbconvert\exporters\exporter.py", line 220, in from_file
+    return self.from_notebook_node(
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\nbconvert\exporters\notebook.py", line 36, in from_notebook_node
+    nb_copy, resources = super().from_notebook_node(nb, resources, **kw)
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\nbconvert\exporters\exporter.py", line 154, in from_notebook_node
+    nb_copy, resources = self._preprocess(nb_copy, resources)
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\nbconvert\exporters\exporter.py", line 353, in _preprocess
+    nbc, resc = preprocessor(nbc, resc)
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\nbconvert\preprocessors\base.py", line 48, in __call__
+    return self.preprocess(nb, resources)
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\nbconvert\preprocessors\execute.py", line 103, in preprocess
+    self.preprocess_cell(cell, resources, index)
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\nbconvert\preprocessors\execute.py", line 124, in preprocess_cell
+    cell = self.execute_cell(cell, index, store_history=True)
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\jupyter_core\utils\__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\asyncio\base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\nbclient\client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\nbclient\client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import faulthandler
+import os
+import sys
+import time
+
+faulthandler.dump_traceback_later(600, repeat=True)
+sys.path.insert(0, os.path.join(os.environ.get("REPO_ROOT", os.getcwd()), "hardening", "phase1"))
+import numpy as np
+from bench import make_data
+from isitfair import FairnessAudit
+
+ctx = "jupyter-kernel" if "ipykernel" in sys.modules else "plain-script"
+y, p, attrs = make_data(5000)
+res = {}
+for nj in (None, 2, -1):
+    a = FairnessAudit(y_true=y, y_proba=p, sensitive_features=attrs, threshold=0.2,
+                      n_bootstrap=200, random_state=42, n_jobs=nj)
+    t0 = time.perf_counter()
+    d = a.discrimination()
+    c = a.calibration()
+    res[nj] = (d, c, time.perf_counter() - t0)
+    print(f"{ctx} n_jobs={nj}: {res[nj][2]:.1f}s", flush=True)
+
+for nj in (2, -1):
+    same = res[nj][0].equals(res[None][0]) and res[nj][1].equals(res[None][1])
+    print(f"{ctx} n_jobs={nj} identical to n_jobs=None: {same}", flush=True)
+------------------
+
+
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mUnsupportedOperation[0m                      Traceback (most recent call last)
+Cell [1;32mIn[1], line 6[0m
+[0;32m      3[0m [38;5;28;01mimport[39;00m[38;5;250m [39m[38;5;21;01msys[39;00m
+[0;32m      4[0m [38;5;28;01mimport[39;00m[38;5;250m [39m[38;5;21;01mtime[39;00m
+[1;32m----> 6[0m [43mfaulthandler[49m[38;5;241;43m.[39;49m[43mdump_traceback_later[49m[43m([49m[38;5;241;43m600[39;49m[43m,[49m[43m [49m[43mrepeat[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m)[49m
+[0;32m      7[0m sys[38;5;241m.[39mpath[38;5;241m.[39minsert([38;5;241m0[39m, os[38;5;241m.[39mpath[38;5;241m.[39mjoin(os[38;5;241m.[39menviron[38;5;241m.[39mget([38;5;124m"[39m[38;5;124mREPO_ROOT[39m[38;5;124m"[39m, os[38;5;241m.[39mgetcwd()), [38;5;124m"[39m[38;5;124mhardening[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mphase1[39m[38;5;124m"[39m))
+[0;32m      8[0m [38;5;28;01mimport[39;00m[38;5;250m [39m[38;5;21;01mnumpy[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[38;5;21;01mnp[39;00m
+
+File [1;32m~\Desktop\isitfair\.venv\lib\site-packages\ipykernel\iostream.py:443[0m, in [0;36mOutStream.fileno[1;34m(self)[0m
+[0;32m    441[0m     [38;5;28;01mreturn[39;00m [38;5;28mself[39m[38;5;241m.[39m_original_stdstream_copy
+[0;32m    442[0m msg [38;5;241m=[39m [38;5;124m"[39m[38;5;124mfileno[39m[38;5;124m"[39m
+[1;32m--> 443[0m [38;5;28;01mraise[39;00m io[38;5;241m.[39mUnsupportedOperation(msg)
+
+[1;31mUnsupportedOperation[0m: fileno
+
+rc=1
+2026-10-20T20:15:50+02:00
+== jupyter kernel 2026-10-20T20:17:06+02:00
+[NbConvertApp] Converting notebook hyp_b_njobs.ipynb to notebook
+C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\zmq\_future.py:718: RuntimeWarning: Proactor event loop does not implement add_reader family of methods required for zmq. Registering an additional selector thread for add_reader support via tornado. Use `asyncio.set_event_loop_policy(WindowsSelectorEventLoopPolicy())` to avoid this warning.
+  self._get_loop()
+Traceback (most recent call last):
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\Scripts\jupyter-nbconvert.EXE\__main__.py", line 5, in <module>
+    sys.exit(main())
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\jupyter_core\application.py", line 284, in launch_instance
+    super().launch_instance(argv=argv, **kwargs)
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\traitlets\config\application.py", line 1080, in launch_instance
+    app.start()
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\nbconvert\nbconvertapp.py", line 420, in start
+    self.convert_notebooks()
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\nbconvert\nbconvertapp.py", line 597, in convert_notebooks
+    self.convert_single_notebook(notebook_filename)
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\nbconvert\nbconvertapp.py", line 563, in convert_single_notebook
+    output, resources = self.export_single_notebook(
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\nbconvert\nbconvertapp.py", line 487, in export_single_notebook
+    output, resources = self.exporter.from_filename(
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\nbconvert\exporters\exporter.py", line 201, in from_filename
+    return self.from_file(f, resources=resources, **kw)
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\nbconvert\exporters\exporter.py", line 220, in from_file
+    return self.from_notebook_node(
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\nbconvert\exporters\notebook.py", line 36, in from_notebook_node
+    nb_copy, resources = super().from_notebook_node(nb, resources, **kw)
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\nbconvert\exporters\exporter.py", line 154, in from_notebook_node
+    nb_copy, resources = self._preprocess(nb_copy, resources)
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\nbconvert\exporters\exporter.py", line 353, in _preprocess
+    nbc, resc = preprocessor(nbc, resc)
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\nbconvert\preprocessors\base.py", line 48, in __call__
+    return self.preprocess(nb, resources)
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\nbconvert\preprocessors\execute.py", line 103, in preprocess
+    self.preprocess_cell(cell, resources, index)
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\nbconvert\preprocessors\execute.py", line 124, in preprocess_cell
+    cell = self.execute_cell(cell, index, store_history=True)
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\jupyter_core\utils\__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\asyncio\base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\nbclient\client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\nbclient\client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import faulthandler
+import os
+import sys
+import time
+
+# Inside a Jupyter kernel sys.stderr has no file descriptor; give the watchdog a real file.
+_fh = open(os.path.join(os.environ.get('REPO_ROOT', os.getcwd()), 'hardening', 'logs', 'faulthandler_hyp_b.log'), 'w')
+faulthandler.dump_traceback_later(600, repeat=True, file=_fh)
+sys.path.insert(0, os.path.join(os.environ.get("REPO_ROOT", os.getcwd()), "hardening", "phase1"))
+import numpy as np
+from bench import make_data
+from isitfair import FairnessAudit
+
+ctx = "jupyter-kernel" if "ipykernel" in sys.modules else "plain-script"
+y, p, attrs = make_data(5000)
+res = {}
+for nj in (None, 2, -1):
+    a = FairnessAudit(y_true=y, y_proba=p, sensitive_features=attrs, threshold=0.2,
+                      n_bootstrap=200, random_state=42, n_jobs=nj)
+    t0 = time.perf_counter()
+    d = a.discrimination()
+    c = a.calibration()
+    res[nj] = (d, c, time.perf_counter() - t0)
+    print(f"{ctx} n_jobs={nj}: {res[nj][2]:.1f}s", flush=True)
+
+for nj in (2, -1):
+    same = res[nj][0].equals(res[None][0]) and res[nj][1].equals(res[None][1])
+    print(f"{ctx} n_jobs={nj} identical to n_jobs=None: {same}", flush=True)
+------------------
+
+
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mUnsupportedOperation[0m                      Traceback (most recent call last)
+Cell [1;32mIn[1], line 11[0m
+[0;32m      9[0m sys[38;5;241m.[39mpath[38;5;241m.[39minsert([38;5;241m0[39m, os[38;5;241m.[39mpath[38;5;241m.[39mjoin(os[38;5;241m.[39menviron[38;5;241m.[39mget([38;5;124m"[39m[38;5;124mREPO_ROOT[39m[38;5;124m"[39m, os[38;5;241m.[39mgetcwd()), [38;5;124m"[39m[38;5;124mhardening[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mphase1[39m[38;5;124m"[39m))
+[0;32m     10[0m [38;5;28;01mimport[39;00m[38;5;250m [39m[38;5;21;01mnumpy[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[38;5;21;01mnp[39;00m
+[1;32m---> 11[0m [38;5;28;01mfrom[39;00m[38;5;250m [39m[38;5;21;01mbench[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m make_data
+[0;32m     12[0m [38;5;28;01mfrom[39;00m[38;5;250m [39m[38;5;21;01misitfair[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m FairnessAudit
+[0;32m     14[0m ctx [38;5;241m=[39m [38;5;124m"[39m[38;5;124mjupyter-kernel[39m[38;5;124m"[39m [38;5;28;01mif[39;00m [38;5;124m"[39m[38;5;124mipykernel[39m[38;5;124m"[39m [38;5;129;01min[39;00m sys[38;5;241m.[39mmodules [38;5;28;01melse[39;00m [38;5;124m"[39m[38;5;124mplain-script[39m[38;5;124m"[39m
+
+File [1;32mC:\Users/hugoa/Desktop/isitfair\hardening\phase1\bench.py:26[0m
+[0;32m     23[0m [38;5;28;01mfrom[39;00m[38;5;250m [39m[38;5;21;01mpathlib[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m Path
+[0;32m     25[0m faulthandler[38;5;241m.[39menable()
+[1;32m---> 26[0m [43mfaulthandler[49m[38;5;241;43m.[39;49m[43mdump_traceback_later[49m[43m([49m[38;5;241;43m600[39;49m[43m,[49m[43m [49m[43mrepeat[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m)[49m
+[0;32m     28[0m [38;5;28;01mimport[39;00m[38;5;250m [39m[38;5;21;01mnumpy[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[38;5;21;01mnp[39;00m  [38;5;66;03m# noqa: E402[39;00m
+[0;32m     29[0m [38;5;28;01mfrom[39;00m[38;5;250m [39m[38;5;21;01mscipy[39;00m[38;5;21;01m.[39;00m[38;5;21;01mspecial[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m expit  [38;5;66;03m# noqa: E402[39;00m
+
+File [1;32m~\Desktop\isitfair\.venv\lib\site-packages\ipykernel\iostream.py:443[0m, in [0;36mOutStream.fileno[1;34m(self)[0m
+[0;32m    441[0m     [38;5;28;01mreturn[39;00m [38;5;28mself[39m[38;5;241m.[39m_original_stdstream_copy
+[0;32m    442[0m msg [38;5;241m=[39m [38;5;124m"[39m[38;5;124mfileno[39m[38;5;124m"[39m
+[1;32m--> 443[0m [38;5;28;01mraise[39;00m io[38;5;241m.[39mUnsupportedOperation(msg)
+
+[1;31mUnsupportedOperation[0m: fileno
+
+rc=1
+2026-10-20T20:17:21+02:00
+== jupyter kernel (3rd) 2026-10-20T20:18:01+02:00
+[NbConvertApp] Converting notebook hyp_b_njobs.ipynb to notebook
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_46060_0fe487936e874bf2915548551ae49336_cbcd8ac05aca41f38c2c3d0bf8529a04'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_46060_c932858b60544161ba5b8cab5d92908b_4275b95b3ae04835a50af9900b529a8f'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_46060_0fe487936e874bf2915548551ae49336_ad685b414bfe41e9949250ecbb5e14ac'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_46060_75f69c5df1334088aca4fe506b9e8fc9_dd38a6748fcb49deb5a157f83c85ea9e'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_46060_0fe487936e874bf2915548551ae49336_19d48c4565a244388ced9676c737578b'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_46060_3b1fe505c43a4e139bff8e73b84a0afd_5da7866df6fd4fb79564b3861a6e99aa'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_46060_0fe487936e874bf2915548551ae49336_0152dedfdd1a461b8b78fb47c5dfa91d'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_46060_b1432293b3e9462a9de1a9ca05c56c1b_a28c53258ba04a00bb480288707eece0'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_46060_0fe487936e874bf2915548551ae49336_34f7e96031a642278ab63ab1908a9073'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_46060_dca9bfd506514a5a88e3fe2011aee611_f1e01c07ddec4fc8b7961ffd90b04411'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_46060_0fe487936e874bf2915548551ae49336_e7789e33cfcb40a08311079f3471b0c5'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_46060_ecd41dcc2c374584befc0f6b8e6611c5_2c1bbcc7b0eb4f248fb14adfffe5790a'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_46060_0fe487936e874bf2915548551ae49336_8378ca02631b4d86908f55f0086db29b'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_46060_4c2cd6fc76574243aa6b4efa97375748_ca7b93e9d7ad4daabb9b0817fb727801'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_46060_0fe487936e874bf2915548551ae49336_57938270f34342f3807478a4ef422942'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_46060_023fcc602c94463891b5f59031a96ac6_bac16c6d1df54e708d03c5a42b1f6317'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_46060_0fe487936e874bf2915548551ae49336_d38c31adbfd746f1b8127fe4aab407af'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_46060_ac7850d46cd942f582e74940e3617a6f_a3725b796a30460d8ba25b021c18a14d'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_46060_0fe487936e874bf2915548551ae49336_752684cad8a24d29b45c7ace319a08a1'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_46060_7f868e6fdd354cc79bca13b7709288ac_ee8db83dbd904601bea5918c9c9a2613'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_46060_0fe487936e874bf2915548551ae49336_0f97db65fd93464e98ea4dc5172a07f5'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_46060_36cd24ae12b541b28adda43cc726a9f8_18692381593943238da9c36228e09450'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_46060_0fe487936e874bf2915548551ae49336_d1ce0df3880542af97655fd2072e83db'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_46060_fe218efeef1b4a0883a77aba6fe36e3f_356e4be89fe649d98ac3eda40c078911'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_46060_0fe487936e874bf2915548551ae49336_255e28f53478495891b0ad9475c02279'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_46060_11e9278c35d84ff0ab2de2d9ce0d2589_7a2e124029214ce4aa5f426eeff004ab'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_46060_0fe487936e874bf2915548551ae49336_be6baba898d244f297afa87557c0228f'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_46060_ad7ff37c601b42ab8dbd329bb4ae66a4_9b0021eac56c482eb11c3b9a342db3c1'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_46060_0fe487936e874bf2915548551ae49336_7a3e78fe5a2349b9ae3cf10a5e5df6f3'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_46060_b7557db96a3d4598bc716f0dc9118589_9a40ea2b2860446b8a1a30b7d4a27ab7'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_46060_0fe487936e874bf2915548551ae49336_e545b4b087244c14939335fbc6e66aaf'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_46060_0fe487936e874bf2915548551ae49336_d78ca13c25294369b17b51d2ed980086'
+[NbConvertApp] Writing 3441 bytes to hyp_b_njobs.executed.ipynb
+rc=0
+2026-10-20T20:22:34+02:00

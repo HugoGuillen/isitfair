@@ -1,0 +1,6 @@
+== bank tag=postfix_B50 B=50 pin= start 2026-10-20T20:51:57+02:00
+[NbConvertApp] Converting notebook bank.ipynb to notebook
+C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\zmq\_future.py:718: RuntimeWarning: Proactor event loop does not implement add_reader family of methods required for zmq. Registering an additional selector thread for add_reader support via tornado. Use `asyncio.set_event_loop_policy(WindowsSelectorEventLoopPolicy())` to avoid this warning.
+  self._get_loop()
+[NbConvertApp] Writing 77272 bytes to executed\bank_postfix_B50.ipynb
+== bank end rc=0 2026-10-20T21:37:33+02:00

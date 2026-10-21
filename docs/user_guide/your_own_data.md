@@ -162,3 +162,5 @@ must match the audit's attributes. See {doc}`mitigation`.
 | warning: `` is numeric with N distinct values `` | bin the variable with `pd.cut` |
 | `` cell label(s) ... cover more than one combination `` | pass `None` for the intersection and let isitfair build the labels |
 | many cells "reported without an interval" | expected with few events per subgroup; see {doc}`estimability` |
+| `` stratum 'x' of 'attr' has zero events in the whole audit `` (from `recalibration_ladder`) | merge that level into another, or drop its rows; no fold choice can fit a calibrator without events |
+| `` fold k, stratum 'x': zero events in the training union `` (from `recalibration_ladder`) | the level has very few events; pass a smaller `cv`, or merge the level |

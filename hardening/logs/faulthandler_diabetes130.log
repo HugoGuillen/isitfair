@@ -1,0 +1,265 @@
+Timeout (0:10:00)!
+Thread 0x00002f50 (most recent call first):
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 320 in wait
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\queues.py", line 147 in _feed
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 953 in run
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 1016 in _bootstrap_inner
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 973 in _bootstrap
+
+Thread 0x00003f2c (most recent call first):
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\multiprocessing\connection.py", line 811 in _exhaustive_wait
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\multiprocessing\connection.py", line 879 in wait
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\process_executor.py", line 681 in wait_result_broken_or_wakeup
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\process_executor.py", line 623 in run
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 1016 in _bootstrap_inner
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 973 in _bootstrap
+
+Thread 0x00000728 (most recent call first):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\parentpoller.py", line 115 in run
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 1016 in _bootstrap_inner
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 973 in _bootstrap
+
+Thread 0x00003aac (most recent call first):
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\selectors.py", line 315 in _select
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\selectors.py", line 324 in select
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\asyncio\base_events.py", line 1871 in _run_once
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\asyncio\base_events.py", line 603 in run_forever
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\tornado\platform\asyncio.py", line 211 in start
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\thread.py", line 24 in run
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\shellchannel.py", line 52 in run
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 1016 in _bootstrap_inner
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 973 in _bootstrap
+
+Thread 0x00006d70 (most recent call first):
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\selectors.py", line 315 in _select
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\selectors.py", line 324 in select
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\asyncio\base_events.py", line 1871 in _run_once
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\asyncio\base_events.py", line 603 in run_forever
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\tornado\platform\asyncio.py", line 211 in start
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\thread.py", line 24 in run
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 1016 in _bootstrap_inner
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 973 in _bootstrap
+
+Thread 0x00000e5c (most recent call first):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\zmq\sugar\__init__.py", line 21 in device
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\heartbeat.py", line 105 in run
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 1016 in _bootstrap_inner
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 973 in _bootstrap
+
+Thread 0x00003014 (most recent call first):
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\selectors.py", line 315 in _select
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\selectors.py", line 324 in select
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\asyncio\base_events.py", line 1871 in _run_once
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\asyncio\base_events.py", line 603 in run_forever
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\tornado\platform\asyncio.py", line 211 in start
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\iostream.py", line 164 in _thread_main
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 953 in run
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 1016 in _bootstrap_inner
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 973 in _bootstrap
+
+Thread 0x00001480 (most recent call first):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\statsmodels\nonparametric\smoothers_lowess.py", line 226 in lowess
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 467 in _loess_smooth_at_data
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 554 in _compute_ici
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 3263 in hosmer_lemeshow
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\report.py", line 774 in generate_report
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 3968 in report
+  File "C:\Users\hugoa\AppData\Local\Temp\ipykernel_8216\1020440595.py", line 3 in <module>
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3579 in run_code
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3519 in run_ast_nodes
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3336 in run_cell_async
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\IPython\core\async_helpers.py", line 128 in _pseudo_sync_runner
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3132 in _run_cell
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3077 in run_cell
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\zmqshell.py", line 663 in run_cell
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\ipkernel.py", line 464 in do_execute
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\kernelbase.py", line 834 in execute_request
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\ipkernel.py", line 372 in execute_request
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\kernelbase.py", line 478 in dispatch_shell
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\kernelbase.py", line 621 in shell_main
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\utils.py", line 71 in preserve_context
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\asyncio\events.py", line 80 in _run
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\asyncio\base_events.py", line 1909 in _run_once
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\asyncio\base_events.py", line 603 in run_forever
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\tornado\platform\asyncio.py", line 211 in start
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\kernelapp.py", line 758 in start
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\traitlets\config\application.py", line 1080 in launch_instance
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel_launcher.py", line 18 in <module>
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\runpy.py", line 86 in _run_code
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\runpy.py", line 196 in _run_module_as_main
+Timeout (0:10:00)!
+Thread 0x00002f50 (most recent call first):
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 320 in wait
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\queues.py", line 147 in _feed
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 953 in run
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 1016 in _bootstrap_inner
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 973 in _bootstrap
+
+Thread 0x00003f2c (most recent call first):
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\multiprocessing\connection.py", line 811 in _exhaustive_wait
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\multiprocessing\connection.py", line 879 in wait
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\process_executor.py", line 681 in wait_result_broken_or_wakeup
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\process_executor.py", line 623 in run
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 1016 in _bootstrap_inner
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 973 in _bootstrap
+
+Thread 0x00000728 (most recent call first):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\parentpoller.py", line 115 in run
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 1016 in _bootstrap_inner
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 973 in _bootstrap
+
+Thread 0x00003aac (most recent call first):
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\selectors.py", line 315 in _select
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\selectors.py", line 324 in select
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\asyncio\base_events.py", line 1871 in _run_once
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\asyncio\base_events.py", line 603 in run_forever
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\tornado\platform\asyncio.py", line 211 in start
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\thread.py", line 24 in run
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\shellchannel.py", line 52 in run
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 1016 in _bootstrap_inner
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 973 in _bootstrap
+
+Thread 0x00006d70 (most recent call first):
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\selectors.py", line 315 in _select
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\selectors.py", line 324 in select
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\asyncio\base_events.py", line 1871 in _run_once
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\asyncio\base_events.py", line 603 in run_forever
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\tornado\platform\asyncio.py", line 211 in start
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\thread.py", line 24 in run
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 1016 in _bootstrap_inner
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 973 in _bootstrap
+
+Thread 0x00000e5c (most recent call first):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\zmq\sugar\__init__.py", line 21 in device
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\heartbeat.py", line 105 in run
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 1016 in _bootstrap_inner
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 973 in _bootstrap
+
+Thread 0x00003014 (most recent call first):
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\selectors.py", line 315 in _select
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\selectors.py", line 324 in select
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\asyncio\base_events.py", line 1871 in _run_once
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\asyncio\base_events.py", line 603 in run_forever
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\tornado\platform\asyncio.py", line 211 in start
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\iostream.py", line 164 in _thread_main
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 953 in run
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 1016 in _bootstrap_inner
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 973 in _bootstrap
+
+Thread 0x00001480 (most recent call first):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\statsmodels\nonparametric\smoothers_lowess.py", line 226 in lowess
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 467 in _loess_smooth_at_data
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 554 in _compute_ici
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 2593 in calibration
+  File "C:\Users\hugoa\AppData\Local\Temp\ipykernel_8216\242012654.py", line 11 in run_variant
+  File "C:\Users\hugoa\AppData\Local\Temp\ipykernel_8216\242012654.py", line 51 in <module>
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3579 in run_code
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3519 in run_ast_nodes
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3336 in run_cell_async
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\IPython\core\async_helpers.py", line 128 in _pseudo_sync_runner
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3132 in _run_cell
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3077 in run_cell
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\zmqshell.py", line 663 in run_cell
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\ipkernel.py", line 464 in do_execute
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\kernelbase.py", line 834 in execute_request
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\ipkernel.py", line 372 in execute_request
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\kernelbase.py", line 478 in dispatch_shell
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\kernelbase.py", line 621 in shell_main
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\utils.py", line 71 in preserve_context
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\asyncio\events.py", line 80 in _run
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\asyncio\base_events.py", line 1909 in _run_once
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\asyncio\base_events.py", line 603 in run_forever
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\tornado\platform\asyncio.py", line 211 in start
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\kernelapp.py", line 758 in start
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\traitlets\config\application.py", line 1080 in launch_instance
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel_launcher.py", line 18 in <module>
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\runpy.py", line 86 in _run_code
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\runpy.py", line 196 in _run_module_as_main
+Timeout (0:10:00)!
+Thread 0x00002f50 (most recent call first):
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 320 in wait
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\queues.py", line 147 in _feed
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 953 in run
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 1016 in _bootstrap_inner
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 973 in _bootstrap
+
+Thread 0x00003f2c (most recent call first):
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\multiprocessing\connection.py", line 811 in _exhaustive_wait
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\multiprocessing\connection.py", line 879 in wait
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\process_executor.py", line 681 in wait_result_broken_or_wakeup
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\process_executor.py", line 623 in run
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 1016 in _bootstrap_inner
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 973 in _bootstrap
+
+Thread 0x00000728 (most recent call first):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\parentpoller.py", line 115 in run
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 1016 in _bootstrap_inner
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 973 in _bootstrap
+
+Thread 0x00003aac (most recent call first):
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\selectors.py", line 315 in _select
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\selectors.py", line 324 in select
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\asyncio\base_events.py", line 1871 in _run_once
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\asyncio\base_events.py", line 603 in run_forever
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\tornado\platform\asyncio.py", line 211 in start
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\thread.py", line 24 in run
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\shellchannel.py", line 52 in run
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 1016 in _bootstrap_inner
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 973 in _bootstrap
+
+Thread 0x00006d70 (most recent call first):
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\selectors.py", line 315 in _select
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\selectors.py", line 324 in select
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\asyncio\base_events.py", line 1871 in _run_once
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\asyncio\base_events.py", line 603 in run_forever
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\tornado\platform\asyncio.py", line 211 in start
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\thread.py", line 24 in run
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 1016 in _bootstrap_inner
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 973 in _bootstrap
+
+Thread 0x00000e5c (most recent call first):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\zmq\sugar\__init__.py", line 21 in device
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\heartbeat.py", line 105 in run
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 1016 in _bootstrap_inner
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 973 in _bootstrap
+
+Thread 0x00003014 (most recent call first):
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\selectors.py", line 315 in _select
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\selectors.py", line 324 in select
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\asyncio\base_events.py", line 1871 in _run_once
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\asyncio\base_events.py", line 603 in run_forever
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\tornado\platform\asyncio.py", line 211 in start
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\iostream.py", line 164 in _thread_main
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 953 in run
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 1016 in _bootstrap_inner
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 973 in _bootstrap
+
+Thread 0x00001480 (most recent call first):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\statsmodels\nonparametric\smoothers_lowess.py", line 226 in lowess
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 467 in _loess_smooth_at_data
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 554 in _compute_ici
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 3263 in hosmer_lemeshow
+  File "C:\Users\hugoa\AppData\Local\Temp\ipykernel_8216\242012654.py", line 12 in run_variant
+  File "C:\Users\hugoa\AppData\Local\Temp\ipykernel_8216\242012654.py", line 53 in <module>
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3579 in run_code
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3519 in run_ast_nodes
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3336 in run_cell_async
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\IPython\core\async_helpers.py", line 128 in _pseudo_sync_runner
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3132 in _run_cell
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3077 in run_cell
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\zmqshell.py", line 663 in run_cell
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\ipkernel.py", line 464 in do_execute
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\kernelbase.py", line 834 in execute_request
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\ipkernel.py", line 372 in execute_request
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\kernelbase.py", line 478 in dispatch_shell
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\kernelbase.py", line 621 in shell_main
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\utils.py", line 71 in preserve_context
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\asyncio\events.py", line 80 in _run
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\asyncio\base_events.py", line 1909 in _run_once
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\asyncio\base_events.py", line 603 in run_forever
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\tornado\platform\asyncio.py", line 211 in start
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel\kernelapp.py", line 758 in start
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\traitlets\config\application.py", line 1080 in launch_instance
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\ipykernel_launcher.py", line 18 in <module>
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\runpy.py", line 86 in _run_code
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\runpy.py", line 196 in _run_module_as_main

@@ -1,0 +1,6 @@
+# Downloaded third-party data and derived predictions: fetched by datasets/registry.py, not redistributed.
+datasets/raw/
+datasets/predictions/
+# Generated reports (about 90 MB); rebuild with phase6/pipeline.py or the notebooks.
+reports/
+__pycache__/

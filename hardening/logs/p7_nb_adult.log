@@ -1,0 +1,1004 @@
+[NbConvertApp] Converting notebook adult.ipynb to notebook
+C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\zmq\_future.py:718: RuntimeWarning: Proactor event loop does not implement add_reader family of methods required for zmq. Registering an additional selector thread for add_reader support via tornado. Use `asyncio.set_event_loop_policy(WindowsSelectorEventLoopPolicy())` to avoid this warning.
+  self._get_loop()
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_fcb949cdfa6e4a90a57451dd5b455067'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_78ecd5da257f49b5ac00fc86bd253c3e_2f01717b129b4116a6eea9dfba79e6d2'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_3059800336f241cda41764aad876c17e'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_62c48991853f46f792374614af7cc72b_43478b2880c54f8984ebaccf9d830413'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_630675c3c0fd44bcb7f97b733e59c5a6'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_981c522547ea4487931cf23f76d2dde9_543ce4f5592e4cef9a69adeeb1088ded'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_3cea483e15984266ae4f63671558ba9d'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_e060a6df8a344e5b85f4a4b557b12a20_2dc0c447e1e14d90a6cb2e01366626a7'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_0bb073530d1e482fb139a7361f8a12e4'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_e84392b0a34f4c22a591df4effc11f17_2ad06fca3b73428e9268dd24c3260f49'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_70e27b4110c44ce0b0732f404e9f1b25'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_0d2bc15894ce43149a93336d1b9f41f4_26a5be8ae3cd47bfadc83b37bab424df'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_daf4ee71685346c68775c623eab5b186'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_9f45167e89f7436fb101b54cd5b504b0_3240ee123cb544cf9d82e805c738da98'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_620654eee8ea4745bf8cf01ae5753f4a'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_79b3f987c448470db618dcc830216b1c_f1e7ba740f9349e89f14c609dd4d98c2'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_50cf03d8090b4bf8a745077cb7380b16'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_eefb2f126702471781408713ec7ea609_c26da57d0dbd4264ace8677f6fbb0e89'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_e317d71f1a4d48d1a0115a951e87b169'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_511e33797dda4543b4b59e22118cb311_b926f88a8ad8478eace2cd2c8d7fcfc0'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_f4e879130818457d988714c2ba33c17a'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_270911d3ed794334860a6ace807340cd_c45f4fdfcfa94ee883623ae22f087093'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_400e6aee1e0d41dfa2a0ce6faa028a89'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_3564ea8aa6b0448c8364164c53b9e5d1_628d986c1b234c3baf45114726f15b92'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_b278665e78eb4409806e528ed3ce073e'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_c8627503aa234c54890952cb97964a5f_956c6eada9564371934c3bfc984a4425'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_1374258bea92405f9e2d92c44ff0f52c'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_b7eb860c2460456ea059dc3af83d47d4_29f8cdf1f9c345abb53cc3f256a7a4c4'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_7c325cc78a1b4d308b00368f001ea033'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_f6824fefe85647fe99839e7a436fda4e_828cc2e3912f4d98b07ffa92c49c988b'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_ff913d416dab4db2a45b12ce22a59f9b'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_98aed1ded2e448e5ad6324f9f266dab9_24e6a1c80f7f4dc3a0d99c54aa31d0c4'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_737467ec88f14b86851f5bf55f8530fe'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_0fa8610cd7ab466e9430181cefca1404_cae5fc78b80b43d29d233fad323be490'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_37d0eba57e924e73b7246bdcfdf17257'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_3b91496bc97542ca93125e2ac254a553_58abf50c51224ac59a55906186748c6a'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_4fb7a1c5b15e48de995e09938b02a1bc'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_f949025226514f62bf7a18fb723edd6b_04532b635ecf4fedab7febfd1505b20c'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_9f15db19cbff42bba382636bc8dc285f'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_cd8497e62ccf4094b6e501cd48d22c7e_f20f2fb3249545898982ab46b10c14d6'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_10efa173592a43d1af223f01d8612370'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_1034375699aa44a28d8408dd1e709c06_8721c8a295c54aa5a50f955220683b66'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_29be159c78f244c0837642c63963e0a0'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_987f4bf60d534e12b92f477cfe81f594_be56e006e2de4773b346197953108adf'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_b5639aa7967b4749bc25a80ca192d97a'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_447112a00695496ba993f5d2115bfbcb_6cc5cf345ad8445d84e70a37a3ec997c'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_5c4ca43c94e54bb6914d199755d2c9f3'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_9db9bacaefd34351b98d6b147bffcafc_eefc8c159b5243acaec7ac6be0150b55'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_8fac6b01385648a5a3e478246d20478a'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_7e6ba0de2ddf48fe94a3dac03fdd70a3_ec2551ddd00743ed86c61837f07eb755'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_11ffb4d1402548c1a8fcbb5ea216cce2'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_51311ddebaa04acf8e135e1418638f0e_77953b4f99bc4c409759366ca0c8d25f'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_023bee7bf9aa47eeabd983a6bdfb9471'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_3aa328875ece42129ed315a033dccd25_82a70ff9fdaa42f1a6234ab95885246e'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_5c166209a3064bca8754f13fecc866ae'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_28dbdcaae7374dd49f20ad7726582bb4_2b6d552761524451941f99cac00a56f2'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_18407cfdca5145fea955126a93379138'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_fbcf2c83091646b896f27623ee3097da_1ce7d196b2174cec89e48b9f2ccc2f04'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_ba55ae9adc964af8aef09a2b1a0e9e2a'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_d7967538a5364ab2a8c4b7f06aef4514_4de18eb86b894000a51ccdd3450855eb'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_c2a717a3acac4e15a1ec57fb755d3999'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_e8d05992d4ef4bc8927719a380e187a5_29e11991780a4979912988a3eadad99b'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_8076d8582d524d6fbd9439e93d232d38'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_3fcc6089947b419c830f6b08cb9eac52_89ee3e33bdb04903a2b3d5b650b81513'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_5fe72e5b603a492bb7b8029f6cda048f'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_cbf88efa55d94d41a893db3006a3b4ed_047fe3abcdd3461fb3d3f282e9978f25'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_14479a4526454758bfbea9e56feab0f3'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_2af2475a5333486b953ae3b92bcfa4e0_ecff79a33c4e41b7ba0f7c13644d9545'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_eec9b80fb9ad4919b7835433e768b3ca'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_8e322b371f464df38488708d10ba9039_0bef3df32cdd400884bab91e7b34ffc5'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_ef78972058004efcae7506946c0929ca'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_9c14050a8a344fc0aaeea2ecce099bea_5678a0932898484bb050301aa8c5c06d'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_17597a34c4a9449eb7f83e83554e3838'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_c6db9a7ded1e44518e636f97d211ca29_916abcf586104400b2f86b3a8fb17895'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_9849647726dc46dca097895a808fd238'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_c0f0e28a5946469780c3cc809b65291b_ce308cb4f67c43bcaeb222691438ba27'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_2a1f1ba4ff504bf7886ea5729cd22741'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_f86bc2f6dab24827b1b4dd8fcac63b90_e79547ed250b48d4b734198b405e33ed'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_3724b9636057443986a8b6a17c1e7483'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_1dd417e5e21843f59a44a59d6d10f286_d2f234fd185249d0a671c65eb21873b7'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_6e85ada212644360af8f55ed86753584'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_16574cac26644a22a0a20b5c95e8c946_ac919411b0ea4be7aa9e422ac5a343fc'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_53166ef7c0d34422bd7e8d26146c2c72'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_112967629c2b430b8d8687035adc2bd2_c7896d9dfb9941b383bb9c781553f2c8'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_2c31ffd8cd1346e3988a506ec353676d'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_f1420bc632e4444d801991703130d3b6_2f66fedeab584d9e8834f467a86b6bea'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_bb5776d1c5d244ffbdd7b0f330b97986'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_9e7b0826df6b487caa97f90101625d00_29ef69b68d7247eaa408abadcf0426c3'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_e94c287d69b84d63ab4738f88786c749'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_4c9630ffe4f34f2eaf0d30a6f0b35a4a_34847548198b4558b4db4e8065f09474'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_9fade9578e394bba8c1792a55622a7a8'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_5a6d558cc2284f89893fb25eb5c05aa6_b1ca6d54400c46e29c8961493dec7e89'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_e1446e999cb847c08400cda3d07048ed'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_c5df6e22f0e4448f9a390e601ec0d46a_9e3cfa69fd6143d3a9f2012752ea17af'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_ecd27ffbaf8747098f1e24f7e48faa5a'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_75e85638a90b4e859dccca71509e7261_7c25693430654e9ca5b7305f4a05e780'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_c23991c460824178b8f539254217aebb'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_849bcd40e6424d34b94f264beeabd326_f152b1751127437888ca751f053f5dbb'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_f626393b04ef44e0b134e92a6acf6dcb'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_d83d598422fe45c9b7aee3da223dc47c_0d1a3afd99e24b44b1852edb6efcd24c'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_eeba7b9d908d45679503ad00eacdac89'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_7f9a886a5c124e9188375990310f2a90_9cd21d602d2e4be8bafd16fa7a86598b'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_9ccd6b685c4148c68e77a453588d8783'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_f494ab24895048768e9ad3ea70a352fa_af21b28816964222a1089634d94ac8f8'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_28ed1abbbf3f43f19d659b83233df52e'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_bcf99e3374494e0493757352aca0f559_80c858ee37f9447b9b3b5d46bbce9488'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_005348f531c8483bb78ea82efcfb8ba9'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_3a942bd7f4d64b4ca05ac29a14db21ab_c50dfdc22fae48d1a5e93d8eda867e30'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_50183adf98f4427f8fb21a14723b14c3'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_3f60732e484940489b91fc9bfa85ce06_c44e94250e8c4c989f9109c9c7754d45'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_27263219178447f494b66438c0cd20c1'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_5a6f1c9c8905414ca3485c854dfbcb31_f0bea5bc6e8c4764abdec4610c6fb338'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_6b28b825abc64ec5a9c4473858a24705'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_2cecadc71b3246e1a985cf81fe953fab_114507fbe0d343b4b2f1dcd2d7aca9e2'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_160c501ae6f243b38068160e5a6c6396'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_5a23e0b4abf54d9bbae8373c643a8eee_92e8204624ab48b493f575ef4103a471'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_84d91a8805cd479abe823657a41bcb34'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_cc0787fcb4b84395bdd2215d92b8023d_227fbc4632f241c4a65a3f181a992bf0'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_104f2a48d50f4ca19dab06eeaaad203c'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_06b2f899aef64543bd9f86df8ca8d8fa_dcf2d579e9d9457e86f078cc0ee485b8'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_ae48e829925a43b88518656d53654016'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_690f4e77fa4342948204ec015d187c9c_89af86f26f274a5d92475860ad292971'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_0f45c917ebed42919572e0b06b14f05c'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_935e10d915664335aaa832fbf220bd6b_2601900baba04ef8ae589e04a60d3abd'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_875264693f6b458aab2b51d50de6bb5f'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_4cc3dbe4c9f947e9a19b9878ab0eaf06_5145be5b074148d98153b514ad970488'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_33a4cd22dcea4dc1b0eb66799d609b11'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_b254c765183a45468f5b6efc5bc650f8_82f9acdd14004c109cfec4cb852fe62e'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_13c3590b92524185872ea459772e5aa0'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_924da7bb8d71416a8ec80444494d3151_0bb36a02129547c5b16bea9edba1bf3d'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_1453d52384ff41199df8381590c61ace'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_dc028b5fa15949e5837f1a219953d13a_9447726c17084b7bbfdfad2d07ee8b2a'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_a2618dbc473145c187027e031f684dde'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_8731fb0356b147898c0256248797646c_f0f0193a02cd403c8cb0e61fd03b0bd4'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_10adc2a11c06449d87178cf5f400fbbe'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_0a4f477a9891412d96f689e0fc32084a_54aee8f0f4b24a8789fc36e074d572a9'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_c2e96b46299f4ba38fa86a81aaec1afc'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_c7ba0008ee87478ea9f685e0fe7c91a0_ff548dd40ad0466daf3a11b4b6f56d4e'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_eb9898c5e80c488a91bc32ed2543499d'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_79fef877485644aa903fc9d01c8a080a_3e28544af75343c2a3dd166bbb790a20'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_db3c69e2808a4d2684f180430f65c54e'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_7d48e62afa39465fb494a3cafad90fbc_976864fd0d104cd68bce74dad045cd30'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_0aec44bb610046009c37866034b68f29'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_8fad19f369ce4a36a4969695881e8160_a6773a0783534bc0afcb8895ff4d267d'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_fb0a85859ceb458698ea2c9260cf3f19'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_dc764aa81e3e4569849ba6719b1a720c_e1e1e368ff1040c7b3ad983698cfc81a'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_e82232b27c0a47039cd32b5b85405b5a'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_41612c9fa66344c6990af1d840071ba1_530f4ed43acc4d89b5894e00c562dbd3'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_8773031d576547c995085a769d34ba12'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_b39d5bbe3b14439fbd1fbffc299173c7_7ab456d7695148b18721665839ac081e'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_301435e8002b4a73971c1ec67eee7c55'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_6735a699959a44d2a5fdefd970d91e21_73c8a17390de419aa9effd727d5bac22'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_32a10ab9843c4419b5815893a70e3f6b'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_bcef8287e7d14212ac3d10597c24eb52_d77f7c48739d4ef696d65488247f31eb'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_fb1e8aeb5e784d679adb9c10f5a2d7ad'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_2b09e4c69f19433389798ce1fdcca646_3e96c2c0d9984963b4657861aea09a35'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_9933631ce2104466993080c7918c30d2'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_5e3417fe95e14aa78df0f2bdc0cb11fa_04906868382f4278b7826098c85c2edf'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_4b38f75de6d042b888a7b398c0d94da9'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_b39a58ebe7a44a229323394e9fe6c850_1715bc752a304ac9a924a951b48e6a2f'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_79f8ad9d82b9481d899d89bcf2fe7b47'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_d6a41a51609445459b7f33ad0c20ab4c_c83a32b51adb40a393693a0db93c42a5'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_8fc357f5df7245a29fb0d941f1f60449'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_1e00fbb875834dcab7eb1cdb5f76f6ca_5bccd83e8b554a12971fde037ffce695'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_7a6c2054e19745e3b6920ce4a16e2b2f'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_9101761eb1a94cfaafe8abd75601b340_9f8e26d4a16442029a1b5d298b211d06'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_d085af73516c47ee8a8f8fd851110ddd'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_d8cc0aeec72a4f219f551bda190c1499_81354986b6ef42cea27cdcb90d74fbec'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_adfab7310c1c4996a51fc7efc248c37a'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_68347642bd01420e843a9e36bccd13ec_a2a748b966294bb8989852a757c2ea83'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_623ea79cc2c6468aa9263a0449b03365'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_dd5a4512091c40078164ed9acc9aeacf_10c4ce93add148629b9c82d0738162fd'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_6fc452f9e0864598939b588c9c33c30c'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_cc1971c213cb4b14875a280d44f31bac_ab50848c7c424a029b1583c1e72a10dc'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_20abc5abaa804f6db721476e0aadce54'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_cdaff18a743547f59c5eca443cb74410_41c75fa3ef9248f5ae7190e85427c3fc'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_49cf245440504ae3841873bdfee88cbb'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_614e6a97306a4d0cb32db58ab02006c2_70bee62ceb334925b9f0992de03e4791'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_9d3aa5fd5f014c20860f6bd23d77a9af'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_40e6cedfbf0b44ccb88591c33381dba3_d13e0ddb1a73478e9723cccd392e6057'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_9cd30a7017b343d7bbb3f04f28da280a'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_4e282ecbcb334f809d92bbd08cb3dac6_deaba9bce9ce4a0d92097850f7eda932'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_cd219c7a0c9f474881f8d86033d5201c'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_d12367631d4847b6b1bdb550a7bab04c_438c55286abf4c0dab3666e6aa6ef96b'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_0fc6273123914b30b646df01161cd9e0'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_b759806907254594b6b9c630d876e7a5_c48da938f1624f8e9997b17050b5ba27'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_80db3494cd0d4baa82916d5e581a9d33'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_d2c75b879521477cae6762900033e4c0_566584bf2ad3471f91b1c761b874497c'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_91e07b2028d24da995ffc3139d185ef4'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_754e111f67a44962b7ef580fa4ea2e27_ea6a0ae9e984452aa4dc58bbf6c7e2e7'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_9c25527243f34129ac44a5ec5042d0bd'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_7ac54e4d8c9a4eecb19cf25f8f8cde1e_69611888887f47f6a40e26ac509055cc'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_58883407c8914aa8bd31dba9a3c4e895'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_98fe1bc6527b49e398b21f7c58e6917b_8e08c61ac09b4b858d53f46d6b76c506'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_a8cd73fb8de44288a7d0621301728271'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_483c12bc70504be6a4c3b164908b3616_5a155d55c7f84b62a5b89dffc5ecfd59'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_a4e22e3b737247d3a2eb9bba7b1aa9d4'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_29eccb15c17740a09bbec365475a4272_e8f0b7f6e4314b57bf7b449b36482b8e'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_4b328af09453465e907cd1c0d7c5c042'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_1b68a5e3384a4f86818d7732d3b42028_65f873cb6be245b8a5191955b2de85b6'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_0c0ffedb3893423ea376ec289a2d35dc'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_82570aa8c0844cc78363d71361402dbc_93985aaa1c2440d9908d5d07f66871e1'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_57555426908642ea98aa8afa69d59c43'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_b97f8586ea1545e9ab83398669c63337_3051872ec9de4ab3a78cbb1c9ef4ea29'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_3f7b8f831f074b66925f686a6fbfc529'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_ac44f59aa40e4b3895d40fb4b708712e_0afcde8be9e64202ae1c18ab62cb69eb'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_0754818403db4f9e8eef590b04f34170'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_8f932e0a9f914629972981e58040282e_20dbc6424421478aac18beeaf3eb31a0'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_93a14c80ce79440e9d1ce5033fe1cf0d'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_0f2f1e1a7cef4303a22fee9cbb675c53_87502dc6371d4b69be7fb16e9b85e1d3'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_44a17390b2184621885b38d155707ef9'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_8754354c33204983a30acd408a1e5245_09aa847126504122969de1519bef9c34'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_069da9fb22e84463b2ef2e3e433c32c1'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_97ebc4bf2c97496497b5dc3e6d8dde16_a698dc7fa365478786a951aa62641a5f'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_cd9dcc962d5f4669bb15c568be2b0ee2'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_695a7cc146eb47dab07651235921a0ac_f6c3719edddd4000abf93397faf55276'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_4b78c3ab3c454fdc8bcded4f02172606'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_0ea6c13ea7d04b42ba2c32d33dfeb721_c8b7a768ece44e77ae2e58a6b4e8d3b0'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_751c6f92be6340859b16b29855b5ab34'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_635ba51bf8654e4c837736b672335dbd_2ad398b2e5ef4441a9def9ffc4809567'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_59d7882c80b142e19cd7294114d37987'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_b71224c502c740fd808530852d0a80cf_314803be93644b21b6d04b8e6b20b969'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_58b204913dc343338cd68a5954f6e83e'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_920f6fe5f00441e580616b5b6bd56020_fb04426c0cd545faa136b6ae49eb06f4'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_30f58eeddf614e65b75ba313a6200572'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_a8c60b76adf640b19c359e632f8ff553_5c77f8f529254da7bd466871e99e7e59'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_99b01efe1fa64570a5c049331b0495d4'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_66de6f6d575e4507874eda41b1f787f1_f5978f5a901e429a991dedefc7269435'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_436c89eb56714fa59fe72535d6ce9ecc'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_65dce1736275408b894a01a1388781a7_371c96a347464b2ebb564c4e43171504'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_cf2e32c7320a4f43a3ff6786b847f982'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_a2677037818747d18afd0c2fd2200817_1c6b57b046fc453d89172970140f1d06'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_de82310340344428b0bd4756b587a274'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_4bca2347197040b98be9a5dbbd3e2821_19a640051e9e4e29b32ef3cf9f996b13'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_0a5d01349109437f8cb2474aaf3ba54d'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_01424085cde2407788d7fb79fd3eddb1_3cddae40786341299f8e9eb027701170'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_015f96ab1559413eaf9bb40da68b5ad8'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_14c88624d6b0465fb06f1a64188066ef_ec6993dbb2094053af7356b0c28946b6'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_1d9e206b1e4f4a828a38b81472972857'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_ad4d5f8ce79b47e2811f7a0228f3d415_ec4bcccecb2d41f4bcf3097e74efc835'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_cfb9df2def5540ff94b79449a2189833'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_131fa2e004bc41d4a3425e9c158ff264_d60a4c72f9314641996c592d7ec46d0f'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_5daafcbce20c494089e06a7e9cde948c'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_520d3883a8794ae48414628e793c473e_73f7eb8c3e4b4cd29d03f8a90aa1c91b'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_27310abb89ea47c2ba18937a454a6ff1'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_ce133c0153214aab9b5c235b8c3b12dd_4e723cde0f8a488e9da3e2f9c07e99db'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_64a7ec21eadb42c59feca0a7e2679ea3'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_c1fa5495cb8848a8aa1b21ba1ae53a36_4d5e07fd14214e59980e6e5d9ed98198'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_613d144d5d654fd191ddf60a9b50b366'
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 319, in main
+    del registry[rtype][name]
+KeyError: 'C:\\Users\\hugoa\\AppData\\Local\\Temp\\joblib_memmapping_folder_2384_38ae30c4add94becafc0bc2888885c22_98ed5e1a43024c7bbcf7cb581abb7eaa'
+[NbConvertApp] Writing 52188 bytes to executed\adult_phase7.ipynb

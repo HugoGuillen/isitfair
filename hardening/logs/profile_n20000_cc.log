@@ -1,0 +1,16 @@
+Timeout (0:10:00)!
+Thread 0x0000b300 (most recent call first):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\statsmodels\nonparametric\smoothers_lowess.py", line 226 in lowess
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 483 in _loess_curve_at_grid
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 2762 in calibration_curves
+  File "C:\Users\hugoa\Desktop\isitfair\hardening/phase1\bench.py", line 65 in call
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\phase1\profile_stage.py", line 28 in <module>
+cProfile run 883.7s
+Timeout (0:10:00)!
+Thread 0x0000b300 (most recent call first):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\statsmodels\nonparametric\smoothers_lowess.py", line 226 in lowess
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 483 in _loess_curve_at_grid
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 2762 in calibration_curves
+  File "C:\Users\hugoa\Desktop\isitfair\hardening/phase1\bench.py", line 65 in call
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\phase1\profile_stage.py", line 38 in <module>
+done

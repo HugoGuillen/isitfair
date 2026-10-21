@@ -1,0 +1,22 @@
+{
+  "dataset": "diabetes130",
+  "B": 200,
+  "n_jobs": -1,
+  "isitfair": "0.4.0",
+  "isitfair_file": "C:\\Users\\hugoa\\Desktop\\isitfair\\src\\isitfair\\__init__.py",
+  "seconds": {
+    "construct": 0.02,
+    "discrimination": 12.12,
+    "roc_curves": 4.51,
+    "calibration": 26.22,
+    "calibration_curves": 72.12,
+    "hosmer_lemeshow": 21.84,
+    "hosmer_lemeshow_detail": 23.19,
+    "decision_curve_zero_crossing": 24.01,
+    "estimability": 0.02,
+    "cell_diagnostics": 0.03,
+    "mitigate": 0.13,
+    "report_html_pdf": 175.95
+  },
+  "total_seconds": 360.3
+}

@@ -1,0 +1,2968 @@
+[
+  {
+    "dataset": "support2",
+    "column": "y_proba_lr",
+    "n": 1821,
+    "threshold": 0.3,
+    "seconds_isitfair": 15.0,
+    "shrunk_rows_skipped_for_rates": 4,
+    "metrics": {
+      "auroc": {
+        "max_abs_diff": 0.0,
+        "n": 23,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "auprc": {
+        "max_abs_diff": 0.0,
+        "n": 23,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "sensitivity": {
+        "max_abs_diff": 0.0,
+        "n": 19,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "specificity": {
+        "max_abs_diff": 0.0,
+        "n": 19,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "ppv": {
+        "max_abs_diff": 0.0,
+        "n": 19,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "npv": {
+        "max_abs_diff": 0.0,
+        "n": 19,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "calibration_intercept": {
+        "max_abs_diff": 1.2898691398866013e-06,
+        "n": 23,
+        "nan_mismatch": 0,
+        "worst": "race_ethnicity=hispanic: isitfair=-0.4926582285510048 oracle=-0.49265951842014466",
+        "nan_examples": []
+      },
+      "calibration_slope": {
+        "max_abs_diff": 1.5624142475356706e-06,
+        "n": 23,
+        "nan_mismatch": 0,
+        "worst": "race_ethnicity=hispanic: isitfair=0.9476047793685405 oracle=0.947606341782788",
+        "nan_examples": []
+      },
+      "brier": {
+        "max_abs_diff": 2.7755575615628914e-17,
+        "n": 23,
+        "nan_mismatch": 0,
+        "worst": "age_group=65-79: isitfair=0.13656446832263153 oracle=0.13656446832263155",
+        "nan_examples": []
+      },
+      "ece": {
+        "max_abs_diff": 0.0,
+        "n": 23,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "hl_statistic": {
+        "max_abs_diff": 5.329070518200751e-15,
+        "n": 23,
+        "nan_mismatch": 0,
+        "worst": "race_ethnicity=other: isitfair=10.850724417351245 oracle=10.85072441735124",
+        "nan_examples": []
+      },
+      "hl_p_value": {
+        "max_abs_diff": 3.3306690738754696e-16,
+        "n": 23,
+        "nan_mismatch": 0,
+        "worst": "age_group=45-64: isitfair=0.4526469214179274 oracle=0.45264692141792706",
+        "nan_examples": []
+      },
+      "hl_df": {
+        "max_abs_diff": 0.0,
+        "n": 23,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "net_benefit_vs_dcurves": {
+        "max_abs_diff": 0.0,
+        "n": 460,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "net_benefit_vs_formula": {
+        "max_abs_diff": 8.326672684688674e-17,
+        "n": 460,
+        "nan_mismatch": 0,
+        "worst": "sex=female t=0.040: isitfair=0.22416349004659036 oracle=0.22416349004659045",
+        "nan_examples": []
+      },
+      "gap_equal_opportunity": {
+        "max_abs_diff": 0.0,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "gap_predictive_equality": {
+        "max_abs_diff": 8.326672684688674e-17,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "sex: isitfair=0.031088256590415475 oracle=0.031088256590415392",
+        "nan_examples": []
+      },
+      "gap_equalized_odds": {
+        "max_abs_diff": 5.551115123125783e-17,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "race_ethnicity: isitfair=0.1630434782608695 oracle=0.16304347826086957",
+        "nan_examples": []
+      },
+      "gap_statistical_parity": {
+        "max_abs_diff": 5.551115123125783e-17,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "sex: isitfair=0.028077143327623233 oracle=0.028077143327623177",
+        "nan_examples": []
+      },
+      "gap_equal_opportunity_intersection": {
+        "max_abs_diff": 0.05282842449742864,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 age_group: isitfair=0.13597612958226768 oracle=0.18880455407969632",
+        "nan_examples": []
+      },
+      "gap_predictive_equality_intersection": {
+        "max_abs_diff": 0.08672856897861181,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 age_group: isitfair=0.1159305768715091 oracle=0.2026591458501209",
+        "nan_examples": []
+      },
+      "gap_equalized_odds_intersection": {
+        "max_abs_diff": 0.06668301626785322,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 age_group: isitfair=0.13597612958226768 oracle=0.2026591458501209",
+        "nan_examples": []
+      },
+      "gap_statistical_parity_intersection": {
+        "max_abs_diff": 0.08164318265937881,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 age_group: isitfair=0.14442460178404015 oracle=0.22606778444341896",
+        "nan_examples": []
+      }
+    }
+  },
+  {
+    "dataset": "support2",
+    "column": "y_proba_gbm",
+    "n": 1821,
+    "threshold": 0.3,
+    "seconds_isitfair": 18.4,
+    "shrunk_rows_skipped_for_rates": 4,
+    "metrics": {
+      "auroc": {
+        "max_abs_diff": 0.0,
+        "n": 23,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "auprc": {
+        "max_abs_diff": 0.0,
+        "n": 23,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "sensitivity": {
+        "max_abs_diff": 0.0,
+        "n": 19,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "specificity": {
+        "max_abs_diff": 0.0,
+        "n": 19,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "ppv": {
+        "max_abs_diff": 0.0,
+        "n": 19,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "npv": {
+        "max_abs_diff": 0.0,
+        "n": 19,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "calibration_intercept": {
+        "max_abs_diff": 1.1452026464353615e-06,
+        "n": 23,
+        "nan_mismatch": 0,
+        "worst": "race_ethnicity=black: isitfair=0.36189726039668585 oracle=0.3618961151940394",
+        "nan_examples": []
+      },
+      "calibration_slope": {
+        "max_abs_diff": 6.692903624649915e-07,
+        "n": 23,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 age_group=male / 45-64: isitfair=0.804940363533738 oracle=0.8049396942433755",
+        "nan_examples": []
+      },
+      "brier": {
+        "max_abs_diff": 0.0,
+        "n": 23,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "ece": {
+        "max_abs_diff": 0.0,
+        "n": 23,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "hl_statistic": {
+        "max_abs_diff": 7.105427357601002e-15,
+        "n": 23,
+        "nan_mismatch": 0,
+        "worst": "sex=Overall: isitfair=37.778717781810194 oracle=37.77871778181019",
+        "nan_examples": []
+      },
+      "hl_p_value": {
+        "max_abs_diff": 3.885780586188048e-16,
+        "n": 23,
+        "nan_mismatch": 0,
+        "worst": "age_group=80+: isitfair=0.4289925826213002 oracle=0.4289925826213006",
+        "nan_examples": []
+      },
+      "hl_df": {
+        "max_abs_diff": 0.0,
+        "n": 23,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "net_benefit_vs_dcurves": {
+        "max_abs_diff": 0.0,
+        "n": 460,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "net_benefit_vs_formula": {
+        "max_abs_diff": 8.326672684688674e-17,
+        "n": 460,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 age_group=female / 80+ t=0.180: isitfair=0.20177383592017745 oracle=0.20177383592017736",
+        "nan_examples": []
+      },
+      "gap_equal_opportunity": {
+        "max_abs_diff": 0.0,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "gap_predictive_equality": {
+        "max_abs_diff": 2.7755575615628914e-17,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "race_ethnicity: isitfair=0.11956521739130432 oracle=0.11956521739130435",
+        "nan_examples": []
+      },
+      "gap_equalized_odds": {
+        "max_abs_diff": 2.7755575615628914e-17,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "race_ethnicity: isitfair=0.11956521739130432 oracle=0.11956521739130435",
+        "nan_examples": []
+      },
+      "gap_statistical_parity": {
+        "max_abs_diff": 0.0,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "gap_equal_opportunity_intersection": {
+        "max_abs_diff": 0.11076707981595313,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 age_group: isitfair=0.10049161721124489 oracle=0.21125869702719802",
+        "nan_examples": []
+      },
+      "gap_predictive_equality_intersection": {
+        "max_abs_diff": 0.05032583912904884,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 age_group: isitfair=0.0963425627449751 oracle=0.14666840187402394",
+        "nan_examples": []
+      },
+      "gap_equalized_odds_intersection": {
+        "max_abs_diff": 0.11076707981595313,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 age_group: isitfair=0.10049161721124489 oracle=0.21125869702719802",
+        "nan_examples": []
+      },
+      "gap_statistical_parity_intersection": {
+        "max_abs_diff": 0.06868983259408401,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 age_group: isitfair=0.1244343021544162 oracle=0.1931241347485002",
+        "nan_examples": []
+      }
+    }
+  },
+  {
+    "dataset": "german",
+    "column": "y_proba_lr",
+    "n": 300,
+    "threshold": 0.3,
+    "seconds_isitfair": 11.4,
+    "shrunk_rows_skipped_for_rates": 8,
+    "metrics": {
+      "auroc": {
+        "max_abs_diff": 0.0,
+        "n": 17,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "auprc": {
+        "max_abs_diff": 0.0,
+        "n": 17,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "sensitivity": {
+        "max_abs_diff": 0.0,
+        "n": 9,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "specificity": {
+        "max_abs_diff": 0.0,
+        "n": 9,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "ppv": {
+        "max_abs_diff": 0.0,
+        "n": 9,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "npv": {
+        "max_abs_diff": 0.0,
+        "n": 9,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "calibration_intercept": {
+        "max_abs_diff": 1.6574295109705872e-06,
+        "n": 17,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 age_group=female / 50+: isitfair=-1.3836795449257202 oracle=-1.3836778874962092",
+        "nan_examples": []
+      },
+      "calibration_slope": {
+        "max_abs_diff": 62.909285571492276,
+        "n": 17,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 age_group=female / 50+: isitfair=42.14534970339977 oracle=105.05463527489205",
+        "nan_examples": []
+      },
+      "brier": {
+        "max_abs_diff": 2.7755575615628914e-17,
+        "n": 17,
+        "nan_mismatch": 0,
+        "worst": "sex=female: isitfair=0.16192488193071006 oracle=0.16192488193071009",
+        "nan_examples": []
+      },
+      "ece": {
+        "max_abs_diff": 0.0,
+        "n": 17,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "hl_statistic": {
+        "max_abs_diff": 3.552713678800501e-15,
+        "n": 17,
+        "nan_mismatch": 0,
+        "worst": "sex=female: isitfair=8.760280665238614 oracle=8.760280665238618",
+        "nan_examples": []
+      },
+      "hl_p_value": {
+        "max_abs_diff": 4.440892098500626e-16,
+        "n": 17,
+        "nan_mismatch": 0,
+        "worst": "sex=female: isitfair=0.5549950099663464 oracle=0.554995009966346",
+        "nan_examples": []
+      },
+      "hl_df": {
+        "max_abs_diff": 0.0,
+        "n": 17,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "net_benefit_vs_dcurves": {
+        "max_abs_diff": 0.0,
+        "n": 340,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "net_benefit_vs_formula": {
+        "max_abs_diff": 1.1102230246251565e-16,
+        "n": 340,
+        "nan_mismatch": 0,
+        "worst": "age_group=19-24 t=0.120: isitfair=0.3944530046224962 oracle=0.3944530046224961",
+        "nan_examples": []
+      },
+      "gap_equal_opportunity": {
+        "max_abs_diff": 0.0,
+        "n": 2,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "gap_predictive_equality": {
+        "max_abs_diff": 1.1102230246251565e-16,
+        "n": 2,
+        "nan_mismatch": 0,
+        "worst": "sex: isitfair=0.03219696969696961 oracle=0.032196969696969724",
+        "nan_examples": []
+      },
+      "gap_equalized_odds": {
+        "max_abs_diff": 1.1102230246251565e-16,
+        "n": 2,
+        "nan_mismatch": 0,
+        "worst": "sex: isitfair=0.03219696969696961 oracle=0.032196969696969724",
+        "nan_examples": []
+      },
+      "gap_statistical_parity": {
+        "max_abs_diff": 0.0,
+        "n": 2,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "gap_equal_opportunity_intersection": {
+        "max_abs_diff": 0.329547608789315,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 age_group: isitfair=0.07045239121068503 oracle=0.4",
+        "nan_examples": []
+      },
+      "gap_predictive_equality_intersection": {
+        "max_abs_diff": 0.14530029435073033,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 age_group: isitfair=0.1285092294587935 oracle=0.27380952380952384",
+        "nan_examples": []
+      },
+      "gap_equalized_odds_intersection": {
+        "max_abs_diff": 0.2714907705412065,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 age_group: isitfair=0.1285092294587935 oracle=0.4",
+        "nan_examples": []
+      },
+      "gap_statistical_parity_intersection": {
+        "max_abs_diff": 0.0649851854993917,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 age_group: isitfair=0.18154080523658356 oracle=0.24652599073597525",
+        "nan_examples": []
+      }
+    }
+  },
+  {
+    "dataset": "german",
+    "column": "y_proba_gbm",
+    "n": 300,
+    "threshold": 0.3,
+    "seconds_isitfair": 9.5,
+    "shrunk_rows_skipped_for_rates": 8,
+    "metrics": {
+      "auroc": {
+        "max_abs_diff": 0.0,
+        "n": 17,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "auprc": {
+        "max_abs_diff": 0.0,
+        "n": 17,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "sensitivity": {
+        "max_abs_diff": 0.0,
+        "n": 9,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "specificity": {
+        "max_abs_diff": 0.0,
+        "n": 9,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "ppv": {
+        "max_abs_diff": 0.0,
+        "n": 9,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "npv": {
+        "max_abs_diff": 0.0,
+        "n": 9,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "calibration_intercept": {
+        "max_abs_diff": 1.4611241665740682e-06,
+        "n": 17,
+        "nan_mismatch": 0,
+        "worst": "sex=male: isitfair=0.13240050152073554 oracle=0.13240196264490212",
+        "nan_examples": []
+      },
+      "calibration_slope": {
+        "max_abs_diff": 2.055939155898301e-05,
+        "n": 17,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 age_group=female / 50+: isitfair=6.864373741321887 oracle=6.864394300713446",
+        "nan_examples": []
+      },
+      "brier": {
+        "max_abs_diff": 0.0,
+        "n": 17,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "ece": {
+        "max_abs_diff": 0.0,
+        "n": 17,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "hl_statistic": {
+        "max_abs_diff": 2.842170943040401e-14,
+        "n": 17,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 age_group=female / 19-24: isitfair=200.87076742197382 oracle=200.8707674219738",
+        "nan_examples": []
+      },
+      "hl_p_value": {
+        "max_abs_diff": 1.1102230246251565e-16,
+        "n": 17,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 age_group=male / 25-34: isitfair=0.15186816470235398 oracle=0.1518681647023541",
+        "nan_examples": []
+      },
+      "hl_df": {
+        "max_abs_diff": 0.0,
+        "n": 17,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "net_benefit_vs_dcurves": {
+        "max_abs_diff": 0.0,
+        "n": 340,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "net_benefit_vs_formula": {
+        "max_abs_diff": 5.551115123125783e-17,
+        "n": 340,
+        "nan_mismatch": 0,
+        "worst": "sex=female t=0.020: isitfair=0.30733481511416444 oracle=0.3073348151141645",
+        "nan_examples": []
+      },
+      "gap_equal_opportunity": {
+        "max_abs_diff": 0.0,
+        "n": 2,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "gap_predictive_equality": {
+        "max_abs_diff": 2.7755575615628914e-17,
+        "n": 2,
+        "nan_mismatch": 0,
+        "worst": "sex: isitfair=0.008838383838383868 oracle=0.00883838383838384",
+        "nan_examples": []
+      },
+      "gap_equalized_odds": {
+        "max_abs_diff": 0.0,
+        "n": 2,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "gap_statistical_parity": {
+        "max_abs_diff": 5.551115123125783e-17,
+        "n": 2,
+        "nan_mismatch": 0,
+        "worst": "age_group: isitfair=0.08026315789473681 oracle=0.08026315789473687",
+        "nan_examples": []
+      },
+      "gap_equal_opportunity_intersection": {
+        "max_abs_diff": 0.4046191805309878,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 age_group: isitfair=0.09538081946901222 oracle=0.5",
+        "nan_examples": []
+      },
+      "gap_predictive_equality_intersection": {
+        "max_abs_diff": 0.15976350486684449,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 age_group: isitfair=0.07269263548403271 oracle=0.2324561403508772",
+        "nan_examples": []
+      },
+      "gap_equalized_odds_intersection": {
+        "max_abs_diff": 0.4046191805309878,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 age_group: isitfair=0.09538081946901222 oracle=0.5",
+        "nan_examples": []
+      },
+      "gap_statistical_parity_intersection": {
+        "max_abs_diff": 0.006109755208855483,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 age_group: isitfair=0.1387878878869882 oracle=0.13267813267813272",
+        "nan_examples": []
+      }
+    }
+  },
+  {
+    "dataset": "heart_cleveland",
+    "column": "y_proba_lr",
+    "n": 91,
+    "threshold": 0.5,
+    "seconds_isitfair": 8.9,
+    "shrunk_rows_skipped_for_rates": 8,
+    "metrics": {
+      "auroc": {
+        "max_abs_diff": 0.0,
+        "n": 16,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "auprc": {
+        "max_abs_diff": 0.0,
+        "n": 16,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "sensitivity": {
+        "max_abs_diff": 0.0,
+        "n": 9,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "specificity": {
+        "max_abs_diff": 0.0,
+        "n": 9,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "ppv": {
+        "max_abs_diff": 0.0,
+        "n": 9,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "npv": {
+        "max_abs_diff": 0.0,
+        "n": 9,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "calibration_intercept": {
+        "max_abs_diff": 1.620491110382316e-06,
+        "n": 16,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 age_group=male / 55-64: isitfair=-0.08167206125278928 oracle=-0.08167368174389966",
+        "nan_examples": []
+      },
+      "calibration_slope": {
+        "max_abs_diff": 11.897561522547175,
+        "n": 16,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 age_group=female / 65+: isitfair=9.387482924524903 oracle=21.285044447072078",
+        "nan_examples": []
+      },
+      "brier": {
+        "max_abs_diff": 2.7755575615628914e-17,
+        "n": 17,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 age_group=female / 65+: isitfair=0.1321702845148079 oracle=0.13217028451480786",
+        "nan_examples": []
+      },
+      "ece": {
+        "max_abs_diff": 0.0,
+        "n": 17,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "hl_statistic": {
+        "max_abs_diff": 3.552713678800501e-15,
+        "n": 13,
+        "nan_mismatch": 0,
+        "worst": "sex=Overall: isitfair=15.860531287435741 oracle=15.860531287435737",
+        "nan_examples": []
+      },
+      "hl_p_value": {
+        "max_abs_diff": 3.3306690738754696e-16,
+        "n": 13,
+        "nan_mismatch": 0,
+        "worst": "age_group=55-64: isitfair=0.47139487553609327 oracle=0.4713948755360936",
+        "nan_examples": []
+      },
+      "hl_df": {
+        "max_abs_diff": 0.0,
+        "n": 13,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "net_benefit_vs_dcurves": {
+        "max_abs_diff": 0.0,
+        "n": 320,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "net_benefit_vs_formula": {
+        "max_abs_diff": 1.6653345369377348e-16,
+        "n": 320,
+        "nan_mismatch": 0,
+        "worst": "sex=male t=0.080: isitfair=0.46811594202898565 oracle=0.4681159420289855",
+        "nan_examples": []
+      },
+      "gap_equal_opportunity": {
+        "max_abs_diff": 0.0,
+        "n": 2,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "gap_predictive_equality": {
+        "max_abs_diff": 5.551115123125783e-17,
+        "n": 2,
+        "nan_mismatch": 0,
+        "worst": "sex: isitfair=0.14137931034482765 oracle=0.1413793103448276",
+        "nan_examples": []
+      },
+      "gap_equalized_odds": {
+        "max_abs_diff": 5.551115123125783e-17,
+        "n": 2,
+        "nan_mismatch": 0,
+        "worst": "sex: isitfair=0.14137931034482765 oracle=0.1413793103448276",
+        "nan_examples": []
+      },
+      "gap_statistical_parity": {
+        "max_abs_diff": 0.0,
+        "n": 2,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "gap_equal_opportunity_intersection": {
+        "max_abs_diff": 0.9062248429702706,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 age_group: isitfair=0.09377515702972938 oracle=1.0",
+        "nan_examples": []
+      },
+      "gap_predictive_equality_intersection": {
+        "max_abs_diff": 0.26465947845258186,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 age_group: isitfair=0.23534052154741814 oracle=0.5",
+        "nan_examples": []
+      },
+      "gap_equalized_odds_intersection": {
+        "max_abs_diff": 0.7646594784525819,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 age_group: isitfair=0.23534052154741814 oracle=1.0",
+        "nan_examples": []
+      },
+      "gap_statistical_parity_intersection": {
+        "max_abs_diff": 0.21692805965642825,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 age_group: isitfair=0.35553570845951377 oracle=0.572463768115942",
+        "nan_examples": []
+      }
+    }
+  },
+  {
+    "dataset": "heart_cleveland",
+    "column": "y_proba_gbm",
+    "n": 91,
+    "threshold": 0.5,
+    "seconds_isitfair": 9.9,
+    "shrunk_rows_skipped_for_rates": 8,
+    "metrics": {
+      "auroc": {
+        "max_abs_diff": 0.0,
+        "n": 16,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "auprc": {
+        "max_abs_diff": 0.0,
+        "n": 16,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "sensitivity": {
+        "max_abs_diff": 0.0,
+        "n": 9,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "specificity": {
+        "max_abs_diff": 0.0,
+        "n": 9,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "ppv": {
+        "max_abs_diff": 0.0,
+        "n": 9,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "npv": {
+        "max_abs_diff": 0.0,
+        "n": 9,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "calibration_intercept": {
+        "max_abs_diff": 1.1650427218512505e-06,
+        "n": 16,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 age_group=female / 65+: isitfair=-2.365880390960113 oracle=-2.365881556002835",
+        "nan_examples": []
+      },
+      "calibration_slope": {
+        "max_abs_diff": 7.724509957293312,
+        "n": 16,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 age_group=female / 65+: isitfair=5.537007154173508 oracle=13.26151711146682",
+        "nan_examples": []
+      },
+      "brier": {
+        "max_abs_diff": 2.168404344971009e-19,
+        "n": 17,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 age_group=female / 45-54: isitfair=0.001354724474467536 oracle=0.0013547244744675363",
+        "nan_examples": []
+      },
+      "ece": {
+        "max_abs_diff": 0.0,
+        "n": 17,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "hl_statistic": {
+        "max_abs_diff": 5.684341886080802e-14,
+        "n": 13,
+        "nan_mismatch": 0,
+        "worst": "sex=female: isitfair=25.139649094414256 oracle=25.139649094414313",
+        "nan_examples": []
+      },
+      "hl_p_value": {
+        "max_abs_diff": 2.7755575615628914e-16,
+        "n": 13,
+        "nan_mismatch": 0,
+        "worst": "age_group=65+: isitfair=0.20334854399377458 oracle=0.2033485439937743",
+        "nan_examples": []
+      },
+      "hl_df": {
+        "max_abs_diff": 0.0,
+        "n": 13,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "net_benefit_vs_dcurves": {
+        "max_abs_diff": 0.0,
+        "n": 320,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "net_benefit_vs_formula": {
+        "max_abs_diff": 1.1102230246251565e-16,
+        "n": 320,
+        "nan_mismatch": 0,
+        "worst": "sex=Overall t=0.280: isitfair=0.36019536019536025 oracle=0.36019536019536014",
+        "nan_examples": []
+      },
+      "gap_equal_opportunity": {
+        "max_abs_diff": 0.0,
+        "n": 2,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "gap_predictive_equality": {
+        "max_abs_diff": 1.1102230246251565e-16,
+        "n": 2,
+        "nan_mismatch": 0,
+        "worst": "sex: isitfair=0.06206896551724128 oracle=0.06206896551724139",
+        "nan_examples": []
+      },
+      "gap_equalized_odds": {
+        "max_abs_diff": 0.0,
+        "n": 2,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "gap_statistical_parity": {
+        "max_abs_diff": 0.0,
+        "n": 2,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "gap_equal_opportunity_intersection": {
+        "max_abs_diff": 0.829867145951079,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 age_group: isitfair=0.17013285404892098 oracle=1.0",
+        "nan_examples": []
+      },
+      "gap_predictive_equality_intersection": {
+        "max_abs_diff": 0.15555555555555556,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 age_group: isitfair=0.28888888888888886 oracle=0.4444444444444444",
+        "nan_examples": []
+      },
+      "gap_equalized_odds_intersection": {
+        "max_abs_diff": 0.7111111111111111,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 age_group: isitfair=0.28888888888888886 oracle=1.0",
+        "nan_examples": []
+      },
+      "gap_statistical_parity_intersection": {
+        "max_abs_diff": 0.3878577689235566,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 age_group: isitfair=0.30779440498948685 oracle=0.6956521739130435",
+        "nan_examples": []
+      }
+    }
+  },
+  {
+    "dataset": "compas",
+    "column": "y_proba_lr",
+    "n": 1852,
+    "threshold": 0.5,
+    "seconds_isitfair": 15.5,
+    "shrunk_rows_skipped_for_rates": 7,
+    "metrics": {
+      "auroc": {
+        "max_abs_diff": 0.0,
+        "n": 23,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "auprc": {
+        "max_abs_diff": 0.0,
+        "n": 23,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "sensitivity": {
+        "max_abs_diff": 0.0,
+        "n": 17,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "specificity": {
+        "max_abs_diff": 0.0,
+        "n": 18,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "ppv": {
+        "max_abs_diff": 0.0,
+        "n": 17,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "npv": {
+        "max_abs_diff": 0.0,
+        "n": 18,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "calibration_intercept": {
+        "max_abs_diff": 1.6434682486715646e-06,
+        "n": 23,
+        "nan_mismatch": 0,
+        "worst": "race=Hispanic: isitfair=0.07515052620271044 oracle=0.07515216967095911",
+        "nan_examples": []
+      },
+      "calibration_slope": {
+        "max_abs_diff": 0.00012289026364165068,
+        "n": 23,
+        "nan_mismatch": 0,
+        "worst": "race=Asian: isitfair=7.563164385320037 oracle=7.563287275583678",
+        "nan_examples": []
+      },
+      "brier": {
+        "max_abs_diff": 5.551115123125783e-17,
+        "n": 25,
+        "nan_mismatch": 0,
+        "worst": "race \u00d7 sex=Hispanic / Female: isitfair=0.31847316723545005 oracle=0.31847316723545",
+        "nan_examples": []
+      },
+      "ece": {
+        "max_abs_diff": 0.03702152051018914,
+        "n": 25,
+        "nan_mismatch": 0,
+        "worst": "race \u00d7 sex=Other / Male: isitfair=0.10750527467320717 oracle=0.1445267951833963",
+        "nan_examples": []
+      },
+      "hl_statistic": {
+        "max_abs_diff": 2.6461904078713143,
+        "n": 23,
+        "nan_mismatch": 0,
+        "worst": "race=Hispanic: isitfair=10.993959449400636 oracle=13.64014985727195",
+        "nan_examples": []
+      },
+      "hl_p_value": {
+        "max_abs_diff": 0.19475077163253096,
+        "n": 23,
+        "nan_mismatch": 0,
+        "worst": "race \u00d7 sex=Other / Male: isitfair=0.5657971643402077 oracle=0.3710463927076767",
+        "nan_examples": []
+      },
+      "hl_df": {
+        "max_abs_diff": 0.0,
+        "n": 23,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "net_benefit_vs_dcurves": {
+        "max_abs_diff": 0.0,
+        "n": 460,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "net_benefit_vs_formula": {
+        "max_abs_diff": 1.6653345369377348e-16,
+        "n": 460,
+        "nan_mismatch": 0,
+        "worst": "race \u00d7 sex=African-American / Male t=0.200: isitfair=0.46035805626598475 oracle=0.4603580562659846",
+        "nan_examples": []
+      },
+      "gap_equal_opportunity": {
+        "max_abs_diff": 0.3103448275862069,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "race: isitfair=0.3563218390804597 oracle=0.6666666666666666",
+        "nan_examples": []
+      },
+      "gap_predictive_equality": {
+        "max_abs_diff": 5.551115123125783e-17,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "race: isitfair=0.2471910112359551 oracle=0.24719101123595505",
+        "nan_examples": []
+      },
+      "gap_equalized_odds": {
+        "max_abs_diff": 0.3103448275862069,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "race: isitfair=0.3563218390804597 oracle=0.6666666666666666",
+        "nan_examples": []
+      },
+      "gap_statistical_parity": {
+        "max_abs_diff": 0.11340206185567009,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "race: isitfair=0.33743475822801194 oracle=0.45083682008368203",
+        "nan_examples": []
+      },
+      "gap_equal_opportunity_intersection": {
+        "max_abs_diff": 0.3091133004926109,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "race \u00d7 sex: isitfair=0.35755336617405575 oracle=0.6666666666666666",
+        "nan_examples": []
+      },
+      "gap_predictive_equality_intersection": {
+        "max_abs_diff": 5.551115123125783e-17,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "race \u00d7 sex: isitfair=0.28613569321533927 oracle=0.2861356932153392",
+        "nan_examples": []
+      },
+      "gap_equalized_odds_intersection": {
+        "max_abs_diff": 0.3091133004926109,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "race \u00d7 sex: isitfair=0.35755336617405575 oracle=0.6666666666666666",
+        "nan_examples": []
+      },
+      "gap_statistical_parity_intersection": {
+        "max_abs_diff": 0.05208992977429355,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "race \u00d7 sex: isitfair=0.43256480168350697 oracle=0.4846547314578005",
+        "nan_examples": []
+      }
+    }
+  },
+  {
+    "dataset": "compas",
+    "column": "y_proba_gbm",
+    "n": 1852,
+    "threshold": 0.5,
+    "seconds_isitfair": 15.4,
+    "shrunk_rows_skipped_for_rates": 7,
+    "metrics": {
+      "auroc": {
+        "max_abs_diff": 0.0,
+        "n": 23,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "auprc": {
+        "max_abs_diff": 0.0,
+        "n": 23,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "sensitivity": {
+        "max_abs_diff": 0.0,
+        "n": 17,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "specificity": {
+        "max_abs_diff": 0.0,
+        "n": 18,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "ppv": {
+        "max_abs_diff": 0.0,
+        "n": 18,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "npv": {
+        "max_abs_diff": 0.0,
+        "n": 17,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "calibration_intercept": {
+        "max_abs_diff": 1.4940311513222948e-06,
+        "n": 23,
+        "nan_mismatch": 0,
+        "worst": "race \u00d7 sex=African-American / Male: isitfair=0.1977986815731316 oracle=0.19780017560428292",
+        "nan_examples": []
+      },
+      "calibration_slope": {
+        "max_abs_diff": 4.666377424289436e-05,
+        "n": 23,
+        "nan_mismatch": 0,
+        "worst": "race=Asian: isitfair=4.433810696473514 oracle=4.433764032699271",
+        "nan_examples": []
+      },
+      "brier": {
+        "max_abs_diff": 2.7755575615628914e-17,
+        "n": 25,
+        "nan_mismatch": 0,
+        "worst": "sex=Male: isitfair=0.21745983225274804 oracle=0.217459832252748",
+        "nan_examples": []
+      },
+      "ece": {
+        "max_abs_diff": 0.03271057165755639,
+        "n": 25,
+        "nan_mismatch": 0,
+        "worst": "race=Other: isitfair=0.0980284010047956 oracle=0.130738972662352",
+        "nan_examples": []
+      },
+      "hl_statistic": {
+        "max_abs_diff": 3.18332161717149,
+        "n": 23,
+        "nan_mismatch": 0,
+        "worst": "age_cat=25 - 45: isitfair=34.590473688390844 oracle=31.407152071219354",
+        "nan_examples": []
+      },
+      "hl_p_value": {
+        "max_abs_diff": 0.23908363003235078,
+        "n": 23,
+        "nan_mismatch": 0,
+        "worst": "race=Other: isitfair=0.7229861951961244 oracle=0.4839025651637736",
+        "nan_examples": []
+      },
+      "hl_df": {
+        "max_abs_diff": 0.0,
+        "n": 23,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "net_benefit_vs_dcurves": {
+        "max_abs_diff": 0.0,
+        "n": 460,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "net_benefit_vs_formula": {
+        "max_abs_diff": 1.6653345369377348e-16,
+        "n": 460,
+        "nan_mismatch": 0,
+        "worst": "age_cat=Less than 25 t=0.300: isitfair=0.3852403520649967 oracle=0.3852403520649965",
+        "nan_examples": []
+      },
+      "gap_equal_opportunity": {
+        "max_abs_diff": 0.3448275862068966,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "race: isitfair=0.32183908045977005 oracle=0.6666666666666666",
+        "nan_examples": []
+      },
+      "gap_predictive_equality": {
+        "max_abs_diff": 5.551115123125783e-17,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "age_cat: isitfair=0.27094047062490256 oracle=0.2709404706249026",
+        "nan_examples": []
+      },
+      "gap_equalized_odds": {
+        "max_abs_diff": 0.0,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "gap_statistical_parity": {
+        "max_abs_diff": 0.544979079497908,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "race: isitfair=0.31069102359487555 oracle=0.8556701030927836",
+        "nan_examples": []
+      },
+      "gap_equal_opportunity_intersection": {
+        "max_abs_diff": 0.342390642134763,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "race \u00d7 sex: isitfair=0.32427602453190363 oracle=0.6666666666666666",
+        "nan_examples": []
+      },
+      "gap_predictive_equality_intersection": {
+        "max_abs_diff": 0.0,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "gap_equalized_odds_intersection": {
+        "max_abs_diff": 0.0,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "gap_statistical_parity_intersection": {
+        "max_abs_diff": 0.546964542550429,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "race \u00d7 sex: isitfair=0.4095571965800058 oracle=0.9565217391304348",
+        "nan_examples": []
+      }
+    }
+  },
+  {
+    "dataset": "oracle_sparse",
+    "column": "y_proba_lr",
+    "n": 5000,
+    "threshold": 0.15,
+    "seconds_isitfair": 11.4,
+    "shrunk_rows_skipped_for_rates": 0,
+    "metrics": {
+      "auroc": {
+        "max_abs_diff": 0.0,
+        "n": 6,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "auprc": {
+        "max_abs_diff": 0.0,
+        "n": 6,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "sensitivity": {
+        "max_abs_diff": 0.0,
+        "n": 6,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "specificity": {
+        "max_abs_diff": 0.0,
+        "n": 7,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "ppv": {
+        "max_abs_diff": 0.0,
+        "n": 7,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "npv": {
+        "max_abs_diff": 0.0,
+        "n": 7,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "calibration_intercept": {
+        "max_abs_diff": 1.592163970443039e-06,
+        "n": 6,
+        "nan_mismatch": 0,
+        "worst": "level=L5: isitfair=-2.857009582500789 oracle=-2.8570111746647595",
+        "nan_examples": []
+      },
+      "calibration_slope": {
+        "max_abs_diff": 8.634554404030048e-06,
+        "n": 6,
+        "nan_mismatch": 0,
+        "worst": "level=Overall: isitfair=0.9883794205913939 oracle=0.988388055145798",
+        "nan_examples": []
+      },
+      "brier": {
+        "max_abs_diff": 2.7755575615628914e-17,
+        "n": 7,
+        "nan_mismatch": 0,
+        "worst": "level=L2: isitfair=0.11216532011225484 oracle=0.11216532011225482",
+        "nan_examples": []
+      },
+      "ece": {
+        "max_abs_diff": 0.0,
+        "n": 7,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "hl_statistic": {
+        "max_abs_diff": 0.0,
+        "n": 6,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "hl_p_value": {
+        "max_abs_diff": 0.0,
+        "n": 6,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "hl_df": {
+        "max_abs_diff": 0.0,
+        "n": 6,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "net_benefit_vs_dcurves": {
+        "max_abs_diff": 0.0,
+        "n": 120,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "net_benefit_vs_formula": {
+        "max_abs_diff": 2.7755575615628914e-17,
+        "n": 120,
+        "nan_mismatch": 0,
+        "worst": "level=L3 t=0.040: isitfair=0.10171296296296295 oracle=0.10171296296296298",
+        "nan_examples": []
+      },
+      "gap_equal_opportunity": {
+        "max_abs_diff": 0.6136363636363636,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "level: isitfair=0.38636363636363635 oracle=1.0",
+        "nan_examples": []
+      },
+      "gap_predictive_equality": {
+        "max_abs_diff": 5.551115123125783e-17,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "level: isitfair=0.06562074647181027 oracle=0.06562074647181032",
+        "nan_examples": []
+      },
+      "gap_equalized_odds": {
+        "max_abs_diff": 0.6136363636363636,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "level: isitfair=0.38636363636363635 oracle=1.0",
+        "nan_examples": []
+      },
+      "gap_statistical_parity": {
+        "max_abs_diff": 0.006111111111111123,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "level: isitfair=0.039722222222222214 oracle=0.04583333333333334",
+        "nan_examples": []
+      }
+    }
+  },
+  {
+    "dataset": "oracle_sparse",
+    "column": "y_proba_gbm",
+    "n": 5000,
+    "threshold": 0.15,
+    "seconds_isitfair": 9.9,
+    "shrunk_rows_skipped_for_rates": 0,
+    "metrics": {
+      "auroc": {
+        "max_abs_diff": 0.0,
+        "n": 6,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "auprc": {
+        "max_abs_diff": 0.0,
+        "n": 6,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "sensitivity": {
+        "max_abs_diff": 0.0,
+        "n": 6,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "specificity": {
+        "max_abs_diff": 0.0,
+        "n": 7,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "ppv": {
+        "max_abs_diff": 0.0,
+        "n": 7,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "npv": {
+        "max_abs_diff": 0.0,
+        "n": 7,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "calibration_intercept": {
+        "max_abs_diff": 1.592163970443039e-06,
+        "n": 6,
+        "nan_mismatch": 0,
+        "worst": "level=L5: isitfair=-2.857009582500789 oracle=-2.8570111746647595",
+        "nan_examples": []
+      },
+      "calibration_slope": {
+        "max_abs_diff": 8.634554404030048e-06,
+        "n": 6,
+        "nan_mismatch": 0,
+        "worst": "level=Overall: isitfair=0.9883794205913939 oracle=0.988388055145798",
+        "nan_examples": []
+      },
+      "brier": {
+        "max_abs_diff": 2.7755575615628914e-17,
+        "n": 7,
+        "nan_mismatch": 0,
+        "worst": "level=L2: isitfair=0.11216532011225484 oracle=0.11216532011225482",
+        "nan_examples": []
+      },
+      "ece": {
+        "max_abs_diff": 0.0,
+        "n": 7,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "hl_statistic": {
+        "max_abs_diff": 0.0,
+        "n": 6,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "hl_p_value": {
+        "max_abs_diff": 0.0,
+        "n": 6,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "hl_df": {
+        "max_abs_diff": 0.0,
+        "n": 6,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "net_benefit_vs_dcurves": {
+        "max_abs_diff": 0.0,
+        "n": 120,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "net_benefit_vs_formula": {
+        "max_abs_diff": 2.7755575615628914e-17,
+        "n": 120,
+        "nan_mismatch": 0,
+        "worst": "level=L3 t=0.040: isitfair=0.10171296296296295 oracle=0.10171296296296298",
+        "nan_examples": []
+      },
+      "gap_equal_opportunity": {
+        "max_abs_diff": 0.6136363636363636,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "level: isitfair=0.38636363636363635 oracle=1.0",
+        "nan_examples": []
+      },
+      "gap_predictive_equality": {
+        "max_abs_diff": 5.551115123125783e-17,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "level: isitfair=0.06562074647181027 oracle=0.06562074647181032",
+        "nan_examples": []
+      },
+      "gap_equalized_odds": {
+        "max_abs_diff": 0.6136363636363636,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "level: isitfair=0.38636363636363635 oracle=1.0",
+        "nan_examples": []
+      },
+      "gap_statistical_parity": {
+        "max_abs_diff": 0.006111111111111123,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "level: isitfair=0.039722222222222214 oracle=0.04583333333333334",
+        "nan_examples": []
+      }
+    }
+  },
+  {
+    "dataset": "oracle_calib",
+    "column": "y_proba_lr",
+    "n": 20000,
+    "threshold": 0.3,
+    "seconds_isitfair": 91.3,
+    "shrunk_rows_skipped_for_rates": 0,
+    "metrics": {
+      "auroc": {
+        "max_abs_diff": 0.0,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "auprc": {
+        "max_abs_diff": 0.0,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "sensitivity": {
+        "max_abs_diff": 0.0,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "specificity": {
+        "max_abs_diff": 0.0,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "ppv": {
+        "max_abs_diff": 0.0,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "npv": {
+        "max_abs_diff": 0.0,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "calibration_intercept": {
+        "max_abs_diff": 2.919859282135562e-07,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "group=Overall: isitfair=-0.34676386530781533 oracle=-0.34676415729374355",
+        "nan_examples": []
+      },
+      "calibration_slope": {
+        "max_abs_diff": 6.205862502772774e-07,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "group=B: isitfair=0.695279511410761 oracle=0.6952788908245108",
+        "nan_examples": []
+      },
+      "brier": {
+        "max_abs_diff": 5.551115123125783e-17,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "group=Overall: isitfair=0.17036554264379825 oracle=0.1703655426437983",
+        "nan_examples": []
+      },
+      "ece": {
+        "max_abs_diff": 0.0,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "hl_statistic": {
+        "max_abs_diff": 1.1368683772161603e-13,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "group=B: isitfair=849.5545465049917 oracle=849.5545465049915",
+        "nan_examples": []
+      },
+      "hl_p_value": {
+        "max_abs_diff": 2.7441496115975457e-115,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "group=Overall: isitfair=9.556848834172931e-102 oracle=9.556848834173206e-102",
+        "nan_examples": []
+      },
+      "hl_df": {
+        "max_abs_diff": 0.0,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "net_benefit_vs_dcurves": {
+        "max_abs_diff": 0.0,
+        "n": 60,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "net_benefit_vs_formula": {
+        "max_abs_diff": 5.551115123125783e-17,
+        "n": 60,
+        "nan_mismatch": 0,
+        "worst": "group=Overall t=0.020: isitfair=0.24581122448979595 oracle=0.2458112244897959",
+        "nan_examples": []
+      },
+      "gap_equal_opportunity": {
+        "max_abs_diff": 0.0,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "gap_predictive_equality": {
+        "max_abs_diff": 0.0,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "gap_equalized_odds": {
+        "max_abs_diff": 0.0,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "gap_statistical_parity": {
+        "max_abs_diff": 0.0,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      }
+    }
+  },
+  {
+    "dataset": "oracle_calib",
+    "column": "y_proba_gbm",
+    "n": 20000,
+    "threshold": 0.3,
+    "seconds_isitfair": 93.2,
+    "shrunk_rows_skipped_for_rates": 0,
+    "metrics": {
+      "auroc": {
+        "max_abs_diff": 0.0,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "auprc": {
+        "max_abs_diff": 0.0,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "sensitivity": {
+        "max_abs_diff": 0.0,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "specificity": {
+        "max_abs_diff": 0.0,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "ppv": {
+        "max_abs_diff": 0.0,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "npv": {
+        "max_abs_diff": 0.0,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "calibration_intercept": {
+        "max_abs_diff": 2.919859282135562e-07,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "group=Overall: isitfair=-0.34676386530781533 oracle=-0.34676415729374355",
+        "nan_examples": []
+      },
+      "calibration_slope": {
+        "max_abs_diff": 6.205862502772774e-07,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "group=B: isitfair=0.695279511410761 oracle=0.6952788908245108",
+        "nan_examples": []
+      },
+      "brier": {
+        "max_abs_diff": 5.551115123125783e-17,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "group=Overall: isitfair=0.17036554264379825 oracle=0.1703655426437983",
+        "nan_examples": []
+      },
+      "ece": {
+        "max_abs_diff": 0.0,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "hl_statistic": {
+        "max_abs_diff": 1.1368683772161603e-13,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "group=B: isitfair=849.5545465049917 oracle=849.5545465049915",
+        "nan_examples": []
+      },
+      "hl_p_value": {
+        "max_abs_diff": 2.7441496115975457e-115,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "group=Overall: isitfair=9.556848834172931e-102 oracle=9.556848834173206e-102",
+        "nan_examples": []
+      },
+      "hl_df": {
+        "max_abs_diff": 0.0,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "net_benefit_vs_dcurves": {
+        "max_abs_diff": 0.0,
+        "n": 60,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "net_benefit_vs_formula": {
+        "max_abs_diff": 5.551115123125783e-17,
+        "n": 60,
+        "nan_mismatch": 0,
+        "worst": "group=Overall t=0.020: isitfair=0.24581122448979595 oracle=0.2458112244897959",
+        "nan_examples": []
+      },
+      "gap_equal_opportunity": {
+        "max_abs_diff": 0.0,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "gap_predictive_equality": {
+        "max_abs_diff": 0.0,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "gap_equalized_odds": {
+        "max_abs_diff": 0.0,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "gap_statistical_parity": {
+        "max_abs_diff": 0.0,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      }
+    }
+  },
+  {
+    "dataset": "adult",
+    "column": "y_proba_lr",
+    "n": 14653,
+    "threshold": 0.3,
+    "seconds_isitfair": 237.2,
+    "shrunk_rows_skipped_for_rates": 6,
+    "metrics": {
+      "auroc": {
+        "max_abs_diff": 0.0,
+        "n": 25,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "auprc": {
+        "max_abs_diff": 0.0,
+        "n": 25,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "sensitivity": {
+        "max_abs_diff": 0.0,
+        "n": 19,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "specificity": {
+        "max_abs_diff": 0.0,
+        "n": 19,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "ppv": {
+        "max_abs_diff": 0.0,
+        "n": 19,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "npv": {
+        "max_abs_diff": 0.0,
+        "n": 19,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "calibration_intercept": {
+        "max_abs_diff": 1.5214256941786797e-06,
+        "n": 25,
+        "nan_mismatch": 0,
+        "worst": "age_group=30-44: isitfair=0.16194409150632716 oracle=0.16194257008063298",
+        "nan_examples": []
+      },
+      "calibration_slope": {
+        "max_abs_diff": 4.882751279300379e-06,
+        "n": 25,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 race=Female / Other: isitfair=1.0588764893576457 oracle=1.0588716066063664",
+        "nan_examples": []
+      },
+      "brier": {
+        "max_abs_diff": 1.3877787807814457e-17,
+        "n": 25,
+        "nan_mismatch": 0,
+        "worst": "race=White: isitfair=0.10933347428582807 oracle=0.10933347428582808",
+        "nan_examples": []
+      },
+      "ece": {
+        "max_abs_diff": 0.0,
+        "n": 25,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "hl_statistic": {
+        "max_abs_diff": 2.842170943040401e-14,
+        "n": 25,
+        "nan_mismatch": 0,
+        "worst": "age_group=60+: isitfair=111.02912292907229 oracle=111.02912292907232",
+        "nan_examples": []
+      },
+      "hl_p_value": {
+        "max_abs_diff": 3.3306690738754696e-16,
+        "n": 25,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 race=Female / White: isitfair=0.37700494849737964 oracle=0.3770049484973793",
+        "nan_examples": []
+      },
+      "hl_df": {
+        "max_abs_diff": 0.0,
+        "n": 25,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "net_benefit_vs_dcurves": {
+        "max_abs_diff": 0.0,
+        "n": 500,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "net_benefit_vs_formula": {
+        "max_abs_diff": 8.326672684688674e-17,
+        "n": 500,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 race=Male / White t=0.180: isitfair=0.23367225271832692 oracle=0.233672252718327",
+        "nan_examples": []
+      },
+      "gap_equal_opportunity": {
+        "max_abs_diff": 0.0,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "gap_predictive_equality": {
+        "max_abs_diff": 5.551115123125783e-17,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "sex: isitfair=0.16682175042641278 oracle=0.16682175042641284",
+        "nan_examples": []
+      },
+      "gap_equalized_odds": {
+        "max_abs_diff": 5.551115123125783e-17,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "sex: isitfair=0.16682175042641278 oracle=0.16682175042641284",
+        "nan_examples": []
+      },
+      "gap_statistical_parity": {
+        "max_abs_diff": 1.1102230246251565e-16,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "sex: isitfair=0.2763206115519262 oracle=0.27632061155192633",
+        "nan_examples": []
+      },
+      "gap_equal_opportunity_intersection": {
+        "max_abs_diff": 0.14363811898041112,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 race: isitfair=0.18794082838800996 oracle=0.3315789473684211",
+        "nan_examples": []
+      },
+      "gap_predictive_equality_intersection": {
+        "max_abs_diff": 0.019892186865957534,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 race: isitfair=0.1955054442677142 oracle=0.21539763113367175",
+        "nan_examples": []
+      },
+      "gap_equalized_odds_intersection": {
+        "max_abs_diff": 0.13607350310070687,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 race: isitfair=0.1955054442677142 oracle=0.3315789473684211",
+        "nan_examples": []
+      },
+      "gap_statistical_parity_intersection": {
+        "max_abs_diff": 0.02782896228438181,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 race: isitfair=0.3480272020991798 oracle=0.3758561643835616",
+        "nan_examples": []
+      }
+    }
+  },
+  {
+    "dataset": "adult",
+    "column": "y_proba_gbm",
+    "n": 14653,
+    "threshold": 0.3,
+    "seconds_isitfair": 229.4,
+    "shrunk_rows_skipped_for_rates": 6,
+    "metrics": {
+      "auroc": {
+        "max_abs_diff": 0.0,
+        "n": 25,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "auprc": {
+        "max_abs_diff": 0.0,
+        "n": 25,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "sensitivity": {
+        "max_abs_diff": 0.0,
+        "n": 19,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "specificity": {
+        "max_abs_diff": 0.0,
+        "n": 19,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "ppv": {
+        "max_abs_diff": 0.0,
+        "n": 19,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "npv": {
+        "max_abs_diff": 0.0,
+        "n": 19,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "calibration_intercept": {
+        "max_abs_diff": 1.1074869278523969e-06,
+        "n": 25,
+        "nan_mismatch": 0,
+        "worst": "race=Other: isitfair=-0.034347751518443985 oracle=-0.03434664403151613",
+        "nan_examples": []
+      },
+      "calibration_slope": {
+        "max_abs_diff": 3.017075185018925e-06,
+        "n": 25,
+        "nan_mismatch": 0,
+        "worst": "race=Other: isitfair=1.0059909342088051 oracle=1.0059939512839902",
+        "nan_examples": []
+      },
+      "brier": {
+        "max_abs_diff": 1.3877787807814457e-17,
+        "n": 25,
+        "nan_mismatch": 0,
+        "worst": "race=Amer-Indian-Eskimo: isitfair=0.05906594547754949 oracle=0.0590659454775495",
+        "nan_examples": []
+      },
+      "ece": {
+        "max_abs_diff": 0.0,
+        "n": 25,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "hl_statistic": {
+        "max_abs_diff": 0.1780856759702374,
+        "n": 25,
+        "nan_mismatch": 0,
+        "worst": "age_group=45-59: isitfair=17.47744069666538 oracle=17.299355020695142",
+        "nan_examples": []
+      },
+      "hl_p_value": {
+        "max_abs_diff": 0.0035522020021086786,
+        "n": 25,
+        "nan_mismatch": 0,
+        "worst": "age_group=45-59: isitfair=0.06444474146111219 oracle=0.06799694346322087",
+        "nan_examples": []
+      },
+      "hl_df": {
+        "max_abs_diff": 0.0,
+        "n": 25,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "net_benefit_vs_dcurves": {
+        "max_abs_diff": 0.0,
+        "n": 500,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "net_benefit_vs_formula": {
+        "max_abs_diff": 1.1102230246251565e-16,
+        "n": 500,
+        "nan_mismatch": 0,
+        "worst": "age_group=45-59 t=0.040: isitfair=0.36041905307369215 oracle=0.36041905307369226",
+        "nan_examples": []
+      },
+      "gap_equal_opportunity": {
+        "max_abs_diff": 0.0,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "gap_predictive_equality": {
+        "max_abs_diff": 1.1102230246251565e-16,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "sex: isitfair=0.15247356571321558 oracle=0.15247356571321546",
+        "nan_examples": []
+      },
+      "gap_equalized_odds": {
+        "max_abs_diff": 1.1102230246251565e-16,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "sex: isitfair=0.15247356571321558 oracle=0.15247356571321546",
+        "nan_examples": []
+      },
+      "gap_statistical_parity": {
+        "max_abs_diff": 5.551115123125783e-17,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "sex: isitfair=0.2703490096656261 oracle=0.270349009665626",
+        "nan_examples": []
+      },
+      "gap_equal_opportunity_intersection": {
+        "max_abs_diff": 0.28656701681454555,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 race: isitfair=0.12519768906780737 oracle=0.4117647058823529",
+        "nan_examples": []
+      },
+      "gap_predictive_equality_intersection": {
+        "max_abs_diff": 0.004179236484572246,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 race: isitfair=0.17094011328579273 oracle=0.17511934977036497",
+        "nan_examples": []
+      },
+      "gap_equalized_odds_intersection": {
+        "max_abs_diff": 0.2408245925965602,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 race: isitfair=0.17094011328579273 oracle=0.4117647058823529",
+        "nan_examples": []
+      },
+      "gap_statistical_parity_intersection": {
+        "max_abs_diff": 0.007070136334290766,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "sex \u00d7 race: isitfair=0.3318754321493072 oracle=0.33894556848359797",
+        "nan_examples": []
+      }
+    }
+  },
+  {
+    "dataset": "bank",
+    "column": "y_proba_lr",
+    "n": 13564,
+    "threshold": 0.2,
+    "seconds_isitfair": 208.3,
+    "shrunk_rows_skipped_for_rates": 46,
+    "metrics": {
+      "auroc": {
+        "max_abs_diff": 0.0,
+        "n": 79,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "auprc": {
+        "max_abs_diff": 0.0,
+        "n": 79,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "sensitivity": {
+        "max_abs_diff": 0.0,
+        "n": 36,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "specificity": {
+        "max_abs_diff": 0.0,
+        "n": 36,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "ppv": {
+        "max_abs_diff": 0.0,
+        "n": 36,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "npv": {
+        "max_abs_diff": 0.0,
+        "n": 36,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "calibration_intercept": {
+        "max_abs_diff": 1.651957224291234e-06,
+        "n": 79,
+        "nan_mismatch": 0,
+        "worst": "age_group \u00d7 job=30-39 / housemaid: isitfair=-0.1893847261271967 oracle=-0.189386378084421",
+        "nan_examples": []
+      },
+      "calibration_slope": {
+        "max_abs_diff": 1662.5651783338405,
+        "n": 79,
+        "nan_mismatch": 0,
+        "worst": "age_group \u00d7 job=40-49 / student: isitfair=-1183.6659164826112 oracle=-2846.231094816452",
+        "nan_examples": []
+      },
+      "brier": {
+        "max_abs_diff": 2.7755575615628914e-17,
+        "n": 82,
+        "nan_mismatch": 0,
+        "worst": "job=unemployed: isitfair=0.11269238635002289 oracle=0.11269238635002286",
+        "nan_examples": []
+      },
+      "ece": {
+        "max_abs_diff": 0.0,
+        "n": 82,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "hl_statistic": {
+        "max_abs_diff": 3.552713678800501e-15,
+        "n": 75,
+        "nan_mismatch": 0,
+        "worst": "age_group=18-29: isitfair=14.1301240257267 oracle=14.130124025726696",
+        "nan_examples": []
+      },
+      "hl_p_value": {
+        "max_abs_diff": 6.661338147750939e-16,
+        "n": 75,
+        "nan_mismatch": 0,
+        "worst": "age_group \u00d7 job=50-59 / entrepreneur: isitfair=0.5912337016683531 oracle=0.5912337016683538",
+        "nan_examples": []
+      },
+      "hl_df": {
+        "max_abs_diff": 0.0,
+        "n": 75,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "net_benefit_vs_dcurves": {
+        "max_abs_diff": 0.0,
+        "n": 1580,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "net_benefit_vs_formula": {
+        "max_abs_diff": 5.551115123125783e-17,
+        "n": 1580,
+        "nan_mismatch": 0,
+        "worst": "age_group=60+ t=0.060: isitfair=0.3054364533613786 oracle=0.30543645336137853",
+        "nan_examples": []
+      },
+      "gap_equal_opportunity": {
+        "max_abs_diff": 0.0,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "gap_predictive_equality": {
+        "max_abs_diff": 5.551115123125783e-17,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "age_group: isitfair=0.30776638115731214 oracle=0.3077663811573121",
+        "nan_examples": []
+      },
+      "gap_equalized_odds": {
+        "max_abs_diff": 0.0,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "gap_statistical_parity": {
+        "max_abs_diff": 5.551115123125783e-17,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "age_group: isitfair=0.39002970772917905 oracle=0.390029707729179",
+        "nan_examples": []
+      },
+      "gap_equal_opportunity_intersection": {
+        "max_abs_diff": 0.42156862745098034,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "age_group \u00d7 job: isitfair=0.5784313725490197 oracle=1.0",
+        "nan_examples": []
+      },
+      "gap_predictive_equality_intersection": {
+        "max_abs_diff": 0.03794369645042839,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "age_group \u00d7 job: isitfair=0.4736842105263158 oracle=0.5116279069767442",
+        "nan_examples": []
+      },
+      "gap_equalized_odds_intersection": {
+        "max_abs_diff": 0.42156862745098034,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "age_group \u00d7 job: isitfair=0.5784313725490197 oracle=1.0",
+        "nan_examples": []
+      },
+      "gap_statistical_parity_intersection": {
+        "max_abs_diff": 0.036059145517097435,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "age_group \u00d7 job: isitfair=0.5532265687686169 oracle=0.5892857142857143",
+        "nan_examples": []
+      }
+    }
+  },
+  {
+    "dataset": "bank",
+    "column": "y_proba_gbm",
+    "n": 13564,
+    "threshold": 0.2,
+    "seconds_isitfair": 195.0,
+    "shrunk_rows_skipped_for_rates": 46,
+    "metrics": {
+      "auroc": {
+        "max_abs_diff": 0.0,
+        "n": 79,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "auprc": {
+        "max_abs_diff": 0.0,
+        "n": 79,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "sensitivity": {
+        "max_abs_diff": 0.0,
+        "n": 36,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "specificity": {
+        "max_abs_diff": 0.0,
+        "n": 36,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "ppv": {
+        "max_abs_diff": 0.0,
+        "n": 36,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "npv": {
+        "max_abs_diff": 0.0,
+        "n": 36,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "calibration_intercept": {
+        "max_abs_diff": 1.557651917616365e-06,
+        "n": 79,
+        "nan_mismatch": 0,
+        "worst": "age_group \u00d7 job=30-39 / self-employed: isitfair=0.427715338245723 oracle=0.4277137805938054",
+        "nan_examples": []
+      },
+      "calibration_slope": {
+        "max_abs_diff": 177.36855867270066,
+        "n": 79,
+        "nan_mismatch": 0,
+        "worst": "age_group \u00d7 job=60+ / entrepreneur: isitfair=102.5686316613137 oracle=279.93719033401436",
+        "nan_examples": []
+      },
+      "brier": {
+        "max_abs_diff": 2.7755575615628914e-17,
+        "n": 82,
+        "nan_mismatch": 0,
+        "worst": "age_group \u00d7 job=60+ / management: isitfair=0.17269368727164408 oracle=0.1726936872716441",
+        "nan_examples": []
+      },
+      "ece": {
+        "max_abs_diff": 0.013071895424836596,
+        "n": 82,
+        "nan_mismatch": 0,
+        "worst": "age_group \u00d7 job=40-49 / entrepreneur: isitfair=0.020945259804092134 oracle=0.03401715522892873",
+        "nan_examples": []
+      },
+      "hl_statistic": {
+        "max_abs_diff": 1.8409569030717372,
+        "n": 75,
+        "nan_mismatch": 0,
+        "worst": "age_group \u00d7 job=40-49 / entrepreneur: isitfair=2.466593930456082 oracle=4.307550833527819",
+        "nan_examples": []
+      },
+      "hl_p_value": {
+        "max_abs_diff": 0.058945496513338025,
+        "n": 75,
+        "nan_mismatch": 0,
+        "worst": "age_group \u00d7 job=40-49 / entrepreneur: isitfair=0.9913536345296274 oracle=0.9324081380162894",
+        "nan_examples": []
+      },
+      "hl_df": {
+        "max_abs_diff": 0.0,
+        "n": 75,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "net_benefit_vs_dcurves": {
+        "max_abs_diff": 0.0,
+        "n": 1580,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "net_benefit_vs_formula": {
+        "max_abs_diff": 1.1102230246251565e-16,
+        "n": 1580,
+        "nan_mismatch": 0,
+        "worst": "age_group \u00d7 job=60+ / retired t=0.200: isitfair=0.2594637223974763 oracle=0.2594637223974764",
+        "nan_examples": []
+      },
+      "gap_equal_opportunity": {
+        "max_abs_diff": 0.0,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "gap_predictive_equality": {
+        "max_abs_diff": 1.1102230246251565e-16,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "job: isitfair=0.3800336669209019 oracle=0.380033666920902",
+        "nan_examples": []
+      },
+      "gap_equalized_odds": {
+        "max_abs_diff": 0.0,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "gap_statistical_parity": {
+        "max_abs_diff": 5.551115123125783e-17,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "job: isitfair=0.45446949704956774 oracle=0.4544694970495678",
+        "nan_examples": []
+      },
+      "gap_equal_opportunity_intersection": {
+        "max_abs_diff": 0.34736175219476884,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "age_group \u00d7 job: isitfair=0.6526382478052312 oracle=1.0",
+        "nan_examples": []
+      },
+      "gap_predictive_equality_intersection": {
+        "max_abs_diff": 0.1105263157894738,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "age_group \u00d7 job: isitfair=0.6894736842105262 oracle=0.8",
+        "nan_examples": []
+      },
+      "gap_equalized_odds_intersection": {
+        "max_abs_diff": 0.31052631578947376,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "age_group \u00d7 job: isitfair=0.6894736842105262 oracle=1.0",
+        "nan_examples": []
+      },
+      "gap_statistical_parity_intersection": {
+        "max_abs_diff": 0.07591185585036175,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "age_group \u00d7 job: isitfair=0.7422699623314565 oracle=0.8181818181818182",
+        "nan_examples": []
+      }
+    }
+  },
+  {
+    "dataset": "diabetes130",
+    "column": "y_proba_lr",
+    "n": 30530,
+    "threshold": 0.15,
+    "seconds_isitfair": 837.8,
+    "shrunk_rows_skipped_for_rates": 9,
+    "metrics": {
+      "auroc": {
+        "max_abs_diff": 0.0,
+        "n": 33,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "auprc": {
+        "max_abs_diff": 0.0,
+        "n": 33,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "sensitivity": {
+        "max_abs_diff": 0.0,
+        "n": 25,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "specificity": {
+        "max_abs_diff": 0.0,
+        "n": 27,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "ppv": {
+        "max_abs_diff": 0.0,
+        "n": 25,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "npv": {
+        "max_abs_diff": 0.0,
+        "n": 27,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "calibration_intercept": {
+        "max_abs_diff": 1.6525899825259316e-06,
+        "n": 33,
+        "nan_mismatch": 0,
+        "worst": "race \u00d7 gender=Other / Female: isitfair=-0.24166111212952476 oracle=-0.24165945953954224",
+        "nan_examples": []
+      },
+      "calibration_slope": {
+        "max_abs_diff": 2.0697331399088803e-05,
+        "n": 33,
+        "nan_mismatch": 0,
+        "worst": "race \u00d7 gender=Caucasian / Male: isitfair=0.8079685076178873 oracle=0.8079892049492864",
+        "nan_examples": []
+      },
+      "brier": {
+        "max_abs_diff": 1.3877787807814457e-17,
+        "n": 36,
+        "nan_mismatch": 0,
+        "worst": "race=Unknown: isitfair=0.08482794728221325 oracle=0.08482794728221324",
+        "nan_examples": []
+      },
+      "ece": {
+        "max_abs_diff": 0.0,
+        "n": 36,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "hl_statistic": {
+        "max_abs_diff": 7.105427357601002e-15,
+        "n": 33,
+        "nan_mismatch": 0,
+        "worst": "race=Caucasian: isitfair=28.88939948408902 oracle=28.88939948408901",
+        "nan_examples": []
+      },
+      "hl_p_value": {
+        "max_abs_diff": 5.551115123125783e-16,
+        "n": 33,
+        "nan_mismatch": 0,
+        "worst": "race \u00d7 gender=Asian / Male: isitfair=0.3169035821395295 oracle=0.31690358213953007",
+        "nan_examples": []
+      },
+      "hl_df": {
+        "max_abs_diff": 0.0,
+        "n": 33,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "net_benefit_vs_dcurves": {
+        "max_abs_diff": 0.0,
+        "n": 660,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "net_benefit_vs_formula": {
+        "max_abs_diff": 2.7755575615628914e-17,
+        "n": 660,
+        "nan_mismatch": 0,
+        "worst": "race=Hispanic t=0.060: isitfair=0.07088616663084746 oracle=0.07088616663084749",
+        "nan_examples": []
+      },
+      "gap_equal_opportunity": {
+        "max_abs_diff": 0.3152741514360313,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "gender: isitfair=0.024459181897302007 oracle=0.33973333333333333",
+        "nan_examples": []
+      },
+      "gap_predictive_equality": {
+        "max_abs_diff": 2.7755575615628914e-17,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "age: isitfair=0.2050113895216401 oracle=0.20501138952164008",
+        "nan_examples": []
+      },
+      "gap_equalized_odds": {
+        "max_abs_diff": 0.1770065603811618,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "gender: isitfair=0.16272677295217153 oracle=0.33973333333333333",
+        "nan_examples": []
+      },
+      "gap_statistical_parity": {
+        "max_abs_diff": 0.17834349737625868,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "gender: isitfair=0.004587043805941354 oracle=0.18293054118220003",
+        "nan_examples": []
+      },
+      "gap_equal_opportunity_intersection": {
+        "max_abs_diff": 0.14328722610691658,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "race \u00d7 gender: isitfair=0.3567127738930834 oracle=0.5",
+        "nan_examples": []
+      },
+      "gap_predictive_equality_intersection": {
+        "max_abs_diff": 0.0,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "gap_equalized_odds_intersection": {
+        "max_abs_diff": 0.14328722610691658,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "race \u00d7 gender: isitfair=0.3567127738930834 oracle=0.5",
+        "nan_examples": []
+      },
+      "gap_statistical_parity_intersection": {
+        "max_abs_diff": 0.10652539243349086,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "race \u00d7 gender: isitfair=0.09024697449742645 oracle=0.19677236693091732",
+        "nan_examples": []
+      }
+    }
+  },
+  {
+    "dataset": "diabetes130",
+    "column": "y_proba_gbm",
+    "n": 30530,
+    "threshold": 0.15,
+    "seconds_isitfair": 728.0,
+    "shrunk_rows_skipped_for_rates": 9,
+    "metrics": {
+      "auroc": {
+        "max_abs_diff": 0.0,
+        "n": 33,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "auprc": {
+        "max_abs_diff": 0.0,
+        "n": 33,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "sensitivity": {
+        "max_abs_diff": 0.0,
+        "n": 25,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "specificity": {
+        "max_abs_diff": 0.0,
+        "n": 27,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "ppv": {
+        "max_abs_diff": 0.0,
+        "n": 25,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "npv": {
+        "max_abs_diff": 0.0,
+        "n": 27,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "calibration_intercept": {
+        "max_abs_diff": 1.6230269079819948e-06,
+        "n": 33,
+        "nan_mismatch": 0,
+        "worst": "race \u00d7 gender=Other / Female: isitfair=-0.21972310850397617 oracle=-0.21972148547706818",
+        "nan_examples": []
+      },
+      "calibration_slope": {
+        "max_abs_diff": 1.9639166853435697e-05,
+        "n": 33,
+        "nan_mismatch": 0,
+        "worst": "race \u00d7 gender=Hispanic / Female: isitfair=1.606099245887762 oracle=1.6060796067209087",
+        "nan_examples": []
+      },
+      "brier": {
+        "max_abs_diff": 2.7755575615628914e-17,
+        "n": 36,
+        "nan_mismatch": 0,
+        "worst": "age=[60-70): isitfair=0.09725207905243875 oracle=0.09725207905243873",
+        "nan_examples": []
+      },
+      "ece": {
+        "max_abs_diff": 0.0,
+        "n": 36,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "hl_statistic": {
+        "max_abs_diff": 0.011020589494254551,
+        "n": 33,
+        "nan_mismatch": 0,
+        "worst": "race=Caucasian: isitfair=11.617938213018299 oracle=11.606917623524044",
+        "nan_examples": []
+      },
+      "hl_p_value": {
+        "max_abs_diff": 0.0007851073357765248,
+        "n": 33,
+        "nan_mismatch": 0,
+        "worst": "race=Caucasian: isitfair=0.31143974327716106 oracle=0.3122248506129376",
+        "nan_examples": []
+      },
+      "hl_df": {
+        "max_abs_diff": 0.0,
+        "n": 33,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "net_benefit_vs_dcurves": {
+        "max_abs_diff": 0.0,
+        "n": 660,
+        "nan_mismatch": 0,
+        "worst": null,
+        "nan_examples": []
+      },
+      "net_benefit_vs_formula": {
+        "max_abs_diff": 2.7755575615628914e-17,
+        "n": 660,
+        "nan_mismatch": 0,
+        "worst": "age=[30-40) t=0.060: isitfair=0.050647754137115863 oracle=0.050647754137115836",
+        "nan_examples": []
+      },
+      "gap_equal_opportunity": {
+        "max_abs_diff": 0.368798955613577,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "gender: isitfair=0.03813437771975631 oracle=0.4069333333333333",
+        "nan_examples": []
+      },
+      "gap_predictive_equality": {
+        "max_abs_diff": 5.551115123125783e-17,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "gender: isitfair=0.17887575590984062 oracle=0.17887575590984056",
+        "nan_examples": []
+      },
+      "gap_equalized_odds": {
+        "max_abs_diff": 0.26262626262626265,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "age: isitfair=0.531024531024531 oracle=0.7936507936507936",
+        "nan_examples": []
+      },
+      "gap_statistical_parity": {
+        "max_abs_diff": 0.19082399659622748,
+        "n": 3,
+        "nan_mismatch": 0,
+        "worst": "gender: isitfair=0.01408255968306879 oracle=0.20490655627929627",
+        "nan_examples": []
+      },
+      "gap_equal_opportunity_intersection": {
+        "max_abs_diff": 0.2565108571434896,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "race \u00d7 gender: isitfair=0.2122391428565104 oracle=0.46875",
+        "nan_examples": []
+      },
+      "gap_predictive_equality_intersection": {
+        "max_abs_diff": 2.7755575615628914e-17,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "race \u00d7 gender: isitfair=0.18852867830423936 oracle=0.1885286783042394",
+        "nan_examples": []
+      },
+      "gap_equalized_odds_intersection": {
+        "max_abs_diff": 0.2565108571434896,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "race \u00d7 gender: isitfair=0.2122391428565104 oracle=0.46875",
+        "nan_examples": []
+      },
+      "gap_statistical_parity_intersection": {
+        "max_abs_diff": 0.11397667581006621,
+        "n": 1,
+        "nan_mismatch": 0,
+        "worst": "race \u00d7 gender: isitfair=0.10034948500533583 oracle=0.21432616081540204",
+        "nan_examples": []
+      }
+    }
+  }
+]

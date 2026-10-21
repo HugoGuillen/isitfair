@@ -1,0 +1,6 @@
+== oracle_calib tag=postfix_B50 B=50 pin= start 2026-10-20T20:51:57+02:00
+[NbConvertApp] Converting notebook oracle_calib.ipynb to notebook
+C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\zmq\_future.py:718: RuntimeWarning: Proactor event loop does not implement add_reader family of methods required for zmq. Registering an additional selector thread for add_reader support via tornado. Use `asyncio.set_event_loop_policy(WindowsSelectorEventLoopPolicy())` to avoid this warning.
+  self._get_loop()
+[NbConvertApp] Writing 42727 bytes to executed\oracle_calib_postfix_B50.ipynb
+== oracle_calib end rc=0 2026-10-20T21:07:14+02:00

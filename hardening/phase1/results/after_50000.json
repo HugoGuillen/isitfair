@@ -1,0 +1,20 @@
+{
+  "n": 50000,
+  "B": 20,
+  "prevalence": 0.09794,
+  "seconds": {
+    "construct": 0.15304010000545532,
+    "discrimination": 2.8787626000121236,
+    "calibration": 208.24396460002754,
+    "calibration_curves": 216.24434870004188,
+    "decision_curve": 3.9275019000051543,
+    "estimability": 0.027478400035761297,
+    "hosmer_lemeshow": 200.23570960003417,
+    "recalibration_ladder": 75.40852050005924,
+    "report": 207.31282230000943,
+    "roc_curves": 4.600035026669502e-06,
+    "decision_curve_zero_crossing": 134.25220139999874
+  },
+  "extrapolated": {},
+  "total_measured": 1048.6903494000435
+}

@@ -1,0 +1,35 @@
+## tables
+ok   results/tables/table1_by_race_effect_sizes.csv: max|diff| 0, nan mismatches 0, text equal True
+ok   results/tables/table1_by_sex_effect_sizes.csv: max|diff| 9.71e-17, nan mismatches 0, text equal True
+FAIL results/tables/table4_mitigation_before_after.csv: max|diff| 0.154, nan mismatches 0, text equal True
+     row 0 [Overall] ece_after: committed np.float64(0.0178) -> np.float64(0.0202)
+     row 1 [asian] ece_after: committed np.float64(0.3833) -> np.float64(0.2295)
+     row 2 [black] ece_after: committed np.float64(0.0627) -> np.float64(0.0502)
+     row 3 [hispanic] ece_after: committed np.float64(0.1315) -> np.float64(0.1485)
+     row 5 [white] ece_after: committed np.float64(0.0278) -> np.float64(0.0272)
+FAIL results/tables/table4_mitigation_before_after.md: markdown differs
+FAIL results/tables/table4_recalibration_ladder.csv: max|diff| 0.0167, nan mismatches 0, text equal True
+     row 7 [common, race_ethnicity, Overall, nan] ece: committed np.float64(0.0162) -> np.float64(0.0188)
+     row 9 [common, race_ethnicity, black, nan] ece: committed np.float64(0.0775) -> np.float64(0.0646)
+     row 10 [common, race_ethnicity, hispanic, nan] ece: committed np.float64(0.12) -> np.float64(0.1033)
+     row 12 [common, race_ethnicity, white, nan] ece: committed np.float64(0.018) -> np.float64(0.0197)
+     row 14 [group_specific, race_ethnicity, Overall, nan] ece: committed np.float64(0.0209) -> np.float64(0.0182)
+     row 16 [group_specific, race_ethnicity, black, nan] ece: committed np.float64(0.047) -> np.float64(0.0454)
+     row 17 [group_specific, race_ethnicity, hispanic, nan] ece: committed np.float64(0.0917) -> np.float64(0.0906)
+     row 18 [group_specific, race_ethnicity, other, nan] ece: committed np.float64(0.1314) -> np.float64(0.1446)
+     row 19 [group_specific, race_ethnicity, white, nan] ece: committed np.float64(0.0201) -> np.float64(0.0181)
+FAIL results/tables/table4_recalibration_ladder.md: markdown differs
+FAIL results/tables/tableS_mitigation_wasserstein.csv: max|diff| 0.0285, nan mismatches 0, text equal True
+     row 0 [Overall] ece: committed np.float64(0.019) -> np.float64(0.0185)
+     row 2 [black] ece: committed np.float64(0.0606) -> np.float64(0.055)
+     row 3 [hispanic] ece: committed np.float64(0.0857) -> np.float64(0.0823)
+     row 4 [other] ece: committed np.float64(0.1698) -> np.float64(0.1413)
+     row 5 [white] ece: committed np.float64(0.0225) -> np.float64(0.0216)
+FAIL results/tables/tableS_mitigation_wasserstein.md: markdown differs
+## report html
+html: 0 mitigation-section ECE cell(s) differ (allowed); other lines checked
+## figures
+note results/figures/figure2_calibration.png: max pixel diff 0.004, pixels differing 0.00016
+note results/figures/figure5_recalibration_ladder.png: max pixel diff 0.004, pixels differing 0.00001
+
+GOLDEN (narrowed): FAIL

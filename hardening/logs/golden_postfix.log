@@ -1,0 +1,172 @@
+== example start 2026-10-20T22:26:21+02:00
+[cell 00] start  # ---
+[cell 00] done        0.00 s   (elapsed      0.00 s)
+[cell 01] start  import importlib.util
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\tools\run_cells.py", line 72, in <module>
+    main()
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\tools\run_cells.py", line 58, in main
+    exec(compile(src, f"{script.name}:cell{i}", "exec"), ns)
+  File "support2_mortality_audit.py:cell1", line 12, in <module>
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\__init__.py", line 3, in <module>
+    from isitfair.audit import BootstrapCell, FairnessAudit
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 25, in <module>
+    from sklearn.metrics import confusion_matrix, roc_curve
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\sklearn\__init__.py", line 73, in <module>
+    from .base import clone  # noqa: E402
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\sklearn\base.py", line 19, in <module>
+    from .utils._metadata_requests import _MetadataRequester, _routing_enabled
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\sklearn\utils\__init__.py", line 9, in <module>
+    from ._chunking import gen_batches, gen_even_slices
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\sklearn\utils\_chunking.py", line 11, in <module>
+    from ._param_validation import Interval, validate_params
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\sklearn\utils\_param_validation.py", line 17, in <module>
+    from .validation import _is_arraylike_not_scalar
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\sklearn\utils\validation.py", line 15, in <module>
+    import joblib
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\__init__.py", line 114, in <module>
+    from ._cloudpickle_wrapper import wrap_non_picklable_objects
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\_cloudpickle_wrapper.py", line 14, in <module>
+    from .externals.loky import wrap_non_picklable_objects
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\__init__.py", line 19, in <module>
+    from .backend.context import cpu_count
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\__init__.py", line 4, in <module>
+    from .context import get_context
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\context.py", line 21, in <module>
+    from concurrent.futures.process import _MAX_WINDOWS_WORKERS
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\concurrent\futures\process.py", line 53, in <module>
+    from multiprocessing.queues import Queue
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\multiprocessing\queues.py", line 21, in <module>
+    from queue import Empty, Full
+ImportError: cannot import name 'Empty' from 'queue' (C:\Users\hugoa\Desktop\isitfair\hardening\tools\queue.py)
+EXAMPLE FAILED rc=1
+== example end 2026-10-20T22:26:25+02:00 (4 s)
+== nb02 start 2026-10-20T22:26:25+02:00
+[NbConvertApp] Converting notebook 02_paper_analysis_support2.ipynb to notebook
+C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\zmq\_future.py:718: RuntimeWarning: Proactor event loop does not implement add_reader family of methods required for zmq. Registering an additional selector thread for add_reader support via tornado. Use `asyncio.set_event_loop_policy(WindowsSelectorEventLoopPolicy())` to avoid this warning.
+  self._get_loop()
+[NbConvertApp] Writing 1348222 bytes to C:\Users\hugoa\Desktop\isitfair\hardening\logs\golden_postfix_nb02.ipynb
+== nb02 end 2026-10-20T22:57:03+02:00 (1838 s)
+== compare
+HASH     results/figures/figure1_discrimination.png: manifest a3c8769444371415 got 3c138fecb03e52a1
+HASH     results/figures/figure2_calibration.png: manifest 0045b79ae8a926ea got f3c7cee4d3405146
+HASH     results/figures/figure3_decision_curves.png: manifest 0fcd8a54acd4a669 got f5dedcecb3951d9d
+HASH     results/figures/figure4_clinical_consequences.png: manifest 40a6be15c3923ebf got 9c839f55825add83
+HASH     results/figures/figure5_recalibration_ladder.pdf: manifest fbc634651176576d got 5b7ba8b644ccacf3
+HASH     results/figures/figure5_recalibration_ladder.png: manifest 77ac2aceefad01a4 got c5ac924010e3d098
+HASH     results/figures/figure6a_volcano_sex.png: manifest af48d354e8c201c6 got 4149ae941080c3a2
+HASH     results/figures/figure6b_forest_comorbidity_sex.png: manifest 66627dc4d65951a2 got 45b5038a387ce6b0
+HASH     results/figures/figureS_roc.png: manifest 1ed8f7374d6f5569 got 0a889cc72cecca4e
+HASH     results/tables/table1_by_race_effect_sizes.csv: manifest 70bc128c402b4f35 got 6b2053df71dbee76
+         max |numeric diff| = 0; text columns equal: True
+HASH     results/tables/table1_by_race_effect_sizes.md: manifest 13d8549b1cf62ec1 got 9b802397d3b16dac
+HASH     results/tables/table1_by_sex_effect_sizes.csv: manifest f29faa53416f24d4 got 0e7a79d37d21c84a
+         max |numeric diff| = 9.71e-17; text columns equal: True
+HASH     results/tables/table1_by_sex_effect_sizes.md: manifest a241ed2d67410453 got c4daaf517e86f367
+HASH     results/tables/table2_discrimination.csv: manifest 5e4cdc7cc6eeb97a got 8a13f4fd877814fa
+         max |numeric diff| = 0; text columns equal: True
+HASH     results/tables/table2_discrimination.md: manifest 05c68baec4672060 got c7b9db19667c0e21
+HASH     results/tables/table2_discrimination_gaps.csv: manifest 2e82b474317fb8a5 got 4c9050920fe9e8d8
+         max |numeric diff| = 0; text columns equal: True
+HASH     results/tables/table2_discrimination_gaps.md: manifest 781a78072a3f12fa got c74874d4bb9c766a
+HASH     results/tables/table3_calibration.csv: manifest 4cff0c6460b3337f got 17db5cd17a4f8ba6
+         max |numeric diff| = 0; text columns equal: True
+HASH     results/tables/table3_calibration.md: manifest 34022bc02dd5a69b got 673e5c1ad67cdfcc
+HASH     results/tables/table3_calibration_gaps.csv: manifest 780c218d13e65e33 got c8edd5ea94214446
+         max |numeric diff| = 0; text columns equal: True
+HASH     results/tables/table3_calibration_gaps.md: manifest 2a1ff594594e2f46 got 4547e88add77dbb2
+HASH     results/tables/table4_mitigation_before_after.csv: manifest 579317e445955620 got 23f84855c07756a5
+         max |numeric diff| = 0.154; text columns equal: True
+HASH     results/tables/table4_mitigation_before_after.md: manifest 1d94b5bf3d90903e got 290f3d7a1104b6eb
+HASH     results/tables/table4_recalibration_ladder.csv: manifest 5807424905842460 got 984533e959ec90ab
+         max |numeric diff| = 0.0167; text columns equal: True
+HASH     results/tables/table4_recalibration_ladder.md: manifest c6d1b67cb1477224 got dd7d4231a357cec9
+HASH     results/tables/tableS1_feature_by_sex.csv: manifest 8349894d90045a96 got fcfbb8ac6b0dd688
+         max |numeric diff| = 0; text columns equal: True
+HASH     results/tables/tableS1_feature_by_sex.md: manifest e262dfb5259d088a got 8cc21036adef76b7
+HASH     results/tables/tableS5_comorbidity_sex_interaction.csv: manifest eb780df3e55f587b got 82df6edc865d72d7
+         max |numeric diff| = 0; text columns equal: True
+HASH     results/tables/tableS5_comorbidity_sex_interaction.md: manifest 0afedc5f43a1f233 got 2809e15f2a8daf39
+HASH     results/tables/tableS_dca_sensitivity.csv: manifest 220b6bd712c68c6a got c3267748f48a26d8
+         max |numeric diff| = 0; text columns equal: True
+HASH     results/tables/tableS_dca_sensitivity.md: manifest 7d64b98a41244877 got 36eb4c2da5f3ace5
+HASH     results/tables/tableS_hosmer_lemeshow.csv: manifest cf5ba1c6c03c4c23 got 25a89c7520e6b824
+         max |numeric diff| = 0; text columns equal: True
+HASH     results/tables/tableS_hosmer_lemeshow.md: manifest 468b00a9f2956fcc got 8f1669a4334d67e7
+HASH     results/tables/tableS_hosmer_lemeshow_deciles.csv: manifest f6a9d9dcdd378591 got fe06457c334ece6f
+         max |numeric diff| = 0; text columns equal: True
+HASH     results/tables/tableS_hosmer_lemeshow_deciles.md: manifest 592771c191b5e684 got 575141a4ac5421ff
+HASH     results/tables/tableS_intersectional_cells.csv: manifest 11f7e21ce084d467 got a05b37cbc8e5346e
+         max |numeric diff| = 0; text columns equal: True
+HASH     results/tables/tableS_intersectional_cells.md: manifest 08fa47dcb0752fdd got a5bc1d26f1889906
+HASH     results/tables/tableS_mitigation_wasserstein.csv: manifest db371d536f107791 got ae39a5630eba049c
+         max |numeric diff| = 0.0285; text columns equal: True
+HASH     results/tables/tableS_mitigation_wasserstein.md: manifest af11a95df504992a got 4e9e1e9f7be82bc0
+HASH     results/tables/table_clinical_consequences.csv: manifest 61c9dcc390752e09 got 1c30a4f024a41e23
+         max |numeric diff| = 0; text columns equal: True
+HASH     results/tables/table_clinical_consequences.md: manifest 2cb8172694946ba1 got 27b233f14b10b84b
+HASH     results/tables/table_compare_periods.csv: manifest fa1301d54eee2e0d got 54b5a66e60189832
+         max |numeric diff| = 0; text columns equal: True
+HASH     results/tables/table_compare_periods.md: manifest 4e908e4a9c61df61 got 8ca619f9e5184b95
+HASH     results/tables/table_decision_curve.csv: manifest 24f6abe433cf9a39 got c5a40f1518533759
+         max |numeric diff| = 0; text columns equal: True
+HASH     results/tables/table_decision_curve.md: manifest 75f103f7b97a074b got 7f02ddf07a6bd73b
+HASH     results/tables/table_estimability.csv: manifest 1d44bb89e932b9c4 got 03616e1e01fb88e3
+         max |numeric diff| = 0; text columns equal: True
+HASH     results/tables/table_estimability.md: manifest 4279b29458080754 got c32b612297e3f380
+HASH     results/tables/table_subgroup_distribution.csv: manifest 68096ad9da6b1241 got b84dcc00bbec19ec
+         max |numeric diff| = 0; text columns equal: True
+HASH     results/tables/table_subgroup_distribution.md: manifest 3c21bfd4edf8ddad got f159c1f61caeec5f
+
+matched 30, differ 49, missing 0
+== git status of worktree results/
+ M results/figures/figure1_discrimination.png
+ M results/figures/figure2_calibration.png
+ M results/figures/figure3_decision_curves.png
+ M results/figures/figure4_clinical_consequences.png
+ M results/figures/figure5_recalibration_ladder.pdf
+ M results/figures/figure5_recalibration_ladder.png
+ M results/figures/figure6a_volcano_sex.png
+ M results/figures/figure6b_forest_comorbidity_sex.png
+ M results/figures/figureS_roc.png
+ M results/tables/table1_by_race_effect_sizes.csv
+ M results/tables/table1_by_race_effect_sizes.md
+ M results/tables/table1_by_sex_effect_sizes.csv
+ M results/tables/table1_by_sex_effect_sizes.md
+ M results/tables/table2_discrimination.csv
+ M results/tables/table2_discrimination.md
+ M results/tables/table2_discrimination_gaps.csv
+ M results/tables/table2_discrimination_gaps.md
+ M results/tables/table3_calibration.csv
+ M results/tables/table3_calibration.md
+ M results/tables/table3_calibration_gaps.csv
+ M results/tables/table3_calibration_gaps.md
+ M results/tables/table4_mitigation_before_after.csv
+ M results/tables/table4_mitigation_before_after.md
+ M results/tables/table4_recalibration_ladder.csv
+ M results/tables/table4_recalibration_ladder.md
+ M results/tables/tableS1_feature_by_sex.csv
+ M results/tables/tableS1_feature_by_sex.md
+ M results/tables/tableS5_comorbidity_sex_interaction.csv
+ M results/tables/tableS5_comorbidity_sex_interaction.md
+ M results/tables/tableS_dca_sensitivity.csv
+ M results/tables/tableS_dca_sensitivity.md
+ M results/tables/tableS_hosmer_lemeshow.csv
+ M results/tables/tableS_hosmer_lemeshow.md
+ M results/tables/tableS_hosmer_lemeshow_deciles.csv
+ M results/tables/tableS_hosmer_lemeshow_deciles.md
+ M results/tables/tableS_intersectional_cells.csv
+ M results/tables/tableS_intersectional_cells.md
+ M results/tables/tableS_mitigation_wasserstein.csv
+ M results/tables/tableS_mitigation_wasserstein.md
+ M results/tables/table_clinical_consequences.csv
+ M results/tables/table_clinical_consequences.md
+ M results/tables/table_compare_periods.csv
+ M results/tables/table_compare_periods.md
+ M results/tables/table_decision_curve.csv
+ M results/tables/table_decision_curve.md
+ M results/tables/table_estimability.csv
+ M results/tables/table_estimability.md
+ M results/tables/table_subgroup_distribution.csv
+ M results/tables/table_subgroup_distribution.md
+== total 1844 s

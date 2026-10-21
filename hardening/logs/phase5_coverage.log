@@ -1,0 +1,154 @@
+single B=2000: {'A': {'slope': True, 'intercept_estimand': True, 'intercept_planted_a': True}, 'B': {'slope': True, 'intercept_estimand': True, 'intercept_planted_a': False}} 320s
+[Parallel(n_jobs=4)]: Using backend LokyBackend with 4 concurrent workers.
+[Parallel(n_jobs=4)]: Done  10 tasks      | elapsed:  4.6min
+Timeout (0:10:00)!
+Thread 0x00000998 (most recent call first):
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 320 in wait
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\queues.py", line 147 in _feed
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 953 in run
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 1016 in _bootstrap_inner
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 973 in _bootstrap
+
+Thread 0x00007d30 (most recent call first):
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\multiprocessing\connection.py", line 811 in _exhaustive_wait
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\multiprocessing\connection.py", line 879 in wait
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\process_executor.py", line 681 in wait_result_broken_or_wakeup
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\process_executor.py", line 623 in run
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 1016 in _bootstrap_inner
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 973 in _bootstrap
+
+Thread 0x000066d0 (most recent call first):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\parallel.py", line 1800 in _retrieve
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\parallel.py", line 1682 in _get_outputs
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\parallel.py", line 2072 in __call__
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\phase5\oracle_calib_coverage.py", line 95 in main
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\phase5\oracle_calib_coverage.py", line 116 in <module>
+Timeout (0:10:00)!
+Thread 0x00000998 (most recent call first):
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 320 in wait
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\queues.py", line 147 in _feed
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 953 in run
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 1016 in _bootstrap_inner
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 973 in _bootstrap
+
+Thread 0x00007d30 (most recent call first):
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\multiprocessing\connection.py", line 811 in _exhaustive_wait
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\multiprocessing\connection.py", line 879 in wait
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\process_executor.py", line 681 in wait_result_broken_or_wakeup
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\process_executor.py", line 623 in run
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 1016 in _bootstrap_inner
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 973 in _bootstrap
+
+Thread 0x000066d0 (most recent call first):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\parallel.py", line 1800 in _retrieve
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\parallel.py", line 1682 in _get_outputs
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\parallel.py", line 2072 in __call__
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\phase5\oracle_calib_coverage.py", line 95 in main
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\phase5\oracle_calib_coverage.py", line 116 in <module>
+[Parallel(n_jobs=4)]: Done  64 tasks      | elapsed: 21.4min
+Timeout (0:10:00)!
+Thread 0x00000998 (most recent call first):
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 320 in wait
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\queues.py", line 147 in _feed
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 953 in run
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 1016 in _bootstrap_inner
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 973 in _bootstrap
+
+Thread 0x00007d30 (most recent call first):
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\multiprocessing\connection.py", line 811 in _exhaustive_wait
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\multiprocessing\connection.py", line 879 in wait
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\process_executor.py", line 681 in wait_result_broken_or_wakeup
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\process_executor.py", line 623 in run
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 1016 in _bootstrap_inner
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 973 in _bootstrap
+
+Thread 0x000066d0 (most recent call first):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\parallel.py", line 1800 in _retrieve
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\parallel.py", line 1682 in _get_outputs
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\parallel.py", line 2072 in __call__
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\phase5\oracle_calib_coverage.py", line 95 in main
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\phase5\oracle_calib_coverage.py", line 116 in <module>
+Timeout (0:10:00)!
+Thread 0x00000998 (most recent call first):
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 320 in wait
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\queues.py", line 147 in _feed
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 953 in run
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 1016 in _bootstrap_inner
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 973 in _bootstrap
+
+Thread 0x00007d30 (most recent call first):
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\multiprocessing\connection.py", line 811 in _exhaustive_wait
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\multiprocessing\connection.py", line 879 in wait
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\process_executor.py", line 681 in wait_result_broken_or_wakeup
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\process_executor.py", line 623 in run
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 1016 in _bootstrap_inner
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 973 in _bootstrap
+
+Thread 0x000066d0 (most recent call first):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\parallel.py", line 1800 in _retrieve
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\parallel.py", line 1682 in _get_outputs
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\parallel.py", line 2072 in __call__
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\phase5\oracle_calib_coverage.py", line 95 in main
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\phase5\oracle_calib_coverage.py", line 116 in <module>
+Timeout (0:10:00)!
+Thread 0x00000998 (most recent call first):
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 320 in wait
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\queues.py", line 147 in _feed
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 953 in run
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 1016 in _bootstrap_inner
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 973 in _bootstrap
+
+Thread 0x00007d30 (most recent call first):
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\multiprocessing\connection.py", line 811 in _exhaustive_wait
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\multiprocessing\connection.py", line 879 in wait
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\process_executor.py", line 681 in wait_result_broken_or_wakeup
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\process_executor.py", line 623 in run
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 1016 in _bootstrap_inner
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 973 in _bootstrap
+
+Thread 0x000066d0 (most recent call first):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\parallel.py", line 1800 in _retrieve
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\parallel.py", line 1682 in _get_outputs
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\parallel.py", line 2072 in __call__
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\phase5\oracle_calib_coverage.py", line 95 in main
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\phase5\oracle_calib_coverage.py", line 116 in <module>
+[Parallel(n_jobs=4)]: Done 154 tasks      | elapsed: 48.2min
+Timeout (0:10:00)!
+Thread 0x00000998 (most recent call first):
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 320 in wait
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\backend\queues.py", line 147 in _feed
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 953 in run
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 1016 in _bootstrap_inner
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 973 in _bootstrap
+
+Thread 0x00007d30 (most recent call first):
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\multiprocessing\connection.py", line 811 in _exhaustive_wait
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\multiprocessing\connection.py", line 879 in wait
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\process_executor.py", line 681 in wait_result_broken_or_wakeup
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\externals\loky\process_executor.py", line 623 in run
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 1016 in _bootstrap_inner
+  File "C:\Users\hugoa\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\threading.py", line 973 in _bootstrap
+
+Thread 0x000066d0 (most recent call first):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\parallel.py", line 1800 in _retrieve
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\parallel.py", line 1682 in _get_outputs
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\joblib\parallel.py", line 2072 in __call__
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\phase5\oracle_calib_coverage.py", line 95 in main
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\phase5\oracle_calib_coverage.py", line 116 in <module>
+[Parallel(n_jobs=4)]: Done 200 out of 200 | elapsed: 56.9min finished
+{
+ "A": {
+  "slope": 0.915,
+  "intercept_estimand": 0.95,
+  "intercept_planted_a": 0.95,
+  "mean_slope": 0.9997281191536567,
+  "mean_intercept": -0.0004932294677742811
+ },
+ "B": {
+  "slope": 0.92,
+  "intercept_estimand": 0.98,
+  "intercept_planted_a": 0.0,
+  "mean_slope": 0.7024152913462892,
+  "mean_intercept": -0.6642404763643498
+ }
+}

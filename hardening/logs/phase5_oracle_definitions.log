@@ -1,0 +1,8 @@
+adult y_proba_gbm {'ece': '0', 'hl_statistic': '2.13e-14', 'hl_p_value': '7.77e-16', 'gap_equal_opportunity': '0', 'gap_equalized_odds': '1.11e-16'}
+compas y_proba_lr {'ece': '0', 'hl_statistic': '7.11e-15', 'hl_p_value': '1.39e-16', 'gap_equal_opportunity': '0', 'gap_equalized_odds': '4.16e-17'}
+compas y_proba_gbm {'ece': '0', 'hl_statistic': '1.42e-14', 'hl_p_value': '1.11e-16', 'gap_equal_opportunity': '0', 'gap_equalized_odds': '0'}
+bank y_proba_gbm {'ece': '0', 'hl_statistic': '3.55e-15', 'hl_p_value': '2.22e-16', 'gap_equal_opportunity': '0', 'gap_equalized_odds': '0'}
+diabetes130 y_proba_lr {'ece': '0', 'hl_statistic': '7.11e-15', 'hl_p_value': '2.22e-16', 'gap_equal_opportunity': '0', 'gap_equalized_odds': '0'}
+diabetes130 y_proba_gbm {'ece': '0', 'hl_statistic': '1.78e-15', 'hl_p_value': '1.11e-16', 'gap_equal_opportunity': '0', 'gap_equalized_odds': '5.55e-17'}
+oracle_sparse y_proba_lr {'ece': '0', 'hl_statistic': '0', 'hl_p_value': '0', 'gap_equal_opportunity': '0', 'gap_equalized_odds': '0'}
+oracle_sparse y_proba_gbm {'ece': '0', 'hl_statistic': '0', 'hl_p_value': '0', 'gap_equal_opportunity': '0', 'gap_equalized_odds': '0'}

@@ -1,0 +1,15 @@
+
+  _     ._   __/__   _ _  _  _ _/_   Recorded: 20:21:35  Samples:  71660
+ /_//_/// /_\ / //_// / //_'/ //     Duration: 739.758   CPU time: 731.016
+/   _/                      v5.1.3
+
+Profile at C:\Users\hugoa\Desktop\isitfair\hardening\phase1\profile_stage.py:37
+
+739.75 <module>  profile_stage.py:1
+└─ 739.75 call  bench.py:59
+   └─ 739.75 FairnessAudit.calibration_curves  isitfair\audit.py:2693
+      └─ 738.90 _loess_curve_at_grid  isitfair\audit.py:469
+         └─ 738.83 lowess  statsmodels\nonparametric\smoothers_lowess.py:12
+               [3 frames hidden]  numpy, <built-in>
+                  714.49 [self]  statsmodels\nonparametric\smoothers_lowess.py
+

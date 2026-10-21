@@ -1,0 +1,30 @@
+{
+  "n": 100000,
+  "B": 20,
+  "prevalence": 0.09622,
+  "seconds": {
+    "construct": 0.49010419996920973,
+    "discrimination": 8.328349299961701,
+    "calibration": 2615.729243400041,
+    "calibration_curves": 25364.842804349726,
+    "decision_curve": 7.292705600033514,
+    "estimability": 0.03332749998662621,
+    "hosmer_lemeshow": 934.436921000015,
+    "recalibration_ladder": 337.08023909991607,
+    "report": 26428.379806549754,
+    "roc_curves": 3.3603236000053585,
+    "decision_curve_zero_crossing": 629.7271670999471
+  },
+  "extrapolated": {
+    "calibration_curves": {
+      "t_B1": 2415.699314699974,
+      "projected": 25364.842804349726
+    },
+    "report": {
+      "increment_B1_warm": 1063.537002200028,
+      "plus_calibration_curves": 25364.842804349726,
+      "projected": 26428.379806549754
+    }
+  },
+  "total_measured": 9977.225871599978
+}

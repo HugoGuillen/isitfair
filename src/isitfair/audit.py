@@ -31,6 +31,7 @@ from isitfair.estimability import (
     floor_fails,
     resolve_event_floors,
 )
+from isitfair.metrics import _tie_snapped_bins
 from isitfair.metrics import hosmer_lemeshow as _hosmer_lemeshow
 from isitfair.metrics import subgroup_metrics
 
@@ -433,10 +434,11 @@ def _compute_ece(
     n = len(y_true)
     if n == 0:
         return float("nan")
-    n_bins_actual = min(n_bins, n)
-    sorted_indices = np.argsort(y_proba)
+    # Tie-snapped like Hosmer-Lemeshow, so tied predictions never straddle a
+    # bin edge and the value does not depend on row order.
+    order = np.argsort(y_proba, kind="stable")
     ece = 0.0
-    for bin_indices in np.array_split(sorted_indices, n_bins_actual):
+    for bin_indices in _tie_snapped_bins(y_proba[order], order, n_bins):
         if len(bin_indices) == 0:
             continue
         avg_pred = float(y_proba[bin_indices].mean())
@@ -466,19 +468,37 @@ def _loess_smooth_at_data(
     return np.asarray(result, dtype=np.float64)
 
 
+#: Largest sample on which a bootstrap replicate's calibration curve is fitted
+#: at every data point. Fitting LOESS (frac=2/3) at all n points is O(n^2):
+#: about 0.1 s at n = 2,000 but 12 s at 20,000 and minutes at 100,000, once per
+#: subgroup per replicate. Larger replicates evaluate the same smoother directly
+#: at the grid points instead (O(grid x n)); point estimates are always exact.
+_LOESS_EXACT_MAX_N = 2_000
+
+
 def _loess_curve_at_grid(
     y_true: npt.NDArray[np.floating[Any]],
     y_proba: npt.NDArray[np.floating[Any]],
     eval_points: npt.NDArray[np.floating[Any]],
+    exact: bool = True,
 ) -> npt.NDArray[np.floating[Any]]:
     """LOESS-smoothed calibration curve evaluated at grid points.
 
     Fits LOESS at the data points with ``it=0`` (no robustifying
     iterations — essential for binary outcomes), then linearly
     interpolates to the evaluation grid.
+
+    With ``exact=False`` the local regressions are evaluated at the grid
+    points themselves, clipped to the data range so the curve is held flat
+    beyond it exactly as the interpolation does.
     """
     if len(y_true) < 3:
         return np.full(len(eval_points), float("nan"))
+    if not exact:
+        xvals = np.clip(eval_points, y_proba.min(), y_proba.max())
+        with np.errstate(divide="ignore", invalid="ignore"):
+            fitted = lowess(y_true, y_proba, frac=2 / 3, it=0, xvals=xvals)
+        return np.clip(np.asarray(fitted, dtype=np.float64), 0.0, 1.0)
     with np.errstate(divide="ignore", invalid="ignore"):
         result = lowess(y_true, y_proba, frac=2 / 3, it=0, return_sorted=True)
     smoothed: npt.NDArray[np.floating[Any]] = np.interp(eval_points, result[:, 0], result[:, 1])
@@ -1602,7 +1622,12 @@ class FairnessAudit:
             "equalized_odds_gap": eq,
         }
         if prev is not None:
-            flag_rate = sens * prev + (1.0 - spec) * (1.0 - prev)
+            # As in _compute_gaps: a replicate without events (or without
+            # non-events) contributes zero to that term instead of NaN.
+            with np.errstate(invalid="ignore"):
+                flag_rate = np.where(prev == 0.0, 0.0, sens * prev) + np.where(
+                    prev == 1.0, 0.0, (1.0 - spec) * (1.0 - prev)
+                )
             distributions["statistical_parity"] = _range_over_subgroups(flag_rate)
 
         out: dict[str, tuple[float, float]] = {}
@@ -2254,8 +2279,11 @@ class FairnessAudit:
                 n_events = m["n_events"]
                 sens = m["sensitivity"]
                 spec = m["specificity"]
-                tp = sens * n_events
-                fp = (1.0 - spec) * (n - n_events)
+                # A subgroup without events has no true positives, and one
+                # without non-events no false positives; its flag rate is still
+                # defined even though sensitivity or specificity is not.
+                tp = sens * n_events if n_events > 0 else 0.0
+                fp = (1.0 - spec) * (n - n_events) if n_events < n else 0.0
                 pprs.append((tp + fp) / n)
             else:
                 pprs.append(float("nan"))
@@ -2701,7 +2729,11 @@ class FairnessAudit:
 
         The LOESS smoother uses ``statsmodels.nonparametric.smoothers_lowess``
         with ``frac=2/3`` (default bandwidth) and ``it=0`` (no robustifying
-        iterations, essential for binary outcomes).
+        iterations, essential for binary outcomes). The point estimate is
+        always fitted at every data point. Bootstrap replicates of more than
+        2,000 patients evaluate the same smoother directly at the 100 grid
+        points, which keeps large cohorts tractable (fitting at every point is
+        quadratic in n) and moves the band edges by about 1e-4.
 
         Returns
         -------
@@ -2759,7 +2791,12 @@ class FairnessAudit:
                     if idx is None:
                         boot_curves.append(np.full(len(eval_points), float("nan")))
                         continue
-                    boot_curves.append(_loess_curve_at_grid(y_t[idx], y_p[idx], eval_points))
+                    boot_curves.append(
+                        _loess_curve_at_grid(
+                            y_t[idx], y_p[idx], eval_points,
+                            exact=len(idx) <= _LOESS_EXACT_MAX_N,
+                        )
+                    )
                 boot_matrix = np.array(boot_curves)
 
                 for i, ep in enumerate(eval_points):
@@ -3578,6 +3615,16 @@ class FairnessAudit:
             "common": np.full(len(y), np.nan, dtype=np.float64),
             "group_specific": np.full(len(y), np.nan, dtype=np.float64),
         }
+
+        for stratum in sorted({str(g) for g in groups}):
+            if int(y[groups.astype(str) == stratum].sum()) == 0:
+                msg = (
+                    f"stratum {stratum!r} of {by!r} has zero events in the whole "
+                    "audit, so no fold can fit a group-specific calibrator for it; "
+                    "fewer folds will not help. Merge it into another level or "
+                    "drop those rows."
+                )
+                raise ValueError(msg)
 
         for k in sorted(set(folds.tolist())):
             test = folds == k

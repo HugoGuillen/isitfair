@@ -1,0 +1,22 @@
+{
+  "dataset": "adult",
+  "B": 200,
+  "n_jobs": -1,
+  "isitfair": "0.4.0",
+  "isitfair_file": "C:\\Users\\hugoa\\Desktop\\isitfair\\src\\isitfair\\__init__.py",
+  "seconds": {
+    "construct": 0.01,
+    "discrimination": 12.35,
+    "roc_curves": 2.76,
+    "calibration": 9.03,
+    "calibration_curves": 43.78,
+    "hosmer_lemeshow": 5.86,
+    "hosmer_lemeshow_detail": 5.93,
+    "decision_curve_zero_crossing": 6.7,
+    "estimability": 0.02,
+    "cell_diagnostics": 0.02,
+    "mitigate": 0.06,
+    "report_html_pdf": 100.55
+  },
+  "total_seconds": 187.1
+}

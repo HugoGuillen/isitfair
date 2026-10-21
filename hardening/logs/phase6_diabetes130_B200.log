@@ -1,0 +1,34 @@
+diabetes130: audited n=15265 events=1703 calib n=15265 B=200 n_jobs=-1
+[construct] start (elapsed 0.0s)
+[construct] done 0.0s (elapsed 0.1s)
+[discrimination] start (elapsed 0.1s)
+[discrimination] done 13.7s (elapsed 13.8s)
+[roc_curves] start (elapsed 13.8s)
+[roc_curves] done 5.1s (elapsed 18.9s)
+[calibration] start (elapsed 18.9s)
+[calibration] done 29.4s (elapsed 48.3s)
+[calibration_curves] start (elapsed 48.3s)
+[calibration_curves] done 75.0s (elapsed 123.3s)
+[hosmer_lemeshow] start (elapsed 123.3s)
+[hosmer_lemeshow] done 22.4s (elapsed 145.7s)
+[hosmer_lemeshow_detail] start (elapsed 145.7s)
+[hosmer_lemeshow_detail] done 22.5s (elapsed 168.1s)
+[decision_curve_zero_crossing] start (elapsed 168.1s)
+[decision_curve_zero_crossing] done 25.5s (elapsed 193.6s)
+[estimability] start (elapsed 193.6s)
+[estimability] done 0.0s (elapsed 193.6s)
+[cell_diagnostics] start (elapsed 193.7s)
+[cell_diagnostics] done 0.0s (elapsed 193.7s)
+[mitigate] start (elapsed 193.7s)
+Traceback (most recent call last):
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\phase6\pipeline.py", line 95, in <module>
+    mitigated = timed("mitigate", lambda: audit.mitigate(GroupRecalibration(method="isotonic"),
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\phase6\pipeline.py", line 57, in timed
+    out = fn()
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\phase6\pipeline.py", line 95, in <lambda>
+    mitigated = timed("mitigate", lambda: audit.mitigate(GroupRecalibration(method="isotonic"),
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 4042, in mitigate
+    mitigated = method.fit_transform(
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\mitigation.py", line 234, in fit_transform
+    raise ValueError(msg)
+ValueError: sensitive_test['gender'] contains subgroups not seen in calibration: ['Unknown/Invalid']

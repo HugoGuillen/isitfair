@@ -1,5 +1,30 @@
 # Changelog
 
+## Unreleased
+
+Hardening against real classification datasets (see `hardening/`). The
+committed SUPPORT2 results are unchanged.
+
+### Fixes
+
+- `calibration_curves()` no longer stalls on large cohorts. Every bootstrap
+  replicate refitted LOESS (`frac=2/3`) at every data point, which is quadratic
+  in n: about 15 minutes at n = 20,000 with 20 replicates, and days for a
+  100,000-row audit at 2,000 replicates. Replicates of more than 2,000 patients
+  now evaluate the same smoother directly at the 100 grid points. Point
+  estimates, and every replicate of 2,000 patients or fewer, are computed
+  exactly as before; above the cutoff the band edges move by about 1e-4.
+- `recalibration_ladder()` on an attribute with a level that has no events at
+  all now says so, instead of advising fewer folds, which cannot help.
+- The statistical-parity gap now includes subgroups with no events (or no
+  non-events). Their flag rate is defined, but it was reconstructed from an
+  undefined sensitivity or specificity and silently dropped, understating the
+  gap (COMPAS race: 0.337 reported, 0.451 true). The same applies to its
+  bootstrap replicates.
+- ECE no longer depends on row order when predicted probabilities are tied.
+  Bins are tie-snapped exactly as in `hosmer_lemeshow()`; untied predictions
+  get the same equal-frequency bins as before.
+
 ## 0.4.0
 
 Release accompanying the companion paper (under review, *JAMIA*). Numerical

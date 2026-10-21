@@ -1,0 +1,27 @@
+support2 y_proba_lr: 9.3s
+support2 y_proba_gbm: 8.9s
+diabetes130 y_proba_lr: 290.7s
+diabetes130 y_proba_gbm: 284.0s
+Timeout (0:10:00)!
+Thread 0x00001d58 (most recent call first):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\statsmodels\nonparametric\smoothers_lowess.py", line 226 in lowess
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 467 in _loess_smooth_at_data
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 554 in _compute_ici
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 2593 in calibration
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\phase5\oracles.py", line 143 in check
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\phase5\oracles.py", line 221 in main
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\phase5\oracles.py", line 227 in <module>
+adult y_proba_lr: 82.4s
+adult y_proba_gbm: 81.4s
+compas y_proba_lr: 8.5s
+compas y_proba_gbm: 8.1s
+bank y_proba_lr: 82.9s
+bank y_proba_gbm: 77.9s
+german y_proba_lr: 5.7s
+german y_proba_gbm: 5.7s
+heart_cleveland y_proba_lr: 5.3s
+heart_cleveland y_proba_gbm: 5.1s
+oracle_calib y_proba_lr: 35.0s
+oracle_calib y_proba_gbm: 35.4s
+oracle_sparse y_proba_lr: 5.3s
+oracle_sparse y_proba_gbm: 4.5s

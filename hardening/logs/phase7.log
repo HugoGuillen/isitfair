@@ -1,0 +1,21 @@
+== support2 start 2026-10-21 09:24:37
+== support2 end rc=0 111 s
+== compas start 2026-10-21 09:26:28
+== compas end rc=0 109 s
+== german start 2026-10-21 09:28:17
+== german end rc=0 74 s
+== heart_cleveland start 2026-10-21 09:29:32
+== heart_cleveland end rc=0 76 s
+== oracle_sparse start 2026-10-21 09:30:48
+== oracle_sparse end rc=0 73 s
+== oracle_calib start 2026-10-21 09:32:01
+== oracle_calib end rc=0 370 s
+== adult start 2026-10-21 09:38:11
+== adult end rc=0 672 s
+== bank start 2026-10-21 09:49:23
+== bank end rc=0 649 s
+== diabetes130 start 2026-10-21 10:00:13
+== diabetes130 end rc=1 1864 s
+== pytest rc=0
+== golden rc=1
+== PHASE 7 DONE 2026-10-21T11:24:47+02:00

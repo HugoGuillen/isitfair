@@ -1,0 +1,5 @@
+k  dca_calls  thresholds_per_call  t_dca_s  t_decision_curve_s  t_per_subgroup_s
+2           3  [20]      0.37      0.68     0.226
+8           9  [20]      1.00      1.63     0.182
+32         33  [20]      3.54      5.44     0.165
+128       129  [20]     13.25     19.36     0.150

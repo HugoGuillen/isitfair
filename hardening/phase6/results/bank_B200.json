@@ -1,0 +1,22 @@
+{
+  "dataset": "bank",
+  "B": 200,
+  "n_jobs": -1,
+  "isitfair": "0.4.0",
+  "isitfair_file": "C:\\Users\\hugoa\\Desktop\\isitfair\\src\\isitfair\\__init__.py",
+  "seconds": {
+    "construct": 0.01,
+    "discrimination": 13.44,
+    "roc_curves": 3.78,
+    "calibration": 8.93,
+    "calibration_curves": 86.1,
+    "hosmer_lemeshow": 4.41,
+    "hosmer_lemeshow_detail": 4.52,
+    "decision_curve_zero_crossing": 9.79,
+    "estimability": 0.02,
+    "cell_diagnostics": 0.02,
+    "mitigate": 0.06,
+    "report_html_pdf": 106.81
+  },
+  "total_seconds": 238.0
+}

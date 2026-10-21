@@ -1,0 +1,118 @@
+F...FF                                                                   [100%]
+================================== FAILURES ===================================
+_________ test_e01_large_replicates_do_not_refit_loess_at_every_point _________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000223F4B2B880>
+
+    def test_e01_large_replicates_do_not_refit_loess_at_every_point(monkeypatch):
+        y, p, g = _large_cohort(3_000)
+        calls = []
+        real = audit_module.lowess
+    
+        def spy(endog, exog, *args, **kwargs):
+            calls.append((len(exog), kwargs.get("xvals") is not None))
+            return real(endog, exog, *args, **kwargs)
+    
+        monkeypatch.setattr(audit_module, "lowess", spy)
+        FairnessAudit(
+            y_true=y, y_proba=p, sensitive_features={"g": g},
+            threshold=0.2, n_bootstrap=5, random_state=1,
+        ).calibration_curves()
+    
+        # Only the Overall point estimate (n = 3,000) may be fitted at every point;
+        # its five replicates must evaluate on the grid.
+        full_fits_above_cutoff = [n for n, on_grid in calls if not on_grid and n > 2_000]
+>       assert full_fits_above_cutoff == [3_000]
+E       assert [3000, 3000, ...0, 3000, 3000] == [3000]
+E         
+E         Left contains 5 more items, first extra item: 3000
+E         Use -v to get more diff
+
+tests\test_hardening_regressions.py:44: AssertionError
+_______________________ test_e01_cutoff_boundary[2000] ________________________
+
+n = 2000
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000223F4CA3970>
+
+    @pytest.mark.parametrize("n", [2_000, 2_001])
+    def test_e01_cutoff_boundary(n, monkeypatch):
+        y, p, g = _large_cohort(n)
+        seen = []
+        real = audit_module._loess_curve_at_grid
+    
+        def spy(y_true, y_proba, eval_points, exact=True):
+            seen.append((len(y_true), exact))
+            return real(y_true, y_proba, eval_points, exact)
+    
+        monkeypatch.setattr(audit_module, "_loess_curve_at_grid", spy)
+        FairnessAudit(
+            y_true=y, y_proba=p, sensitive_features={"g": g},
+            threshold=0.2, n_bootstrap=2, random_state=1,
+>       ).calibration_curves()
+
+tests\test_hardening_regressions.py:97: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\isitfair-golden\src\isitfair\audit.py:2753: in calibration_curves
+    point_curve = _loess_curve_at_grid(y_t, y_p, eval_points)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+y_true = array([0., 0., 0., ..., 0., 0., 0.], shape=(2000,))
+y_proba = array([0.20193088, 0.16354222, 0.29742766, ..., 0.0287817 , 0.08245662,
+       0.2440189 ], shape=(2000,))
+eval_points = array([0.00449886, 0.01280916, 0.02111945, 0.02942974, 0.03774003,
+       0.04605033, 0.05436062, 0.06267091, 0.070981...24, 0.76073554, 0.76904583, 0.77735612, 0.78566641,
+       0.79397671, 0.802287  , 0.81059729, 0.81890759, 0.82721788])
+exact = True
+
+    def spy(y_true, y_proba, eval_points, exact=True):
+        seen.append((len(y_true), exact))
+>       return real(y_true, y_proba, eval_points, exact)
+E       TypeError: _loess_curve_at_grid() takes 3 positional arguments but 4 were given
+
+tests\test_hardening_regressions.py:91: TypeError
+_______________________ test_e01_cutoff_boundary[2001] ________________________
+
+n = 2001
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000223F4CAFDC0>
+
+    @pytest.mark.parametrize("n", [2_000, 2_001])
+    def test_e01_cutoff_boundary(n, monkeypatch):
+        y, p, g = _large_cohort(n)
+        seen = []
+        real = audit_module._loess_curve_at_grid
+    
+        def spy(y_true, y_proba, eval_points, exact=True):
+            seen.append((len(y_true), exact))
+            return real(y_true, y_proba, eval_points, exact)
+    
+        monkeypatch.setattr(audit_module, "_loess_curve_at_grid", spy)
+        FairnessAudit(
+            y_true=y, y_proba=p, sensitive_features={"g": g},
+            threshold=0.2, n_bootstrap=2, random_state=1,
+>       ).calibration_curves()
+
+tests\test_hardening_regressions.py:97: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\isitfair-golden\src\isitfair\audit.py:2753: in calibration_curves
+    point_curve = _loess_curve_at_grid(y_t, y_p, eval_points)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+y_true = array([0., 0., 0., ..., 0., 1., 1.], shape=(2001,))
+y_proba = array([0.20193088, 0.16354222, 0.29742766, ..., 0.08245662, 0.2440189 ,
+       0.25336503], shape=(2001,))
+eval_points = array([0.00449886, 0.01280916, 0.02111945, 0.02942974, 0.03774003,
+       0.04605033, 0.05436062, 0.06267091, 0.070981...24, 0.76073554, 0.76904583, 0.77735612, 0.78566641,
+       0.79397671, 0.802287  , 0.81059729, 0.81890759, 0.82721788])
+exact = True
+
+    def spy(y_true, y_proba, eval_points, exact=True):
+        seen.append((len(y_true), exact))
+>       return real(y_true, y_proba, eval_points, exact)
+E       TypeError: _loess_curve_at_grid() takes 3 positional arguments but 4 were given
+
+tests\test_hardening_regressions.py:91: TypeError
+=========================== short test summary info ===========================
+FAILED tests/test_hardening_regressions.py::test_e01_large_replicates_do_not_refit_loess_at_every_point
+FAILED tests/test_hardening_regressions.py::test_e01_cutoff_boundary[2000] - ...
+FAILED tests/test_hardening_regressions.py::test_e01_cutoff_boundary[2001] - ...
+3 failed, 3 passed in 40.12s

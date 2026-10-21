@@ -1,0 +1,67 @@
+## tables
+ok   results/tables/table1_by_race_effect_sizes.csv: max|diff| 0, nan mismatches 0, text equal True
+ok   results/tables/table1_by_sex_effect_sizes.csv: max|diff| 9.71e-17, nan mismatches 0, text equal True
+     allowed results/tables/table4_mitigation_before_after.csv row 6 ece_before: nan -> nan
+     allowed results/tables/table4_mitigation_before_after.csv row 7 ece_before: nan -> nan
+     allowed results/tables/table4_mitigation_before_after.csv row 8 ece_before: nan -> nan
+     allowed results/tables/table4_mitigation_before_after.csv row 9 ece_before: nan -> nan
+     allowed results/tables/table4_mitigation_before_after.csv row 0 ece_after: 0.0178 -> 0.0202
+     allowed results/tables/table4_mitigation_before_after.csv row 1 ece_after: 0.3833 -> 0.2295
+     allowed results/tables/table4_mitigation_before_after.csv row 2 ece_after: 0.0627 -> 0.0502
+     allowed results/tables/table4_mitigation_before_after.csv row 3 ece_after: 0.1315 -> 0.1485
+     allowed results/tables/table4_mitigation_before_after.csv row 5 ece_after: 0.0278 -> 0.0272
+     allowed results/tables/table4_mitigation_before_after.csv row 6 ece_after: nan -> nan
+     allowed results/tables/table4_mitigation_before_after.csv row 7 ece_after: nan -> nan
+     allowed results/tables/table4_mitigation_before_after.csv row 8 ece_after: nan -> nan
+     allowed results/tables/table4_mitigation_before_after.csv row 9 ece_after: nan -> nan
+ok   results/tables/table4_mitigation_before_after.csv: max|diff| 0, nan mismatches 0, text equal True
+ok   results/tables/table4_mitigation_before_after.md: differs only in exempt ECE columns
+     allowed results/tables/table4_recalibration_ladder.csv row 6 ece: nan -> nan
+     allowed results/tables/table4_recalibration_ladder.csv row 7 ece: 0.0162 -> 0.0188
+     allowed results/tables/table4_recalibration_ladder.csv row 9 ece: 0.0775 -> 0.0646
+     allowed results/tables/table4_recalibration_ladder.csv row 10 ece: 0.12 -> 0.1033
+     allowed results/tables/table4_recalibration_ladder.csv row 12 ece: 0.018 -> 0.0197
+     allowed results/tables/table4_recalibration_ladder.csv row 13 ece: nan -> nan
+     allowed results/tables/table4_recalibration_ladder.csv row 14 ece: 0.0209 -> 0.0182
+     allowed results/tables/table4_recalibration_ladder.csv row 16 ece: 0.047 -> 0.0454
+     allowed results/tables/table4_recalibration_ladder.csv row 17 ece: 0.0917 -> 0.0906
+     allowed results/tables/table4_recalibration_ladder.csv row 18 ece: 0.1314 -> 0.1446
+     allowed results/tables/table4_recalibration_ladder.csv row 19 ece: 0.0201 -> 0.0181
+     allowed results/tables/table4_recalibration_ladder.csv row 20 ece: nan -> nan
+ok   results/tables/table4_recalibration_ladder.csv: max|diff| 0, nan mismatches 0, text equal True
+ok   results/tables/table4_recalibration_ladder.md: differs only in exempt ECE columns
+     allowed results/tables/tableS_mitigation_wasserstein.csv row 0 ece: 0.019 -> 0.0185
+     allowed results/tables/tableS_mitigation_wasserstein.csv row 2 ece: 0.0606 -> 0.055
+     allowed results/tables/tableS_mitigation_wasserstein.csv row 3 ece: 0.0857 -> 0.0823
+     allowed results/tables/tableS_mitigation_wasserstein.csv row 4 ece: 0.1698 -> 0.1413
+     allowed results/tables/tableS_mitigation_wasserstein.csv row 5 ece: 0.0225 -> 0.0216
+     allowed results/tables/tableS_mitigation_wasserstein.csv row 6 ece: nan -> nan
+     allowed results/tables/tableS_mitigation_wasserstein.csv row 7 ece: nan -> nan
+ok   results/tables/tableS_mitigation_wasserstein.csv: max|diff| 0, nan mismatches 0, text equal True
+ok   results/tables/tableS_mitigation_wasserstein.md: differs only in exempt ECE columns
+## report html
+     allowed ECE cell line 2719: 0.0442 -> 0.0425
+     allowed ECE cell line 2724: 0.0389 -> 0.0346
+     allowed ECE cell line 2853: 0.0709 -> 0.0705
+     allowed ECE cell line 2858: 0.0328 -> 0.0336
+     allowed ECE cell line 2863: 0.0450 -> 0.0427
+     allowed ECE cell line 2868: 0.0960 -> 0.0822
+FAIL line 3010 [After]
+   - <td>0.235</td><td>0.3833</td><td>0.2295</td>
+   + <td>0.235</td><td>0.2295</td><td>0.2295</td>
+     allowed ECE cell line 3015: 0.0627 -> 0.0502
+FAIL line 3020 [After]
+   - <td>0.123</td><td>0.1315</td><td>0.1058</td>
+   + <td>0.123</td><td>0.1485</td><td>0.1058</td>
+     allowed ECE cell line 3030: 0.0278 -> 0.0272
+html: 8 mitigation-section ECE cell(s) differ (allowed); other lines checked
+## figures
+note results/figures/figure2_calibration.png: max pixel diff 0.004, pixels differing 0.00016
+note results/figures/figure5_recalibration_ladder.png: max pixel diff 0.004, pixels differing 0.00001
+note results/support2_audit_report_figures/calibration_age_group.png: max pixel diff 0.004, pixels differing 0.00002
+note results/support2_audit_report_figures/calibration_race_ethnicity.png: max pixel diff 0.004, pixels differing 0.00010
+note results/support2_audit_report_figures/mitigation_calibration_age_group.png: max pixel diff 0.008, pixels differing 0.00014
+note results/support2_audit_report_figures/mitigation_calibration_race_ethnicity.png: max pixel diff 0.008, pixels differing 0.00020
+note results/support2_audit_report_figures/mitigation_calibration_sex.png: max pixel diff 0.004, pixels differing 0.00013
+
+GOLDEN (narrowed): FAIL

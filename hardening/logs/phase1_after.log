@@ -1,0 +1,114 @@
+isitfair from C:\Users\hugoa\Desktop\isitfair\src\isitfair\__init__.py
+== n=1000 start 2026-10-20T20:48:48+02:00
+n=1000 events=94 prevalence=0.0940 B=20
+  construct 0.012s
+  discrimination 3.489s (elapsed 3.5s)
+  calibration 5.297s (elapsed 8.8s)
+  calibration_curves 5.100s (elapsed 13.9s)
+  decision_curve 5.939s (elapsed 19.8s)
+  estimability 0.065s (elapsed 19.9s)
+  hosmer_lemeshow 0.577s (elapsed 20.5s)
+  recalibration_ladder 5.567s (elapsed 26.1s)
+  report 14.118s (elapsed 40.2s)
+  roc_curves 0.000s (elapsed 40.2s)
+  decision_curve_zero_crossing 4.574s (elapsed 44.7s)
+done total 44.8s
+== n=1000 end 2026-10-20T20:49:41+02:00
+== n=5000 start 2026-10-20T20:49:41+02:00
+n=5000 events=487 prevalence=0.0974 B=20
+  construct 0.032s
+  discrimination 3.011s (elapsed 3.0s)
+  calibration 10.967s (elapsed 14.0s)
+  calibration_curves 13.668s (elapsed 27.7s)
+  decision_curve 4.574s (elapsed 32.3s)
+  estimability 0.083s (elapsed 32.3s)
+  hosmer_lemeshow 5.501s (elapsed 37.8s)
+  recalibration_ladder 8.351s (elapsed 46.2s)
+  report 15.850s (elapsed 62.0s)
+  roc_curves 0.000s (elapsed 62.0s)
+  decision_curve_zero_crossing 8.966s (elapsed 71.0s)
+done total 71.0s
+== n=5000 end 2026-10-20T20:50:59+02:00
+== n=20000 start 2026-10-20T20:50:59+02:00
+n=20000 events=1918 prevalence=0.0959 B=20
+  construct 0.099s
+  discrimination 3.947s (elapsed 4.0s)
+  calibration 83.807s (elapsed 87.9s)
+  calibration_curves 123.812s (elapsed 211.7s)
+  decision_curve 7.096s (elapsed 218.8s)
+  estimability 0.075s (elapsed 218.8s)
+  hosmer_lemeshow 105.112s (elapsed 324.0s)
+  recalibration_ladder 50.497s (elapsed 374.5s)
+  report 129.530s (elapsed 504.0s)
+  roc_curves 0.000s (elapsed 504.0s)
+  decision_curve_zero_crossing 90.120s (elapsed 594.1s)
+done total 594.1s
+== n=20000 end 2026-10-20T21:01:00+02:00
+== n=50000 start 2026-10-20T21:01:00+02:00
+n=50000 events=4897 prevalence=0.0979 B=20
+  construct 0.534s
+  discrimination 9.380s (elapsed 9.9s)
+Timeout (0:10:00)!
+Thread 0x00004314 (most recent call first):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\statsmodels\nonparametric\smoothers_lowess.py", line 226 in lowess
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 467 in _loess_smooth_at_data
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 554 in _compute_ici
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 2593 in calibration
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\phase1\bench.py", line 60 in call
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\phase1\bench.py", line 141 in main
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\phase1\bench.py", line 153 in <module>
+  calibration 740.265s (elapsed 750.2s)
+Timeout (0:10:00)!
+Thread 0x00004314 (most recent call first):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\statsmodels\nonparametric\smoothers_lowess.py", line 226 in lowess
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 503 in _loess_curve_at_grid
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 2785 in calibration_curves
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\phase1\bench.py", line 62 in call
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\phase1\bench.py", line 141 in main
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\phase1\bench.py", line 153 in <module>
+  calibration_curves 765.470s (elapsed 1515.7s)
+  decision_curve 14.972s (elapsed 1530.6s)
+  estimability 0.119s (elapsed 1530.7s)
+Timeout (0:10:00)!
+Thread 0x00004314 (most recent call first):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\statsmodels\nonparametric\smoothers_lowess.py", line 226 in lowess
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 467 in _loess_smooth_at_data
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 554 in _compute_ici
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 3263 in hosmer_lemeshow
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\phase1\bench.py", line 68 in call
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\phase1\bench.py", line 141 in main
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\phase1\bench.py", line 153 in <module>
+  hosmer_lemeshow 688.649s (elapsed 2219.4s)
+Timeout (0:10:00)!
+Thread 0x00004314 (most recent call first):
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 417 in neg_ll
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\scipy\optimize\_differentiable_functions.py", line 21 in wrapped
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\scipy\optimize\_numdiff.py", line 474 in fun_wrapped
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\scipy\optimize\_numdiff.py", line 596 in _dense_difference
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\scipy\optimize\_numdiff.py", line 523 in approx_derivative
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\scipy\optimize\_differentiable_functions.py", line 48 in wrapped1
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\scipy\optimize\_differentiable_functions.py", line 307 in _update_grad
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\scipy\optimize\_differentiable_functions.py", line 345 in fun_and_grad
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\scipy\optimize\_lbfgsb_py.py", line 441 in _minimize_lbfgsb
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\scipy\optimize\_minimize.py", line 738 in minimize
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 419 in _fit_calibration_slope
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 586 in _compute_calibration_boot_metrics
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 1360 in _bootstrap_calibration_metrics
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 3780 in recalibration_ladder
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\phase1\bench.py", line 70 in call
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\phase1\bench.py", line 141 in main
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\phase1\bench.py", line 153 in <module>
+  recalibration_ladder 221.521s (elapsed 2440.9s)
+Timeout (0:10:00)!
+Thread 0x00004314 (most recent call first):
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\numpy\_core\fromnumeric.py", line 86 in _wrapreduction
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\numpy\_core\fromnumeric.py", line 2466 in sum
+  File "C:\Users\hugoa\Desktop\isitfair\.venv\lib\site-packages\statsmodels\nonparametric\smoothers_lowess.py", line 226 in lowess
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 467 in _loess_smooth_at_data
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 554 in _compute_ici
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 3263 in hosmer_lemeshow
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\report.py", line 774 in generate_report
+  File "C:\Users\hugoa\Desktop\isitfair\src\isitfair\audit.py", line 3968 in report
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\phase1\bench.py", line 72 in call
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\phase1\bench.py", line 141 in main
+  File "C:\Users\hugoa\Desktop\isitfair\hardening\phase1\bench.py", line 153 in <module>

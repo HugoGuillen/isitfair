@@ -1,0 +1,35 @@
+# %% [markdown]
+# Hypothesis b: does `n_jobs` other than None/0/1 (joblib loky) deadlock or stall,
+# in a plain script and inside a Jupyter kernel? Same synthetic data as bench.py,
+# n = 5,000, B = 200. Each configuration runs discrimination() and calibration()
+# (the two axes that go through `_run_chunks`) and is compared with n_jobs=None.
+
+# %%
+import faulthandler
+import os
+import sys
+import time
+
+# Inside a Jupyter kernel sys.stderr has no file descriptor; give the watchdog a real file.
+_fh = open(os.path.join(os.environ.get('REPO_ROOT', os.getcwd()), 'hardening', 'logs', 'faulthandler_hyp_b.log'), 'w')
+faulthandler.dump_traceback_later(600, repeat=True, file=_fh)
+sys.path.insert(0, os.path.join(os.environ.get("REPO_ROOT", os.getcwd()), "hardening", "phase1"))
+import numpy as np
+from bench import make_data
+from isitfair import FairnessAudit
+
+ctx = "jupyter-kernel" if "ipykernel" in sys.modules else "plain-script"
+y, p, attrs = make_data(5000)
+res = {}
+for nj in (None, 2, -1):
+    a = FairnessAudit(y_true=y, y_proba=p, sensitive_features=attrs, threshold=0.2,
+                      n_bootstrap=200, random_state=42, n_jobs=nj)
+    t0 = time.perf_counter()
+    d = a.discrimination()
+    c = a.calibration()
+    res[nj] = (d, c, time.perf_counter() - t0)
+    print(f"{ctx} n_jobs={nj}: {res[nj][2]:.1f}s", flush=True)
+
+for nj in (2, -1):
+    same = res[nj][0].equals(res[None][0]) and res[nj][1].equals(res[None][1])
+    print(f"{ctx} n_jobs={nj} identical to n_jobs=None: {same}", flush=True)

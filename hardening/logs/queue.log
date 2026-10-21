@@ -1,0 +1,60 @@
+[2026-10-20 21:51:59] waiting for ['golden.sh', 'oracle_calib_coverage.py', 'before_50000.json']
+[2026-10-20 21:53:59] waiting for ['oracle_calib_coverage.py', 'before_50000.json']
+[2026-10-20 21:56:00] waiting for ['oracle_calib_coverage.py', 'before_50000.json']
+[2026-10-20 21:58:01] waiting for ['oracle_calib_coverage.py', 'before_50000.json']
+[2026-10-20 22:00:02] waiting for ['before_50000.json']
+[2026-10-20 22:02:03] waiting for ['before_50000.json']
+[2026-10-20 22:04:03] waiting for ['before_50000.json']
+[2026-10-20 22:06:04] waiting for ['before_50000.json']
+[2026-10-20 22:08:05] waiting for ['before_50000.json']
+[2026-10-20 22:10:05] waiting for ['before_50000.json']
+[2026-10-20 22:12:06] waiting for ['before_50000.json']
+[2026-10-20 22:14:06] waiting for ['before_50000.json']
+[2026-10-20 22:16:07] waiting for ['before_50000.json']
+[2026-10-20 22:18:07] waiting for ['before_50000.json']
+[2026-10-20 22:20:08] waiting for ['before_50000.json']
+[2026-10-20 22:22:09] waiting for ['before_50000.json']
+[2026-10-20 22:24:09] waiting for ['before_50000.json']
+[2026-10-20 22:26:10] START P0 golden narrowed compare of HEAD baseline outputs -> golden_baseline_narrow.log
+[2026-10-20 22:26:20] END   P0 golden narrowed compare of HEAD baseline outputs rc=1 wall=10s
+[2026-10-20 22:26:20] START P0/P4 golden check on fixed src (example + nb02) -> golden_postfix.log
+[2026-10-20 22:57:05] END   P0/P4 golden check on fixed src (example + nb02) rc=0 wall=1845s
+[2026-10-20 22:57:05] START P4 golden narrowed compare -> golden_postfix_narrow.log
+[2026-10-20 22:57:15] END   P4 golden narrowed compare rc=1 wall=10s
+[2026-10-20 22:57:15] START P5 oracles on final code -> phase5_oracles_final.log
+[2026-10-20 23:14:36] END   P5 oracles on final code rc=0 wall=1041s
+[2026-10-20 23:14:36] START P3 final B=50 n_jobs=-1 support2 -> nb_support2_final_B50.log
+[2026-10-20 23:16:57] END   P3 final B=50 n_jobs=-1 support2 rc=0 wall=141s
+[2026-10-20 23:16:57] START P3 final B=50 n_jobs=-1 compas -> nb_compas_final_B50.log
+[2026-10-20 23:19:06] END   P3 final B=50 n_jobs=-1 compas rc=0 wall=130s
+[2026-10-20 23:19:06] START P3 final B=50 n_jobs=-1 german -> nb_german_final_B50.log
+[2026-10-20 23:20:29] END   P3 final B=50 n_jobs=-1 german rc=0 wall=83s
+[2026-10-20 23:20:29] START P3 final B=50 n_jobs=-1 heart_cleveland -> nb_heart_cleveland_final_B50.log
+[2026-10-20 23:21:50] END   P3 final B=50 n_jobs=-1 heart_cleveland rc=0 wall=80s
+[2026-10-20 23:21:50] START P3 final B=50 n_jobs=-1 oracle_sparse -> nb_oracle_sparse_final_B50.log
+[2026-10-20 23:23:05] END   P3 final B=50 n_jobs=-1 oracle_sparse rc=0 wall=76s
+[2026-10-20 23:23:05] START P3 final B=50 n_jobs=-1 oracle_calib -> nb_oracle_calib_final_B50.log
+[2026-10-20 23:28:52] END   P3 final B=50 n_jobs=-1 oracle_calib rc=0 wall=346s
+[2026-10-20 23:28:52] START P3 final B=50 n_jobs=-1 adult -> nb_adult_final_B50.log
+[2026-10-20 23:41:01] END   P3 final B=50 n_jobs=-1 adult rc=0 wall=730s
+[2026-10-20 23:41:01] START P3 final B=50 n_jobs=-1 bank -> nb_bank_final_B50.log
+[2026-10-20 23:52:14] END   P3 final B=50 n_jobs=-1 bank rc=0 wall=672s
+[2026-10-20 23:52:14] START P3 final B=50 n_jobs=-1 diabetes130 -> nb_diabetes130_final_B50.log
+[2026-10-21 00:23:31] END   P3 final B=50 n_jobs=-1 diabetes130 rc=0 wall=1877s
+[2026-10-21 00:23:31] START P6 B=200 n_jobs=-1 support2 -> phase6_support2_B200.log (timeout 1800s)
+[2026-10-21 00:25:37] END   P6 B=200 n_jobs=-1 support2 rc=0 wall=126s
+[2026-10-21 00:25:37] START P6 B=200 n_jobs=-1 compas -> phase6_compas_B200.log (timeout 1800s)
+[2026-10-21 00:26:48] END   P6 B=200 n_jobs=-1 compas rc=0 wall=71s
+[2026-10-21 00:26:48] START P6 B=200 n_jobs=-1 german -> phase6_german_B200.log (timeout 1800s)
+[2026-10-21 00:27:25] END   P6 B=200 n_jobs=-1 german rc=0 wall=37s
+[2026-10-21 00:27:25] START P6 B=200 n_jobs=-1 heart_cleveland -> phase6_heart_cleveland_B200.log (timeout 1800s)
+[2026-10-21 00:28:02] END   P6 B=200 n_jobs=-1 heart_cleveland rc=0 wall=37s
+[2026-10-21 00:28:02] START P6 B=200 n_jobs=-1 adult -> phase6_adult_B200.log (timeout 4815s)
+[2026-10-21 00:31:14] END   P6 B=200 n_jobs=-1 adult rc=0 wall=192s
+[2026-10-21 00:31:14] START P6 B=200 n_jobs=-1 bank -> phase6_bank_B200.log (timeout 5263s)
+[2026-10-21 00:35:17] END   P6 B=200 n_jobs=-1 bank rc=0 wall=243s
+[2026-10-21 00:35:17] START P6 B=200 n_jobs=-1 diabetes130 -> phase6_diabetes130_B200.log (timeout 7202s)
+[2026-10-21 00:38:36] END   P6 B=200 n_jobs=-1 diabetes130 rc=1 wall=198s
+[2026-10-21 00:38:36] START P1 after sweep (uncontended) -> phase1_after_uncontended.log
+[2026-10-21 02:06:26] END   P1 after sweep (uncontended) rc=0 wall=5270s
+[2026-10-21 02:06:26] QUEUE DONE

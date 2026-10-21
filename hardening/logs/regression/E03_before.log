@@ -1,0 +1,23 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+___________ test_e03_zero_event_stratum_gets_an_actionable_message ____________
+
+cohort = {'y': array([0., 0., 0., ..., 1., 0., 0.], shape=(1500,)), 'p': array([0.16446343, 0.15248335, 0.08759425, ..., 0.7181...'), 'race': array(['White', 'White', 'White', ..., 'Black', 'White', 'Black'],
+      shape=(1500,), dtype='<U24'), ...}
+kw = {'threshold': 0.2, 'n_bootstrap': 30, 'random_state': 1}
+
+    def test_e03_zero_event_stratum_gets_an_actionable_message(cohort, kw):
+        y = cohort["y"].copy()
+        race = cohort["race"].copy()
+        race[:40] = "Empty"
+        y[:40] = 0.0
+        audit = FairnessAudit(y_true=y, y_proba=cohort["p"], sensitive_features={"race": race}, **kw)
+>       with pytest.raises(ValueError, match="zero events in the whole audit") as err:
+E       AssertionError: Regex pattern did not match.
+E         Expected regex: 'zero events in the whole audit'
+E         Actual message: "fold 0, stratum 'Empty': zero events in the training union. Isotonic would silently return a constant and Platt would raise; neither may be papered over. Use fewer folds, or drop the stratum."
+
+tests\test_hardening_regressions.py:112: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_hardening_regressions.py::test_e03_zero_event_stratum_gets_an_actionable_message
+1 failed, 6 deselected in 7.48s

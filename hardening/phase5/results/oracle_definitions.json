@@ -1,0 +1,90 @@
+[
+  {
+    "dataset": "adult",
+    "column": "y_proba_gbm",
+    "max_abs_diff": {
+      "ece": 0.0,
+      "hl_statistic": 2.1316282072803006e-14,
+      "hl_p_value": 7.771561172376096e-16,
+      "gap_equal_opportunity": 0.0,
+      "gap_equalized_odds": 1.1102230246251565e-16
+    }
+  },
+  {
+    "dataset": "compas",
+    "column": "y_proba_lr",
+    "max_abs_diff": {
+      "ece": 0.0,
+      "hl_statistic": 7.105427357601002e-15,
+      "hl_p_value": 1.3877787807814457e-16,
+      "gap_equal_opportunity": 0.0,
+      "gap_equalized_odds": 4.163336342344337e-17
+    }
+  },
+  {
+    "dataset": "compas",
+    "column": "y_proba_gbm",
+    "max_abs_diff": {
+      "ece": 0.0,
+      "hl_statistic": 1.4210854715202004e-14,
+      "hl_p_value": 1.1102230246251565e-16,
+      "gap_equal_opportunity": 0.0,
+      "gap_equalized_odds": 0.0
+    }
+  },
+  {
+    "dataset": "bank",
+    "column": "y_proba_gbm",
+    "max_abs_diff": {
+      "ece": 0.0,
+      "hl_statistic": 3.552713678800501e-15,
+      "hl_p_value": 2.220446049250313e-16,
+      "gap_equal_opportunity": 0.0,
+      "gap_equalized_odds": 0.0
+    }
+  },
+  {
+    "dataset": "diabetes130",
+    "column": "y_proba_lr",
+    "max_abs_diff": {
+      "ece": 0.0,
+      "hl_statistic": 7.105427357601002e-15,
+      "hl_p_value": 2.220446049250313e-16,
+      "gap_equal_opportunity": 0.0,
+      "gap_equalized_odds": 0.0
+    }
+  },
+  {
+    "dataset": "diabetes130",
+    "column": "y_proba_gbm",
+    "max_abs_diff": {
+      "ece": 0.0,
+      "hl_statistic": 1.7763568394002505e-15,
+      "hl_p_value": 1.1102230246251565e-16,
+      "gap_equal_opportunity": 0.0,
+      "gap_equalized_odds": 5.551115123125783e-17
+    }
+  },
+  {
+    "dataset": "oracle_sparse",
+    "column": "y_proba_lr",
+    "max_abs_diff": {
+      "ece": 0.0,
+      "hl_statistic": 0.0,
+      "hl_p_value": 0.0,
+      "gap_equal_opportunity": 0.0,
+      "gap_equalized_odds": 0.0
+    }
+  },
+  {
+    "dataset": "oracle_sparse",
+    "column": "y_proba_gbm",
+    "max_abs_diff": {
+      "ece": 0.0,
+      "hl_statistic": 0.0,
+      "hl_p_value": 0.0,
+      "gap_equal_opportunity": 0.0,
+      "gap_equalized_odds": 0.0
+    }
+  }
+]

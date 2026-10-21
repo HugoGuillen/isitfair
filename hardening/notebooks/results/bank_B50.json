@@ -1,0 +1,234 @@
+{
+  "dataset": "bank",
+  "B": 50,
+  "isitfair": "0.4.0",
+  "isitfair_file": "C:\\Users\\hugoa\\Desktop\\isitfair\\src\\isitfair\\__init__.py",
+  "n_jobs": -1,
+  "stages": {
+    "load_validate": {
+      "seconds": 0.02,
+      "warnings": [],
+      "error": null,
+      "expected_error": false
+    },
+    "construct": {
+      "seconds": 0.064,
+      "warnings": [],
+      "error": null,
+      "expected_error": false
+    },
+    "discrimination": {
+      "seconds": 13.382,
+      "warnings": [],
+      "error": null,
+      "expected_error": false
+    },
+    "calibration": {
+      "seconds": 25.268,
+      "warnings": [],
+      "error": null,
+      "expected_error": false
+    },
+    "calibration_curves": {
+      "seconds": 53.993,
+      "warnings": [],
+      "error": null,
+      "expected_error": false
+    },
+    "roc_curves": {
+      "seconds": 3.485,
+      "warnings": [],
+      "error": null,
+      "expected_error": false
+    },
+    "decision_curve": {
+      "seconds": 8.653,
+      "warnings": [],
+      "error": null,
+      "expected_error": false
+    },
+    "estimability": {
+      "seconds": 0.066,
+      "warnings": [],
+      "error": null,
+      "expected_error": false
+    },
+    "hosmer_lemeshow": {
+      "seconds": 21.034,
+      "warnings": [],
+      "error": null,
+      "expected_error": false
+    },
+    "cell_diagnostics": {
+      "seconds": 0.042,
+      "warnings": [],
+      "error": null,
+      "expected_error": false
+    },
+    "recalibration_ladder": {
+      "seconds": 19.816,
+      "warnings": [],
+      "error": null,
+      "expected_error": false
+    },
+    "mitigation_split": {
+      "seconds": 0.032,
+      "warnings": [],
+      "error": null,
+      "expected_error": false
+    },
+    "mitigate_group_recalibration": {
+      "seconds": 13.764,
+      "warnings": [],
+      "error": null,
+      "expected_error": false
+    },
+    "mitigate_wasserstein": {
+      "seconds": 3.189,
+      "warnings": [],
+      "error": null,
+      "expected_error": false
+    },
+    "report_html": {
+      "seconds": 109.824,
+      "warnings": [
+        "UserWarning: Tight layout not applied. The bottom and top margins cannot be made large enough to accommodate all Axes decorations. (x3)"
+      ],
+      "error": null,
+      "expected_error": false
+    },
+    "report_pdf": {
+      "seconds": 43.115,
+      "warnings": [],
+      "error": null,
+      "expected_error": false
+    },
+    "variants": {
+      "seconds": 321.159,
+      "warnings": [],
+      "error": null,
+      "expected_error": false
+    }
+  },
+  "variants": {
+    "baseline_numpy": {
+      "status": "ok",
+      "warnings": [],
+      "error": null,
+      "inf_values": {
+        "discrimination": 0,
+        "calibration": 0,
+        "hosmer_lemeshow": 0,
+        "decision_curve": 0
+      }
+    },
+    "category_attributes": {
+      "status": "ok-identical",
+      "warnings": [],
+      "error": null,
+      "inf_values": {
+        "discrimination": 0,
+        "calibration": 0,
+        "hosmer_lemeshow": 0,
+        "decision_curve": 0
+      },
+      "identical_to_baseline": true
+    },
+    "Int64_outcome": {
+      "status": "ok-identical",
+      "warnings": [],
+      "error": null,
+      "inf_values": {
+        "discrimination": 0,
+        "calibration": 0,
+        "hosmer_lemeshow": 0,
+        "decision_curve": 0
+      },
+      "identical_to_baseline": true
+    },
+    "bool_outcome": {
+      "status": "ok-identical",
+      "warnings": [],
+      "error": null,
+      "inf_values": {
+        "discrimination": 0,
+        "calibration": 0,
+        "hosmer_lemeshow": 0,
+        "decision_curve": 0
+      },
+      "identical_to_baseline": true
+    },
+    "bool_outcome_series": {
+      "status": "ok-identical",
+      "warnings": [],
+      "error": null,
+      "inf_values": {
+        "discrimination": 0,
+        "calibration": 0,
+        "hosmer_lemeshow": 0,
+        "decision_curve": 0
+      },
+      "identical_to_baseline": true
+    },
+    "shuffled_index_consistent": {
+      "status": "ok-identical",
+      "warnings": [],
+      "error": null,
+      "inf_values": {
+        "discrimination": 0,
+        "calibration": 0,
+        "hosmer_lemeshow": 0,
+        "decision_curve": 0
+      },
+      "identical_to_baseline": true
+    },
+    "shuffled_index_misaligned": {
+      "status": "raises",
+      "warnings": [],
+      "error": "ValueError: `y_proba` and `y_true` are pandas objects with the same index labels in a different order. FairnessAudit aligns inputs by position, not by index, so the rows would be mismatched. Reorder them consistently, e.g. `s.loc[other.index]`, or pass `.to_numpy()` arrays built from one DataFrame."
+    },
+    "ties_and_exact_0_1": {
+      "status": "ok",
+      "warnings": [],
+      "error": null,
+      "inf_values": {
+        "discrimination": 0,
+        "calibration": 0,
+        "hosmer_lemeshow": 0,
+        "decision_curve": 0
+      }
+    }
+  },
+  "checks": {
+    "n": 13564,
+    "index_is_range": true,
+    "y_true_dtype": "int64",
+    "y_true_values": [
+      0,
+      1
+    ],
+    "y_true_missing": 0,
+    "y_proba_range": [
+      0.0005722501559348,
+      0.9362851810567004
+    ],
+    "y_proba_missing": 0,
+    "attr_dtypes": {
+      "age_group": "object",
+      "job": "object",
+      "marital": "object"
+    },
+    "attr_missing": {
+      "age_group": 0,
+      "job": 0,
+      "marital": 0
+    },
+    "attr_levels": {
+      "age_group": 5,
+      "job": 12,
+      "marital": 3
+    }
+  },
+  "unexpected_errors": {},
+  "total_seconds": 636.91
+}
