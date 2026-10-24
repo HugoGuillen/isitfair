@@ -112,6 +112,7 @@ repository. GitHub shows `.html` files as raw text.
 | 📓 [`notebooks/02_paper_analysis_support2.ipynb`](notebooks/02_paper_analysis_support2.ipynb) | The **complete analysis**, section by section — cohort table through mitigation and interaction screens. Writes 20 tables and 8 figures. |
 | 📓 [`notebooks/03_tutorial_support2.ipynb`](notebooks/03_tutorial_support2.ipynb) | The **tutorial**, runnable. Nine sections, every slide's code executing on real data. |
 | 🎞️ [`slides/isitfair_audit_tutorial.pdf`](slides/isitfair_audit_tutorial.pdf) | The tutorial deck the notebook above is built from: 74 slides in nine parts. Speaker notes are in [`slides/isitfair_audit_tutorial_notes.pdf`](slides/isitfair_audit_tutorial_notes.pdf). |
+| 📓 [`extra_examples/`](extra_examples) | **Six more audits** on public datasets: Diabetes 130-US hospitals, Adult, Bank Marketing, COMPAS, German Credit and Heart Disease Cleveland. One notebook each, the same twelve steps as the tutorial, at B = 50. Only Diabetes 130 and Heart Disease are clinical; the others are standard fairness benchmarks. |
 | 📁 [`results/tables/`](results/tables) · [`results/figures/`](results/figures) | Every table as `.csv` **and** `.md`; every figure as `.png` **and** `.pdf`. |
 | 🏥 [`results/bern/`](results/bern) | **The paper's clinical cohort, aggregated**: its audit reports and subgroup tables for 2014–2022 and the 2018–2022 window. Aggregates only, some of them small; see its README. |
 
@@ -127,7 +128,7 @@ its README describes each file.
 
 ## The data
 
-Everything here runs on **SUPPORT2** — 9,105 critically ill adults from five US
+The main examples run on **SUPPORT2** — 9,105 critically ill adults from five US
 medical centres, published by the UCI Machine Learning Repository (dataset 880,
 CC BY 4.0, no credentialing required). A copy is bundled at
 `examples/data/support2.csv.gz`, so the examples run offline as well as online.
@@ -136,6 +137,11 @@ It suits a fairness audit well: it records **race/ethnicity** alongside sex and
 age, so a single run exercises a sociodemographic axis, a clinical one, and the
 intersection of two of them — including the sparse cells that make subgroup
 estimation interesting.
+
+The six notebooks in [`extra_examples/`](extra_examples) use other public data,
+which is not bundled: `extra_examples/datasets.py` downloads it from UCI and
+ProPublica and fits the audited models. Check each source's terms before
+reusing the data.
 
 ---
 
@@ -148,6 +154,9 @@ pip install -e ".[examples,plots,pdf]"
 python examples/support2_mortality_audit.py         # the audit report  (~12 min)
 jupyter nbconvert --to notebook --execute --inplace notebooks/*.ipynb
 python examples/make_manifest.py                    # refresh results/MANIFEST.csv
+
+python -I extra_examples/datasets.py                # download and fit the six extra datasets
+jupyter nbconvert --to notebook --execute --inplace extra_examples/*.ipynb
 ```
 
 The `plots` extra installs adjustText, which places the labels of the volcano
