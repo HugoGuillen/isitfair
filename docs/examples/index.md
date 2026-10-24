@@ -66,10 +66,9 @@ and `.pdf`) to `results/figures/`.
 **Source**: `notebooks/03_tutorial_support2.ipynb`, built from
 `slides/isitfair_audit_tutorial.pdf`.
 
-The nine-section tutorial deck with every code block executing against real
-data: why audit at all · the three axes · setting up · discrimination ·
-calibration · clinical utility · uncertainty, floors and multiplicity ·
-mitigation · reporting.
+The nine-part tutorial deck, with its code run on real public data: why audit
+subgroups · three axes · inputs · discrimination · calibration · clinical
+utility · uncertainty · mitigation · reporting.
 
 Figures carried over from the tutorial's worked example are marked `[study]`;
 everything else on the page is computed in the cell above it.
