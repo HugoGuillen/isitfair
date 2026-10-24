@@ -111,7 +111,7 @@ repository. GitHub shows `.html` files as raw text.
 | 📄 [`results/support2_audit_report.pdf`](results/support2_audit_report.pdf) | The same report typeset for print. |
 | 📓 [`notebooks/02_paper_analysis_support2.ipynb`](notebooks/02_paper_analysis_support2.ipynb) | The **complete analysis**, section by section — cohort table through mitigation and interaction screens. Writes 20 tables and 8 figures. |
 | 📓 [`notebooks/03_tutorial_support2.ipynb`](notebooks/03_tutorial_support2.ipynb) | The **tutorial**, runnable. Nine sections, every slide's code executing on real data. |
-| 🎞️ [`slides/isitfair_audit_tutorial.pdf`](slides/isitfair_audit_tutorial.pdf) | The tutorial deck the notebook above is built from. 61 frames. |
+| 🎞️ [`slides/isitfair_audit_tutorial.pdf`](slides/isitfair_audit_tutorial.pdf) | The tutorial deck the notebook above is built from: 73 slides in nine parts. Speaker notes are in [`slides/isitfair_audit_tutorial_notes.pdf`](slides/isitfair_audit_tutorial_notes.pdf). |
 | 📁 [`results/tables/`](results/tables) · [`results/figures/`](results/figures) | Every table as `.csv` **and** `.md`; every figure as `.png` **and** `.pdf`. |
 | 🏥 [`results/bern/`](results/bern) | **The paper's clinical cohort, aggregated**: its audit reports and subgroup tables for 2014–2022 and the 2018–2022 window. Aggregates only, some of them small; see its README. |
 
